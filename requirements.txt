@@ -1,0 +1,13 @@
+fastapi>=0.115
+uvicorn[standard]>=0.34
+pydantic>=2.10
+pydantic-settings>=2.7
+httpx>=0.28
+sqlalchemy[asyncio]>=2.0.36
+aiosqlite>=0.20
+alembic>=1.14
+apscheduler>=3.11,<4
+structlog>=24.4
+pyyaml>=6.0
+tenacity>=9.0
+tzdata

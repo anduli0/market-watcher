@@ -1,0 +1,212 @@
+# APPROVED INSTRUMENT REGISTRY (catalog).
+#
+# This is the CATALOG of Korean-listed instruments the Instrument Translator may
+# map economic exposures onto. It is NOT the trading allow-list — that lives in
+# risk_limits.yml and starts EMPTY (deny-by-default). An instrument is only
+# tradable when BOTH (a) active: true here AND (b) its ticker is in
+# risk_limits.allowed_instruments. New tickers require explicit operator approval.
+#
+# IMPORTANT: every `ticker` MUST be verified against live Kiwoom master data
+# (name, listing status, exchange route) before activation. Market-derived
+# metrics (adv_krw, avg_spread_bps, aum_krw, tracking_error_bps, liquidity_score)
+# are NULL here and are populated at runtime by the InstrumentMetrics service
+# from live data (Phase 3). An instrument with stale/empty metrics fails the
+# liquidity risk checks and cannot trade.
+#
+# Defaults below are conservative: everything active:false; leveraged/inverse are
+# restricted to the HEDGE_BOOK and stay inactive until explicitly whitelisted.
+
+schema_version: 1
+
+# Books: STRATEGIC_REGIME | TACTICAL_ALPHA | HEDGE
+instruments:
+
+  # ---------------- KOREA EQUITY (core) ----------------
+  - ticker: "069500"
+    name_ko: "KODEX 200"
+    exposure: KOREA_LARGE_CAP
+    asset_class: KR_EQUITY_ETF
+    underlying_index: "KOSPI 200"
+    exchange_route: KRX
+    hedged: NA
+    leveraged: false
+    inverse: false
+    expense_ratio_bps: 15
+    allowed_books: [STRATEGIC_REGIME, TACTICAL_ALPHA]
+    max_position_weight: 0.25
+    active: false
+    metrics: {adv_krw: null, avg_spread_bps: null, aum_krw: null, tracking_error_bps: null, liquidity_score: null}
+
+  - ticker: "102110"
+    name_ko: "TIGER 200"
+    exposure: KOREA_LARGE_CAP
+    asset_class: KR_EQUITY_ETF
+    underlying_index: "KOSPI 200"
+    exchange_route: KRX
+    hedged: NA
+    leveraged: false
+    inverse: false
+    expense_ratio_bps: 5
+    allowed_books: [STRATEGIC_REGIME, TACTICAL_ALPHA]
+    max_position_weight: 0.25
+    active: false
+    metrics: {adv_krw: null, avg_spread_bps: null, aum_krw: null, tracking_error_bps: null, liquidity_score: null}
+
+  - ticker: "091160"
+    name_ko: "KODEX 반도체"
+    exposure: KOREA_SEMICONDUCTOR
+    asset_class: KR_EQUITY_ETF
+    underlying_index: "KRX Semiconductor"
+    exchange_route: KRX
+    hedged: NA
+    leveraged: false
+    inverse: false
+    expense_ratio_bps: 45
+    allowed_books: [TACTICAL_ALPHA]
+    max_position_weight: 0.12
+    active: false
+    metrics: {adv_krw: null, avg_spread_bps: null, aum_krw: null, tracking_error_bps: null, liquidity_score: null}
+
+  - ticker: "091170"
+    name_ko: "KODEX 은행"
+    exposure: KOREA_BANKS
+    asset_class: KR_EQUITY_ETF
+    underlying_index: "KRX Banks"
+    exchange_route: KRX
+    hedged: NA
+    leveraged: false
+    inverse: false
+    expense_ratio_bps: 30
+    allowed_books: [TACTICAL_ALPHA]
+    max_position_weight: 0.10
+    active: false
+    metrics: {adv_krw: null, avg_spread_bps: null, aum_krw: null, tracking_error_bps: null, liquidity_score: null}
+
+  # ---------------- KOREA-LISTED US EQUITY ----------------
+  - ticker: "360750"
+    name_ko: "TIGER 미국S&P500"
+    exposure: US_LARGE_CAP
+    asset_class: KR_LISTED_US_EQUITY_ETF
+    underlying_index: "S&P 500"
+    exchange_route: KRX
+    hedged: UNHEDGED            # USD exposure embedded
+    leveraged: false
+    inverse: false
+    expense_ratio_bps: 7
+    allowed_books: [STRATEGIC_REGIME, TACTICAL_ALPHA]
+    max_position_weight: 0.20
+    active: false
+    metrics: {adv_krw: null, avg_spread_bps: null, aum_krw: null, tracking_error_bps: null, liquidity_score: null}
+
+  - ticker: "133690"
+    name_ko: "TIGER 미국나스닥100"
+    exposure: US_TECH
+    asset_class: KR_LISTED_US_EQUITY_ETF
+    underlying_index: "NASDAQ-100"
+    exchange_route: KRX
+    hedged: UNHEDGED
+    leveraged: false
+    inverse: false
+    expense_ratio_bps: 7
+    allowed_books: [STRATEGIC_REGIME, TACTICAL_ALPHA]
+    max_position_weight: 0.18
+    active: false
+    metrics: {adv_krw: null, avg_spread_bps: null, aum_krw: null, tracking_error_bps: null, liquidity_score: null}
+
+  - ticker: "381180"
+    name_ko: "TIGER 미국필라델피아반도체나스닥"
+    exposure: US_SEMICONDUCTOR
+    asset_class: KR_LISTED_US_EQUITY_ETF
+    underlying_index: "PHLX Semiconductor"
+    exchange_route: KRX
+    hedged: UNHEDGED
+    leveraged: false
+    inverse: false
+    expense_ratio_bps: 49
+    allowed_books: [TACTICAL_ALPHA]
+    max_position_weight: 0.10
+    active: false
+    metrics: {adv_krw: null, avg_spread_bps: null, aum_krw: null, tracking_error_bps: null, liquidity_score: null}
+
+  # ---------------- KOREA-LISTED US TREASURY ----------------
+  - ticker: "308620"
+    name_ko: "KODEX 미국채10년선물"
+    exposure: US_INTERMEDIATE_TREASURY
+    asset_class: KR_LISTED_US_BOND_ETF
+    underlying_index: "US 10Y Treasury futures"
+    exchange_route: KRX
+    hedged: UNHEDGED
+    leveraged: false
+    inverse: false
+    duration_years: 8.0
+    expense_ratio_bps: 30
+    allowed_books: [STRATEGIC_REGIME, HEDGE]
+    max_position_weight: 0.20
+    active: false
+    metrics: {adv_krw: null, avg_spread_bps: null, aum_krw: null, tracking_error_bps: null, liquidity_score: null}
+
+  - ticker: "304660"
+    name_ko: "KODEX 미국채울트라30년선물(H)"
+    exposure: US_LONG_TREASURY
+    asset_class: KR_LISTED_US_BOND_ETF
+    underlying_index: "US 30Y Ultra Treasury futures"
+    exchange_route: KRX
+    hedged: FX_HEDGED
+    leveraged: false
+    inverse: false
+    duration_years: 25.0
+    expense_ratio_bps: 30
+    allowed_books: [STRATEGIC_REGIME, HEDGE]
+    max_position_weight: 0.12
+    active: false
+    metrics: {adv_krw: null, avg_spread_bps: null, aum_krw: null, tracking_error_bps: null, liquidity_score: null}
+
+  # ---------------- USD / CASH ----------------
+  - ticker: "261240"
+    name_ko: "KODEX 미국달러선물"
+    exposure: USD_EXPOSURE
+    asset_class: KR_LISTED_FX_ETF
+    underlying_index: "USD/KRW futures"
+    exchange_route: KRX
+    hedged: NA
+    leveraged: false
+    inverse: false
+    expense_ratio_bps: 25
+    allowed_books: [HEDGE, STRATEGIC_REGIME]
+    max_position_weight: 0.15
+    active: false
+    metrics: {adv_krw: null, avg_spread_bps: null, aum_krw: null, tracking_error_bps: null, liquidity_score: null}
+
+  - ticker: "153130"
+    name_ko: "KODEX 단기채권"
+    exposure: CASH
+    asset_class: KR_CASH_EQUIV_ETF
+    underlying_index: "KRW short-term bond"
+    exchange_route: KRX
+    hedged: NA
+    leveraged: false
+    inverse: false
+    duration_years: 0.4
+    expense_ratio_bps: 15
+    allowed_books: [STRATEGIC_REGIME, TACTICAL_ALPHA, HEDGE]
+    max_position_weight: 0.50
+    active: false
+    metrics: {adv_krw: null, avg_spread_bps: null, aum_krw: null, tracking_error_bps: null, liquidity_score: null}
+
+  # ---------------- LEVERAGED / INVERSE (HEDGE BOOK ONLY) ----------------
+  # Blocked by default. Require explicit Hedge-Book whitelisting + separate
+  # leveraged/inverse risk limits. Kept inactive.
+  - ticker: "114800"
+    name_ko: "KODEX 인버스"
+    exposure: KOREA_LARGE_CAP_INVERSE
+    asset_class: KR_EQUITY_ETF
+    underlying_index: "KOSPI 200 futures (-1x)"
+    exchange_route: KRX
+    hedged: NA
+    leveraged: false
+    inverse: true
+    expense_ratio_bps: 64
+    allowed_books: [HEDGE]
+    max_position_weight: 0.05
+    active: false
+    metrics: {adv_krw: null, avg_spread_bps: null, aum_krw: null, tracking_error_bps: null, liquidity_score: null}

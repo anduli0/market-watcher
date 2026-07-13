@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MARKET WATCHER — 자산시장 종합 애널리스트</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230a0d13'/><path d='M13 41 L27 27 L37 35 L51 17' fill='none' stroke='%234da3ff' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/><circle cx='51' cy='17' r='5' fill='%2345c08a'/></svg>" />
+<style>
+  :root{
+    --bg:#0a0d13; --panel:#131a26; --panel2:#1b2330; --line:#28323f;
+    --tx:#e8edf5; --mut:#8a94a7; --acc:#4da3ff;
+    --up:#ff5d5d; --down:#4d9bff; --ok:#45c08a; --warn:#ffb454; --bad:#ff5d5d;
+    --eq-us:#4da3ff; --eq-kr:#ff6b6b; --ust:#45c08a; --gold:#ffce5a;
+    --usd:#9b8cff; --btc:#f7931a; --cash:#8a94a7;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);
+    font-family:-apple-system,"Segoe UI",Pretendard,Roboto,sans-serif;font-size:14px;line-height:1.55}
+  header{position:sticky;top:0;z-index:20;background:#0a0d13ee;backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);padding:12px 22px 0}
+  .htop{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+  h1{font-size:17px;margin:0;letter-spacing:1.5px;font-weight:800}
+  h1 b{color:var(--acc)} h1 span{color:var(--mut);font-weight:400;font-size:12px;letter-spacing:0;margin-left:8px}
+  .badge{padding:3px 9px;border-radius:999px;font-size:12px;font-weight:600;border:1px solid var(--line)}
+  .b-ok{background:#10301f;color:#7fe3b3;border-color:#1c4d34}
+  .b-bad{background:#3a1414;color:#ff9c9c;border-color:#5e1f1f}
+  .b-info{background:#13283f;color:#9ad0ff;border-color:#1e4b78}
+  .tabs{display:flex;gap:2px;margin-top:12px;overflow-x:auto}
+  .tabs button{background:none;border:0;border-bottom:2px solid transparent;color:var(--mut);
+    padding:10px 14px;font-size:13.5px;cursor:pointer;white-space:nowrap;font-weight:600}
+  .tabs button.on{color:var(--tx);border-bottom-color:var(--acc)}
+  .wrap{max-width:1180px;margin:0 auto;padding:20px 22px 70px}
+  .tab{display:none} .tab.on{display:block}
+  .grid{display:grid;gap:14px}
+  .cols-3{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+  .cols-2{grid-template-columns:1fr 1fr}
+  .panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .panel h2{font-size:13px;margin:0 0 14px;color:var(--mut);text-transform:uppercase;letter-spacing:.7px}
+  .k{color:var(--mut);font-size:12px} .v{font-size:24px;font-weight:800;margin-top:3px}
+  .mut{color:var(--mut)} .up{color:var(--up)} .down{color:var(--down)} .warn{color:var(--warn)}
+  .row{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed var(--line)}
+  .row:last-child{border-bottom:0}
+  .hero{display:flex;gap:26px;flex-wrap:wrap;align-items:center}
+  .donut{--g:conic-gradient(#333 0 100%);width:210px;height:210px;border-radius:50%;
+    background:var(--g);position:relative;flex:none}
+  .donut::after{content:"";position:absolute;inset:30px;border-radius:50%;background:var(--panel)}
+  .donut .ctr{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;z-index:2;text-align:center}
+  .legend{flex:1;min-width:280px}
+  .alloc{display:flex;align-items:center;gap:10px;padding:7px 0;border-bottom:1px solid var(--line)}
+  .alloc:last-child{border-bottom:0}
+  .dot{width:11px;height:11px;border-radius:3px;flex:none}
+  .alloc .nm{width:78px;font-weight:600}
+  .alloc .barwrap{flex:1;position:relative;height:14px;background:var(--panel2);border-radius:7px}
+  .alloc .barwrap>i{position:absolute;left:0;top:0;bottom:0;border-radius:7px;display:block}
+  .alloc .barwrap>.nt{position:absolute;top:-3px;bottom:-3px;width:2px;background:#fff7;border-radius:2px}
+  .alloc .wt{width:52px;text-align:right;font-weight:700}
+  .pill{font-size:11px;padding:1px 8px;border-radius:999px;border:1px solid var(--line);color:var(--mut)}
+  .ov{color:#7fe3b3;border-color:#1c4d34}.un{color:#ff9c9c;border-color:#5e1f1f}.ne{color:var(--mut)}
+  .why{font-size:12.5px;color:#c7cedb;margin-top:4px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th,td{text-align:left;padding:8px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{color:var(--mut);font-weight:600;font-size:12px}
+  .bar{height:8px;border-radius:4px;background:var(--panel2);overflow:hidden}
+  .bar>span{display:block;height:100%;background:var(--acc)}
+  .rep h3{font-size:15px;margin:20px 0 6px} .rep p{margin:6px 0;color:#d3dae6}
+  .rep ul{margin:6px 0 6px 2px;padding-left:18px} .rep li{margin:3px 0;color:#cdd5e2}
+  .banner{background:#13283f;border:1px solid #1e4b78;border-radius:10px;padding:9px 13px;
+    color:#bfe0ff;font-size:12.5px;margin-bottom:16px}
+  button.act{background:var(--panel2);color:var(--tx);border:1px solid var(--line);border-radius:8px;
+    padding:6px 12px;cursor:pointer;font-size:12.5px} button.act:hover{border-color:var(--acc)}
+  .mini{font-size:11.5px;color:var(--mut)}
+  footer{border-top:1px solid var(--line);margin-top:34px;padding:18px 22px;color:var(--mut);font-size:12px}
+  .kpi{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-bottom:14px}
+  .meter{height:14px;border-radius:8px;background:linear-gradient(90deg,#4d9bff 0%,#8a94a7 50%,#45c08a 100%);position:relative;margin:8px 0 4px}
+  .meter>i{position:absolute;top:-4px;width:4px;height:22px;background:#fff;border-radius:2px;box-shadow:0 0 6px #000a}
+  .tl{display:flex;gap:8px;flex-wrap:wrap}
+  .tl .step{flex:1;min-width:130px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:10px}
+  .desks{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+  .panel>h2{cursor:pointer;user-select:none}
+  .panel>h2::before{content:"▾ ";color:var(--mut);font-size:10px}
+  .panel.collapsed>h2::before{content:"▸ "}
+  .panel.collapsed>h2{margin-bottom:0}
+  .panel.collapsed>*:not(h2){display:none !important}
+  .recard{background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:10px 12px;margin-bottom:8px}
+  .recard:last-child{margin-bottom:0}
+</style>
+</head>
+<body>
+<header>
+  <div class="htop">
+    <h1><b>MARKET</b> WATCHER <span>자산시장 종합 애널리스트 플랫폼</span></h1>
+    <span id="mode" class="badge b-info">…</span>
+    <span id="live" class="badge">…</span>
+    <span id="kill" class="badge">…</span>
+    <span style="flex:1"></span>
+    <span id="asof" class="mini"></span>
+    <button class="act" onclick="load()">새로고침</button>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button data-t="alloc" class="on">자산배분</button>
+    <button data-t="ai">AI 브리프</button>
+    <button data-t="cio">투자 전략</button>
+    <button data-t="world">세계 조망</button>
+    <button data-t="regime">시장 국면</button>
+    <button data-t="synth">종합분석</button>
+    <button data-t="track">정확도</button>
+    <button data-t="realestate">부동산</button>
+    <button data-t="report">애널리스트 리포트</button>
+    <button data-t="news">뉴스</button>
+    <button data-t="geo">국제정세</button>
+    <button data-t="signals">신호</button>
+    <button data-t="system">시스템</button>
+  </nav>
+</header>
+<div class="wrap">
+  <section id="tab-alloc" class="tab on"></section>
+  <section id="tab-ai" class="tab"></section>
+  <section id="tab-cio" class="tab"></section>
+  <section id="tab-world" class="tab"></section>
+  <section id="tab-regime" class="tab"></section>
+  <section id="tab-synth" class="tab"></section>
+  <section id="tab-track" class="tab"></section>
+  <section id="tab-realestate" class="tab"></section>
+  <section id="tab-report" class="tab"></section>
+  <section id="tab-news" class="tab"></section>
+  <section id="tab-geo" class="tab"></section>
+  <section id="tab-signals" class="tab"></section>
+  <section id="tab-system" class="tab"></section>
+</div>
+<footer>
+  © 2026 YellowScale · 안민규 — MARKET WATCHER. 데이터: Fed / 환율 / 국장 / 미장 Watcher(읽기 전용).
+  본 화면은 공개 데이터 기반 결정론적 분석 참고 자료이며 투자 권유가 아닙니다. 비트코인·금 비중은 거시 국면 추론치입니다.
+</footer>
+<script>
+const $=id=>document.getElementById(id);
+// Served at the site root (local 127.0.0.1:8200) or under a sub-path like "/market"
+// (Tailscale funnel). Derive the API base from our own URL so the same page works at
+// either mount without the request escaping the sub-path.
+const API_BASE=location.pathname.replace(/\/+$/,'');
+const pct=(x,d=0)=>(x==null?'–':(x*100).toFixed(d)+'%');
+const COLOR={US_EQUITY:'var(--eq-us)',KOREA_EQUITY:'var(--eq-kr)',US_TREASURY:'var(--ust)',
+  GOLD:'var(--gold)',USD:'var(--usd)',BITCOIN:'var(--btc)',CASH:'var(--cash)'};
+const STANCECLS={OVERWEIGHT:'ov',UNDERWEIGHT:'un',NEUTRAL:'ne'};
+const STANCEKO={OVERWEIGHT:'비중확대',UNDERWEIGHT:'비중축소',NEUTRAL:'중립'};
+let STATE=null;
+
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('#tabs button').forEach(x=>x.classList.toggle('on',x===b));
+  document.querySelectorAll('.tab').forEach(s=>s.classList.toggle('on', s.id==='tab-'+b.dataset.t));
+});
+// Accordion: click a panel's heading to collapse/expand only that panel.
+document.addEventListener('click', e=>{
+  const h=e.target.closest('h2');
+  if(h && h.parentElement && h.parentElement.classList.contains('panel')) h.parentElement.classList.toggle('collapsed');
+});
+
+async function fetchState(ms){
+  const ctrl=new AbortController(); const t=setTimeout(()=>ctrl.abort(), ms);
+  try{ const r=await fetch(API_BASE+'/api/v1/state',{cache:'no-store',signal:ctrl.signal});
+    if(!r.ok) throw new Error('HTTP '+r.status); return await r.json(); }
+  finally{ clearTimeout(t); }
+}
+async function load(){
+  if(!STATE){ $('tab-alloc').innerHTML='<div class="panel">데이터 준비 중… 잠시만 기다려 주세요.</div>'; }
+  let s=null;
+  for(let a=0;a<2 && !s;a++){ try{ s=await fetchState(15000); }catch(_){} }
+  if(!s){ if(!STATE){ $('tab-alloc').innerHTML='<div class="panel">서버 응답 지연 — 자동으로 다시 시도합니다…</div>'; } setTimeout(load,5000); return; }
+  STATE=s;
+  const sig=JSON.stringify(s);
+  if(sig===window.__sig){ clearTimeout(window.__t); window.__t=setTimeout(load, s.warming?4000:60000); return; }
+  window.__sig=sig;  // only re-render when data changed (preserves expand/collapse state)
+  try{
+    $('mode').textContent='모드 '+s.mode;
+    const lv=$('live'); lv.textContent=s.warming?'분석 준비중':'● LIVE'; lv.className='badge '+(s.warming?'b-warn':'b-ok'); lv.title='실시간 분석 가동(자동 갱신). 주문 실행은 시스템 탭 참조';
+    const ks=$('kill'); ks.textContent='킬스위치 '+(s.kill_switch.engaged?'ON':'OFF'); ks.className='badge '+(s.kill_switch.engaged?'b-bad':'b-ok');
+    $('asof').textContent='기준(KST) '+s.as_of_kst.replace('T',' ').slice(0,16)+(s.warming?' · 데이터 준비 중':'');
+    const renders={world:renderWorld,alloc:renderAlloc,synth:renderSynth,report:renderReport,regime:renderRegime,cio:renderCio,realestate:renderRealEstate,geo:renderGeo,signals:renderSignals,news:renderNews,system:renderSystem};
+    for(const [t,fn] of Object.entries(renders)){
+      try{ fn(s); }
+      catch(err){ console.error('render '+t, err); const el=$('tab-'+t); if(el) el.innerHTML='<div class="panel mut">이 섹션을 표시하는 중 오류가 발생했습니다.</div>'; }
+    }
+  }catch(e){ console.error('render error',e); }
+  clearTimeout(window.__t); window.__t=setTimeout(load, s.warming?4000:60000);
+}
+
+// ── AI 수석 브리프 — 서버가 사용자 Claude 구독(claude -p)으로 직접 생성 ──────────
+const esc=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let AI=null, AIPOLL=null;
+async function loadAi(){
+  try{
+    const r=await fetch(API_BASE+'/api/v1/aibrief',{cache:'no-store'});
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    AI=await r.json(); renderAi();
+    if(AI.status.running){ clearTimeout(AIPOLL); AIPOLL=setTimeout(loadAi,4000); }
+  }catch(_){ if(!AI){ $('tab-ai').innerHTML='<div class="panel mut">AI 브리프 상태를 불러오지 못했습니다. 잠시 후 다시 시도합니다…</div>'; setTimeout(loadAi,6000);} }
+}
+async function runAi(){
+  const btn=$('ai-run'); if(btn){ btn.disabled=true; btn.textContent='실행 요청 중…'; }
+  try{
+    const r=await fetch(API_BASE+'/api/v1/aibrief/run',{method:'POST'});
+    const d=await r.json(); AI={status:d.status, brief:(AI&&AI.brief)||null};
+    if(!d.started && d.reason) AI.status.run_notice=d.reason;
+    renderAi();
+    if(d.started){ clearTimeout(AIPOLL); AIPOLL=setTimeout(loadAi,4000); }
+  }catch(_){ if(btn){ btn.disabled=false; btn.textContent='AI 분석 실행'; } }
+}
+function renderAi(){
+  if(!AI){ return; }
+  const st=AI.status||{}, b=AI.brief;
+  const badge = st.running?'<span class="badge b-warn">생성 중…</span>'
+    : st.auth_ok===false?'<span class="badge b-bad">인증 필요</span>'
+    : b?'<span class="badge b-ok">준비됨</span>':'<span class="badge b-info">대기</span>';
+  const authBanner = st.auth_ok===false&&st.auth_help
+    ? `<div class="banner" style="background:#3a1414;border-color:#5e1f1f;color:#ffb3b3">🔑 ${esc(st.auth_help)}</div>` : '';
+  const notice = st.run_notice?`<div class="mini warn" style="margin-top:8px">⚠ ${esc(st.run_notice)}</div>`:'';
+  const err = (!st.running&&st.last_error&&st.auth_ok!==false)?`<div class="mini warn" style="margin-top:8px">⚠ ${esc(st.last_error)}</div>`:'';
+  const skip = (!st.running&&st.last_skip)?`<div class="mini" style="margin-top:8px">ℹ ${esc(st.last_skip)}</div>`:'';
+  const meta = [
+    b?`생성 ${esc((st.generated_at_kst||'').replace('T',' '))} KST`:null,
+    `모델 ${esc(st.model||'–')}`,
+    `오늘 ${st.runs_today??0}/${st.daily_cap??'–'}회`,
+    `자동 갱신 ${Math.round((st.auto_minutes||0)/60)}시간마다`,
+  ].filter(Boolean).join(' · ');
+  const body = b?`
+    <div class="panel rep" style="margin-top:14px">
+      <div style="font-size:17px;font-weight:800">${esc(b.headline)}</div>
+      <ul>${(b.summary||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+      <h3>시장 종합 진단</h3><p>${esc(b.market_diagnosis)}</p>
+      <h3>자산배분 해설 (7자산)</h3><p>${esc(b.allocation_comment)}</p>
+      <h3>주시할 위험</h3><ul>${(b.risks||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+      <h3>다음에 볼 것</h3><ul>${(b.watch_next||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+      <div class="mini" style="margin-top:10px">${esc(b.disclaimer)}</div>
+    </div>`
+    : `<div class="panel mut" style="margin-top:14px">아직 생성된 AI 브리프가 없습니다. ${st.auth_ok===false?'아래 인증을 마치면 자동으로 생성됩니다.':'[AI 분석 실행]을 누르거나 자동 갱신을 기다려 주세요.'}</div>`;
+  $('tab-ai').innerHTML=`
+    <div class="banner">🤖 <b>AI 수석 브리프</b> — 이 서버가 운영자의 Claude 구독으로 직접 작성합니다(웹사이트 자체 실행 — 별도 앱 불필요, 휴대폰에서도 그대로).
+      결정론 분석 수치만 근거로 쓰며, 데이터가 안 바뀌면 자동 실행은 건너뛰어 토큰을 아낍니다.</div>
+    ${authBanner}
+    <div class="panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+        <div>${badge} <span class="mini" style="margin-left:8px">${meta}</span></div>
+        <button id="ai-run" class="act" onclick="runAi()" ${st.running?'disabled':''}>${st.running?'생성 중…':'AI 분석 실행'}</button>
+      </div>
+      ${notice}${err}${skip}
+    </div>
+    ${body}`;
+}
+
+// ── 정확도(자체 적중 기록) — 매일 권고를 기록하고 실현 수익률로 채점 ──────────
+let TRACK=null;
+async function loadTrack(){
+  try{
+    const ctrl=new AbortController(); const t=setTimeout(()=>ctrl.abort(),20000);
+    const r=await fetch(API_BASE+'/api/v1/track',{cache:'no-store',signal:ctrl.signal});
+    clearTimeout(t);
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    TRACK=await r.json(); renderTrack();
+  }catch(_){ if(!TRACK){ $('tab-track').innerHTML='<div class="panel mut">적중 기록을 불러오지 못했습니다. 잠시 후 자동으로 다시 시도합니다…</div>'; setTimeout(loadTrack,8000);} }
+}
+function renderTrack(){
+  if(!TRACK) return;
+  const d=TRACK, s=d.summary;
+  const kpi=(label,val,sub)=>`<div class="panel"><div class="k">${label}</div><div class="v">${val}</div>${sub?`<div class="mini">${sub}</div>`:''}</div>`;
+  const cal = d.calibration_active
+    ? '<span class="badge b-ok">보정 활성</span>'
+    : `<span class="badge b-info">보정 대기</span> <span class="mini">방향 표본 ${s?s.n_directional:0}/${d.calibration_min_n}개 필요</span>`;
+  let body='';
+  if(s && s.n_scored>0){
+    const rows=(d.scores||[]).slice().reverse().map(x=>`<tr>
+      <td>${x.date}</td><td class="mut">${x.regime}</td>
+      <td class="${x.risk_on>0?'up':(x.risk_on<0?'down':'mut')}">${x.risk_on>0?'+':''}${x.risk_on.toFixed(2)}</td>
+      <td class="${x.risk_spread_pct>0?'up':'down'}">${x.risk_spread_pct>0?'+':''}${x.risk_spread_pct.toFixed(2)}%</td>
+      <td class="${x.excess_pct>=0?'up':'down'}">${x.excess_pct>=0?'+':''}${x.excess_pct.toFixed(2)}%</td>
+      <td>${x.hit===null?'<span class="mut">–</span>':(x.hit?'<span class="up">적중</span>':'<span class="down">빗나감</span>')}</td></tr>`).join('');
+    body=`
+    <div class="kpi">
+      ${kpi('기록 / 채점', `${d.n_predictions_recorded} / ${s.n_scored}`, '하루 1건, 5거래일 뒤 채점')}
+      ${kpi('방향 적중률', s.hit_rate==null?'–':pct(s.hit_rate), `방향 콜 ${s.n_directional}건 기준`)}
+      ${kpi('평균 초과수익', s.avg_excess_pct==null?'–':(s.avg_excess_pct>=0?'+':'')+s.avg_excess_pct.toFixed(2)+'%', '중립 분산 대비 (5거래일·원화 기준)')}
+      ${kpi('누적 초과수익', s.cum_excess_pct==null?'–':(s.cum_excess_pct>=0?'+':'')+s.cum_excess_pct.toFixed(2)+'%', '채점된 전체 기간')}
+    </div>
+    <div class="panel"><h2>일별 채점 내역 (최근 ${(d.scores||[]).length}건)</h2>
+      <table><thead><tr><th>날짜</th><th>국면</th><th>위험선호</th><th>실현 스프레드</th><th>초과수익</th><th>판정</th></tr></thead>
+      <tbody>${rows}</tbody></table>
+      <div class="mini" style="margin-top:8px">실현 스프레드 = 위험자산(미장·국장·비트코인) 평균수익 − 방어자산(국채·금·달러·현금) 평균수익. 위험선호 부호와 스프레드 부호가 같으면 적중.</div></div>`;
+  } else {
+    body=`<div class="panel"><h2>기록 쌓는 중</h2>
+      <p class="why">오늘부터 매일 권고(국면·위험선호·7자산 비중)가 자동 기록됩니다. 각 기록은 <b>5거래일 뒤</b> 실제 시세(원화 기준)로 채점되므로, 첫 채점 결과는 약 일주일 후부터 이 화면에 나타납니다.</p>
+      <div class="mini">현재 기록 ${d.n_predictions_recorded}건 · 채점 0건</div></div>`;
+  }
+  $('tab-track').innerHTML=`
+    <div class="banner">🎯 <b>자체 적중 기록</b> — 이 플랫폼이 스스로 낸 권고를 기록하고, 5거래일 뒤 실현 수익률로 채점합니다(가짜 백테스트 아님 · 실전 기록만).
+      방향 표본이 ${d.calibration_min_n}건 쌓이면 실제 적중률로 확신도를 자동 보정합니다(±15%p 한도). ${cal}</div>
+    ${body}`;
+}
+
+function renderAlloc(s){
+  const p=s.portfolio, allocs=p.allocations;
+  let acc=0; const stops=allocs.map(a=>{const st=acc; acc+=a.weight; return `${COLOR[a.asset]} ${(st*100).toFixed(2)}% ${(acc*100).toFixed(2)}%`;});
+  const maxw=Math.max(0.4,...allocs.map(a=>a.weight));
+  const rows=allocs.map(a=>`
+    <div class="alloc">
+      <span class="dot" style="background:${COLOR[a.asset]}"></span>
+      <span class="nm">${a.label_ko}</span>
+      <span class="barwrap">
+        <i style="width:${(a.weight/maxw*100).toFixed(1)}%;background:${COLOR[a.asset]}"></i>
+        <span class="nt" title="중립 ${pct(a.neutral_weight)}" style="left:${(a.neutral_weight/maxw*100).toFixed(1)}%"></span>
+      </span>
+      <span class="wt">${pct(a.weight,1)}</span>
+      <span class="pill ${STANCECLS[a.stance]}">${STANCEKO[a.stance]}</span>
+    </div>
+    <div class="why">${a.rationale}</div>`).join('');
+  $('tab-alloc').innerHTML=`
+    <div class="banner">📌 <b>최적 자산배분</b> — 달러·미국채·미장·국장·현금·비트코인·금 7개 자산을 시황·예측으로 융합한 권고 비중입니다.
+      흰 눈금은 중립(분산) 기준선이며, 이 한 화면으로 자산시장 전체 향방을 봅니다.</div>
+    <div class="grid cols-3" style="margin-bottom:14px">
+      <div class="panel"><div class="k">시장 한줄평</div><div style="font-size:17px;font-weight:700;margin-top:6px">${p.headline}</div></div>
+      <div class="panel"><div class="k">위험선호 점수</div><div class="v">${p.risk_on_score>0?'+':''}${p.risk_on_score.toFixed(2)}</div><div class="mini">${p.risk_on_score>=0?'위험선호':'위험회피'} · 확신도 ${pct(p.confidence)}</div></div>
+      <div class="panel"><div class="k">데이터 커버리지</div><div class="v">${pct(p.coverage)}</div><div class="mini">국면 ${s.regime.primary_ko||s.regime.primary}</div></div>
+    </div>
+    <div class="panel">
+      <h2>권고 포트폴리오 (7자산)</h2>
+      <div class="hero">
+        <div class="donut" style="--g:conic-gradient(${stops.join(',')})">
+          <div class="ctr"><div class="mini">위험선호</div><div style="font-size:22px;font-weight:800">${p.risk_on_score>0?'+':''}${p.risk_on_score.toFixed(2)}</div></div>
+        </div>
+        <div class="legend">${rows}</div>
+      </div>
+      <div class="mini" style="margin-top:12px">${p.notes.join(' · ')}</div>
+    </div>`;
+}
+
+function renderReport(s){
+  const r=s.report;
+  const secs=r.sections.map(sec=>`<h3>${sec.heading}</h3>${sec.body?`<p>${sec.body}</p>`:''}${sec.bullets.length?'<ul>'+sec.bullets.map(b=>`<li>${b}</li>`).join('')+'</ul>':''}`).join('');
+  $('tab-report').innerHTML=`
+    <div class="panel rep">
+      <div style="display:flex;justify-content:space-between;align-items:start;gap:10px">
+        <div><h2 style="margin-bottom:6px">${r.title}</h2><div style="font-size:16px;font-weight:700">${r.headline}</div></div>
+        <button class="act" onclick="dlReport()">리포트 .md 다운로드</button>
+      </div>
+      <p style="margin-top:12px">${r.summary}</p>
+      ${secs}
+    </div>`;
+}
+function dlReport(){
+  const md=STATE.report.markdown, blob=new Blob([md],{type:'text/markdown'});
+  const a=document.createElement('a'); a.href=URL.createObjectURL(blob);
+  a.download='market-watcher-report.md'; a.click();
+}
+
+function renderRegime(s){
+  const r=s.regime;
+  const probs=Object.entries(r.probabilities).map(([k,v])=>`<div class="row"><span>${k}</span><span style="flex:1;margin:0 10px"><span class="bar"><span style="width:${(v*100)}%"></span></span></span><span class="mut">${pct(v,1)}</span></div>`).join('');
+  const yd=r.yield_decomposition;
+  $('tab-regime').innerHTML=`<div class="grid cols-2">
+    <div class="panel"><h2>시장 국면 (4개 워처 융합 · 결정론)</h2>
+      <div class="row"><span>1순위</span><b>${r.primary_ko||r.primary}</b></div>
+      <div class="row"><span>2순위</span><span class="mut">${r.secondary_ko||r.secondary||'–'}</span></div>
+      <div class="row"><span>확신도 / 전환위험</span><span>${pct(r.confidence)} / ${pct(r.transition_risk)}</span></div>
+      <div class="row"><span>커버리지</span><span>${pct(r.coverage)}</span></div>
+      <div class="row"><span>지지 / 상충 신호</span><span>${r.supporting.length} / ${r.contradictory.length}</span></div>
+      <div class="mini" style="margin-top:8px">금리 분해: ${yd.available?'가용':'미가용 — '+yd.basis}</div></div>
+    <div class="panel"><h2>국면 확률 분포</h2>${probs}</div></div>`;
+}
+
+function renderCio(s){
+  const c=s.cio;
+  const ww=c.watcher_weights.map(w=>`<div class="row"><span>${w.watcher.replace('_WATCHER','')}</span><span style="flex:1;margin:0 10px"><span class="bar"><span style="width:${w.weight*100}%"></span></span></span><span class="mut">${pct(w.weight)}<span class="mini"> · 적중률 ${w.components&&w.components.accuracy!=null?pct(w.components.accuracy):'–'}</span></span></div>`).join('');
+  const tilt=o=>Object.entries(o||{}).filter(([,v])=>Math.abs(v)>0.001).map(([k,v])=>`<div class="row"><span>${k}</span><span class="${v>0?'up':'down'}">${v>0?'선호 +':'회피 '}${(+v).toFixed(2)}</span></div>`).join('');
+  const styleRows=tilt(c.style_tilts)||'<div class="mut">중립 (특별한 스타일 치우침 없음)</div>';
+  const sectorRows=tilt(c.sector_tilts)||'<div class="mut">중립 (섹터 치우침 없음)</div>';
+  const dis=c.disagreements.length?'<div class="mini warn" style="margin-top:8px">⚠ '+c.disagreements.join(' · ')+'</div>':'';
+  $('tab-cio').innerHTML=`
+    ${c.strategy_brief?`<div class="panel" style="margin-bottom:14px"><h2>오늘의 투자 전략 (매일 갱신)</h2><p class="why">${c.strategy_brief}</p></div>`:''}
+    <div class="grid cols-2">
+    <div class="panel"><h2>자산배분 종합 (워처 가중)</h2>
+      <div class="row"><span>위험선호 / 현금</span><span>${c.risk_on_score>0?'+':''}${c.risk_on_score.toFixed(2)} / ${pct(c.target_cash_ratio)}</span></div>
+      <div class="row"><span>자산군(주식·채권·현금)</span><span>${pct(c.asset_class_allocation.EQUITY)} · ${pct(c.asset_class_allocation.BOND)} · ${pct(c.asset_class_allocation.CASH)}</span></div>
+      <div class="row"><span>국가(한국·미국)</span><span>${pct(c.country_allocation.KOREA)} · ${pct(c.country_allocation.US)}</span></div>
+      <div style="margin:10px 0 4px" class="mini">워처 가중 (정확도×국면적합×신선도×독립성×캘리브레이션)</div>${ww}${dis}</div>
+    <div class="panel"><h2>스타일·섹터 틸트</h2>
+      <div class="mini" style="margin:2px 0 4px">스타일 (성장/가치 등)</div>${styleRows}
+      <div class="mini" style="margin:10px 0 4px">섹터</div>${sectorRows}
+      <div class="row" style="margin-top:10px"><span>포트폴리오 확신도</span><b>${pct(c.portfolio_confidence)}</b></div>
+      <div class="mini" style="margin-top:8px">경제적 익스포저 판단 (종목 아님). 시스템 탭에서 종목 변환·리스크 판정 확인.</div></div></div>`;
+}
+
+function renderSignals(s){
+  const rows=s.signals.map(x=>`<tr><td>${x.watcher.replace('_WATCHER','')}</td><td>${x.target}</td><td>${x.horizon}</td>
+    <td class="${x.direction==='UP'?'up':(x.direction==='DOWN'?'down':'mut')}">${x.direction}</td><td>${pct(x.confidence)}</td>
+    <td class="mut">${x.expected_move!=null?x.expected_move+(x.unit||''):'–'}</td><td>${x.data_quality}</td>
+    <td class="${x.stale?'down':'mut'}">${x.stale?'만료':'유효'}</td></tr>`).join('');
+  $('tab-signals').innerHTML=`<div class="panel"><h2>정규화 신호 (${s.signals.length})</h2>
+    <table><thead><tr><th>워처</th><th>대상</th><th>기간</th><th>방향</th><th>확신</th><th>예상폭</th><th>품질</th><th>신선도</th></tr></thead>
+    <tbody>${rows||'<tr><td colspan=8 class="mut">신호 없음</td></tr>'}</tbody></table></div>`;
+}
+
+function renderNews(s){
+  const b=s.news_brief; if(!b){ $('tab-news').innerHTML='<div class="panel mut">데이터 준비 중…</div>'; return; }
+  const themes=b.themes.map(t=>`<div class="panel" style="margin-bottom:10px">
+     <div style="display:flex;justify-content:space-between;align-items:center"><b>${t.title}</b><span class="mini">${(t.items||[]).length}건</span></div>
+     <div class="why" style="margin-top:6px">${t.body}</div>
+     ${(t.items||[]).length?'<ul class="rep">'+t.items.map(x=>`<li>${x}</li>`).join('')+'</ul>':''}</div>`).join('');
+  const wl=(b.watchlist||[]).map(w=>`<li>${w}</li>`).join('');
+  $('tab-news').innerHTML=`
+    <div class="banner">📰 <b>데일리 분석 브리프</b> — 헤드라인 나열이 아니라, 수집 뉴스를 주제별로 묶고 분석·종합을 반영해 가공한 제3의 브리프입니다.</div>
+    <div class="panel" style="margin-bottom:14px"><h2>${b.title}</h2><p class="why">${b.market_read}</p>
+      <div class="mini" style="margin-top:6px">반영 뉴스 ${b.source_count}건 · 부동산 뉴스는 부동산 탭에서 별도 정리</div></div>
+    <h2 style="color:var(--mut);font-size:13px;margin:0 0 10px">주제별 분석</h2>${themes||'<div class="panel mut">수집된 일반 뉴스가 부족합니다.</div>'}
+    ${wl?`<div class="panel" style="margin-top:4px"><h2>지켜볼 것</h2><ul class="rep">${wl}</ul></div>`:''}`;
+}
+
+function renderSystem(s){
+  const wh=Object.entries(s.watchers.health).map(([w,o])=>{const e=s.watchers.errors[w];
+    return `<div class="row"><span>${w.replace('_WATCHER','')}</span><span class="${o?'':'down'}">${o?'정상':'장애'}${e?' <span class="mini">'+e.join('; ')+'</span>':''}</span></div>`;}).join('');
+  const props=s.proposals.map(p=>`<tr><td>${p.exposure}</td><td class="${p.direction==='INCREASE'?'up':'down'}">${p.direction}</td>
+    <td>${p.chosen_ticker||'<span class="mut">미등록</span>'}</td><td>${p.tradable?'가능':'<span class="mut">불가</span>'}</td>
+    <td class="mut">${p.decision?p.decision.status:'—'}${p.decision&&p.decision.failed_checks.length?' <span class="mini">('+p.decision.failed_checks.slice(0,2).join(',')+'…)</span>':''}</td></tr>`).join('');
+  $('tab-system').innerHTML=`<div class="grid cols-2">
+    <div class="panel"><h2>워처 상태 (읽기 전용)</h2>${wh}
+      <div class="mini" style="margin-top:8px">커버리지 ${pct(s.watchers.coverage)} · 장애/만료 신호는 확신도를 낮추고 의존 전략을 차단합니다(가짜 대체 없음).</div></div>
+    <div class="panel"><h2>운영/안전</h2>
+      <div class="row"><span>운영 모드</span><span>${s.mode}</span></div>
+      <div class="row"><span>라이브 무장</span><span class="${s.live_armed?'down':''}">${s.live_armed?'ON':'OFF (기본)'}</span></div>
+      <div class="row"><span>킬스위치</span><span>${s.kill_switch.engaged?'ON':'OFF'}</span></div>
+      <div class="row"><span>승인목록(종목/전략)</span><span>${s.limits.allowed_instruments} / ${s.limits.allowed_strategies}</span></div>
+      <div class="row"><span>장중 여부</span><span>${s.limits.market_open?'개장':'폐장(기본)'}</span></div></div>
+    <div class="panel" style="grid-column:1/-1"><h2>익스포저 → 종목 변환 → 리스크 판정 (deny-by-default)</h2>
+      <table><thead><tr><th>익스포저</th><th>방향</th><th>매핑 종목</th><th>거래</th><th>리스크 판정</th></tr></thead>
+      <tbody>${props||'<tr><td colspan=5 class="mut">없음</td></tr>'}</tbody></table>
+      <div class="mini" style="margin-top:8px">주문 실행 기능은 비활성/미구현. 승인목록이 비어 있어 모든 주문 의도가 차단됩니다(의도된 안전 기본값).</div></div></div>`;
+}
+function renderSynth(s){
+  const sy=s.synthesis; if(!sy){ $('tab-synth').innerHTML='<div class="panel mut">데이터 준비 중…</div>'; return; }
+  const tk=sy.takeaways.map(t=>`<tr><td>${t.label_ko}${t.present?'':' <span class="mini">(미가용)</span>'}</td><td>${t.standalone}</td><td class="why">${t.in_context}</td></tr>`).join('');
+  const KIND={CONFIRMATION:['확인','b-ok'],DIVERGENCE:['디커플링','b-bad'],TRANSMISSION:['전이','b-info'],REGIME_NUANCE:['국면해석','b-warn'],UNCERTAINTY:['불확실','b-info']};
+  const ins=sy.insights.map(i=>{const k=KIND[i.kind]||[i.kind,'b-info'];return `<div class="panel" style="margin-bottom:10px"><span class="badge ${k[1]}">${k[0]}</span> <b style="margin-left:6px">${i.title}</b><div class="why" style="margin-top:6px">${i.detail}</div></div>`;}).join('');
+  $('tab-synth').innerHTML=`
+    <div class="banner">🧭 <b>4개 워처 종합</b> — 각 시장을 <b>따로</b> 볼 때와 <b>합쳐서</b> 볼 때 시사점이 어떻게 달라지는지에 집중합니다.</div>
+    <div class="panel" style="margin-bottom:14px"><h2>종합 결론</h2><div style="font-size:15px;font-weight:600;margin-bottom:6px">${sy.headline}</div><p class="why">${sy.bottom_line}</p></div>
+    <div class="panel" style="margin-bottom:14px"><h2>워처별 — 단독 시사점 vs 종합 시사점</h2>
+      <table><thead><tr><th>워처</th><th>단독으로 보면</th><th>종합하면</th></tr></thead><tbody>${tk}</tbody></table></div>
+    <h2 style="color:var(--mut);font-size:13px;letter-spacing:.7px;margin:0 0 10px">교차 인사이트 (합쳐야 보이는 것)</h2>${ins}`;
+}
+function renderRealEstate(s){
+  const re=s.realestate; if(!re){ $('tab-realestate').innerHTML='<div class="panel mut">데이터 준비 중…</div>'; return; }
+  const topic=t=>`<div class="recard"><b>${t.title}</b>${t.body?`<div class="why" style="margin-top:4px">${t.body}</div>`:''}${t.bullets&&t.bullets.length?'<ul class="rep">'+t.bullets.map(b=>`<li>${b}</li>`).join('')+'</ul>':''}</div>`;
+  const nv=q=>'https://search.naver.com/search.naver?query='+encodeURIComponent(q);
+  const listings=re.kr_listings.map(li=>`<div class="recard">
+     <div style="display:flex;justify-content:space-between;align-items:center;gap:6px"><b>${li.area}</b>
+       <span><a class="act" target="_blank" rel="noopener" href="${nv(li.query)}">네이버검색</a> <a class="act" target="_blank" rel="noopener" href="https://hogangnono.com/">호갱노노</a></span></div>
+     <div class="why" style="margin-top:6px">${li.complexes.join(' · ')}</div>
+     <div class="mini" style="margin-top:4px">${li.note}</div></div>`).join('');
+  const redevCard=li=>`<div class="recard">
+     <div style="display:flex;justify-content:space-between;align-items:center;gap:6px"><b>${li.area}</b>
+       <a class="act" target="_blank" rel="noopener" href="${nv(li.query)}">네이버검색</a></div>
+     <div class="why" style="margin-top:6px">${li.complexes.join(' · ')}</div>
+     <div class="mini" style="margin-top:4px">${li.note}</div></div>`;
+  const redev=(re.kr_redev||[]).map(redevCard).join('');
+  const pinned=(re.kr_redev_pinned||[]).map(redevCard).join('');
+  const usm=re.us_markets.map(m=>`<div class="recard">
+     <div style="display:flex;justify-content:space-between;align-items:center;gap:6px"><b>${m.region} <span class="mini">${m.state}</span></b><span class="pill">${m.profile}</span></div>
+     <div class="why" style="margin-top:6px">${m.thesis}</div>
+     <div class="mini" style="margin-top:4px">수요: ${m.demand}</div>
+     <div class="mini">리스크: ${m.risks} · 적합: ${m.best_for}</div></div>`).join('');
+  const arch=(re.us_archive||[]).map(a=>`<div class="row" style="align-items:flex-start"><span class="mini" style="min-width:74px">${a.date}</span><span class="mini" style="flex:1;margin-left:8px">${(a.picks||[]).map(p=>p.reason?`<b>${p.region}</b> <span style="opacity:.75">— ${p.reason}</span>`:`<b>${p.region}</b>`).join('<br>')}</span></div>`).join('');
+  const renews=(re.re_news||[]).map(n=>`<li>${n}</li>`).join('');
+  const inst=re.instruments.map(i=>`<tr><td><b>${i.ticker}</b></td><td>${i.name}</td><td><span class="pill">${i.kind}</span></td><td class="why">${i.note}</td></tr>`).join('');
+  // 섹션 헬퍼: 제목 클릭으로 접고 펼침(open=false면 처음부터 접힌 상태).
+  const sec=(title,body,open)=>`<div class="panel${open?'':' collapsed'}" style="margin-bottom:12px"><h2>${title}</h2>${body}</div>`;
+  const stanceBody=`<div class="row"><span>🇰🇷 한국 금리(BOK)</span><b>${re.stance.kr_rate_env}</b></div>
+      <div class="row"><span>한국 부동산</span><span class="why" style="text-align:right;max-width:68%">${re.stance.kr_stance}</span></div>
+      <div class="row"><span>🇺🇸 미국 금리(Fed)</span><b>${re.stance.us_rate_env}</b></div>
+      <div class="row"><span>미국 부동산</span><span class="why" style="text-align:right;max-width:68%">${re.stance.us_stance}</span></div>
+      <div class="mini" style="margin-top:8px">${re.stance.rationale}</div>`;
+  const newsBody=`<ul class="rep">${renews}</ul><div class="mini">부동산 관련 뉴스만 따로 모았습니다(일반 뉴스 탭과 분리).</div>`;
+  const usBody=usm+(arch?`<div class="recard"><b>과거 추천 (간소 보관)</b><div style="margin-top:6px">${arch}</div></div>`:'');
+  const instBody=`<table><thead><tr><th>티커</th><th>이름</th><th>유형</th><th>메모</th></tr></thead><tbody>${inst}</tbody></table>`;
+  $('tab-realestate').innerHTML=`
+    <div class="banner">🏠 <b>부동산</b> — 한국(BOK 금리)·미국(Fed 금리) 분리. 정보·교육용(면책) 전제, 권고는 과감히. <b>각 섹션 제목을 누르면 접고 펼쳐집니다.</b></div>
+    ${(re.kr_strategy&&re.kr_strategy.length)?sec('🔥 공격형 투자 전략 <span class="mini">(리스크 감수형 · 정비 초기+교통 호재 선점)</span>', re.kr_strategy.map(topic).join(''), true):''}
+    ${sec('💹 금리 연동 스탠스 <span class="mini">(한국=한국은행 · 미국=연준)</span>', stanceBody, true)}
+    ${renews?sec('📌 부동산 뉴스 <span class="mini">(정책·대출·세제·교통)</span>', newsBody, false):''}
+    <div class="grid cols-2">
+      <div>
+        ${sec('🇰🇷 광역철도 <span class="mini">(GTX·서부선·고양은평선·동부선)</span>', re.kr_rail.map(topic).join(''), true)}
+        ${sec('🇰🇷 재개발·재건축 <span class="mini">(⭐ 고정 관심구역 + 매일 갱신)</span>', pinned+redev, true)}
+        ${sec('🇰🇷 핵심 권역·단지 <span class="mini">(네이버/호갱노노)</span>', listings, false)}
+        ${sec('🇰🇷 청약 <span class="mini">(청약홈)</span>', re.kr_subscriptions.map(topic).join(''), false)}
+        ${sec('🇰🇷 기타 핵심 토픽', re.kr_topics.map(topic).join(''), false)}
+      </div>
+      <div>
+        ${sec('🇺🇸 오늘의 미국 지역 추천 <span class="mini">(매일 로테이션)</span>', usBody, false)}
+        ${sec('🇺🇸 투자 경로·세제·금리', re.us_evergreen.map(topic).join(''), false)}
+        ${sec('🏦 관련 종목·ETF <span class="mini">(REIT·홈빌더·인프라)</span>', instBody, false)}
+        ${sec('📋 제도·규제', re.regulations.map(topic).join(''), false)}
+      </div>
+    </div>
+    <div class="mini" style="margin-top:10px">${re.notes.join(' ')}</div>`;
+}
+function renderWorld(s){
+  const w=s.world_view; if(!w){ $('tab-world').innerHTML='<div class="panel mut">데이터 준비 중…</div>'; return; }
+  const g=w.converged_risk_on, posp=((g+1)/2*100).toFixed(1);
+  const lbl=g>=0.25?'위험선호 우위':(g<=-0.25?'위험회피 우위':'중립·혼조');
+  const kpi=[['종합 위험선호',(g>0?'+':'')+g.toFixed(2),lbl],['확신도',Math.round(w.confidence*100)+'%',''],
+    ['수렴',w.converged?'수렴 완료':'미수렴',w.iterations+'라운드'],['합의/이견',w.consensus.length+' / '+w.dissent.length,'데스크']]
+    .map(k=>`<div class="panel card"><div class="k">${k[0]}</div><div class="v">${k[1]}</div>${k[2]?`<div class="mini">${k[2]}</div>`:''}</div>`).join('');
+  const desks=w.desks.map(d=>`<div class="panel">
+     <div style="display:flex;justify-content:space-between;align-items:center;gap:6px"><b>${d.label_ko}</b><span class="pill">${d.lean_label}</span></div>
+     <div style="margin:7px 0"><span class="bar"><span style="width:${Math.round(d.conviction*100)}%"></span></span></div>
+     <div class="mini">확신 ${Math.round(d.conviction*100)}%</div>
+     <div class="why" style="margin-top:6px">${d.summary}</div>
+     ${d.dissent?`<div class="mini" style="margin-top:4px">반론: ${d.dissent}</div>`:''}</div>`).join('');
+  const tl=w.rounds.map(r=>`<div class="step"><div class="mini">라운드 ${r.round_no}</div>
+     <div style="font-size:18px;font-weight:800">${(r.global_score>0?'+':'')+r.global_score.toFixed(2)}</div>
+     <div class="mini">${r.global_label} · Δ${r.delta.toFixed(2)}</div>
+     <div class="mini" style="margin-top:4px">${r.note}</div></div>`).join('');
+  const intel=w.intel.map(i=>`<div class="panel">
+     <div style="display:flex;justify-content:space-between;align-items:center;gap:6px"><b>${i.label_ko}</b><span class="pill">${i.standalone_lean}</span></div>
+     ${i.notes&&i.notes.length?'<ul class="rep">'+i.notes.map(n=>`<li>${n}</li>`).join('')+'</ul>':'<div class="mini" style="margin-top:6px">수집된 내부 코멘트 없음(워처 응답 제한)</div>'}
+     ${i.endpoints&&i.endpoints.length?`<div class="mini">수집 경로: ${i.endpoints.join(', ')}</div>`:''}</div>`).join('');
+  $('tab-world').innerHTML=`
+    <div class="banner">🧠 <b>세계 경제 조망</b> — 파견 에이전트가 네 워처의 내부 분석까지 수집하고, 마켓 와처의 섹터 데스크와 수석이 토론·조율한 뒤, 글로벌 조망을 각 시장에 되돌려 <b>개별균형 ↔ 전체균형이 수렴</b>할 때까지 반복한 결과입니다.</div>
+    <div class="kpi">${kpi}</div>
+    <div class="panel" style="margin-bottom:14px"><h2>수석 종합 결론</h2>
+      <div style="font-size:16px;font-weight:700;margin-bottom:6px">${w.headline}</div>
+      <p class="why">${w.overview}</p>
+      <div class="meter"><i style="left:${posp}%"></i></div>
+      <div class="mini">← 위험회피　·　중립　·　위험선호 →</div>
+      <p class="why" style="margin-top:10px"><b>한줄 결론:</b> ${w.bottom_line}</p></div>
+    <div class="panel" style="margin-bottom:14px"><h2>수렴 과정 (글로벌 ↔ 개별시장 조율 라운드)</h2><div class="tl">${tl}</div></div>
+    <h2 style="color:var(--mut);font-size:13px;margin:0 0 10px">섹터 데스크 의견 (마켓 와처 자체 분석)</h2>
+    <div class="desks" style="margin-bottom:14px">${desks}</div>
+    <h2 style="color:var(--mut);font-size:13px;margin:0 0 10px">파견 인텔 (각 워처 내부 수집)</h2>
+    <div class="desks">${intel}</div>`;
+}
+function renderGeo(s){
+  const g=s.geopolitics; if(!g){ $('tab-geo').innerHTML='<div class="panel mut">데이터 준비 중…</div>'; return; }
+  const lvlCls=g.risk_level.indexOf('높음')>=0?'b-bad':(g.risk_level.indexOf('낮음')>=0?'b-ok':'b-warn');
+  const themes=g.themes.map(t=>`<div class="panel" style="margin-bottom:10px">
+     <div style="display:flex;justify-content:space-between;gap:8px;align-items:center"><b>${t.title}</b><span class="pill">${t.region}</span></div>
+     <div class="why" style="margin-top:6px">${t.summary}</div>
+     ${t.analysis?`<div class="why" style="margin-top:6px">${t.analysis}</div>`:''}
+     ${t.asset_impact?`<div class="why" style="margin-top:6px"><b>자산 영향:</b> ${t.asset_impact}</div>`:''}
+     ${t.scenarios&&t.scenarios.length?'<ul class="rep">'+t.scenarios.map(x=>`<li>${x}</li>`).join('')+'</ul>':''}
+     ${t.watch&&t.watch.length?'<div class="mini" style="margin-top:4px">지켜볼 점: '+t.watch.join(' · ')+'</div>':''}</div>`).join('');
+  $('tab-geo').innerHTML=`
+    <div class="banner">🌐 <b>국제 정세</b> — 테마별 <b>심층 분석</b> 후 <b>종합 리포트</b>로 묶었습니다(자산시장 영향·시나리오·국면 기반 위험도).</div>
+    <div class="panel" style="margin-bottom:14px"><h2>지정학 위험도 · 종합 리포트</h2>
+      <div class="row"><span>현재 위험도</span><span class="badge ${lvlCls}">${g.risk_level}</span></div>
+      <div class="why" style="margin-top:8px">${g.risk_rationale}</div>
+      ${g.synthesis?`<p class="why" style="margin-top:10px"><b>종합:</b> ${g.synthesis}</p>`:''}</div>
+    <h2 style="color:var(--mut);font-size:13px;margin:0 0 10px">테마별 심층 분석</h2>${themes}
+    <div class="mini" style="margin-top:10px">${g.notes.join(' ')}</div>`;
+}
+load();
+loadAi();
+loadTrack();
+setInterval(loadAi, 120000); // AI 브리프는 서버가 스스로 갱신 — 화면은 2분마다 동기화
+setInterval(loadTrack, 600000); // 적중 기록은 6시간 캐시 — 화면은 10분마다 동기화
+</script>
+</body>
+</html>

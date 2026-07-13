@@ -1,0 +1,21 @@
+# Render Blueprint — market-watcher 대시보드를 상시 구동 웹 서비스로 배포.
+# Render 대시보드에서 이 저장소를 연결하면 아래 정의대로 자동 생성됩니다.
+# (PC 전원과 무관하게 <서비스이름>.onrender.com 으로 휴대폰에서 접속 가능)
+services:
+  - type: web
+    name: market-watcher
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    # free: 15분 미사용 시 슬립(첫 접속 시 수십 초 콜드스타트, 서버측 자동 브리프도 슬립 중엔 멈춤).
+    # 항상 켜두려면 아래를 starter 로 바꾸세요(월 $7). 접속 자체는 free 에서도 됩니다.
+    plan: free
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      # Render 도메인 루트에서 서빙되므로 서브패스 프리픽스는 비웁니다.
+      - key: AUTOPILOT_PUBLIC_PREFIX
+        value: ""
+      # AI 수석 브리프용 Claude 구독 OAuth 토큰. 로컬에서 `claude setup-token` 실행 후
+      # 나온 토큰을 Render 대시보드 > Environment 에 직접 입력하세요(값은 저장소에 넣지 않음).
+      - key: CLAUDE_CODE_OAUTH_TOKEN
+        sync: false

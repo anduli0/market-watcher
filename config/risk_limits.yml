@@ -1,0 +1,63 @@
+# KIWOOM AUTOPILOT — deterministic risk limits (DENY-BY-DEFAULT).
+#
+# Empty allow-lists mean "deny everything". An instrument can only trade if its
+# ticker appears in allowed_instruments AND is active:true in instruments.yml.
+# A strategy can only act if it appears in allowed_strategies. These start empty
+# on purpose. Changes to this file are SAFETY-RELEVANT and must be recorded in an
+# ADR / WORKLOG entry and reviewed (see docs/RISK_POLICY.md).
+#
+# Monetary values are STRINGS to preserve Decimal precision (KRW). float forbidden.
+
+version: 1
+
+# ---- Allow-lists (DENY-BY-DEFAULT: both empty) ----
+allowed_instruments: []
+allowed_strategies: []
+
+# Market is treated CLOSED by default; the execution orchestrator must explicitly
+# assert an open, validated session before any order is risk-approved.
+market_open: false
+
+# ---- Account-level limits (KRW) ----
+daily_loss_limit: "3000000"          # 3,000,000 KRW realized loss/day -> kill switch
+weekly_loss_limit: "7000000"         # 7,000,000 KRW realized loss/week -> kill switch
+max_drawdown_pct: "8"                # rolling peak-to-trough on NAV
+max_gross_exposure: "200000000"      # 200,000,000 KRW total gross
+max_net_equity_exposure_pct: "70"    # net equity beta as % of NAV
+max_usd_exposure_pct: "40"           # total USD-denominated exposure as % of NAV
+min_cash_ratio_pct: "10"             # never deploy below this cash buffer
+max_portfolio_turnover_pct: "25"     # daily turnover ceiling as % of NAV
+max_concurrent_positions: 15
+max_unfilled_order_exposure: "30000000"
+
+# ---- Per-book capital ceilings (% of NAV) ----
+book_limits:
+  STRATEGIC_REGIME: {min_pct: "60", max_pct: "80"}
+  TACTICAL_ALPHA:   {min_pct: "0",  max_pct: "20"}
+  HEDGE:            {min_pct: "0",  max_pct: "20"}
+
+# ---- Position-level limits ----
+max_single_instrument_weight_pct: "25"
+max_sector_weight_pct: "30"
+max_thematic_overlap_pct: "35"
+max_foreign_equity_etf_pct: "40"
+max_duration_contribution_years: "6"
+max_inverse_exposure_pct: "0"        # inverse blocked unless Hedge-Book whitelisted
+max_leveraged_exposure_pct: "0"      # leverage blocked unless Hedge-Book whitelisted
+max_correlation_cluster_pct: "45"
+
+# ---- Order-level limits ----
+max_order_notional: "20000000"       # 20,000,000 KRW per order
+max_order_quantity: 50000
+max_pct_of_adv: "5"                  # order <= 5% of avg daily value traded
+max_spread_bps: "30"                 # reject if quoted spread > 30 bps
+max_nav_premium_discount_bps: "75"   # reject ETF trading >0.75% off iNAV
+max_estimated_slippage_bps: "20"
+min_liquidity_score: "0.4"
+price_deviation_pct: "3"             # limit price within 3% of last
+signal_max_age_seconds: 3600         # reject stale signals / expired intents
+market_close_cutoff_minutes: 10      # no new orders within 10 min of close
+
+# ---- Daily activity ----
+daily_trade_count: 30
+max_open_orders: 12

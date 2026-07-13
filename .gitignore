@@ -1,0 +1,19 @@
+# Python
+**/__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Secrets & local state — never commit
+.env
+.env.*
+data/
+*.log
+*.sqlite
+*.sqlite3
+*.db
+**/claude_oauth_token.txt
+**/.credentials.json

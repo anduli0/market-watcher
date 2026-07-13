@@ -1,0 +1,56 @@
+# WATCHER source registry — read-only HTTP endpoints the adapters poll.
+#
+# Each adapter fetches `latest_endpoint`, validates the source timestamp, assigns TTL,
+# and rejects anything older than `max_age_seconds`. A watcher that is down or stale
+# reduces confidence and BLOCKS dependent strategies; it must NEVER be replaced with
+# fabricated or stale-beyond-TTL data.
+#
+# TTLs are tuned to each producer's REGENERATION CADENCE so still-valid output is not
+# dropped: Fed ~5 cycles/day; KRW every ~2h; KOSPI & US regenerate ~once daily.
+
+fed_watcher:
+  enabled: true
+  base_url_env: FED_WATCHER_BASE_URL          # http://127.0.0.1:8000
+  latest_endpoint: /api/forecast/horizons     # public, no auth
+  health_endpoint: /health
+  extra_endpoints:
+    trading_desk: /api/trading/desk            # Treasury position view (DV01)
+  poll_seconds: 900                            # producer regenerates ~5x/day
+  ttl_seconds: 64800                           # 18h — slow-moving rate path
+  max_age_seconds: 129600                      # reject if >36h old
+
+krw_watcher:
+  enabled: true
+  base_url_env: KRW_WATCHER_BASE_URL           # http://127.0.0.1:8010
+  latest_endpoint: /api/forecast
+  health_endpoint: /health
+  extra_endpoints:
+    signal: /api/signal                         # FX trade signal (research only)
+  poll_seconds: 900
+  ttl_seconds: 14400                           # 4h — FX regime moves faster
+  max_age_seconds: 43200
+
+kospi_watcher:
+  enabled: true
+  base_url_env: KOSPI_WATCHER_BASE_URL         # http://127.0.0.1:18080
+  latest_endpoint: /api/v1/prediction/latest
+  health_endpoint: /health
+  extra_endpoints:
+    market_analysis: /api/v1/market/analysis    # sector board + investor flows
+    stock_reco: /api/v1/stocks/recommendations
+  poll_seconds: 900
+  ttl_seconds: 108000                          # 30h — daily 08:00 KST cadence
+  max_age_seconds: 172800                      # reject if >48h old
+
+us_watcher:
+  enabled: true
+  base_url_env: US_WATCHER_BASE_URL            # http://127.0.0.1:8088
+  latest_endpoint: /api/v1/market/overview
+  health_endpoint: /health
+  extra_endpoints:
+    regime: /api/v1/market/regime
+    rotation: /api/v1/rotation                  # sector + style leadership
+    recommendations: /api/v1/recommendations
+  poll_seconds: 900
+  ttl_seconds: 108000                          # 30h — daily 17:45 ET cadence
+  max_age_seconds: 172800                      # reject if >48h old
