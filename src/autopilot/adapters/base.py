@@ -10,6 +10,7 @@ contract-tested against captured fixtures with no I/O.
 from __future__ import annotations
 
 import asyncio
+import os
 import uuid
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
@@ -25,6 +26,11 @@ from autopilot.domain.time import now_utc
 # Stable namespace so the same (watcher, target, horizon, source_data_at) always
 # yields the same signal_id — deterministic parsing + natural dedup.
 _SIGNAL_NS = uuid.UUID("a1f0c0de-0000-4000-8000-0bad0bad0bad")
+
+# HTTP timeout for watcher calls. Local watchers answer in <1s so the 8s default is
+# ample; batch/CI builds reaching the watchers over the internet (Tailscale funnel —
+# e.g. FED /api/backtest/skill computes ~15s) set AUTOPILOT_HTTP_TIMEOUT higher.
+HTTP_TIMEOUT = float(os.environ.get("AUTOPILOT_HTTP_TIMEOUT", "8.0"))
 
 
 def make_signal_id(watcher: Watcher, target: str, horizon: str, source_data_at: datetime) -> str:
@@ -93,7 +99,7 @@ class WatcherAdapter(ABC):
         *,
         ttl_seconds: int,
         max_age_seconds: int,
-        timeout: float = 8.0,
+        timeout: float = HTTP_TIMEOUT,
         retries: int = 2,
         client: httpx.AsyncClient | None = None,
     ) -> None:

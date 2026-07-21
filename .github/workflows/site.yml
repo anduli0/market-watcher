@@ -53,6 +53,8 @@ jobs:
 
       - name: Build static site
         env:
+          # 러너→퍼널→PC 경유는 느림 (FED backtest/skill ~15s) — 로컬 8s 기본값 상향
+          AUTOPILOT_HTTP_TIMEOUT: "60"
           FED_WATCHER_BASE_URL: ${{ vars.FED_WATCHER_BASE_URL }}
           KRW_WATCHER_BASE_URL: ${{ vars.KRW_WATCHER_BASE_URL }}
           KOSPI_WATCHER_BASE_URL: ${{ vars.KOSPI_WATCHER_BASE_URL }}

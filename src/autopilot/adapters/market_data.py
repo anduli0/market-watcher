@@ -12,6 +12,7 @@ from typing import Any
 
 import httpx
 
+from autopilot.adapters.base import HTTP_TIMEOUT
 from autopilot.domain.enums import AssetClass
 
 # Yahoo proxy per asset. CASH is the KRW numeraire (0% daily return by definition).
@@ -69,7 +70,7 @@ async def _one(
 
 async def fetch_asset_history(range_: str = "3mo") -> dict[str, list[tuple[str, float]]]:
     """Daily closes per asset value-key (e.g. "US_EQUITY"). Missing assets omitted."""
-    async with httpx.AsyncClient(timeout=8.0) as client:
+    async with httpx.AsyncClient(timeout=HTTP_TIMEOUT) as client:
         results = await asyncio.gather(
             *(_one(client, a, s, range_) for a, s in PROXY.items())
         )

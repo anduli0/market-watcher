@@ -10,6 +10,8 @@ from typing import Any
 
 import httpx
 
+from autopilot.adapters.base import HTTP_TIMEOUT
+
 _KEYS = ("headline", "market_read", "market_view", "summary", "title", "lead")
 _MAXLEN = 180
 
@@ -54,7 +56,7 @@ async def _one(client: httpx.AsyncClient, label: str, url: str) -> list[tuple[st
 
 
 async def collect_news(base_urls: dict[str, str]) -> list[tuple[str, str]]:
-    async with httpx.AsyncClient(timeout=4.0) as client:
+    async with httpx.AsyncClient(timeout=max(4.0, HTTP_TIMEOUT / 2)) as client:
         tasks = [
             _one(client, label, base_urls[attr].rstrip("/") + path)
             for label, attr, path in _ENDPOINTS

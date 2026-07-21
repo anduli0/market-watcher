@@ -11,6 +11,7 @@ from typing import Any
 
 import httpx
 
+from autopilot.adapters.base import HTTP_TIMEOUT
 from autopilot.domain.enums import SignalDirection, Watcher
 from autopilot.domain.orchestration.schemas import WatcherIntel
 from autopilot.domain.signals.schemas import NormalizedSignal
@@ -140,5 +141,5 @@ async def _one(
 async def collect_intel(
     base_urls: dict[str, str], signals: list[NormalizedSignal]
 ) -> list[WatcherIntel]:
-    async with httpx.AsyncClient(timeout=8.0) as client:
+    async with httpx.AsyncClient(timeout=HTTP_TIMEOUT) as client:
         return list(await asyncio.gather(*(_one(client, w, base_urls, signals) for w in _SPEC)))

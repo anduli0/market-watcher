@@ -16,6 +16,7 @@ from typing import Any
 
 import httpx
 
+from autopilot.adapters.base import HTTP_TIMEOUT
 from autopilot.domain.enums import Watcher
 
 
@@ -178,6 +179,6 @@ async def _one(
 
 
 async def collect_accuracy(base_urls: dict[str, str]) -> dict[Watcher, float]:
-    async with httpx.AsyncClient(timeout=6.0) as client:
+    async with httpx.AsyncClient(timeout=max(6.0, HTTP_TIMEOUT)) as client:
         results = await asyncio.gather(*(_one(client, w, base_urls) for w in _SPEC))
     return {w: r for w, r in results if r is not None}
