@@ -3,9 +3,10 @@
 signals. Bitcoin and gold have no dedicated watcher, so their tilts are derived from the
 macro regime/factors (clearly an inference, not a fabricated signal).
 
-Method: start from a diversified NEUTRAL baseline, tilt multiplicatively by a per-asset
-attractiveness score scaled by regime confidence, then apply caps/floors and normalize.
-Low confidence => stays near the diversified baseline with more cash.
+Method: start from a return-SEEKING baseline (growth-tilted, gold demoted to a hedge
+sleeve), tilt multiplicatively by a per-asset attractiveness score scaled by regime
+confidence, then apply caps/floors and normalize. Low confidence => stays near the
+baseline with more cash; strong signals move the book decisively (conviction-driven).
 """
 
 from __future__ import annotations
@@ -21,16 +22,20 @@ from autopilot.domain.signals.schemas import NormalizedSignal
 
 A = AssetClass
 
+# Return-SEEKING strategic baseline (not an all-weather anchor): tilted to growth
+# assets (미장/국장/비트코인) with gold demoted from a 20% strategic anchor to a 10%
+# hedge sleeve. Gold/현금/국채 are held for their signal-driven, regime-specific role
+# (risk-off, easing, inflation) — not as a permanent ballast that caps upside.
 NEUTRAL: dict[AssetClass, float] = {
     A.USD: 0.10,
-    A.US_TREASURY: 0.15,
-    A.US_EQUITY: 0.25,
+    A.US_TREASURY: 0.12,
+    A.US_EQUITY: 0.35,
     A.KOREA_EQUITY: 0.15,
     A.CASH: 0.10,
-    A.BITCOIN: 0.05,
-    A.GOLD: 0.20,
+    A.BITCOIN: 0.08,
+    A.GOLD: 0.10,
 }
-CAP: dict[AssetClass, float] = {A.BITCOIN: 0.15, A.GOLD: 0.30}
+CAP: dict[AssetClass, float] = {A.BITCOIN: 0.18, A.GOLD: 0.20}
 CASH_FLOOR = 0.05
 
 
@@ -91,7 +96,16 @@ def _scores(regime: RegimeAssessment, signals: list[NormalizedSignal]) -> dict[A
         - 0.70 * _pos(usd)
         + 0.35 * _neg(usd),
         A.BITCOIN: 0.90 * r - 0.60 * _pos(usd) - 0.45 * _pos(h) - 0.60 * liq,
-        A.GOLD: 0.50 * _neg(r) + 0.50 * _neg(h) - 0.30 * _pos(usd) + 0.50 * infl + 0.45 * liq,
+        # Hawkish policy = rising REAL rates, gold's primary headwind (raises the
+        # opportunity cost of a zero-yield asset) — so penalize _pos(h), don't merely
+        # withhold the dovish bonus. The inflation term still rewards gold in a
+        # reinflation/stagflation regime, where it works as an inflation hedge.
+        A.GOLD: 0.50 * _neg(r)
+        + 0.50 * _neg(h)
+        - 0.45 * _pos(h)
+        - 0.30 * _pos(usd)
+        + 0.50 * infl
+        + 0.45 * liq,
     }
 
 
@@ -195,7 +209,7 @@ def build_portfolio(
     sc = _scores(regime, signals)
     usd = _usd_view(regime, signals)
     conf = regime.confidence
-    gain = 1.1 * (0.4 + 0.6 * conf)  # tilt strength scales with confidence
+    gain = 1.35 * (0.5 + 0.5 * conf)  # tilt strength scales with confidence (return-seeking)
     raw = {a: NEUTRAL[a] * math.exp(gain * _clamp(sc[a], -1.5, 1.5)) for a in NEUTRAL}
     weights = _apply_caps_floors(raw)
 
