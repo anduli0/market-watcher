@@ -1,0 +1,88 @@
+# MARKET WATCHER — GitHub Pages 배포 (서버 없는 상시 구동)
+#
+# 30분마다(+push, +수동 실행) 파이프라인을 1회 돌려 정적 스냅샷을 생성하고
+# Pages 로 배포합니다. 적중 기록(track_*.json)은 저장소에 커밋되어 영속됩니다.
+#
+# 최초 1회 설정:
+#   1) 저장소 Settings → Pages → Source: "GitHub Actions"
+#   2) (실데이터) Settings → Secrets and variables → Actions → Variables 에
+#      FED_WATCHER_BASE_URL / KRW_WATCHER_BASE_URL / KOSPI_WATCHER_BASE_URL /
+#      US_WATCHER_BASE_URL 을 공개 접속 가능한 워처 주소로 등록
+#   3) (선택 · AI 브리프) Secrets 에 CLAUDE_CODE_OAUTH_TOKEN 등록
+name: Build & deploy dashboard
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+permissions:
+  contents: write # track-record JSON 커밋백
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-site
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Install claude CLI (AI brief — only when token secret exists)
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          if [ -n "$CLAUDE_CODE_OAUTH_TOKEN" ]; then
+            npm install -g @anthropic-ai/claude-code || echo "claude CLI install failed — brief will reuse last stored"
+          else
+            echo "no CLAUDE_CODE_OAUTH_TOKEN secret — skipping"
+          fi
+
+      - name: Build static site
+        env:
+          FED_WATCHER_BASE_URL: ${{ vars.FED_WATCHER_BASE_URL }}
+          KRW_WATCHER_BASE_URL: ${{ vars.KRW_WATCHER_BASE_URL }}
+          KOSPI_WATCHER_BASE_URL: ${{ vars.KOSPI_WATCHER_BASE_URL }}
+          US_WATCHER_BASE_URL: ${{ vars.US_WATCHER_BASE_URL }}
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: python scripts/build_site.py
+
+      - name: Commit track record back (persistence)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/track_predictions.json data/track_scores.json data/ai_brief.json data/realestate_us_archive.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "no data changes"
+          else
+            git commit -m "chore: update track record & brief [skip ci]"
+            git pull --rebase origin master || true
+            git push
+          fi
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

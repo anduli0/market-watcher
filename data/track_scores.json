@@ -1,0 +1,15 @@
+{
+ "updated_at": "2026-07-21T01:55:26.766518+00:00",
+ "summary": {
+  "horizon_days": 5,
+  "n_predictions": 1,
+  "n_scored": 0,
+  "n_directional": 0,
+  "hit_rate": null,
+  "avg_stated_confidence": null,
+  "avg_excess_pct": null,
+  "cum_excess_pct": null,
+  "updated_at": null
+ },
+ "scores": []
+}

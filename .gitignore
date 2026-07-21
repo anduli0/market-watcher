@@ -10,10 +10,19 @@ venv/
 # Secrets & local state — never commit
 .env
 .env.*
-data/
+# data/: local state stays out, EXCEPT the non-secret JSONs the GitHub Pages
+# build commits back for persistence (track record, AI brief, RE archive).
+data/*
+!data/track_predictions.json
+!data/track_scores.json
+!data/ai_brief.json
+!data/realestate_us_archive.json
 *.log
 *.sqlite
 *.sqlite3
 *.db
 **/claude_oauth_token.txt
 **/.credentials.json
+
+# GitHub Pages build artifact (regenerated every run)
+site/
