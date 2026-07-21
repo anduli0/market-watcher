@@ -1,0 +1,1439 @@
+{
+ "as_of_utc": "2026-07-21T02:30:20.880968+00:00",
+ "as_of_kst": "2026-07-21T11:30:20.880968+09:00",
+ "warming": false,
+ "mode": "READ_ONLY",
+ "live_armed": false,
+ "kill_switch": {
+  "engaged": false,
+  "reason": null,
+  "source": null,
+  "since": null
+ },
+ "watchers": {
+  "coverage": 1.0,
+  "health": {
+   "FED_WATCHER": true,
+   "KRW_WATCHER": true,
+   "KOSPI_WATCHER": true,
+   "US_WATCHER": true
+  },
+  "errors": {}
+ },
+ "signals": [
+  {
+   "watcher": "FED_WATCHER",
+   "target": "US_POLICY_RATE_PATH",
+   "horizon": "6M",
+   "direction": "NEUTRAL",
+   "confidence": 0.0,
+   "regime": "neutral",
+   "expected_move": "0.0",
+   "unit": "BPS",
+   "data_quality": 0.17,
+   "age_seconds": 54015,
+   "stale": false
+  },
+  {
+   "watcher": "FED_WATCHER",
+   "target": "US_POLICY_RATE_PATH",
+   "horizon": "12M",
+   "direction": "NEUTRAL",
+   "confidence": 0.0,
+   "regime": "neutral",
+   "expected_move": "0.0",
+   "unit": "BPS",
+   "data_quality": 0.17,
+   "age_seconds": 54015,
+   "stale": false
+  },
+  {
+   "watcher": "FED_WATCHER",
+   "target": "US_POLICY_RATE_PATH",
+   "horizon": "3Y",
+   "direction": "NEUTRAL",
+   "confidence": 0.0,
+   "regime": "neutral",
+   "expected_move": "0.0",
+   "unit": "BPS",
+   "data_quality": 0.17,
+   "age_seconds": 54015,
+   "stale": false
+  },
+  {
+   "watcher": "FED_WATCHER",
+   "target": "US_POLICY_RATE_PATH",
+   "horizon": "10Y",
+   "direction": "DOWN",
+   "confidence": 0.0,
+   "regime": "dovish",
+   "expected_move": "-25.0",
+   "unit": "BPS",
+   "data_quality": 0.17,
+   "age_seconds": 54015,
+   "stale": false
+  },
+  {
+   "watcher": "KRW_WATCHER",
+   "target": "USD_KRW",
+   "horizon": "1W",
+   "direction": "DOWN",
+   "confidence": 0.0,
+   "regime": "krw_strong",
+   "expected_move": "-7.0",
+   "unit": "KRW",
+   "data_quality": 0.6,
+   "age_seconds": 2,
+   "stale": false
+  },
+  {
+   "watcher": "KRW_WATCHER",
+   "target": "USD_KRW",
+   "horizon": "1M",
+   "direction": "DOWN",
+   "confidence": 0.0,
+   "regime": "krw_strong",
+   "expected_move": "-16.0",
+   "unit": "KRW",
+   "data_quality": 0.6,
+   "age_seconds": 2,
+   "stale": false
+  },
+  {
+   "watcher": "KRW_WATCHER",
+   "target": "USD_KRW",
+   "horizon": "3M",
+   "direction": "UP",
+   "confidence": 0.0,
+   "regime": "krw_weak",
+   "expected_move": "9.0",
+   "unit": "KRW",
+   "data_quality": 0.6,
+   "age_seconds": 2,
+   "stale": false
+  },
+  {
+   "watcher": "KRW_WATCHER",
+   "target": "USD_KRW",
+   "horizon": "12M",
+   "direction": "UP",
+   "confidence": 0.0,
+   "regime": "krw_weak",
+   "expected_move": "21.0",
+   "unit": "KRW",
+   "data_quality": 0.6,
+   "age_seconds": 2,
+   "stale": false
+  },
+  {
+   "watcher": "KOSPI_WATCHER",
+   "target": "KOSPI200",
+   "horizon": "D5",
+   "direction": "DOWN",
+   "confidence": 0.82,
+   "regime": "DATA_UNCERTAIN",
+   "expected_move": null,
+   "unit": null,
+   "data_quality": 0.7,
+   "age_seconds": 3429,
+   "stale": false
+  },
+  {
+   "watcher": "US_WATCHER",
+   "target": "US_EQUITY",
+   "horizon": "NOWCAST",
+   "direction": "UP",
+   "confidence": 0.387,
+   "regime": "MODERATE_UPTREND",
+   "expected_move": "17.2",
+   "unit": "SCORE",
+   "data_quality": 0.54,
+   "age_seconds": 59,
+   "stale": false
+  }
+ ],
+ "regime": {
+  "primary": "US_TECH_LEADERSHIP",
+  "primary_ko": "미국 기술주 주도",
+  "secondary": "KOREA_DECOUPLING",
+  "secondary_ko": "한국 따로 가기(디커플링)",
+  "confidence": 0.689,
+  "coverage": 1.0,
+  "transition_risk": 0.63,
+  "probabilities": {
+   "US_TECH_LEADERSHIP": 0.449,
+   "KOREA_DECOUPLING": 0.2993,
+   "REGIME_UNCERTAIN": 0.1709,
+   "RECESSION_RISK": 0.0449,
+   "DEFENSIVE_ROTATION": 0.0359
+  },
+  "supporting": [
+   "d81bf60e43465f70967dc6cd01e35500"
+  ],
+  "contradictory": [
+   "1bc29ed569c25c9fadf3fafd524d91e9"
+  ],
+  "invalidations": [
+   {
+    "metric": "EQUITY_TILT",
+    "operator": "LT",
+    "value": "0"
+   }
+  ],
+  "yield_decomposition": {
+   "available": false,
+   "basis": "macro series not ingested (Fed /api/macro/series pending)",
+   "nominal_change_bps": null,
+   "real_change_bps": null,
+   "inflation_expectation_change_bps": null,
+   "term_premium_change_bps": null,
+   "growth_driven": null,
+   "inflation_driven": null,
+   "fiscal_driven": null
+  }
+ },
+ "cio": {
+  "strategy_brief": "오늘의 전략 — 시장은 '미국 기술주 주도' 국면(확신 69%)으로, 공격적 기조가 적절합니다. 현금은 약 26% 확보한 채, 늘릴 곳은 [US_TECH, US_SEMICONDUCTOR, KOREA_SEMICONDUCTOR], 줄일 곳은 [CASH]입니다. 위험선호 국면이라 분할 매수로 위험자산 비중을 키우되 과열 구간은 경계하세요. (매일 갱신되는 참고 전략이며 투자 권유가 아닙니다.)",
+  "risk_on_score": 0.185,
+  "target_cash_ratio": 0.263,
+  "asset_class_allocation": {
+   "EQUITY": 0.4531,
+   "BOND": 0.2839,
+   "CASH": 0.263
+  },
+  "country_allocation": {
+   "KOREA": 0.258,
+   "US": 0.4791,
+   "CASH": 0.263
+  },
+  "style_tilts": {
+   "GROWTH": 0.1,
+   "VALUE": -0.1
+  },
+  "sector_tilts": {
+   "SEMICONDUCTOR": 0.05
+  },
+  "portfolio_confidence": 0.6887431468109315,
+  "watcher_weights": [
+   {
+    "watcher": "FED_WATCHER",
+    "weight": 0.0365,
+    "components": {
+     "accuracy": 0.5226,
+     "regime_suitability": 0.8,
+     "horizon_suitability": 1.0,
+     "freshness": 0.1665,
+     "independence": 0.9,
+     "calibration": 0.7
+    }
+   },
+   {
+    "watcher": "KOSPI_WATCHER",
+    "weight": 0.3152,
+    "components": {
+     "accuracy": 0.6204,
+     "regime_suitability": 1.0,
+     "horizon_suitability": 1.0,
+     "freshness": 0.9683,
+     "independence": 0.9,
+     "calibration": 0.7
+    }
+   },
+   {
+    "watcher": "KRW_WATCHER",
+    "weight": 0.3568,
+    "components": {
+     "accuracy": 0.85,
+     "regime_suitability": 0.8,
+     "horizon_suitability": 1.0,
+     "freshness": 1.0,
+     "independence": 0.9,
+     "calibration": 0.7
+    }
+   },
+   {
+    "watcher": "US_WATCHER",
+    "weight": 0.2916,
+    "components": {
+     "accuracy": 0.556,
+     "regime_suitability": 1.0,
+     "horizon_suitability": 1.0,
+     "freshness": 0.9995,
+     "independence": 0.9,
+     "calibration": 0.7
+    }
+   }
+  ],
+  "disagreements": [
+   "1 signal(s) contradict US_TECH_LEADERSHIP",
+   "US and Korea equity signals point opposite directions",
+   "high regime-transition risk (63%)"
+  ]
+ },
+ "proposals": [
+  {
+   "exposure": "US_TECH",
+   "direction": "INCREASE",
+   "chosen_ticker": "133690",
+   "chosen_name": "TIGER 미국나스닥100",
+   "tradable": false,
+   "reasons": [
+    "133690 not in risk allow-list (deny-by-default)",
+    "133690 inactive in registry",
+    "133690 liquidity metrics not yet populated"
+   ],
+   "decision": {
+    "status": "REJECTED",
+    "failed_checks": [
+     "INSTRUMENT_ALLOWED",
+     "STRATEGY_ALLOWED",
+     "MARKET_HOURS",
+     "MAX_ORDER_NOTIONAL"
+    ],
+    "reason": "rejected by: INSTRUMENT_ALLOWED, STRATEGY_ALLOWED, MARKET_HOURS",
+    "requires_human": false
+   }
+  },
+  {
+   "exposure": "US_SEMICONDUCTOR",
+   "direction": "INCREASE",
+   "chosen_ticker": "381180",
+   "chosen_name": "TIGER 미국필라델피아반도체나스닥",
+   "tradable": false,
+   "reasons": [
+    "381180 not in risk allow-list (deny-by-default)",
+    "381180 inactive in registry",
+    "381180 liquidity metrics not yet populated"
+   ],
+   "decision": {
+    "status": "REJECTED",
+    "failed_checks": [
+     "INSTRUMENT_ALLOWED",
+     "STRATEGY_ALLOWED",
+     "MARKET_HOURS",
+     "MAX_ORDER_NOTIONAL"
+    ],
+    "reason": "rejected by: INSTRUMENT_ALLOWED, STRATEGY_ALLOWED, MARKET_HOURS",
+    "requires_human": false
+   }
+  },
+  {
+   "exposure": "KOREA_SEMICONDUCTOR",
+   "direction": "INCREASE",
+   "chosen_ticker": "091160",
+   "chosen_name": "KODEX 반도체",
+   "tradable": false,
+   "reasons": [
+    "091160 not in risk allow-list (deny-by-default)",
+    "091160 inactive in registry",
+    "091160 liquidity metrics not yet populated"
+   ],
+   "decision": {
+    "status": "REJECTED",
+    "failed_checks": [
+     "INSTRUMENT_ALLOWED",
+     "STRATEGY_ALLOWED",
+     "MARKET_HOURS",
+     "MAX_ORDER_NOTIONAL"
+    ],
+    "reason": "rejected by: INSTRUMENT_ALLOWED, STRATEGY_ALLOWED, MARKET_HOURS",
+    "requires_human": false
+   }
+  },
+  {
+   "exposure": "CASH",
+   "direction": "REDUCE",
+   "chosen_ticker": "153130",
+   "chosen_name": "KODEX 단기채권",
+   "tradable": false,
+   "reasons": [
+    "153130 not in risk allow-list (deny-by-default)",
+    "153130 inactive in registry",
+    "153130 liquidity metrics not yet populated"
+   ],
+   "decision": {
+    "status": "REJECTED",
+    "failed_checks": [
+     "INSTRUMENT_ALLOWED",
+     "STRATEGY_ALLOWED",
+     "MARKET_HOURS",
+     "MAX_ORDER_NOTIONAL"
+    ],
+    "reason": "rejected by: INSTRUMENT_ALLOWED, STRATEGY_ALLOWED, MARKET_HOURS",
+    "requires_human": false
+   }
+  }
+ ],
+ "limits": {
+  "allowed_instruments": 0,
+  "allowed_strategies": 0,
+  "market_open": false
+ },
+ "portfolio": {
+  "headline": "위험선호 우위 — 미국 주식 중심, 위험자산 비중 확대",
+  "risk_on_score": 0.185,
+  "confidence": 0.6887431468109315,
+  "coverage": 1.0,
+  "notes": [
+   "‘달러(USD)’는 달러 보유(환차익·안전판), ‘원화 현금’은 환노출 없는 원화 보유 — 역할이 다릅니다.",
+   "비트코인·금은 전용 워처가 없어 거시 국면에서 도출한 추론 비중입니다(별도 시세 신호 아님).",
+   "확신도 69% · 커버리지 100%. 확신이 낮으면 분산을 키우되, 원화 약세 국면의 방어는 원화 현금이 아니라 달러로 가져갑니다."
+  ],
+  "allocations": [
+   {
+    "asset": "US_EQUITY",
+    "label_ko": "미국 주식",
+    "weight": 0.521,
+    "neutral_weight": 0.35,
+    "stance": "OVERWEIGHT",
+    "score": 0.614,
+    "rationale": "[US_TECH_LEADERSHIP·OVERWEIGHT] 위험선호·미 증시 주도력에 비중 확대 우위",
+    "drivers": [
+     "위험선호",
+     "미 증시 모멘텀"
+    ]
+   },
+   {
+    "asset": "CASH",
+    "label_ko": "원화 현금",
+    "weight": 0.0948,
+    "neutral_weight": 0.1,
+    "stance": "NEUTRAL",
+    "score": 0.219,
+    "rationale": "[US_TECH_LEADERSHIP·NEUTRAL] 원화 현금 — 환노출 없는 방어 버퍼(전환 위험·불확실성 대비 드라이파우더)",
+    "drivers": [
+     "원화 방향",
+     "방어 버퍼"
+    ]
+   },
+   {
+    "asset": "US_TREASURY",
+    "label_ko": "미국채",
+    "weight": 0.0887,
+    "neutral_weight": 0.12,
+    "stance": "UNDERWEIGHT",
+    "score": 0.0,
+    "rationale": "[US_TECH_LEADERSHIP·UNDERWEIGHT] 금리 상방/리플레이션 압력에 듀레이션 부담",
+    "drivers": [
+     "금리 방향",
+     "경기 국면"
+    ]
+   },
+   {
+    "asset": "KOREA_EQUITY",
+    "label_ko": "한국 주식",
+    "weight": 0.0781,
+    "neutral_weight": 0.15,
+    "stance": "UNDERWEIGHT",
+    "score": -0.308,
+    "rationale": "[US_TECH_LEADERSHIP·UNDERWEIGHT] 달러 강세·위험회피에 수급 부담",
+    "drivers": [
+     "위험선호",
+     "원화/외국인 수급"
+    ]
+   },
+   {
+    "asset": "BITCOIN",
+    "label_ko": "비트코인",
+    "weight": 0.074,
+    "neutral_weight": 0.08,
+    "stance": "NEUTRAL",
+    "score": 0.197,
+    "rationale": "[US_TECH_LEADERSHIP·NEUTRAL] 위험선호·유동성 확대 국면의 고베타 자산으로 소폭 편입",
+    "drivers": [
+     "위험선호/유동성",
+     "변동성 캡 적용"
+    ]
+   },
+   {
+    "asset": "GOLD",
+    "label_ko": "금",
+    "weight": 0.0739,
+    "neutral_weight": 0.1,
+    "stance": "UNDERWEIGHT",
+    "score": 0.0,
+    "rationale": "[US_TECH_LEADERSHIP·UNDERWEIGHT] 달러 강세·실질금리 상방에 매력 제한",
+    "drivers": [
+     "실질금리/달러",
+     "헤지 수요"
+    ]
+   },
+   {
+    "asset": "USD",
+    "label_ko": "달러(USD)",
+    "weight": 0.0694,
+    "neutral_weight": 0.1,
+    "stance": "UNDERWEIGHT",
+    "score": -0.055,
+    "rationale": "[US_TECH_LEADERSHIP·UNDERWEIGHT] 달러(USD) — 위험선호·달러 약세 흐름에서 보유 매력 저하",
+    "drivers": [
+     "달러 강세",
+     "안전자산 수요"
+    ]
+   }
+  ]
+ },
+ "report": {
+  "title": "MARKET WATCHER — 자산시장 종합 애널리스트 리포트",
+  "headline": "위험선호 우위 — 미국 주식 중심, 위험자산 비중 확대",
+  "summary": "한마디로 지금은 '방향이 뚜렷하지 않은 혼조 분위기'입니다. 네 개 시장 신호(미국 금리·환율·한국 증시·미국 증시)를 합쳐 보면 '미국 기술주 주도' 국면이고, 신호들의 확신도는 69% 수준입니다. 그래서 권하는 비중 1위 자산은 미국 주식(52%)입니다. 한쪽에 크게 베팅하기보다 골고루 나눠 담고 현금을 넉넉히 두는 편이 안전합니다.",
+  "sections": [
+   {
+    "heading": "자산별 배분 및 근거",
+    "body": "7개 자산에 어느 정도 비중을 두면 좋을지와 그 이유입니다(비중·중립 대비 방향·근거).",
+    "bullets": [
+     "미국 주식 52% (비중 확대) — [US_TECH_LEADERSHIP·OVERWEIGHT] 위험선호·미 증시 주도력에 비중 확대 우위",
+     "원화 현금 9% (중립) — [US_TECH_LEADERSHIP·NEUTRAL] 원화 현금 — 환노출 없는 방어 버퍼(전환 위험·불확실성 대비 드라이파우더)",
+     "미국채 9% (비중 축소) — [US_TECH_LEADERSHIP·UNDERWEIGHT] 금리 상방/리플레이션 압력에 듀레이션 부담",
+     "한국 주식 8% (비중 축소) — [US_TECH_LEADERSHIP·UNDERWEIGHT] 달러 강세·위험회피에 수급 부담",
+     "비트코인 7% (중립) — [US_TECH_LEADERSHIP·NEUTRAL] 위험선호·유동성 확대 국면의 고베타 자산으로 소폭 편입",
+     "금 7% (비중 축소) — [US_TECH_LEADERSHIP·UNDERWEIGHT] 달러 강세·실질금리 상방에 매력 제한",
+     "달러(USD) 7% (비중 축소) — [US_TECH_LEADERSHIP·UNDERWEIGHT] 달러(USD) — 위험선호·달러 약세 흐름에서 보유 매력 저하"
+    ]
+   },
+   {
+    "heading": "시장 상황 진단",
+    "body": "지금 시장은 '미국 기술주 주도' 국면입니다. 쉽게 말해, 미국 기술주가 시장을 이끌어 관련 자산이 상대적으로 강합니다. 다만 시장이 다른 국면으로 바뀔 위험이 63%로 높습니다. 즉 지금 판단이 흔들릴 수 있으니, 비중을 과감하게 싣기보다 여지를 남겨두는 게 좋습니다.",
+    "bullets": []
+   },
+   {
+    "heading": "자산 배분 판단",
+    "body": "위험을 감수할지 말지를 점수로 보면 +0.18입니다(+는 공격적, −는 방어적). 이에 맞춰 현금은 약 26% 정도 들고 가기를 권합니다. 확신이 낮을수록 현금을 늘려 변동성에 대비하는 뜻입니다.",
+    "bullets": []
+   },
+   {
+    "heading": "무엇을 지켜봐야 하나",
+    "body": "",
+    "bullets": [
+     "신호 간 엇갈림: 1 signal(s) contradict US_TECH_LEADERSHIP",
+     "신호 간 엇갈림: US and Korea equity signals point opposite directions",
+     "신호 간 엇갈림: high regime-transition risk (63%)",
+     "환율이 크게 움직이거나 미국 금리 방향이 바뀌면 위 판단을 다시 봐야 합니다."
+    ]
+   },
+   {
+    "heading": "뉴스 흐름",
+    "body": "",
+    "bullets": [
+     "[Fed] Fed holds its hawkish line as an oil-price surge revives inflation worries and lifts policy uncertainty",
+     "[Fed] Federal Reserve Chairman Kevin Warsh agrees inflation fight continues - Crypto Briefing",
+     "[환율] 1개월: -16.0원 → 1463.07 (krw_strong, conf 0%)",
+     "[환율] 원/달러 데일리 브리프",
+     "[국장] 투자자 관점 — 비중을 줄여 방어적으로 가져가되, 곱버스(2배 인버스)의 장기 보유는 손실이 쌓이니 피하세요. (오늘의 종합 판단: 코스피 약세, 확신도 82%)",
+     "[국장] 2026-07-21 한국 증시 데일리 브리핑입니다. 오늘 수집한 증시 뉴스 37건을 종합하면, 오늘 한국 증시는 내릴 가능성에 무게가 실린 데이터가 불확실한 흐름입니다. 종합 판단을 한 줄로 옮기면 '코스피 약세·고확신 — 데이터 불확실 국면 · 인버스 우위'입니다.  오늘 수집한 헤드라인의 어조를 보면 상승 톤(7건)과",
+     "[미장] [Monday 7/20 session outlook] bullish lean — Moderate / selective risk-on · composite +22 · confidence 41%"
+    ]
+   },
+   {
+    "heading": "면책",
+    "body": "이 글은 공개 데이터와 자동 모델로 만든 참고 자료이며 투자 권유가 아닙니다. 비트코인·금 비중은 거시 흐름에서 추론한 값입니다. © 2026 YellowScale.",
+    "bullets": []
+   }
+  ],
+  "markdown": "# MARKET WATCHER — 자산시장 종합 애널리스트 리포트\n\n**위험선호 우위 — 미국 주식 중심, 위험자산 비중 확대**\n\n한마디로 지금은 '방향이 뚜렷하지 않은 혼조 분위기'입니다. 네 개 시장 신호(미국 금리·환율·한국 증시·미국 증시)를 합쳐 보면 '미국 기술주 주도' 국면이고, 신호들의 확신도는 69% 수준입니다. 그래서 권하는 비중 1위 자산은 미국 주식(52%)입니다. 한쪽에 크게 베팅하기보다 골고루 나눠 담고 현금을 넉넉히 두는 편이 안전합니다.\n\n## 자산별 배분 및 근거\n7개 자산에 어느 정도 비중을 두면 좋을지와 그 이유입니다(비중·중립 대비 방향·근거).\n- 미국 주식 52% (비중 확대) — [US_TECH_LEADERSHIP·OVERWEIGHT] 위험선호·미 증시 주도력에 비중 확대 우위\n- 원화 현금 9% (중립) — [US_TECH_LEADERSHIP·NEUTRAL] 원화 현금 — 환노출 없는 방어 버퍼(전환 위험·불확실성 대비 드라이파우더)\n- 미국채 9% (비중 축소) — [US_TECH_LEADERSHIP·UNDERWEIGHT] 금리 상방/리플레이션 압력에 듀레이션 부담\n- 한국 주식 8% (비중 축소) — [US_TECH_LEADERSHIP·UNDERWEIGHT] 달러 강세·위험회피에 수급 부담\n- 비트코인 7% (중립) — [US_TECH_LEADERSHIP·NEUTRAL] 위험선호·유동성 확대 국면의 고베타 자산으로 소폭 편입\n- 금 7% (비중 축소) — [US_TECH_LEADERSHIP·UNDERWEIGHT] 달러 강세·실질금리 상방에 매력 제한\n- 달러(USD) 7% (비중 축소) — [US_TECH_LEADERSHIP·UNDERWEIGHT] 달러(USD) — 위험선호·달러 약세 흐름에서 보유 매력 저하\n\n## 시장 상황 진단\n지금 시장은 '미국 기술주 주도' 국면입니다. 쉽게 말해, 미국 기술주가 시장을 이끌어 관련 자산이 상대적으로 강합니다. 다만 시장이 다른 국면으로 바뀔 위험이 63%로 높습니다. 즉 지금 판단이 흔들릴 수 있으니, 비중을 과감하게 싣기보다 여지를 남겨두는 게 좋습니다.\n\n## 자산 배분 판단\n위험을 감수할지 말지를 점수로 보면 +0.18입니다(+는 공격적, −는 방어적). 이에 맞춰 현금은 약 26% 정도 들고 가기를 권합니다. 확신이 낮을수록 현금을 늘려 변동성에 대비하는 뜻입니다.\n\n## 무엇을 지켜봐야 하나\n- 신호 간 엇갈림: 1 signal(s) contradict US_TECH_LEADERSHIP\n- 신호 간 엇갈림: US and Korea equity signals point opposite directions\n- 신호 간 엇갈림: high regime-transition risk (63%)\n- 환율이 크게 움직이거나 미국 금리 방향이 바뀌면 위 판단을 다시 봐야 합니다.\n\n## 뉴스 흐름\n- [Fed] Fed holds its hawkish line as an oil-price surge revives inflation worries and lifts policy uncertainty\n- [Fed] Federal Reserve Chairman Kevin Warsh agrees inflation fight continues - Crypto Briefing\n- [환율] 1개월: -16.0원 → 1463.07 (krw_strong, conf 0%)\n- [환율] 원/달러 데일리 브리프\n- [국장] 투자자 관점 — 비중을 줄여 방어적으로 가져가되, 곱버스(2배 인버스)의 장기 보유는 손실이 쌓이니 피하세요. (오늘의 종합 판단: 코스피 약세, 확신도 82%)\n- [국장] 2026-07-21 한국 증시 데일리 브리핑입니다. 오늘 수집한 증시 뉴스 37건을 종합하면, 오늘 한국 증시는 내릴 가능성에 무게가 실린 데이터가 불확실한 흐름입니다. 종합 판단을 한 줄로 옮기면 '코스피 약세·고확신 — 데이터 불확실 국면 · 인버스 우위'입니다.  오늘 수집한 헤드라인의 어조를 보면 상승 톤(7건)과\n- [미장] [Monday 7/20 session outlook] bullish lean — Moderate / selective risk-on · composite +22 · confidence 41%\n\n## 면책\n이 글은 공개 데이터와 자동 모델로 만든 참고 자료이며 투자 권유가 아닙니다. 비트코인·금 비중은 거시 흐름에서 추론한 값입니다. © 2026 YellowScale."
+ },
+ "news": [
+  {
+   "source": "Fed",
+   "text": "Fed holds its hawkish line as an oil-price surge revives inflation worries and lifts policy uncertainty"
+  },
+  {
+   "source": "Fed",
+   "text": "Federal Reserve Chairman Kevin Warsh agrees inflation fight continues - Crypto Briefing"
+  },
+  {
+   "source": "환율",
+   "text": "1개월: -16.0원 → 1463.07 (krw_strong, conf 0%)"
+  },
+  {
+   "source": "환율",
+   "text": "원/달러 데일리 브리프"
+  },
+  {
+   "source": "국장",
+   "text": "투자자 관점 — 비중을 줄여 방어적으로 가져가되, 곱버스(2배 인버스)의 장기 보유는 손실이 쌓이니 피하세요. (오늘의 종합 판단: 코스피 약세, 확신도 82%)"
+  },
+  {
+   "source": "국장",
+   "text": "2026-07-21 한국 증시 데일리 브리핑입니다. 오늘 수집한 증시 뉴스 37건을 종합하면, 오늘 한국 증시는 내릴 가능성에 무게가 실린 데이터가 불확실한 흐름입니다. 종합 판단을 한 줄로 옮기면 '코스피 약세·고확신 — 데이터 불확실 국면 · 인버스 우위'입니다.  오늘 수집한 헤드라인의 어조를 보면 상승 톤(7건)과"
+  },
+  {
+   "source": "미장",
+   "text": "[Monday 7/20 session outlook] bullish lean — Moderate / selective risk-on · composite +22 · confidence 41%"
+  }
+ ],
+ "synthesis": {
+  "headline": "4개 워처 종합 — '미국 기술주 주도' 국면, 교차 인사이트 2건",
+  "bottom_line": "개별로는 '미장 강세' 같은 신호가 두드러지지만, 종합하면 '미국 기술주 주도' 국면(확신 69%)입니다. 단일 시장만 보면 환율 전이·한·미 디커플링·둔화 속 금리 같은 교차 효과를 놓치기 쉬우므로, 자산배분은 종합 신호에 맞춰야 합니다.",
+  "takeaways": [
+   {
+    "watcher": "FED_WATCHER",
+    "label_ko": "미 연준 · 금리",
+    "present": true,
+    "standalone": "동결·중립",
+    "in_context": "완화 기대는 미국채·금·성장주에 우호적이나 달러 약세 여부를 함께 봐야 합니다."
+   },
+   {
+    "watcher": "KRW_WATCHER",
+    "label_ko": "원/달러 환율",
+    "present": true,
+    "standalone": "환율 중립",
+    "in_context": "원화 강세는 국장·신흥국에 우호적이며, 미장 언헤지 환차손 요인입니다."
+   },
+   {
+    "watcher": "US_WATCHER",
+    "label_ko": "미국 증시(미장)",
+    "present": true,
+    "standalone": "미장 강세",
+    "in_context": "미장 강세를 그대로 국장에 대입하면 오류 — 환율·디커플링을 거쳐야 한국 자산 함의가 정해집니다."
+   },
+   {
+    "watcher": "KOSPI_WATCHER",
+    "label_ko": "한국 증시(국장)",
+    "present": true,
+    "standalone": "국장 약세",
+    "in_context": "국장 약세는 달러 강세·외국인 매도와 함께 나타나는지 확인이 필요합니다."
+   }
+  ],
+  "insights": [
+   {
+    "kind": "DIVERGENCE",
+    "title": "미장 ↔ 국장 디커플링",
+    "detail": "미국과 한국 증시 신호가 반대입니다. '미국 따라 산다'는 단순 가정이 깨지는 구간으로, 환율·외국인 수급·반도체 사이클 차이를 확인하기 전엔 한국 비중을 늘리지 않는 편이 안전합니다."
+   },
+   {
+    "kind": "UNCERTAINTY",
+    "title": "신호 엇갈림·부재 → 종합 확신 하향",
+    "detail": "전환 위험 63%, 커버리지 100%. 개별 워처가 또렷해 보여도 종합하면 확신이 제한되므로 현금·분산 비중을 키우는 것이 합리적입니다."
+   }
+  ]
+ },
+ "realestate": {
+  "as_of": "2026-07-21T02:30:20.880968Z",
+  "stance": {
+   "kr_rate_env": "긴축·금리 인상 (2026년 약 2회 인상 전망)",
+   "us_rate_env": "중립",
+   "kr_stance": "역풍 — 대출규제·DSR·금리 부담으로 매수여력 위축. 핵심지/현금흐름 위주, 레버리지 매수 신중. 금리 인상기엔 갭·전세 레버리지 리스크 관리가 우선입니다.",
+   "us_stance": "선별 — 우량 임차인·점유율 높은 net-lease REIT 중심.",
+   "rationale": "한국 부동산은 한국은행(BOK) 금리, 미국 부동산은 연준(Fed) 금리에 연동해 평가합니다."
+  },
+  "kr_topics": [
+   {
+    "title": "핵심지 · 핵심 아파트",
+    "body": "금리·전세·정책에 가장 민감하며 하락기 방어·상승기 선도. 입지(직주근접·학군·교통)가 가격을 좌우합니다.",
+    "bullets": [
+     "강남 3구(강남·서초·송파)·용산·마용성(마포·용산·성동)이 상급지 대장",
+     "전세가율·갭(매매-전세) 추이가 단기 수급의 핵심 지표",
+     "토지거래허가구역 지정 여부로 거래 난이도가 크게 달라짐"
+    ]
+   },
+   {
+    "title": "신도시 · 3기 신도시",
+    "body": "공급 물량·교통망(특히 GTX) 연계가 인근 시세를 좌우. 입주기 전세 약세에 유의.",
+    "bullets": [
+     "3기: 남양주왕숙·하남교산·고양창릉·부천대장·인천계양",
+     "사전청약→본청약→입주 일정과 분담금 점검"
+    ]
+   },
+   {
+    "title": "재개발 · 재건축",
+    "body": "안전진단→조합설립→사업시행→관리처분→이주·철거→준공. 단계가 오를수록 불확실성↓·가격↑.",
+    "bullets": [
+     "재초환·분양가상한제가 사업성에 직접 영향",
+     "관리처분인가 전후가 변동성·기회의 분기점"
+    ]
+   },
+   {
+    "title": "경매 · 공매",
+    "body": "시세 대비 할인 매수 기회이나 권리분석 실패 시 손실. 명도까지 비용·시간 고려.",
+    "bullets": [
+     "말소기준권리·대항력 임차인 분석",
+     "감정가·최저가·유찰로 경쟁강도 파악"
+    ]
+   }
+  ],
+  "kr_rail": [
+   {
+    "title": "GTX (광역급행철도) — 부동산 최대 변수",
+    "body": "수도권 광역철도는 역세권 시세를 재편하는 핵심 변수입니다. 노선별 진행 단계와 지연 여부를 반드시 확인하세요.",
+    "bullets": [
+     "GTX-A(운정~동탄): 일부 구간 개통/단계 개통 — 삼성역 등 일부 정거장 공사 지연 이슈 점검",
+     "GTX-B(인천대입구~마석): 착공 단계 — 공정·예산 따라 개통 지연 가능",
+     "GTX-C(덕정~수원): 착공/공사 — 노선·정거장(왕십리·인덕원 등) 변동·지연 점검",
+     "GTX-D/E/F: 노선 계획 단계 — 확정 전 기대가 선반영되면 변동성↑(계획 변경 리스크)"
+    ]
+   },
+   {
+    "title": "도시철도 · 광역 교통 (착공/지연)",
+    "body": "신안산선·월곶판교선·위례신사선 등 광역·도시철도와 BRT는 주변 단지 수요를 끌어올립니다.",
+    "bullets": [
+     "착공·개통 임박 노선 인접 단지는 선반영 vs 추가 상승 여부를 구분",
+     "예타·재정 문제로 '지연·재검토' 뉴스가 나오면 기대가 빠르게 되돌려질 수 있음",
+     "개통 시점(D-day)과 실제 통행시간 단축 효과를 분리해서 평가"
+    ]
+   },
+   {
+    "title": "서부선 경전철 (새절~서울대입구) — 서북·서남 관통",
+    "body": "6호선 새절역에서 2호선 서울대입구역까지 15.6km·16개역. 2024년 말 민자적격성 심의(민투심)를 통과해 16년 만에 본궤도에 올랐고 2026년 착공이 목표입니다. 새절~서울대입구 약 27분(현재 37~42분).",
+    "bullets": [
+     "은평(새절)·서대문·동작·관악(서울대입구)을 한 줄로 — 은평 신사동/관악 신림 정비사업과 수혜축이 겹침",
+     "아직 착공 전이라 역세권 선반영이 덜 됨 → 확정 임박 구간을 미리 선점하는 전략이 유효(공격형)",
+     "민자사업 특성상 실시협약·실시설계에서 일정이 지연될 수 있음 — 확정 전 기대 선반영 리스크 점검"
+    ]
+   },
+   {
+    "title": "고양은평선 + 신사고개역 — 은평 직접 수혜 (신사고개역은 추진 중)",
+    "body": "고양 식사동~은평 새절을 잇는 광역철도. 2024년 12월 기본계획이 승인됐고 2026년 착공·2031년 개통이 목표입니다. 은평 입장의 핵심 변수는 '신사고개역' 신설 여부입니다.",
+    "bullets": [
+     "신사고개역: 기본계획에서는 일단 제외(탈락) → 은평구가 재추진 중. 2026년 2월까지 사전타당성 보완용역을 마치고 기본계획 변경(역 추가)을 대광위에 요청할 계획",
+     "신사고개역이 확정되면 신사동(편백·산새마을) 일대가 서부선 새절 + 고양은평선 더블 역세권으로 직접 수혜",
+     "역 신설은 아직 미확정 = 호재 선반영 후 무산되면 되돌림 → '확정 전 저가 매수, 확정 시 차익'은 전형적 고위험·고수익 베팅"
+    ]
+   },
+   {
+    "title": "동부선·동북권 경전철 (계획·검토 단계)",
+    "body": "서울 동북권 교통 보강을 위한 경전철 구상(동부선 등)은 아직 계획·검토 단계로 노선·역사·재원이 확정 전입니다.",
+    "bullets": [
+     "계획 단계 노선은 기대만으로 가격이 먼저 움직였다가 변경·지연 뉴스에 빠르게 되돌려짐",
+     "확정 노선(착공·개통 임박) 대비 변동성이 가장 큼 — 소액·분산으로 접근",
+     "이미 공사 중인 동북선(왕십리~상계)과는 진행 단계가 다르니 혼동 주의"
+    ]
+   }
+  ],
+  "kr_listings": [
+   {
+    "area": "강남구 대치동",
+    "complexes": [
+     "은마",
+     "래미안대치팰리스",
+     "대치동부센트레빌"
+    ],
+    "note": "학군·재건축 기대. 토지거래허가구역 — 실거주 요건 확인.",
+    "query": "대치동 아파트 시세"
+   },
+   {
+    "area": "강남구 개포동",
+    "complexes": [
+     "디에이치아너힐즈",
+     "개포자이프레지던스",
+     "래미안블레스티지"
+    ],
+    "note": "재건축 신축 벨트. 신축 선호 강함.",
+    "query": "개포동 아파트 시세"
+   },
+   {
+    "area": "서초구 반포동",
+    "complexes": [
+     "아크로리버파크",
+     "래미안원베일리",
+     "반포자이"
+    ],
+    "note": "한강·신축 프리미엄 최상급지.",
+    "query": "반포동 아파트 시세"
+   },
+   {
+    "area": "송파구 잠실동",
+    "complexes": [
+     "엘스",
+     "리센츠",
+     "트리지움",
+     "잠실주공5단지"
+    ],
+    "note": "대단지·교통(2·8호선). 주공5단지는 재건축 기대.",
+    "query": "잠실동 아파트 시세"
+   },
+   {
+    "area": "용산구 이촌·한남",
+    "complexes": [
+     "한가람",
+     "LG한강자이",
+     "한남더힐",
+     "나인원한남"
+    ],
+    "note": "용산정비창·국제업무지구 호재. 초고가 단지 포함.",
+    "query": "용산구 이촌동 아파트 시세"
+   },
+   {
+    "area": "마포구 아현·공덕",
+    "complexes": [
+     "마포래미안푸르지오",
+     "마포프레스티지자이",
+     "공덕자이"
+    ],
+    "note": "도심 직주근접(마용성). 실수요 두터움.",
+    "query": "마포구 아현동 아파트 시세"
+   },
+   {
+    "area": "성동구 성수·왕십리",
+    "complexes": [
+     "트리마제",
+     "갤러리아포레",
+     "센트라스"
+    ],
+    "note": "성수 준공업·지식산업·한강 호재. 신흥 상급지.",
+    "query": "성동구 성수동 아파트 시세"
+   }
+  ],
+  "kr_redev": [
+   {
+    "area": "한남뉴타운",
+    "complexes": [
+     "한남2구역",
+     "한남3구역",
+     "한남4·5구역"
+    ],
+    "note": "서울 최대어 재개발. 한남3 착공·이주 단계로 시장 주목.",
+    "query": "한남뉴타운 재개발"
+   },
+   {
+    "area": "성수전략정비구역",
+    "complexes": [
+     "1~4지구"
+    ],
+    "note": "한강변 초고층 재개발. 성수 호재로 각광.",
+    "query": "성수전략정비구역 재개발"
+   },
+   {
+    "area": "노량진뉴타운",
+    "complexes": [
+     "1~8구역"
+    ],
+    "note": "도심 접근성 우수 재개발. 구역별 진행 차이 확인.",
+    "query": "노량진뉴타운 재개발"
+   },
+   {
+    "area": "이문·휘경뉴타운",
+    "complexes": [
+     "이문1·3·4",
+     "휘경3"
+    ],
+    "note": "동북권 대단지 일반분양 활발(각광).",
+    "query": "이문 휘경 재개발"
+   },
+   {
+    "area": "흑석뉴타운",
+    "complexes": [
+     "흑석9·11구역"
+    ],
+    "note": "한강·동작 입지 재개발. 분양 성과 양호.",
+    "query": "흑석뉴타운 재개발"
+   }
+  ],
+  "kr_redev_pinned": [
+   {
+    "area": "⭐ 은평 신사동 편백·산새마을 (필수 관심)",
+    "complexes": [
+     "신사동 200번지 일대(편백마을)",
+     "237번지 일대(산새마을)"
+    ],
+    "note": "편백·산새마을 통합 신속통합기획. 2025년 6월 정비구역 지정·정비계획이 가결됐고 최고 33층·약 2,896세대로 재개발 예정. 서부선 새절역 + 고양은평선 신사고개역(추진 중) 호재축의 한가운데. 정비구역 지정 단계라 초기 진입 여지가 남은 공격형 후보.",
+    "query": "은평구 신사동 편백마을 재개발"
+   },
+   {
+    "area": "⭐ 관악 신림6구역 (신림뉴타운 인접)",
+    "complexes": [
+     "신림동 일대(삼성산 자락)"
+    ],
+    "note": "신속통합기획 → 2026년 정비구역 지정 고시. 최고 28층·957가구(임대 189) 규모. 삼성산 숲세권 + 신림초 초품아 입지. 신림선(개통) 수혜. 저층 노후주거지가 대단지로 바뀌는 초기~중기 단계라 단계 상승 차익 여력이 큼.",
+    "query": "신림6구역 재개발"
+   },
+   {
+    "area": "⭐ 관악 신림5구역 (신림6과 연계)",
+    "complexes": [
+     "신림동 412 일대"
+    ],
+    "note": "구역면적 약 16만㎡의 대형 구역. 인접한 신림6구역과 지형·생활권을 공유해 연계 개발 추진. 신림뉴타운(2025년 사업시행인가)과 함께 신림동 재개발 시계가 빨라지는 흐름의 한 축.",
+    "query": "신림5구역 재개발"
+   },
+   {
+    "area": "은평 수색·증산뉴타운 + 갈현1구역 (저평가 성장)",
+    "complexes": [
+     "수색4·6·7·13",
+     "증산2·5",
+     "갈현1구역"
+    ],
+    "note": "DMC 배후 은평권 정비 벨트. 신사동과 같은 은평 생활권이라 서부선·고양은평선 교통개선을 함께 누림. 강남권 대비 저가라 진입장벽이 낮은 성장 베팅 — 구역별 진행 단계 차이를 확인하고 선별.",
+    "query": "수색증산뉴타운 갈현1구역 재개발"
+   },
+   {
+    "area": "동북권 장위·상계뉴타운 (저평가 대단지)",
+    "complexes": [
+     "장위뉴타운(성북)",
+     "상계뉴타운(노원)"
+    ],
+    "note": "서울 동북권 대규모 뉴타운. 구역별 진행 차가 크지만 가격이 상대적으로 낮아, 단계 상승(조합설립→관리처분)에 따른 시세 레버리지가 큼. 동북권 경전철 계획과 맞물리는 장기 성장축.",
+    "query": "장위뉴타운 상계뉴타운 재개발"
+   }
+  ],
+  "kr_strategy": [
+   {
+    "title": "🔥 공격형 핵심 전략 — 한 줄 요약",
+    "body": "이미 확정된 호재를 비싸게 사는 대신, '곧 확정될' 호재를 미리 싸게 사서 단계 상승의 차익을 노립니다. 정비사업 초기 + 교통 호재 착공 전 = 가장 싸고, 가장 변동성 큰 구간.",
+    "bullets": [
+     "정비사업은 단계(조합설립→사업시행→관리처분)가 오를수록 불확실성↓·가격↑ → 초기에 들어갈수록 싸지만 무산·지연 리스크를 감수",
+     "교통 호재(서부선·고양은평선)는 착공·개통이 임박할수록 선반영 → 확정 전에 선점해야 차익이 큼",
+     "강남 대장은 안전하지만 비쌈 → 같은 자금으로 은평·관악·동북권 저평가 구역에 들어가 '성장 여력'에 베팅"
+    ]
+   },
+   {
+    "title": "① 정비사업 초기 진입 (조합설립 전후)",
+    "body": "정비구역 지정·조합설립 직전후가 가격은 낮고 상승 여력은 가장 큰 구간입니다.",
+    "bullets": [
+     "편백마을·신림5·6처럼 '정비구역 지정~조합' 단계 구역을 노림 — 관리처분으로 갈수록 권리가액·프리미엄이 뜀",
+     "신속통합기획·모아타운은 행정 절차가 빨라 단계 상승 속도가 빠름(시간 리스크↓)",
+     "리스크: 초기일수록 사업 무산·정체·분담금 증가 가능 — 구역별 사업성(비례율)·조합 갈등을 반드시 점검"
+    ]
+   },
+   {
+    "title": "② 교통 호재 선점 (착공 전 역세권)",
+    "body": "서부선·고양은평선·신사고개역처럼 '추진 중'인 노선의 예정 역세권을 착공 전에 선점합니다.",
+    "bullets": [
+     "편백·산새마을 = 서부선 새절 + 고양은평선 신사고개역(추진 중)의 더블 역세권 후보 — 두 호재의 교차점",
+     "신사고개역은 아직 미확정 → 확정 시 큰 점프, 무산 시 되돌림. 전형적 고위험·고수익 이벤트 베팅",
+     "리스크: 민자·예타·재정 변수로 노선 일정이 흔들림 → 한 구역에 몰빵 대신 호재축을 분산"
+    ]
+   },
+   {
+    "title": "③ 레버리지·실행 규칙 (공격하되 살아남기)",
+    "body": "고수익을 노리되, 금리·규제 리스크에 깨지지 않도록 한도와 출구를 미리 정합니다.",
+    "bullets": [
+     "전세 레버리지(갭)·대출은 한국은행 금리·DSR가 조이면 가장 먼저 압박 — 감당 가능한 한도 안에서만",
+     "입주권·분양권 프리미엄은 정책·금리에 민감하게 출렁임 → 진입가·목표가·손절선을 숫자로 미리 정함",
+     "분산: 필수 관심(편백) + 연계(신림5·6) + 저평가(수색증산·장위) 등 단계가 다른 구역을 섞어 한 곳의 무산 리스크를 흡수"
+    ]
+   }
+  ],
+  "kr_subscriptions": [
+   {
+    "title": "청약 — 지금 주목할 권역 (청약홈에서 실시간 확인)",
+    "body": "구체 단지·일정은 청약홈(applyhome.co.kr)에서 매일 확인하세요. 아래는 분양 대기/주목 권역입니다.",
+    "bullets": [
+     "동탄2·평택 고덕국제신도시: 공급 지속, GTX·삼성 반도체 벨트 수혜 기대",
+     "광명뉴타운(철산·하안)·이문/휘경 재개발: 도심 접근성 좋은 정비사업 일반분양",
+     "3기 신도시 본청약(왕숙·교산·창릉 등): 사전청약 후 본청약 일정 확인",
+     "과천지식정보타운·위례: 입지 대비 분양가 메리트 점검",
+     "전략: 분양가상한제 단지는 시세차익 크나 실거주·전매제한 동반 — 자금·거주계획 우선 점검"
+    ]
+   }
+  ],
+  "us_markets": [
+   {
+    "region": "컬럼버스",
+    "state": "OH",
+    "thesis": "인텔 대형 팹 투자 + 중서부 저평가·높은 임대수익률.",
+    "demand": "반도체·물류·대학(OSU)",
+    "risks": "중서부 인구 성장 완만",
+    "profile": "현금흐름(고수익률)",
+    "best_for": "캡레이트 높은 현금흐름"
+   },
+   {
+    "region": "헌츠빌",
+    "state": "AL",
+    "thesis": "항공우주·방산(Redstone Arsenal/NASA) 엔지니어 일자리, 저렴한 진입가.",
+    "demand": "방산·항공우주·엔지니어",
+    "risks": "단일 산업 의존",
+    "profile": "현금흐름+안정",
+    "best_for": "정부·방산 수요 기반 임대"
+   },
+   {
+    "region": "메릴랜드 (DC 근교)",
+    "state": "MD",
+    "thesis": "워싱턴 D.C. 인접 + 연방·군·바이오 클러스터로 경기 둔감한 임대 수요.",
+    "demand": "연방 공무원·계약직·NIH/FDA·NSA(Fort Meade)·외국 주재원",
+    "risks": "정부 셧다운·예산 변수, 지역별 가격 편차",
+    "profile": "현금흐름+안정",
+    "best_for": "공실 위험 낮은 안정적 장기 임대"
+   },
+   {
+    "region": "댈러스–포트워스",
+    "state": "TX",
+    "thesis": "무주(無州)소득세 + 기업 본사 이전 + 인구·일자리 증가.",
+    "demand": "기업 relocation, 제조·물류·금융 백오피스",
+    "risks": "공급 과잉 국면·재산세 높음",
+    "profile": "성장+현금흐름",
+    "best_for": "인구 유입 기반 임대+시세"
+   }
+  ],
+  "us_evergreen": [
+   {
+    "title": "미국 부동산 투자 경로 · 세제",
+    "body": "직접 매입(임대) vs 상장 REIT/ETF. 외국인·비거주자는 세제·신고를 사전 점검하세요.",
+    "bullets": [
+     "보유: property tax(주·카운티별 상이)·보험(플로리다 등 급등)·관리·공실",
+     "양도: FIRPTA(외국인 양도 원천징수), 1031 exchange(양도세 이연)",
+     "한국 거주자: 해외부동산 취득·보유·처분 신고 + 임대소득 신고 + 환리스크"
+    ]
+   },
+   {
+    "title": "모기지 금리 · 연준 경로",
+    "body": "모기지 금리는 매수여력·리파이낸싱·REIT 밸류의 1차 변수 — Fed Watcher와 직접 연동됩니다.",
+    "bullets": [
+     "금리↑: 매수여력↓·캡레이트↑로 가격 압박",
+     "금리↓ 기대: REIT·홈빌더 리레이팅·거래 회복"
+    ]
+   }
+  ],
+  "us_archive": [
+   {
+    "date": "2026-07-21",
+    "picks": [
+     {
+      "region": "컬럼버스",
+      "reason": "캡레이트 높은 현금흐름"
+     },
+     {
+      "region": "헌츠빌",
+      "reason": "정부·방산 수요 기반 임대"
+     },
+     {
+      "region": "메릴랜드 (DC 근교)",
+      "reason": "공실 위험 낮은 안정적 장기 임대"
+     },
+     {
+      "region": "댈러스–포트워스",
+      "reason": "인구 유입 기반 임대+시세"
+     }
+    ]
+   },
+   {
+    "date": "2026-07-14",
+    "picks": [
+     {
+      "region": "댈러스–포트워스",
+      "reason": "인구 유입 기반 임대+시세"
+     },
+     {
+      "region": "오스틴",
+      "reason": "중장기 성장 베팅"
+     },
+     {
+      "region": "탬파 / 잭슨빌",
+      "reason": "임대수익률+인구 성장"
+     },
+     {
+      "region": "내슈빌",
+      "reason": "성장 도시 분산"
+     }
+    ]
+   }
+  ],
+  "instruments": [
+   {
+    "ticker": "O",
+    "name": "Realty Income",
+    "kind": "REIT",
+    "note": "월배당 net-lease REIT, 점유율 ~98.9%, 배당 5%대, 57년 연속 배당."
+   },
+   {
+    "ticker": "ADC",
+    "name": "Agree Realty",
+    "kind": "REIT",
+    "note": "월배당 net-lease REIT — 우량 리테일 임차인 중심 성장형 배당."
+   },
+   {
+    "ticker": "XHB",
+    "name": "SPDR S&P Homebuilders",
+    "kind": "HOMEBUILDER",
+    "note": "동일가중 — 빌더 + 홈임프루브먼트·건자재 공급사 포함."
+   },
+   {
+    "ticker": "ITB",
+    "name": "iShares U.S. Home Construction",
+    "kind": "HOMEBUILDER",
+    "note": "순수 홈빌더 집중(D.R. Horton·Lennar) — 주택 사이클 직접 베팅."
+   },
+   {
+    "ticker": "PAVE",
+    "name": "Global X U.S. Infrastructure",
+    "kind": "MATERIALS_INFRA",
+    "note": "인프라·건자재·중장비 — 재정·인프라 지출 수혜."
+   },
+   {
+    "ticker": "088980",
+    "name": "맥쿼리인프라",
+    "kind": "KR_REIT",
+    "note": "국내 상장 인프라 펀드 — 배당형(참고용)."
+   }
+  ],
+  "regulations": [
+   {
+    "title": "한국 제도",
+    "body": "",
+    "bullets": [
+     "대출: LTV·DSR이 매수여력의 핵심(스트레스 DSR 단계 확대 점검)",
+     "세금: 취득세·종합부동산세·양도소득세(다주택 중과 여부)",
+     "정비/공급: 분양가상한제·재초환·전월세신고제·토지거래허가구역"
+    ]
+   },
+   {
+    "title": "미국 제도",
+    "body": "",
+    "bullets": [
+     "property tax(주·카운티)·mortgage interest deduction",
+     "1031 like-kind exchange(양도세 이연), FIRPTA(외국인 양도 원천징수)",
+     "REIT 배당 대부분 ordinary income — 절세계좌 배치 고려"
+    ]
+   }
+  ],
+  "re_news": [],
+  "notes": [
+   "한국 금리 환경은 한국은행(BOK) 기준, 미국은 연준(Fed) 기준으로 분리 적용합니다.",
+   "한국 단지·청약은 참고용 워치리스트 + 검색 딥링크이며 실거래·청약홈에서 반드시 확인하세요(라이브 매물 아님).",
+   "미국 지역 추천은 매일 로테이션되며, 메릴랜드는 예시 중 하나입니다. 구체 수치는 실거래·세금·보험·환율로 검증하세요.",
+   "정보·교육용이며 투자 권유가 아닙니다(면책). 그 전제 하에 권고는 과감히 제시합니다."
+  ]
+ },
+ "geopolitics": {
+  "as_of": "2026-07-21T02:30:20.880968Z",
+  "risk_level": "보통~높음",
+  "risk_rationale": "달러 강세·국면 전환 위험이 있어 지정학 이벤트의 파급이 평소보다 큽니다.",
+  "synthesis": "종합하면, 현재 세계 정세의 자산시장 함의는 '미국 기술주 주도' 국면과 결합해 지정학 위험도 '보통~높음'로 평가됩니다. 가장 구조적인 축은 미·중 기술 패권과 중앙은행 정책 차별화이며, 단기 변동성의 방아쇠는 중동·유가와 엔 캐리입니다. 환율이 중립이라 지정학 변수는 개별 이벤트 중심으로 작용합니다. 리스크가 커지는 국면에서는 금·달러·미국채 같은 안전판과 방산·에너지 같은 사건 대응 자산이 방어력을 제공하고, 긴장이 완화되면 그간 눌렸던 한국·신흥국 위험자산의 반등 탄력이 큽니다.",
+  "themes": [
+   {
+    "title": "미·중 전략 경쟁 (반도체·기술 패권)",
+    "region": "미국·중국·대만",
+    "summary": "첨단 반도체 수출통제·공급망 재편·대만 해협 긴장이 구조적으로 장기화되는 흐름입니다.",
+    "analysis": "미국의 대중 첨단 반도체·장비 통제는 단기 협상으로 풀릴 사안이 아니라 '디리스킹(de-risking)'이라는 구조적 추세입니다. 한국은 반도체 수출국이자 미·중 사이 분업 구조의 한가운데에 있어, 통제 강화는 단기 수주·매출에 양날의 칼입니다. 대만 리스크는 확률은 낮아도 발생 시 충격이 극단적인 '테일 리스크'입니다.",
+    "asset_impact": "반도체·기술주 변동성 확대. 긴장 고조 시 위험회피로 달러·금 강세, 한국 반도체·중국 노출 자산 약세.",
+    "scenarios": [
+     "완화: 부분 합의·관세 유예 → 반도체·위험자산 안도 랠리",
+     "악화: 통제 확대·대만 군사 긴장 → 달러·금·방산 강세, 한국 증시 급락"
+    ],
+    "watch": [
+     "추가 수출통제·관세",
+     "대만 해협 군사 활동",
+     "중국 경기부양 강도"
+    ]
+   },
+   {
+    "title": "중동 정세와 유가",
+    "region": "중동",
+    "summary": "분쟁 위험과 산유국 정책에 따라 유가가 출렁입니다. 유가는 물가·경기·통화정책을 동시에 건드립니다.",
+    "analysis": "유가는 인플레이션의 핵심 변수라, 급등하면 연준·각국 중앙은행의 금리 인하를 지연시켜 위험자산 전반에 부담을 줍니다. 반대로 안정되면 인하 여력이 생겨 우호적입니다. 호르무즈 해협 물류 차질은 즉각적인 공급 충격 경로입니다.",
+    "asset_impact": "유가 급등 시 물가↑·금리 인하 지연, 에너지주 강세·항공/운송·소비주 약세. 위험회피로 금·달러 수요.",
+    "scenarios": [
+     "안정: 분쟁 제한·증산 → 유가 하향, 인하 기대 회복",
+     "급등: 분쟁 확산·호르무즈 차질 → 인플레 재점화, 위험자산 약세"
+    ],
+    "watch": [
+     "분쟁 확산 여부",
+     "OPEC+ 감·증산",
+     "호르무즈 해협"
+    ]
+   },
+   {
+    "title": "러시아-우크라이나 전쟁",
+    "region": "유럽·러시아",
+    "summary": "장기화된 전쟁이 에너지·곡물·방산 공급망에 영향을 줍니다. 휴전/확전 시나리오에 따라 변동성이 큽니다.",
+    "analysis": "전쟁은 유럽 에너지 가격과 글로벌 곡물·비료 공급, 그리고 각국의 방위비 증액 추세를 통해 자산시장에 작용합니다. 종전·휴전 기대는 유럽 자산과 에너지 안정에 우호적이고, 확전은 안전자산 수요를 키웁니다.",
+    "asset_impact": "유럽 에너지·곡물 가격, 방산주에 직접 영향. 확전 시 달러·금↑, 종전 기대 시 유럽 자산 반등.",
+    "scenarios": [
+     "휴전 진전 → 유럽 위험자산·유로 반등",
+     "확전 → 에너지·곡물 급등, 위험회피"
+    ],
+    "watch": [
+     "휴전 협상",
+     "에너지 공급망",
+     "글로벌 방산 수요"
+    ]
+   },
+   {
+    "title": "미국 정책·재정 (관세·감세·적자)",
+    "region": "미국",
+    "summary": "관세·감세·재정적자 확대 경로가 금리와 달러, 업종 흐름을 좌우합니다. 정치 일정도 변동성 요인입니다.",
+    "analysis": "관세는 수입물가를 통해 인플레이션과 특정 업종 마진에 영향을 주고, 재정적자 확대는 국채 발행 증가로 장기금리(미국채)와 달러에 부담을 줍니다. 정책 방향에 따라 수혜·피해 업종이 갈리는 '로테이션'이 잦아집니다.",
+    "asset_impact": "관세는 물가·업종 마진, 재정적자는 장기금리·달러에 부담. 정책 수혜/피해 업종 로테이션.",
+    "scenarios": [
+     "관세 강화 → 물가·달러 강세, 수입의존 업종 압박",
+     "재정확대 지속 → 장기금리 상승 압력, 성장주 밸류 부담"
+    ],
+    "watch": [
+     "관세 발표",
+     "재정적자·국채 발행",
+     "주요 정치 일정"
+    ]
+   },
+   {
+    "title": "일본은행(BOJ)·엔화 (엔 캐리)",
+    "region": "일본",
+    "summary": "일본의 초완화 정상화 속도와 엔화 방향이 글로벌 자금흐름(엔 캐리)에 영향을 줍니다.",
+    "analysis": "저금리 엔을 빌려 고수익 자산에 투자하는 '엔 캐리'는 글로벌 유동성의 큰 축입니다. BOJ의 급격한 긴축이나 엔 급등은 이 포지션의 청산을 유발해, 2024년 사례처럼 전 세계 위험자산 변동성을 키울 수 있습니다.",
+    "asset_impact": "엔 강세 급변 시 엔 캐리 청산→글로벌 위험자산 변동성 확대. 한국·신흥국 증시에도 파급.",
+    "scenarios": [
+     "점진 정상화 → 영향 제한적",
+     "엔 급등·급한 긴축 → 캐리 청산, 글로벌 변동성 급등"
+    ],
+    "watch": [
+     "BOJ 정책 변경",
+     "엔/달러 급변",
+     "엔 캐리 포지션 규모"
+    ]
+   },
+   {
+    "title": "한반도·코리아 디스카운트",
+    "region": "한국·북한",
+    "summary": "지정학 리스크와 거버넌스 이슈가 한국 자산의 저평가(코리아 디스카운트) 요인으로 작용합니다.",
+    "analysis": "북한 리스크와 지배구조·주주환원 미흡이 한국 증시의 구조적 저평가 요인입니다. 밸류업·거버넌스 개선이 진전되면 재평가 동력이 되지만, 긴장 고조 시엔 원화 약세와 외국인 매도가 동반됩니다.",
+    "asset_impact": "긴장 고조 시 원화 약세·외국인 매도·방산주 강세. 완화·밸류업 진전 시 한국 증시 재평가.",
+    "scenarios": [
+     "밸류업 진전 → 디스카운트 축소·재평가",
+     "도발·긴장 → 원화 약세·외국인 이탈"
+    ],
+    "watch": [
+     "북한 도발",
+     "외국인 수급",
+     "밸류업·거버넌스 정책"
+    ]
+   },
+   {
+    "title": "중앙은행 정책 차별화",
+    "region": "글로벌",
+    "summary": "미 연준과 다른 중앙은행(ECB·BOK·BOJ 등)의 금리 경로 차이가 환율과 국가 간 자금 이동을 만듭니다.",
+    "analysis": "금리차는 환율의 1차 동인입니다. 미국이 상대적으로 매파면 달러가 강해지고 신흥국에서 자금이 빠집니다. 한국은행이 인상 기조라면 원화엔 지지 요인이지만, 미국과의 금리차·경기 차이를 함께 봐야 합니다.",
+    "asset_impact": "미국이 상대적으로 매파면 달러 강세·신흥국 자금 유출. 인하 전환이 빠른 쪽 통화 약세.",
+    "scenarios": [
+     "미국만 매파 → 달러 독주·신흥국 압박",
+     "동반 완화 → 위험자산 우호"
+    ],
+    "watch": [
+     "Fed vs ECB/BOK 금리차",
+     "환율",
+     "신흥국 자금흐름"
+    ]
+   }
+  ],
+  "notes": [
+   "국제 정세는 전용 데이터 워처가 없어 구조적 테마 분석 + 거시 국면 연동 추론입니다(실시간 이벤트 추적 아님).",
+   "위험도·종합은 현재 시장 국면에서 도출한 상대 평가이며, 돌발 이벤트는 별도 모니터링이 필요합니다."
+  ]
+ },
+ "world_view": {
+  "headline": "세계 경제 조망 — 위험회피 우위 · 미수렴(4R)",
+  "overview": "네 시장(미국 금리·환율·한국 증시·미국 증시)에서 모은 정보를 데스크별로 검토하고 수석이 조율한 결과, 세계 경제는 '미국 기술주 주도' 국면이며 종합 위험선호는 -0.44(위험회피 우위)입니다. 섹터 데스크 3곳이 같은 방향, 1곳이 반대 의견입니다.",
+  "bottom_line": "4라운드 조율에도 시각차가 남아 완전 수렴에 이르지 못했습니다(최종 -0.44). 시장 간 신호가 엇갈리는 구간이므로 분산과 현금 비중을 키우는 편이 안전합니다.",
+  "converged_risk_on": -0.4382,
+  "confidence": 0.602120202767652,
+  "converged": false,
+  "iterations": 4,
+  "desks": [
+   {
+    "desk": "RATES",
+    "label_ko": "금리·연준 데스크",
+    "lean_label": "중립",
+    "lean_score": -0.0,
+    "conviction": 0.32,
+    "summary": "연준 경로가 매파면 위험자산에 부담, 완화면 채권·성장주에 우호적입니다.",
+    "drivers": [
+     "미 정책금리 경로",
+     "장단기 금리"
+    ],
+    "dissent": "완화 신호가 둔화 신호와 겹치면 해석이 갈립니다."
+   },
+   {
+    "desk": "FX",
+    "label_ko": "환율·달러 데스크",
+    "lean_label": "중립",
+    "lean_score": -0.0,
+    "conviction": 0.38,
+    "summary": "달러 강세는 미국 자산(언헤지)엔 유리하나 한국 증시 수급엔 역풍입니다.",
+    "drivers": [
+     "달러 방향",
+     "외국인 수급"
+    ],
+    "dissent": "안전통화 수요와 무역흐름이 반대로 작용할 수 있습니다."
+   },
+   {
+    "desk": "US_EQ",
+    "label_ko": "미국 증시 데스크",
+    "lean_label": "강세",
+    "lean_score": 1.0,
+    "conviction": 0.8200000000000001,
+    "summary": "미국 증시 방향은 글로벌 위험선호의 기준점입니다.",
+    "drivers": [
+     "미 지수·breadth",
+     "기술주 주도"
+    ],
+    "dissent": "지수 강세가 소수 종목 쏠림이면 신뢰도가 낮습니다."
+   },
+   {
+    "desk": "KR_EQ",
+    "label_ko": "한국 증시 데스크",
+    "lean_label": "약세",
+    "lean_score": -1.0,
+    "conviction": 0.8600000000000001,
+    "summary": "한국 증시는 환율·외국인·반도체 사이클에 민감합니다.",
+    "drivers": [
+     "외국인 수급",
+     "반도체"
+    ],
+    "dissent": "미국과 따로 움직이면(디커플링) 동조 가정이 깨집니다."
+   },
+   {
+    "desk": "CROSS",
+    "label_ko": "크로스에셋 데스크",
+    "lean_label": "디커플링 경계",
+    "lean_score": -1.0,
+    "conviction": 0.15000000000000002,
+    "summary": "시장 간 신호가 일치하면 확신을 키우고, 엇갈리면 분산·현금을 권합니다.",
+    "drivers": [
+     "미·한 동조도",
+     "환율 전이"
+    ],
+    "dissent": "시차·ETF 괴리 등 기술적 요인이 디커플링처럼 보일 수 있습니다."
+   },
+   {
+    "desk": "RISK",
+    "label_ko": "리스크·방어 데스크",
+    "lean_label": "방어 강화",
+    "lean_score": -0.46033623584034433,
+    "conviction": 0.7151681179201721,
+    "summary": "위험회피·전환위험이 높으면 금·달러·현금 등 방어자산을 키웁니다.",
+    "drivers": [
+     "위험회피 강도",
+     "국면 전환 위험",
+     "데이터 커버리지"
+    ],
+    "dissent": "과도한 방어는 회복 국면 수익을 놓칠 수 있습니다."
+   }
+  ],
+  "consensus": [
+   "한국 증시 데스크",
+   "크로스에셋 데스크",
+   "리스크·방어 데스크"
+  ],
+  "dissent": [
+   "미국 증시 데스크"
+  ],
+  "rounds": [
+   {
+    "round_no": 1,
+    "global_score": -0.16,
+    "global_label": "중립·혼조",
+    "delta": 1.0,
+    "note": "각 데스크 원안을 신뢰도 가중 종합"
+   },
+   {
+    "round_no": 2,
+    "global_score": -0.2603,
+    "global_label": "위험회피 우위",
+    "delta": 0.1003,
+    "note": "글로벌 조망을 각 시장에 환류 — 합의 미달 시각은 비중↓, 일치 시각은 비중↑ 후 재계산"
+   },
+   {
+    "round_no": 3,
+    "global_score": -0.3542,
+    "global_label": "위험회피 우위",
+    "delta": 0.0939,
+    "note": "글로벌 조망을 각 시장에 환류 — 합의 미달 시각은 비중↓, 일치 시각은 비중↑ 후 재계산"
+   },
+   {
+    "round_no": 4,
+    "global_score": -0.4382,
+    "global_label": "위험회피 우위",
+    "delta": 0.084,
+    "note": "글로벌 조망을 각 시장에 환류 — 합의 미달 시각은 비중↓, 일치 시각은 비중↑ 후 재계산"
+   }
+  ],
+  "intel": [
+   {
+    "watcher": "FED_WATCHER",
+    "label_ko": "미 연준·금리",
+    "present": true,
+    "standalone_lean": "동결·중립",
+    "notes": [
+     "연준은 매파 기조 유지 — 국제 유가 급등에 물가 걱정 다시 커지고 정책 불확실성도 상승"
+    ],
+    "endpoints": [
+     "/api/forecast/report?lang=ko",
+     "/api/briefings/latest?lang=ko"
+    ]
+   },
+   {
+    "watcher": "KRW_WATCHER",
+    "label_ko": "원/달러 환율",
+    "present": true,
+    "standalone_lean": "환율 중립",
+    "notes": [
+     "1개월: -16.0원 → 1463.07 (krw_strong, conf 0%)",
+     "원/달러 데일리 브리프",
+     "달러·원 환율, 중동 불안에도 소폭 하락…장 초반 1470원대 후반 - 뉴스1",
+     "[환율] 원-달러 1,478.50원 … 0.84%↓ - 버핏연구소"
+    ],
+    "endpoints": [
+     "/api/briefing/latest"
+    ]
+   },
+   {
+    "watcher": "KOSPI_WATCHER",
+    "label_ko": "한국 증시(국장)",
+    "present": true,
+    "standalone_lean": "국장 약세",
+    "notes": [
+     "코스피 약세·고확신 — 데이터 불확실 국면 · 인버스 우위",
+     "【총평】 코스피200 지수 방향 (KODEX 200 추종 기준)에 대한 오늘의 종합 판단은 '하락(약세)'입니다. 분석 에이전트 21인이 5개 데스크로 나눠 검토하고 수석이 최종 조율한 결과로, 확신도는 82%(고확신)이며 지금 장세는 데이터가 불확실한 국면으로 읽힙니다. 한마디로, 코",
+     "리스크·레드팀 데스크"
+    ],
+    "endpoints": [
+     "/api/v1/brief",
+     "/api/v1/agents/org"
+    ]
+   },
+   {
+    "watcher": "US_WATCHER",
+    "label_ko": "미국 증시(미장)",
+    "present": true,
+    "standalone_lean": "미장 강세",
+    "notes": [
+     "종합 점수 +17/100 → 완만한 상승 국면 (신뢰도 39%, 4개 항목 측정). 미측정: 유동성, 신용, 실적, 경제지표 서프라이즈, 밸류에이션(가치평가), 투자자 포지션 (가중치 제외)."
+    ],
+    "endpoints": [
+     "/api/v1/market/regime",
+     "/api/v1/briefings/latest"
+    ]
+   }
+  ]
+ },
+ "news_brief": {
+  "as_of": "2026-07-21T02:30:20.880968Z",
+  "title": "MARKET WATCHER — 데일리 분석 브리프",
+  "market_read": "오늘 수집한 뉴스 7건을 종합하면, 흐름의 무게중심은 '통화정책·금리'에 있습니다. 이를 시장 국면('미국 기술주 주도', 종합 위험회피)과 겹쳐 보면 세계 경제 조망 — 위험회피 우위 · 미수렴(4R). 개별 헤드라인을 나열하기보다, 아래처럼 주제별로 묶어 '그래서 자산에 어떤 의미인지'로 재해석했습니다.",
+  "themes": [
+   {
+    "title": "통화정책·금리",
+    "body": "3건 — 금리·물가 흐름은 위험자산 밸류에이션과 환율의 출발점입니다.",
+    "items": [
+     "[Fed] Fed holds its hawkish line as an oil-price surge revives inflation worries and lifts policy uncertainty",
+     "[Fed] Federal Reserve Chairman Kevin Warsh agrees inflation fight continues - Crypto Briefing",
+     "[미장] [Monday 7/20 session outlook] bullish lean — Moderate / selective risk-on · composite +22 · confidence 41%"
+    ]
+   },
+   {
+    "title": "환율·달러",
+    "body": "1건 — 환율은 외국인 수급과 미국 자산의 원화 환산 손익을 좌우합니다.",
+    "items": [
+     "[환율] 원/달러 데일리 브리프"
+    ]
+   },
+   {
+    "title": "증시·기업",
+    "body": "2건 — 증시·실적 뉴스는 위험선호의 온도계입니다.",
+    "items": [
+     "[국장] 투자자 관점 — 비중을 줄여 방어적으로 가져가되, 곱버스(2배 인버스)의 장기 보유는 손실이 쌓이니 피하세요. (오늘의 종합 판단: 코스피 약세, 확신도 82%)",
+     "[국장] 2026-07-21 한국 증시 데일리 브리핑입니다. 오늘 수집한 증시 뉴스 37건을 종합하면, 오늘 한국 증시는 내릴 가능성에 무게가 실린 데이터가 불확실한 흐름입니다. 종합 판단을 한 줄로 옮기면 '코스피 약세·고확신 — 데이터 불확실 국면 · 인버스 우위'입니다.  오늘 수집한 헤드라인의 어조를 보면 상승 톤(7건)과"
+    ]
+   },
+   {
+    "title": "기타",
+    "body": "1건 — 시장 전반의 분위기를 보여주는 신호입니다.",
+    "items": [
+     "[환율] 1개월: -16.0원 → 1463.07 (krw_strong, conf 0%)"
+    ]
+   }
+  ],
+  "watchlist": [
+   "미국 기술주 주도 국면의 무효화 조건(환율·금리 방향 전환)",
+   "지정학 돌발(중동·대만·엔 캐리)로 인한 변동성 급변"
+  ],
+  "source_count": 7
+ }
+}

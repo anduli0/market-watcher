@@ -81,21 +81,36 @@ async def main() -> int:
     status["running"] = False
     status["run_notice"] = STATIC_NOTICE
 
+    # Never regress the site to an empty dashboard: when the watchers are
+    # unreachable (PC/funnel down -> coverage 0), serve the last GOOD serialized
+    # state, which is committed back to the repo as data/state_snapshot.json.
+    # Track scoring + AI brief above stay fresh either way (they don't need watchers).
+    state = _serialize(result)
+    cov = result.snapshot.coverage
+    snap_path = settings.data_dir / "state_snapshot.json"
+    if cov > 0.0:
+        _write_json(snap_path, state)
+    else:
+        try:
+            stored = json.loads(snap_path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            stored = None
+        if isinstance(stored, dict) and stored.get("regime"):
+            print(f"fallback: watchers unreachable — serving last good snapshot "
+                  f"(기준 {stored.get('as_of_kst', '?')})")
+            state = stored
+
     site = ROOT / "site"
     shutil.rmtree(site, ignore_errors=True)
     api = site / "api" / "v1"
     shutil.copy(ROOT / "src" / "autopilot" / "api" / "static" / "index.html", _mk(site) / "index.html")
     (site / ".nojekyll").write_text("", encoding="utf-8")
-    _write_json(api / "state", _serialize(result))
+    _write_json(api / "state", state)
     _write_json(api / "track", pipeline.track.report())
     _write_json(api / "aibrief", {"status": status, "brief": ai.brief()})
 
-    cov = result.snapshot.coverage
-    print(f"site built: coverage={cov:.2f} regime={result.regime.primary_regime.value} "
-          f"confidence={result.regime.confidence:.3f}")
-    if cov <= 0.0:
-        print("WARNING: watcher coverage is 0 — set *_WATCHER_BASE_URL to publicly "
-              "reachable watcher URLs (repo Variables) for a fully-populated dashboard.")
+    print(f"site built: coverage={cov:.2f} regime={state['regime']['primary']} "
+          f"confidence={state['regime']['confidence']}")
     return 0
 
 
