@@ -8,10 +8,18 @@ Scoring model (KRW view, matching the platform's won-centric cash framing):
 - direction hit = sign(risk_on) vs sign(risky basket − defensive basket),
   scored only when a directional call was actually made (|risk_on| ≥ 0.05).
 
-Calibration: once ≥ MIN_SCORED directional outcomes exist, displayed confidence
-is nudged toward the realized hit rate — bounded (±0.15) and clamped, so the
-loop can correct persistent over/under-confidence but can never fabricate
-certainty. Mirrors the KOSPI watcher's confidence_target approach.
+Calibration (continuous, uses EVERY scored outcome — no activation cliff):
+displayed confidence is pulled toward a realized-hit-rate estimate that is
+- recency-weighted (half-life ~20 outcomes: recent errors dominate, so the loop
+  tracks methodology changes instead of averaging over a stale past),
+- regime-conditional (the current regime's own record is preferred once it has
+  enough effective samples — error patterns differ per regime),
+- Beta-shrunk toward 0.5 (small samples produce proportionally small pulls, so
+  the loop can never fabricate certainty from noise).
+The pull strength grows with effective sample size and is bounded (±MAX_ADJUST).
+If the record says the calls are coin-flips (~0.5), confidence converges there
+and the allocation engine stops betting; if the record earns >0.5, confidence
+rises legitimately. Mirrors the KOSPI watcher's confidence_target approach.
 """
 
 from __future__ import annotations
@@ -23,8 +31,10 @@ DEFENSIVE = ("US_TREASURY", "GOLD", "USD", "CASH")
 _USD_QUOTED = ("US_TREASURY", "US_EQUITY", "BITCOIN", "GOLD")
 
 NEUTRAL_BAND = 0.05  # |risk_on| below this = "no directional call" -> not graded
-MIN_SCORED = 20  # directional outcomes required before calibration activates
-MAX_ADJUST = 0.15  # calibration can never move confidence more than this
+HALF_LIFE = 20.0  # recency decay of scored outcomes (in outcomes, not days)
+PRIOR_STRENGTH = 6.0  # pseudo-observations at 0.5 — Beta shrinkage for small samples
+REGIME_MIN_EFF = 4.0  # effective regime-matched samples needed to prefer regime stats
+MAX_ADJUST = 0.25  # calibration can never move confidence more than this
 
 
 def _future_return(
@@ -122,23 +132,56 @@ def score_predictions(
     return scores, summary
 
 
+def _decayed_hits(directional: list[TrackScore]) -> tuple[float, float]:
+    """(weighted hits, weighted count) over outcomes sorted oldest→newest,
+    with exponential recency decay (HALF_LIFE outcomes)."""
+    decay = 0.5 ** (1.0 / HALF_LIFE)
+    hits = weight = 0.0
+    n = len(directional)
+    for i, s in enumerate(directional):
+        w = decay ** (n - 1 - i)
+        weight += w
+        if s.hit:
+            hits += w
+    return hits, weight
+
+
+def directional_hit_estimate(
+    scores: list[TrackScore], regime: str | None = None
+) -> tuple[float | None, float, int]:
+    """Recency-weighted, regime-preferred, Beta-shrunk estimate of P(direction hit).
+
+    Returns (estimate, effective_n, n_directional). Uses every scored outcome from
+    the very first one; small samples are shrunk toward 0.5 (coin flip) so early
+    data informs proportionally without dominating."""
+    directional = sorted((s for s in scores if s.hit is not None), key=lambda s: s.date)
+    if not directional:
+        return None, 0.0, 0
+    pool = directional
+    if regime is not None:
+        matched = [s for s in directional if s.regime == regime]
+        h, w = _decayed_hits(matched)
+        if w >= REGIME_MIN_EFF:  # this regime's own error record is significant
+            pool = matched
+    hits, weight = _decayed_hits(pool)
+    estimate = (hits + 0.5 * PRIOR_STRENGTH) / (weight + PRIOR_STRENGTH)
+    return estimate, weight, len(directional)
+
+
 def calibrate_confidence(
     confidence: float,
     *,
-    hit_rate: float | None,
-    avg_stated_confidence: float | None,
-    n_directional: int,
+    hit_estimate: float | None,
+    n_eff: float,
 ) -> float:
-    """Bounded feedback: move displayed confidence toward the realized hit rate.
+    """Bounded continuous feedback: pull displayed confidence toward the realized
+    hit-rate estimate, with strength growing in effective sample size.
 
-    No-op until MIN_SCORED directional outcomes exist. The correction is half the
-    (realized − stated) gap, clamped to ±MAX_ADJUST and to [0.05, 0.95] — it can
-    fix persistent miscalibration but can never manufacture certainty."""
-    if (
-        n_directional < MIN_SCORED
-        or hit_rate is None
-        or avg_stated_confidence is None
-    ):
+    weight = n_eff/(n_eff+PRIOR_STRENGTH): 1 outcome moves confidence a little,
+    20+ outcomes move it most of the way. Clamped to ±MAX_ADJUST and [0.05, 0.95] —
+    persistent miscalibration self-corrects, but certainty is never manufactured."""
+    if hit_estimate is None or n_eff <= 0:
         return confidence
-    adjust = max(-MAX_ADJUST, min(MAX_ADJUST, 0.5 * (hit_rate - avg_stated_confidence)))
+    weight = n_eff / (n_eff + PRIOR_STRENGTH)
+    adjust = max(-MAX_ADJUST, min(MAX_ADJUST, weight * (hit_estimate - confidence)))
     return max(0.05, min(0.95, confidence + adjust))

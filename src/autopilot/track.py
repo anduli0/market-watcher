@@ -17,8 +17,12 @@ from typing import TYPE_CHECKING, Any
 from autopilot.adapters.market_data import fetch_asset_history
 from autopilot.config import Settings
 from autopilot.domain.time import now_utc, to_kst
-from autopilot.domain.track.engine import score_predictions
-from autopilot.domain.track.schemas import TrackPrediction
+from autopilot.domain.track.engine import (
+    PRIOR_STRENGTH,
+    directional_hit_estimate,
+    score_predictions,
+)
+from autopilot.domain.track.schemas import TrackPrediction, TrackScore
 
 if TYPE_CHECKING:
     from autopilot.pipeline import PipelineResult
@@ -125,31 +129,39 @@ class TrackService:
 
     # ── reads ────────────────────────────────────────────────────────────────
 
+    def _scored(self) -> list[TrackScore]:
+        raw = self._read(self._score_path)
+        rows = raw.get("scores")
+        out: list[TrackScore] = []
+        for r in rows if isinstance(rows, list) else []:
+            try:
+                out.append(TrackScore.model_validate(r))
+            except ValueError:
+                continue
+        return out
+
     def report(self) -> dict[str, Any]:
         raw = self._read(self._score_path)
         summary = raw.get("summary") if isinstance(raw.get("summary"), dict) else None
         raw_scores = raw.get("scores")
         scores: list[Any] = raw_scores if isinstance(raw_scores, list) else []
-        n_dir = int(summary.get("n_directional", 0)) if summary else 0
-        from autopilot.domain.track.engine import MIN_SCORED
-
+        _est, n_eff, n_dir = directional_hit_estimate(self._scored())
         return {
             "summary": summary,
             "scores": scores[-40:],
             "n_predictions_recorded": len(self._read(self._pred_path)),
-            "calibration_active": n_dir >= MIN_SCORED,
-            "calibration_min_n": MIN_SCORED,
+            "calibration_active": n_dir > 0,
+            "calibration_weight": round(n_eff / (n_eff + PRIOR_STRENGTH), 4),
             "updated_at": raw.get("updated_at"),
         }
 
-    def calibration(self) -> dict[str, Any] | None:
-        """Realized-vs-stated stats for `calibrate_confidence` (None until scored)."""
-        raw = self._read(self._score_path)
-        s = raw.get("summary")
-        if not isinstance(s, dict):
+    def calibration(self, regime: str | None = None) -> dict[str, Any] | None:
+        """Realized-hit stats for `calibrate_confidence` (None until scored).
+
+        Continuous from the first scored outcome: recency-weighted, preferring the
+        current regime's own record once it has enough effective samples."""
+        scores = self._scored()
+        if not scores:
             return None
-        return {
-            "hit_rate": s.get("hit_rate"),
-            "avg_stated_confidence": s.get("avg_stated_confidence"),
-            "n_directional": int(s.get("n_directional", 0)),
-        }
+        estimate, n_eff, n_dir = directional_hit_estimate(scores, regime)
+        return {"hit_estimate": estimate, "n_eff": n_eff, "n_directional": n_dir}

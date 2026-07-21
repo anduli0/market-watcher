@@ -139,16 +139,17 @@ class PipelineService:
     ) -> PipelineResult:
         fresh = snap.fresh(snap.collected_at)
         regime = assess_regime(fresh, as_of=snap.collected_at)
-        # Own-track-record feedback: once enough scored outcomes exist, displayed
-        # confidence is nudged toward the realized hit rate (bounded ±0.15,
-        # sample-gated) — persistent over/under-confidence self-corrects.
-        cal = self.track.calibration()
+        # Own-track-record feedback: from the first scored outcome, displayed
+        # confidence is pulled toward the realized hit-rate estimate (recency-
+        # weighted, regime-conditional, Beta-shrunk, bounded ±0.25) — persistent
+        # over/under-confidence self-corrects, and a coin-flip record drags
+        # confidence to ~0.5 which shrinks the allocation tilts automatically.
+        cal = self.track.calibration(regime=regime.primary_regime.value)
         if cal is not None:
             adjusted = calibrate_confidence(
                 regime.confidence,
-                hit_rate=cal["hit_rate"],
-                avg_stated_confidence=cal["avg_stated_confidence"],
-                n_directional=cal["n_directional"],
+                hit_estimate=cal["hit_estimate"],
+                n_eff=cal["n_eff"],
             )
             if adjusted != regime.confidence:
                 regime = regime.model_copy(update={"confidence": round(adjusted, 4)})

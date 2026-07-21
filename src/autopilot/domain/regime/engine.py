@@ -278,21 +278,24 @@ def assess_regime(
     primary, p1 = ranked[0]
     secondary, p2 = ranked[1] if len(ranked) > 1 else (None, 0.0)
 
-    # Decision confidence: how clearly the top regime leads (margin), scaled by data
-    # coverage, quality, and signal agreement. (Raw top-probability mass understates
-    # confidence because it is diluted across many candidate regimes.)
+    # Decision confidence, anchored at coin-flip semantics: 0.5 = "a call with no
+    # demonstrated edge". The margin-derived edge (scaled by coverage, quality and
+    # agreement) ADDS to 0.5; missing coverage subtracts. The old multiplicative
+    # form ((0.40+0.45m)×…) structurally sat below 0.5 even for clear, fully-covered
+    # calls — which made every displayed 확신도 read as worse-than-coin-flip and gave
+    # the track-record calibration a bias it had to spend its whole budget undoing.
+    # A dead-heat call with full data now reads exactly 0.5; realized results
+    # (calibrate_confidence) move it from there in either direction.
     margin = p1 - p2
     m_score = min(1.0, margin / 0.20)
-    confidence = max(
-        0.0,
-        min(
-            0.95,
-            (0.40 + 0.45 * m_score)
-            * (0.55 + 0.45 * f.coverage)
-            * (0.65 + 0.35 * f.avg_quality)
-            * (0.75 + 0.25 * f.agreement),
-        ),
+    edge = (
+        0.42
+        * m_score
+        * (0.55 + 0.45 * f.coverage)
+        * (0.65 + 0.35 * f.avg_quality)
+        * (0.75 + 0.25 * f.agreement)
     )
+    confidence = max(0.05, min(0.95, 0.50 + edge - 0.30 * (1.0 - f.coverage)))
     # Transition risk uses the SAME margin scale as confidence (margin/0.20 saturates):
     # with 15 candidate regimes the raw normalized margin is structurally small, so the
     # unscaled version sat chronically at 0.5+ regardless of how clear the call was.

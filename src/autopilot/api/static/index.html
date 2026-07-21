@@ -14,8 +14,10 @@
     --usd:#9b8cff; --btc:#f7931a; --cash:#8a94a7;
   }
   *{box-sizing:border-box}
+  html,body{overflow-x:hidden;max-width:100%;overscroll-behavior-x:none}
   body{margin:0;background:var(--bg);color:var(--tx);
-    font-family:-apple-system,"Segoe UI",Pretendard,Roboto,sans-serif;font-size:14px;line-height:1.55}
+    font-family:-apple-system,"Segoe UI",Pretendard,Roboto,sans-serif;font-size:14px;line-height:1.55;
+    word-break:keep-all;overflow-wrap:anywhere}
   header{position:sticky;top:0;z-index:20;background:#0a0d13ee;backdrop-filter:blur(8px);
     border-bottom:1px solid var(--line);padding:12px 22px 0}
   .htop{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
@@ -25,7 +27,7 @@
   .b-ok{background:#10301f;color:#7fe3b3;border-color:#1c4d34}
   .b-bad{background:#3a1414;color:#ff9c9c;border-color:#5e1f1f}
   .b-info{background:#13283f;color:#9ad0ff;border-color:#1e4b78}
-  .tabs{display:flex;gap:2px;margin-top:12px;overflow-x:auto}
+  .tabs{display:flex;gap:2px;margin-top:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
   .tabs button{background:none;border:0;border-bottom:2px solid transparent;color:var(--mut);
     padding:10px 14px;font-size:13.5px;cursor:pointer;white-space:nowrap;font-weight:600}
   .tabs button.on{color:var(--tx);border-bottom-color:var(--acc)}
@@ -84,6 +86,23 @@
   .panel.collapsed>*:not(h2){display:none !important}
   .recard{background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:10px 12px;margin-bottom:8px}
   .recard:last-child{margin-bottom:0}
+  .alloc .barwrap{min-width:40px}
+  /* ── 모바일: 가로 넘침 방지 — 표는 패널 안에서만 스크롤, 그리드는 1열로 ── */
+  @media (max-width:720px){
+    header{padding:10px 12px 0}
+    .wrap{padding:14px 12px 60px}
+    .cols-2{grid-template-columns:1fr}
+    .desks{grid-template-columns:1fr}
+    .panel{padding:14px}
+    .hero{gap:16px;justify-content:center}
+    .donut{width:170px;height:170px}
+    .donut::after{inset:24px}
+    .legend{min-width:0;width:100%}
+    .alloc .nm{width:62px}
+    table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+    .tl .step{min-width:104px}
+    footer{padding:14px 12px}
+  }
 </style>
 </head>
 <body>
@@ -263,8 +282,8 @@ function renderTrack(){
   const d=TRACK, s=d.summary;
   const kpi=(label,val,sub)=>`<div class="panel"><div class="k">${label}</div><div class="v">${val}</div>${sub?`<div class="mini">${sub}</div>`:''}</div>`;
   const cal = d.calibration_active
-    ? '<span class="badge b-ok">보정 활성</span>'
-    : `<span class="badge b-info">보정 대기</span> <span class="mini">방향 표본 ${s?s.n_directional:0}/${d.calibration_min_n}개 필요</span>`;
+    ? `<span class="badge b-ok">보정 활성</span> <span class="mini">보정 강도 ${pct(d.calibration_weight)}</span>`
+    : '<span class="badge b-info">보정 대기</span> <span class="mini">첫 채점 결과부터 즉시 반영</span>';
   let body='';
   if(s && s.n_scored>0){
     const rows=(d.scores||[]).slice().reverse().map(x=>`<tr>
@@ -291,7 +310,7 @@ function renderTrack(){
   }
   $('tab-track').innerHTML=`
     <div class="banner">🎯 <b>자체 적중 기록</b> — 이 플랫폼이 스스로 낸 권고를 기록하고, 5거래일 뒤 실현 수익률로 채점합니다(가짜 백테스트 아님 · 실전 기록만).
-      방향 표본이 ${d.calibration_min_n}건 쌓이면 실제 적중률로 확신도를 자동 보정합니다(±15%p 한도). ${cal}</div>
+      첫 채점 결과부터 실제 적중률로 확신도를 연속 보정합니다 — 최근 결과 우대(반감기 20건) · 현재 국면의 기록 우선 · 표본이 쌓일수록 보정 강도 증가(±25%p 한도). ${cal}</div>
     ${body}`;
 }
 
