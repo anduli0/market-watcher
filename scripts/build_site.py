@@ -46,6 +46,65 @@ STATIC_NOTICE = (
     "브리프는 배포 주기마다 자동으로 재생성/갱신됩니다."
 )
 
+# ── KRW watcher mirror-cache ─────────────────────────────────────────────────
+# fed/kospi/us watchers publish cloud-fresh static API mirrors (their own Actions
+# pipelines), so this build consumes them directly. The KRW watcher has no cloud
+# mirror (private repo, PC-hosted) — so: while its live URL answers, cache every
+# consumed endpoint to data/krw_mirror.json (committed back); when it is
+# unreachable, replay the cache from a localhost server. Payload timestamps are
+# untouched, so the adapters' own TTL/staleness handling stays honest.
+KRW_PATHS = ("/health", "/api/forecast", "/api/accuracy", "/api/briefing/latest", "/api/hierarchy")
+_KRW_MIRROR_PORT = 18299
+
+
+def _resolve_krw_base(data_dir: Path) -> str | None:
+    import http.server
+    import threading
+    import urllib.request
+
+    base = os.environ.get("KRW_WATCHER_BASE_URL", "http://127.0.0.1:8010").rstrip("/")
+    mirror_path = data_dir / "krw_mirror.json"
+
+    def fetch(path: str) -> Any | None:
+        try:
+            with urllib.request.urlopen(base + path, timeout=45) as r:
+                return json.loads(r.read().decode("utf-8")) if r.status == 200 else None
+        except Exception:  # noqa: BLE001 — reachability probe
+            return None
+
+    if fetch("/api/forecast") is not None:  # live source is up -> refresh the cache
+        mirror = {p: body for p in KRW_PATHS if (body := fetch(p)) is not None}
+        if mirror.get("/api/forecast") is not None:
+            _write_json(mirror_path, mirror)
+        print(f"krw: live ({base}) — mirror cached ({len(mirror)} endpoints)")
+        return base
+
+    try:
+        mirror = json.loads(mirror_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        mirror = None
+    if not isinstance(mirror, dict) or "/api/forecast" not in mirror:
+        print("krw: unreachable and no mirror cache — KRW coverage will be 0")
+        return None
+
+    class Handler(http.server.BaseHTTPRequestHandler):
+        def do_GET(self) -> None:  # noqa: N802 — stdlib naming
+            body = mirror.get(self.path.split("?")[0])
+            data = json.dumps(body, ensure_ascii=False).encode("utf-8") if body is not None else b"{}"
+            self.send_response(200 if body is not None else 404)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(data)))
+            self.end_headers()
+            self.wfile.write(data)
+
+        def log_message(self, *a: Any) -> None: ...
+
+    server = http.server.ThreadingHTTPServer(("127.0.0.1", _KRW_MIRROR_PORT), Handler)
+    threading.Thread(target=server.serve_forever, daemon=True).start()
+    print(f"krw: unreachable — replaying mirror cache on :{_KRW_MIRROR_PORT} "
+          "(source timestamps preserved; staleness handled by adapters)")
+    return f"http://127.0.0.1:{_KRW_MIRROR_PORT}"
+
 
 def _write_json(path: Path, data: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -64,6 +123,9 @@ async def _maybe_generate_brief(ai: AiBriefService) -> None:
 
 
 async def main() -> int:
+    krw_base = _resolve_krw_base(ROOT / "data")
+    if krw_base:
+        os.environ["KRW_WATCHER_BASE_URL"] = krw_base  # before Settings() reads env
     settings = Settings()
     pipeline = PipelineService(settings)
 

@@ -18,6 +18,7 @@ data/*
 !data/ai_brief.json
 !data/realestate_us_archive.json
 !data/state_snapshot.json
+!data/krw_mirror.json
 *.log
 *.sqlite
 *.sqlite3

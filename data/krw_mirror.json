@@ -1,0 +1,313 @@
+{
+ "/health": {
+  "status": "ok",
+  "model": "claude-sonnet-4-6",
+  "broker": "paper",
+  "live_trading": false,
+  "spot": 1479.0899658203125,
+  "realized_vol_krw": 9.645,
+  "data_last_collected": "2026-07-21T02:04:36.439106",
+  "agent_count": 23
+ },
+ "/api/forecast": {
+  "horizons": {
+   "1w": {
+    "published_delta_krw": -7.0,
+    "implied_rate": 1471.18,
+    "confidence": 0.0,
+    "signal": "krw_strong",
+    "unchanged_streak_days": 26,
+    "spot_at_run": 1478.1800537109375,
+    "target_date": "2026-07-21",
+    "change_justification": null
+   },
+   "1m": {
+    "published_delta_krw": -16.0,
+    "implied_rate": 1462.18,
+    "confidence": 0.0,
+    "signal": "krw_strong",
+    "unchanged_streak_days": 3,
+    "spot_at_run": 1478.1800537109375,
+    "target_date": "2026-07-21",
+    "change_justification": null
+   },
+   "3m": {
+    "published_delta_krw": 9.0,
+    "implied_rate": 1487.18,
+    "confidence": 0.0,
+    "signal": "krw_weak",
+    "unchanged_streak_days": 75,
+    "spot_at_run": 1478.1800537109375,
+    "target_date": "2026-07-21",
+    "change_justification": null
+   },
+   "12m": {
+    "published_delta_krw": 21.0,
+    "implied_rate": 1499.18,
+    "confidence": 0.0,
+    "signal": "krw_weak",
+    "unchanged_streak_days": 1,
+    "spot_at_run": 1478.1800537109375,
+    "target_date": "2026-07-21",
+    "change_justification": null
+   }
+  },
+  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdEPANT8nHyHaUuLA1xAc'}",
+  "report_en": ""
+ },
+ "/api/accuracy": {
+  "forecast": {
+   "horizons": {
+    "1w": {
+     "samples": 446,
+     "directional_hit_rate": 0.967,
+     "mae_krw": 20.92
+    },
+    "1m": {
+     "samples": 331,
+     "directional_hit_rate": 0.026,
+     "mae_krw": 40.12
+    },
+    "3m": {
+     "samples": 0
+    },
+    "12m": {
+     "samples": 0
+    }
+   },
+   "agent_ranking": [
+    {
+     "agent_id": 10,
+     "mae_krw": 27.44,
+     "n": 35
+    },
+    {
+     "agent_id": 11,
+     "mae_krw": 27.86,
+     "n": 35
+    },
+    {
+     "agent_id": 16,
+     "mae_krw": 28.09,
+     "n": 23
+    },
+    {
+     "agent_id": 7,
+     "mae_krw": 28.13,
+     "n": 35
+    },
+    {
+     "agent_id": 6,
+     "mae_krw": 28.18,
+     "n": 35
+    },
+    {
+     "agent_id": 13,
+     "mae_krw": 28.21,
+     "n": 33
+    },
+    {
+     "agent_id": 9,
+     "mae_krw": 28.24,
+     "n": 35
+    },
+    {
+     "agent_id": 106,
+     "mae_krw": 28.24,
+     "n": 35
+    },
+    {
+     "agent_id": 14,
+     "mae_krw": 28.54,
+     "n": 29
+    },
+    {
+     "agent_id": 4,
+     "mae_krw": 28.94,
+     "n": 35
+    },
+    {
+     "agent_id": 15,
+     "mae_krw": 29.09,
+     "n": 29
+    },
+    {
+     "agent_id": 105,
+     "mae_krw": 29.16,
+     "n": 35
+    },
+    {
+     "agent_id": 103,
+     "mae_krw": 29.3,
+     "n": 35
+    },
+    {
+     "agent_id": 1,
+     "mae_krw": 29.33,
+     "n": 35
+    },
+    {
+     "agent_id": 104,
+     "mae_krw": 29.38,
+     "n": 35
+    },
+    {
+     "agent_id": 107,
+     "mae_krw": 29.64,
+     "n": 35
+    },
+    {
+     "agent_id": 102,
+     "mae_krw": 29.67,
+     "n": 35
+    },
+    {
+     "agent_id": 8,
+     "mae_krw": 29.68,
+     "n": 35
+    },
+    {
+     "agent_id": 12,
+     "mae_krw": 29.94,
+     "n": 33
+    },
+    {
+     "agent_id": 101,
+     "mae_krw": 30.13,
+     "n": 35
+    }
+   ],
+   "total_samples": 777
+  },
+  "trading": {
+   "closed_trades": 5,
+   "win_rate": 0.6,
+   "total_pnl_krw": 56241.0,
+   "avg_pnl_pct": 0.512,
+   "profit_factor": 1.17,
+   "sharpe_per_trade": 0.4,
+   "best_krw": 240468.0,
+   "worst_krw": -167100.0,
+   "calibration": {
+    "0.55-0.65": {
+     "n": 2,
+     "win_rate": 1.0
+    },
+    "0.65-0.75": {
+     "n": 3,
+     "win_rate": 0.333
+    }
+   }
+  }
+ },
+ "/api/briefing/latest": {
+  "brief": {
+   "date": "2026-07-21",
+   "title": "원/달러 데일리 브리프",
+   "headline": "1개월: -16.0원 → 1463.07 (krw_strong, conf 0%)",
+   "forecast_summary": "1주: -7.0원 → 1472.07 (krw_strong, conf 0%) / 1개월: -16.0원 → 1463.07 (krw_strong, conf 0%) / 3개월: +9.0원 → 1488.07 (krw_weak, conf 0%) / 1년: +21.0원 → 1500.07 (krw_weak, conf 0%)",
+   "analysis": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdELTJBHJvmwk8JAQGii6'}",
+   "news_digest": [
+    "US Dollar Index Trims Gains as Fed Rate Hike Bets Fade - CryptoRank",
+    "달러·원 환율, 중동 불안에도 소폭 하락…장 초반 1470원대 후반 - 뉴스1",
+    "[환율] 원-달러 1,478.50원 … 0.84%↓ - 버핏연구소",
+    "원·달러 환율 1500원 아래로…중동 불안이 변수 - 알파경제"
+   ],
+   "trading_view": "",
+   "risks": [],
+   "sources": [
+    {
+     "source": "US dollar index / DXY",
+     "title": "US Dollar Index Trims Gains as Fed Rate Hike Bets Fade - CryptoRank",
+     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQcGZ4NEhpdXd0bjZjU2FCYnpMeXpncEpoM2NOSHZHaWVkMVBtVHRidk54dktET0VsM25FM2I1MVQwRk9ldDVFanhQY0E2cVZmVzc5ckwyWFhlRi1xc1Fzbnh5Ym5oLV90OWoyTENscDFxWGhDcEZGeXNLd25YbTJOVWx6blNOYkt5SHBjU2lYSm1HN00?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "달러·원 환율, 중동 불안에도 소폭 하락…장 초반 1470원대 후반 - 뉴스1",
+     "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9SSWtNc3M0N05udmJ3VWY3d1pIdkI0OC1McWMzUTN1dlBnbUJ5anhFckl0LXdPbVZYSXVTems3VVdCQ0hHaU5Ja1ktajFlUUJTcEVyX1RVbUdHdkE?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "[환율] 원-달러 1,478.50원 … 0.84%↓ - 버핏연구소",
+     "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBXMXB6ZGxuWk1TYlJmVXVPZnh1bjNiaDJfVDhMOW5ycHBiZTNtQXBlYlhabW5PWnhQVDJhb3lSVG5oOE14RUpJTkUzZ3dtcmhlVVV3WklzN0pGQjRURFlUb3hn?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "원·달러 환율 1500원 아래로…중동 불안이 변수 - 알파경제",
+     "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBjVFJPemh1WTZNS21nd0ZZbUtlTURtcWtrUGNjV0xjQTF1QTVjZFQzQTYxVWpvNnJkS3dmMzFyR3J1QmtjOW5TRnh5WEJGODU3UkxISjEzNlNPTHNIMmNDYmxnWkVSQ21xS2diZWxR?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "원·달러 환율, 2.4원 내린 1476원 - 조선비즈 - Chosunbiz",
+     "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPU2ZyV1VRbkRnMEJpZWRfMWR2TGdyQ3pCalFwWWpIMUFsMUpHZjdWei01aENyTEVNVXVzTWcxSzIyR0dKWUt2S2tYTmhTR0liV2RHVG9zOHRiXzEzeGVkdTJlUnJFRnpydi1YSHhLSE1rWXhWeEVKWVhxdVpIZkxyNWVueV92UdIBmgFBVV95cUxQUkc1cThjMzliZHBMR3RYb2MxcG1Wa01ReHh6WDlhTC1Qc2VyT05VOWZkUGF3ZE5hdFJrRUwyUlhiT3ZISUJUa1dvZTU0T3ZES1laNk1LaDFPN2JBMmFidFBFLV9fR1VKc3U0YUZncTFzSnpkVXRaS3pycFBvcTZFQ2pPWWU2SVFvbnE0RkIxbXdjR3JVdHVUSzV3?oc=5"
+    },
+    {
+     "source": "Chinese yuan / PBoC",
+     "title": "PBOC is expected to set the USD/CNY reference rate at 6.7850 – Reuters estimate - TradingView",
+     "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPVHRUcFI1VkpqR202R2R6aE52MHo5SG5wOEpKbGVYUVVtVHpTV1lRRXNIdlV2UFEzRTN1ZEl1bnR1NGdfNXk5UC1uNzlNQVZMMVdyd0JsakItWDRsWnZTWGlqTXZtbS0wX0wxUnVaZjV0OVRuSnF6U29ua215Vkk0UmtuY2pSOFFNcUdwNWY1QzNkRXZ0aFVXaFFwRnliaUVmZFViOHExMXVuZ0xpbk1pY3pYaDJYRnJXR1ZoZWExR3g3OXZ5T3VrWXNhSGRpckRtZEVZ?oc=5"
+    },
+    {
+     "source": "Wall Street Journal — Dollar/FX",
+     "title": "Chinese-Owned EV Maker Polestar Won’t Appeal U.S. Ban, Leaving Dealers in the Lurch - WSJ",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNaVpDcDZ3M1RxZFBWMTlXaGRHc3FjWjV2Sl9ULUFvODFJWnpRQmhrRmxYUHJueGVkX1lpVXpJYWlVbjQ1WVJmLUxHbnRvY1RLWnI5dmpWWnhNRWdwNTlNbjBiZ0tJS0JLdzdyazk3MFlrd2RnZU1VNk14WHp4ZkdBcTIzN294TDNNNHhOOElsNmFPa3Y4eWZYQ25RcFpqeEMtdWNJRjA2SmM0ejJMYmwyZ3MybFB2NWc2Yi1jaC1qWGxCdw?oc=5"
+    },
+    {
+     "source": "Bloomberg — KRW / Asia FX",
+     "title": "South Korea to Ease FX Rules for Foreigners to Trade Won Easier - Bloomberg.com",
+     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPdUp6M1pNVm45U0dlak53SDRMTHJFb1RKeFlERWVxWG9CcXNvNUt0c2hDY0dmTm1lUVlMazhyYlJ0VG5ESUdQc3V5WGVta1RJbmRlNVZPUWdLRGF3VWhWQWVVWVZQT3N0QUhURm5iM3dpUEpBX2NtYlMyazNRUFRjaWg0bFZNa3BqeEJMQllQY0NHajJXMXZjMDJrcXhsOUlHVzRDbzN5VUkxQkZrWVBXT2E3SW0?oc=5"
+    }
+   ],
+   "fc_lines": [
+    "1주: -7.0원 → 1472.07 (krw_strong, conf 0%)",
+    "1개월: -16.0원 → 1463.07 (krw_strong, conf 0%)",
+    "3개월: +9.0원 → 1488.07 (krw_weak, conf 0%)",
+    "1년: +21.0원 → 1500.07 (krw_weak, conf 0%)"
+   ]
+  }
+ },
+ "/api/hierarchy": {
+  "hierarchy": {
+   "academic": {
+    "group": "학계(Academic)",
+    "horizons": {},
+    "synthesis": "(에이전트 없음)",
+    "agents": []
+   },
+   "public": {
+    "group": "퍼블릭(Public)",
+    "horizons": {},
+    "synthesis": "(에이전트 없음)",
+    "agents": []
+   },
+   "private": {
+    "group": "프라이빗(Private)",
+    "horizons": {},
+    "synthesis": "(에이전트 없음)",
+    "agents": []
+   },
+   "chief": {
+    "reconciliation": "(수석 종합 실패 — 정량 앵커 사용)",
+    "horizons": {}
+   },
+   "members": {
+    "academic": [],
+    "public": [],
+    "private": []
+   },
+   "collaboration": {
+    "consensus_1m": 0.0,
+    "outlier_count": 0,
+    "revised_count": 0,
+    "reviews": []
+   },
+   "sector_agreement": {
+    "1w": "mixed",
+    "1m": "mixed",
+    "3m": "mixed",
+    "12m": "mixed"
+   },
+   "spot": 1478.1800537109375
+  },
+  "updated_at": "2026-07-21T02:04:51.067882"
+ }
+}
