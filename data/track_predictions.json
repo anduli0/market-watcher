@@ -83,7 +83,7 @@
   "secondary": "KOREA_DECOUPLING",
   "confidence": 0.5953,
   "risk_on": -0.2881,
-  "coverage": 1.0,
+  "coverage": 0.75,
   "weights": {
    "US_EQUITY": 0.281,
    "GOLD": 0.1664,
