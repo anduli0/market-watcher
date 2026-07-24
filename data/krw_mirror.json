@@ -4,69 +4,69 @@
   "model": "claude-sonnet-4-6",
   "broker": "paper",
   "live_trading": false,
-  "spot": 1470.75,
+  "spot": 1461.5999755859375,
   "realized_vol_krw": 9.645,
-  "data_last_collected": "2026-07-24T00:38:08.644340",
+  "data_last_collected": "2026-07-24T14:51:18.435299",
   "agent_count": 23
  },
  "/api/forecast": {
   "horizons": {
    "1w": {
     "published_delta_krw": -7.0,
-    "implied_rate": 1468.21,
+    "implied_rate": 1457.0,
     "confidence": 0.0,
     "signal": "krw_strong",
-    "unchanged_streak_days": 37,
-    "spot_at_run": 1475.2099609375,
+    "unchanged_streak_days": 38,
+    "spot_at_run": 1464.0,
     "target_date": "2026-07-24",
     "change_justification": null
    },
    "1m": {
     "published_delta_krw": -29.0,
-    "implied_rate": 1446.21,
+    "implied_rate": 1435.0,
     "confidence": 0.0,
     "signal": "krw_strong",
-    "unchanged_streak_days": 3,
-    "spot_at_run": 1475.2099609375,
+    "unchanged_streak_days": 4,
+    "spot_at_run": 1464.0,
     "target_date": "2026-07-24",
     "change_justification": null
    },
    "3m": {
     "published_delta_krw": 9.0,
-    "implied_rate": 1484.21,
+    "implied_rate": 1473.0,
     "confidence": 0.0,
     "signal": "krw_weak",
-    "unchanged_streak_days": 86,
-    "spot_at_run": 1475.2099609375,
+    "unchanged_streak_days": 87,
+    "spot_at_run": 1464.0,
     "target_date": "2026-07-24",
     "change_justification": null
    },
    "12m": {
     "published_delta_krw": 21.0,
-    "implied_rate": 1496.21,
+    "implied_rate": 1485.0,
     "confidence": 0.0,
     "signal": "krw_weak",
-    "unchanged_streak_days": 12,
-    "spot_at_run": 1475.2099609375,
+    "unchanged_streak_days": 13,
+    "spot_at_run": 1464.0,
     "target_date": "2026-07-24",
     "change_justification": null
    }
   },
-  "report_ko": "Report generation failed: Connection error.",
-  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdKFd6QKbjvhFGCJgPDZ8'}"
+  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdLRCbiQePKh7tmRr5mcH'}",
+  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdLRCiBM8WExcFmMUZi4o'}"
  },
  "/api/accuracy": {
   "forecast": {
    "horizons": {
     "1w": {
-     "samples": 155,
-     "directional_hit_rate": 0.774,
-     "mae_krw": 19.64
+     "samples": 157,
+     "directional_hit_rate": 0.778,
+     "mae_krw": 19.48
     },
     "1m": {
-     "samples": 55,
+     "samples": 57,
      "directional_hit_rate": 0.0,
-     "mae_krw": 64.43
+     "mae_krw": 65.61
     },
     "3m": {
      "samples": 0
@@ -177,7 +177,7 @@
      "n": 34
     }
    ],
-   "total_samples": 210
+   "total_samples": 214
   },
   "trading": {
    "closed_trades": 5,
@@ -203,37 +203,30 @@
  "/api/briefing/latest": {
   "brief": {
    "date": "2026-07-24",
-   "title": "원/달러 데일리 브리프",
-   "headline": "1개월: -29.0원 → 1446.21 (krw_strong, conf 0%)",
-   "forecast_summary": "1주: -7.0원 → 1468.21 (krw_strong, conf 0%) / 1개월: -29.0원 → 1446.21 (krw_strong, conf 0%) / 3개월: +9.0원 → 1484.21 (krw_weak, conf 0%) / 1년: +21.0원 → 1496.21 (krw_weak, conf 0%)",
+   "title": "원/달러 1,465원대 — 최근 원화 강세와 강달러·고금리 압력이 팽팽히 맞선다",
+   "headline": "현물 환율은 약 1,465.8원. 가까운 시일에는 원화가 더 강해져 환율이 1,450원대로 내려갈 여지가 있으나, 시간이 지나면 다시 오를 소지가 있다.",
+   "forecast_summary": "1주 뒤에는 약 7원 내린 1,458원대, 1개월 뒤에는 약 29원 내린 1,436원대로 원화가 더 강해지는 흐름을 본다. 다만 3개월 뒤에는 약 9원 오른 1,474원대, 1년 뒤에는 약 21원 오른 1,486원대로 환율이 되돌아설 소지가 있다. 정리하면 가까운 시일에는 원화 강세, 시간이 지나면서 원화 약세로 방향이 바뀌는 그림이다.",
    "horizon_breakdown": {},
-   "analysis": "Report generation failed: Connection error.",
+   "analysis": "환율을 움직이는 힘이 서로 반대쪽으로 당기고 있다. 한쪽에는 최근 뚜렷해진 원화 강세가 있다. 이달 원화 절상률은 약 4.27%로 주요국 1위였고, 원/달러는 두 달여 만에 1,460원대까지 급락해 77일 만의 저점을 찍었다. 한국 경제의 깜짝 성장 소식이 원화를 떠받쳤고, 원/엔 환율은 1년 8개월 만에 900원 아래로 내려갔다. 한국은행 총재는 원화 반등을 전망하며 금리 인상 필요성을 거듭 언급했고, UBS는 국제수지 흐름을 근거로 원화가 더 강해질 수 있다고 봤다. 정부 개입 정황을 반영해 미국계 은행(BofA)이 원/달러 전망을 수정하기도 했다. 다른 한쪽에는 강달러와 미국 고금리가 있다. 달러지수는 매파적 연준 발언에 힘입어 52주 최고치까지 올랐고, 미국 10년물 국채 금리가 4.67%로 오르는 등 금리가 달러에 우호적으로 움직였다. 다만 같은 날 미국 금리 인상 기대가 한풀 꺾이며 달러가 상승분을 반납했다는 보도도 있어, 달러 방향은 아직 한쪽으로 굳어지지 않았다. 중동전쟁 확전 우려는 안전자산 달러 수요를 자극해 원화에 부담을 주는 변수다. 위안화 쪽은 연준이 완화 신호를 보내면 달러당 7위안까지 강해질 수 있다는 관측과 인민은행의 관리형 절하 기조가 섞여 있어 원화에 양방향으로 작용한다. 결국 가까운 시일에는 원화 강세 재료가, 시간이 지나면서는 강달러 재료가 우위를 보일 수 있는 구도다.",
    "key_levels": null,
    "scenario": {},
    "news_digest": [
-    "Federal Reserve Board issues enforcement action with TS Banking Group, Inc. and TS Contrarian Bancshares, Inc.",
-    "Federal Reserve announces the leadership and objectives of its task forces to advance the conduct of monetary policy"
+    "원/달러가 두 달여 만에 1,460원대로 급락해 77일 만의 저점을 찍었고, 한국 경제의 깜짝 성장 소식이 원화 강세를 뒷받침했다.",
+    "이달 원화 절상률이 약 4.27%로 주요국 1위를 기록하고 원/엔이 1년 8개월 만에 900원 아래로 내려가, 최근의 원화 강세 흐름을 확인시켜 준다.",
+    "한국은행 총재가 원화 반등을 전망하며 금리 인상 필요성을 재차 언급해, 원화를 떠받치는 정책 신호가 됐다.",
+    "UBS는 국제수지 흐름을 근거로 원화가 더 강해질 수 있다고 봤고, 미국계 은행(BofA)은 정부 개입 정황을 반영해 원/달러 전망을 수정했다.",
+    "달러지수가 매파적 연준 발언에 힘입어 52주 최고치로 오르고 미국 국채 금리도 상승해, 원화에는 하방 압력으로 작용한다.",
+    "중동전쟁 확전 우려에 원/달러가 1,470원을 다시 넘기도 하는 등, 지정학 불안이 안전자산 달러 수요를 자극하는 변수로 남아 있다."
    ],
-   "trading_view": "",
-   "risks": [],
-   "sources": [
-    {
-     "source": "Federal Reserve Press",
-     "title": "Federal Reserve Board issues enforcement action with TS Banking Group, Inc. and TS Contrarian Bancshares, Inc.",
-     "link": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260709a.htm"
-    },
-    {
-     "source": "Federal Reserve Press",
-     "title": "Federal Reserve announces the leadership and objectives of its task forces to advance the conduct of monetary policy",
-     "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260709a.htm"
-    }
+   "trading_view": "가까운 시일에는 원화 강세(환율 하락) 쪽에 무게를 두되 1,450원대 접근에서는 되돌림에 유의하고, 시간이 지나 강달러가 재개될 경우 환율 반등 가능성을 함께 열어두는 것이 합리적이다.",
+   "risks": [
+    "매파적 연준과 달러지수 신고가 흐름, 미국 국채 금리 상승이 이어지면 최근의 원화 강세가 조기에 꺾일 수 있다.",
+    "정부 개입과 한국은행의 금리 인상 신호가 실제 정책으로 이어질지가 방향을 가른다.",
+    "중동전쟁 확전 등 지정학 변수가 안전자산 달러 수요를 자극하면 환율이 위로 튈 수 있다.",
+    "위안화의 관리형 절하와 연준 완화 신호 사이의 줄다리기가 원화에 양방향으로 번질 수 있다."
    ],
-   "fc_lines": [
-    "1주: -7.0원 → 1468.21 (krw_strong, conf 0%)",
-    "1개월: -29.0원 → 1446.21 (krw_strong, conf 0%)",
-    "3개월: +9.0원 → 1484.21 (krw_weak, conf 0%)",
-    "1년: +21.0원 → 1496.21 (krw_weak, conf 0%)"
-   ]
+   "sources": [],
+   "fc_lines": []
   }
  },
  "/api/hierarchy": {
@@ -277,8 +270,8 @@
     "3m": "mixed",
     "12m": "mixed"
    },
-   "spot": 1475.2099609375
+   "spot": 1464.0
   },
-  "updated_at": "2026-07-23T15:48:57.507162"
+  "updated_at": "2026-07-24T06:35:10.271244"
  }
 }
