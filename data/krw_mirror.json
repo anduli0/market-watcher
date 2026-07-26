@@ -6,7 +6,7 @@
   "live_trading": false,
   "spot": 1459.4200439453125,
   "realized_vol_krw": 9.645,
-  "data_last_collected": "2026-07-25T09:46:42.305550",
+  "data_last_collected": "2026-07-26T05:44:34.655013",
   "agent_count": 23
  },
  "/api/forecast": {
@@ -16,9 +16,9 @@
     "implied_rate": 1452.42,
     "confidence": 0.0,
     "signal": "krw_strong",
-    "unchanged_streak_days": 44,
+    "unchanged_streak_days": 47,
     "spot_at_run": 1459.4200439453125,
-    "target_date": "2026-07-25",
+    "target_date": "2026-07-26",
     "change_justification": null
    },
    "1m": {
@@ -26,9 +26,9 @@
     "implied_rate": 1430.42,
     "confidence": 0.0,
     "signal": "krw_strong",
-    "unchanged_streak_days": 10,
+    "unchanged_streak_days": 13,
     "spot_at_run": 1459.4200439453125,
-    "target_date": "2026-07-25",
+    "target_date": "2026-07-26",
     "change_justification": null
    },
    "3m": {
@@ -36,9 +36,9 @@
     "implied_rate": 1468.42,
     "confidence": 0.0,
     "signal": "krw_weak",
-    "unchanged_streak_days": 93,
+    "unchanged_streak_days": 96,
     "spot_at_run": 1459.4200439453125,
-    "target_date": "2026-07-25",
+    "target_date": "2026-07-26",
     "change_justification": null
    },
    "12m": {
@@ -46,27 +46,27 @@
     "implied_rate": 1480.42,
     "confidence": 0.0,
     "signal": "krw_weak",
-    "unchanged_streak_days": 19,
+    "unchanged_streak_days": 22,
     "spot_at_run": 1459.4200439453125,
-    "target_date": "2026-07-25",
+    "target_date": "2026-07-26",
     "change_justification": null
    }
   },
-  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdNaivxwEmmNNrS3ntECK'}",
-  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdNaj5TuXhyxHZSgnAvjT'}"
+  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdP2jdcTbafPQPvNJSdWu'}",
+  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdP2k3wgdVy3WmHFMFGrh'}"
  },
  "/api/accuracy": {
   "forecast": {
    "horizons": {
     "1w": {
-     "samples": 161,
-     "directional_hit_rate": 0.784,
-     "mae_krw": 19.44
+     "samples": 163,
+     "directional_hit_rate": 0.787,
+     "mae_krw": 19.42
     },
     "1m": {
-     "samples": 59,
+     "samples": 60,
      "directional_hit_rate": 0.0,
-     "mae_krw": 67.06
+     "mae_krw": 67.84
     },
     "3m": {
      "samples": 0
@@ -177,7 +177,7 @@
      "n": 34
     }
    ],
-   "total_samples": 220
+   "total_samples": 223
   },
   "trading": {
    "closed_trades": 5,
@@ -202,36 +202,24 @@
  },
  "/api/briefing/latest": {
   "brief": {
-   "date": "2026-07-25",
+   "date": "2026-07-26",
    "title": "원/달러 데일리 브리프",
    "headline": "1개월: -29.0원 → 1430.42 (krw_strong, conf 0%)",
    "forecast_summary": "1주: -7.0원 → 1452.42 (krw_strong, conf 0%) / 1개월: -29.0원 → 1430.42 (krw_strong, conf 0%) / 3개월: +9.0원 → 1468.42 (krw_weak, conf 0%) / 1년: +21.0원 → 1480.42 (krw_weak, conf 0%)",
    "horizon_breakdown": {},
-   "analysis": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdN7MXwMupFHGDXKwdVNV'}",
+   "analysis": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdP2jdcTbafPQPvNJSdWu'}",
    "key_levels": null,
    "scenario": {},
    "news_digest": [
-    "7월 6일부터 원/달러 24시간 거래 ㅡ IMF 외환위기 트라우마 끝, 원화 국제화 원년 - 한국미래일보",
-    "원·달러 환율, 7.5원 오른 1480.9원 - 조선비즈 - Chosunbiz",
-    "Oil Prices Ease Pressure on Treasury Yields - WSJ"
+    "3년 반 만의 한국은행 기준금리 인상…평택 '더 플래티넘 파인애비뉴' 분양 열기 고조 - 네이트"
    ],
    "trading_view": "",
    "risks": [],
    "sources": [
     {
-     "source": "기획재정부 외환시장",
-     "title": "7월 6일부터 원/달러 24시간 거래 ㅡ IMF 외환위기 트라우마 끝, 원화 국제화 원년 - 한국미래일보",
-     "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9kMzI1ekUteEVRN3E5Zm9TR1lYWUExME5rWjZDajdCbTVUcHRNUm1sZmplNVNHZ1dxZ25fQ2VXU2Z2dWQ5UENuYVNkOHZUZk9tMW1ScGxseldLRU9TMm11MFFwMkhDT2pU?oc=5"
-    },
-    {
-     "source": "원/달러 환율",
-     "title": "원·달러 환율, 7.5원 오른 1480.9원 - 조선비즈 - Chosunbiz",
-     "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQMWs0LXlrMVJveGRWc1NCOG5fVHo4eDhNX3pDNzRwd0hMMVpmN3ctVlZOV3k4M3BhT3dhMjUyVXYtY1I5Nnk4RVYxblAtR3FMM1BLeGpmNGZtOHlrTU80R3FTNm0xSTRrQ1NsbGoxMllPcVhCQVd3NEh3RnRrakFxWTVyXzR5d9IBmgFBVV95cUxPVjdqWnh2c0JHWC1DTGhYQTE5amptRDdiX3VPaUJGdzZHN0lYQTdfNWZRRGdWS2dkVjA5N2dnN2daakY3UHdsTUdzTkNCbTQ2cGE5UnJ4TElqNUJsa2VudlhEaE9rWnF1cWc4YUEyUGxCMnlSbEhTX2VBVUt6ZWc2TEhuZnRCM0hlWFdJUjFWdklRMXAyNXdMN2JB?oc=5"
-    },
-    {
-     "source": "Wall Street Journal — Dollar/FX",
-     "title": "Oil Prices Ease Pressure on Treasury Yields - WSJ",
-     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxQUktfOW5wS2M0Vmp3bGp5TVdzenRlcHBxSEdVWE9neWpNajhrVlJ1WnQ2WGVFN0V3VWxQRkRiaDJSbEF3M2xNYXJWY2VUT0Q2dDlGdlNZYmotZ1VOOEdUbWxGckZ6M1VROXVPZlM2UHpfMGhRYWpPNm5felJVamY1YnY0TDRGcFFGWG9zUHpBbG45azF2cTlNS1VOOHdwQQ?oc=5"
+     "source": "한국은행 기준금리",
+     "title": "3년 반 만의 한국은행 기준금리 인상…평택 '더 플래티넘 파인애비뉴' 분양 열기 고조 - 네이트",
+     "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9xSjQ1WU1UYWNGVzc0RjJaYkpfOFFydDVCUzZfNERibTRnRHhHWC16QnFYLUNEZzI1NXE1S0lvT0JLLXk4SlBNVTF1dHE4Qkd4WWhR?oc=5"
     }
    ],
    "fc_lines": [
@@ -285,6 +273,6 @@
    },
    "spot": 1459.4200439453125
   },
-  "updated_at": "2026-07-25T10:01:14.817391"
+  "updated_at": "2026-07-25T15:42:25.434989"
  }
 }
