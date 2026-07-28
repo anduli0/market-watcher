@@ -4,64 +4,64 @@
   "model": "claude-sonnet-4-6",
   "broker": "paper",
   "live_trading": false,
-  "spot": 1459.449951171875,
+  "spot": 1459.5799560546875,
   "realized_vol_krw": 7.155,
-  "data_last_collected": "2026-07-28T11:15:45.717339",
+  "data_last_collected": "2026-07-28T13:45:45.800870",
   "agent_count": 23
  },
  "/api/forecast": {
   "horizons": {
    "1w": {
     "published_delta_krw": -7.0,
-    "implied_rate": 1462.68,
+    "implied_rate": 1452.16,
     "confidence": 0.0,
     "signal": "krw_strong",
-    "unchanged_streak_days": 4,
-    "spot_at_run": 1469.68,
+    "unchanged_streak_days": 6,
+    "spot_at_run": 1459.1600341796875,
     "target_date": "2026-07-28",
     "change_justification": null
    },
    "1m": {
     "published_delta_krw": -29.0,
-    "implied_rate": 1440.68,
+    "implied_rate": 1430.16,
     "confidence": 0.0,
     "signal": "krw_strong",
-    "unchanged_streak_days": 4,
-    "spot_at_run": 1469.68,
+    "unchanged_streak_days": 6,
+    "spot_at_run": 1459.1600341796875,
     "target_date": "2026-07-28",
     "change_justification": null
    },
    "3m": {
     "published_delta_krw": 9.0,
-    "implied_rate": 1478.68,
+    "implied_rate": 1468.16,
     "confidence": 0.0,
     "signal": "krw_weak",
-    "unchanged_streak_days": 4,
-    "spot_at_run": 1469.68,
+    "unchanged_streak_days": 6,
+    "spot_at_run": 1459.1600341796875,
     "target_date": "2026-07-28",
     "change_justification": null
    },
    "12m": {
     "published_delta_krw": 21.0,
-    "implied_rate": 1490.68,
+    "implied_rate": 1480.16,
     "confidence": 0.0,
     "signal": "krw_weak",
-    "unchanged_streak_days": 4,
-    "spot_at_run": 1469.68,
+    "unchanged_streak_days": 6,
+    "spot_at_run": 1459.1600341796875,
     "target_date": "2026-07-28",
     "change_justification": null
    }
   },
-  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdUMrvrUH3mzQL7UXiSQP'}",
-  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdUMs9UVJD12dZ9dpa4oY'}"
+  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdUX1dPnUxN1G8B8Q6bJ7'}",
+  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdUX1kkoEn6WtnSibyM4p'}"
  },
  "/api/accuracy": {
   "forecast": {
    "horizons": {
     "1w": {
-     "samples": 171,
-     "directional_hit_rate": 0.799,
-     "mae_krw": 18.78
+     "samples": 172,
+     "directional_hit_rate": 0.8,
+     "mae_krw": 18.68
     },
     "1m": {
      "samples": 70,
@@ -177,7 +177,7 @@
      "n": 34
     }
    ],
-   "total_samples": 241
+   "total_samples": 242
   },
   "trading": {
    "closed_trades": 5,
@@ -319,8 +319,8 @@
     "3m": "mixed",
     "12m": "mixed"
    },
-   "spot": 1469.68
+   "spot": 1459.1600341796875
   },
-  "updated_at": "2026-07-28T11:16:09.599393"
+  "updated_at": "2026-07-28T13:16:07.719249"
  }
 }
