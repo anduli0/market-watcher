@@ -287,27 +287,27 @@
  },
  "2026-08-01": {
   "date": "2026-08-01",
-  "regime": "US_TECH_LEADERSHIP",
+  "regime": "RECESSION_RISK",
   "secondary": "KOREA_DECOUPLING",
-  "confidence": 0.6088,
-  "risk_on": 0.0705,
+  "confidence": 0.6053,
+  "risk_on": -0.2982,
   "coverage": 1.0,
   "weights": {
-   "US_EQUITY": 0.4612,
-   "CASH": 0.119,
-   "US_TREASURY": 0.1091,
-   "USD": 0.104,
-   "KOREA_EQUITY": 0.0785,
-   "GOLD": 0.0685,
-   "BITCOIN": 0.0597
+   "US_EQUITY": 0.2524,
+   "CASH": 0.1715,
+   "US_TREASURY": 0.1694,
+   "USD": 0.1587,
+   "GOLD": 0.1385,
+   "KOREA_EQUITY": 0.0737,
+   "BITCOIN": 0.0357
   },
   "neutral": {
    "US_EQUITY": 0.35,
    "CASH": 0.1,
    "US_TREASURY": 0.12,
    "USD": 0.1,
-   "KOREA_EQUITY": 0.15,
    "GOLD": 0.1,
+   "KOREA_EQUITY": 0.15,
    "BITCOIN": 0.08
   }
  }
