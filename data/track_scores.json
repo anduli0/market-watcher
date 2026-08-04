@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-04T19:26:26.304636+00:00",
+ "updated_at": "2026-08-04T20:51:51.596651+00:00",
  "summary": {
   "horizon_days": 5,
   "n_predictions": 16,
@@ -72,8 +72,8 @@
    "regime": "RECESSION_RISK",
    "risk_on": -0.2877,
    "confidence": 0.5946,
-   "portfolio_return_pct": -2.023,
-   "neutral_return_pct": -2.333,
+   "portfolio_return_pct": -2.026,
+   "neutral_return_pct": -2.336,
    "excess_pct": 0.31,
    "risk_spread_pct": -1.613,
    "hit": true
