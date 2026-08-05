@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-05T10:59:12.353136+00:00",
+ "updated_at": "2026-08-05T12:59:25.835747+00:00",
  "summary": {
   "horizon_days": 5,
   "n_predictions": 16,
@@ -8,7 +8,7 @@
   "hit_rate": 0.4286,
   "avg_stated_confidence": 0.6304,
   "avg_excess_pct": 0.407,
-  "cum_excess_pct": 2.875,
+  "cum_excess_pct": 2.874,
   "updated_at": null
  },
  "scores": [
@@ -83,10 +83,10 @@
    "regime": "RECESSION_RISK",
    "risk_on": -0.2883,
    "confidence": 0.5955,
-   "portfolio_return_pct": 0.232,
-   "neutral_return_pct": 0.858,
-   "excess_pct": -0.626,
-   "risk_spread_pct": 2.934,
+   "portfolio_return_pct": 0.16,
+   "neutral_return_pct": 0.788,
+   "excess_pct": -0.627,
+   "risk_spread_pct": 2.94,
    "hit": false
   }
  ]
