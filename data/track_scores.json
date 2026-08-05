@@ -1,14 +1,14 @@
 {
- "updated_at": "2026-08-04T23:32:29.911094+00:00",
+ "updated_at": "2026-08-05T02:06:27.075649+00:00",
  "summary": {
   "horizon_days": 5,
   "n_predictions": 16,
-  "n_scored": 6,
-  "n_directional": 6,
-  "hit_rate": 0.5,
-  "avg_stated_confidence": 0.6362,
-  "avg_excess_pct": 0.58,
-  "cum_excess_pct": 3.523,
+  "n_scored": 7,
+  "n_directional": 7,
+  "hit_rate": 0.4286,
+  "avg_stated_confidence": 0.6304,
+  "avg_excess_pct": 0.364,
+  "cum_excess_pct": 2.558,
   "updated_at": null
  },
  "scores": [
@@ -77,6 +77,17 @@
    "excess_pct": 0.31,
    "risk_spread_pct": -1.613,
    "hit": true
+  },
+  {
+   "date": "2026-07-27",
+   "regime": "RECESSION_RISK",
+   "risk_on": -0.2883,
+   "confidence": 0.5955,
+   "portfolio_return_pct": 0.518,
+   "neutral_return_pct": 1.45,
+   "excess_pct": -0.932,
+   "risk_spread_pct": 4.335,
+   "hit": false
   }
  ]
 }
