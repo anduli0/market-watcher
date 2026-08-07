@@ -1,14 +1,14 @@
 {
- "updated_at": "2026-08-06T14:52:35.523127+00:00",
+ "updated_at": "2026-08-07T00:22:37.351818+00:00",
  "summary": {
   "horizon_days": 5,
-  "n_predictions": 17,
-  "n_scored": 8,
-  "n_directional": 8,
-  "hit_rate": 0.5,
-  "avg_stated_confidence": 0.6238,
-  "avg_excess_pct": 0.285,
-  "cum_excess_pct": 2.283,
+  "n_predictions": 18,
+  "n_scored": 9,
+  "n_directional": 9,
+  "hit_rate": 0.5556,
+  "avg_stated_confidence": 0.6188,
+  "avg_excess_pct": 0.194,
+  "cum_excess_pct": 1.739,
   "updated_at": null
  },
  "scores": [
@@ -94,10 +94,21 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.067,
    "confidence": 0.5782,
-   "portfolio_return_pct": 3.314,
-   "neutral_return_pct": 3.894,
-   "excess_pct": -0.579,
-   "risk_spread_pct": 5.941,
+   "portfolio_return_pct": 3.162,
+   "neutral_return_pct": 3.754,
+   "excess_pct": -0.592,
+   "risk_spread_pct": 5.955,
+   "hit": true
+  },
+  {
+   "date": "2026-07-29",
+   "regime": "US_TECH_LEADERSHIP",
+   "risk_on": 0.067,
+   "confidence": 0.5786,
+   "portfolio_return_pct": 3.172,
+   "neutral_return_pct": 3.692,
+   "excess_pct": -0.519,
+   "risk_spread_pct": 4.77,
    "hit": true
   }
  ]
