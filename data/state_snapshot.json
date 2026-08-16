@@ -1,6 +1,6 @@
 {
- "as_of_utc": "2026-08-16T15:45:02.378419+00:00",
- "as_of_kst": "2026-08-17T00:45:02.378419+09:00",
+ "as_of_utc": "2026-08-16T16:19:20.231971+00:00",
+ "as_of_kst": "2026-08-17T01:19:20.231971+09:00",
  "warming": false,
  "mode": "READ_ONLY",
  "live_armed": false,
@@ -26,12 +26,12 @@
    "target": "US_POLICY_RATE_PATH",
    "horizon": "6M",
    "direction": "UP",
-   "confidence": 0.618,
+   "confidence": 0.609,
    "regime": "hawkish",
    "expected_move": "25.0",
    "unit": "BPS",
-   "data_quality": 0.79,
-   "age_seconds": 13853,
+   "data_quality": 0.98,
+   "age_seconds": 1433,
    "stale": false
   },
   {
@@ -39,12 +39,12 @@
    "target": "US_POLICY_RATE_PATH",
    "horizon": "12M",
    "direction": "UP",
-   "confidence": 0.581,
+   "confidence": 0.6,
    "regime": "hawkish",
    "expected_move": "25.0",
    "unit": "BPS",
-   "data_quality": 0.79,
-   "age_seconds": 13853,
+   "data_quality": 0.98,
+   "age_seconds": 1433,
    "stale": false
   },
   {
@@ -52,12 +52,12 @@
    "target": "US_POLICY_RATE_PATH",
    "horizon": "3Y",
    "direction": "DOWN",
-   "confidence": 0.452,
+   "confidence": 0.487,
    "regime": "dovish",
    "expected_move": "-25.0",
    "unit": "BPS",
-   "data_quality": 0.79,
-   "age_seconds": 13853,
+   "data_quality": 0.98,
+   "age_seconds": 1433,
    "stale": false
   },
   {
@@ -65,12 +65,12 @@
    "target": "US_POLICY_RATE_PATH",
    "horizon": "10Y",
    "direction": "DOWN",
-   "confidence": 0.44,
+   "confidence": 0.427,
    "regime": "dovish",
    "expected_move": "-50.0",
    "unit": "BPS",
-   "data_quality": 0.79,
-   "age_seconds": 13853,
+   "data_quality": 0.98,
+   "age_seconds": 1433,
    "stale": false
   },
   {
@@ -83,7 +83,7 @@
    "expected_move": "-10.0",
    "unit": "KRW",
    "data_quality": 0.6,
-   "age_seconds": 2,
+   "age_seconds": 0,
    "stale": false
   },
   {
@@ -96,7 +96,7 @@
    "expected_move": "-29.0",
    "unit": "KRW",
    "data_quality": 0.6,
-   "age_seconds": 2,
+   "age_seconds": 0,
    "stale": false
   },
   {
@@ -109,7 +109,7 @@
    "expected_move": "9.0",
    "unit": "KRW",
    "data_quality": 0.6,
-   "age_seconds": 2,
+   "age_seconds": 0,
    "stale": false
   },
   {
@@ -122,7 +122,7 @@
    "expected_move": "21.0",
    "unit": "KRW",
    "data_quality": 0.6,
-   "age_seconds": 2,
+   "age_seconds": 0,
    "stale": false
   },
   {
@@ -134,8 +134,8 @@
    "regime": "RISK_OFF",
    "expected_move": null,
    "unit": null,
-   "data_quality": 0.85,
-   "age_seconds": 16411,
+   "data_quality": 0.83,
+   "age_seconds": 18469,
    "stale": false
   },
   {
@@ -148,7 +148,7 @@
    "expected_move": "42.5",
    "unit": "SCORE",
    "data_quality": 0.54,
-   "age_seconds": 7019,
+   "age_seconds": 9077,
    "stale": false
   }
  ],
@@ -157,15 +157,15 @@
   "primary_ko": "미국 기술주 주도",
   "secondary": "KOREA_DECOUPLING",
   "secondary_ko": "한국 따로 가기(디커플링)",
-  "confidence": 0.526,
+  "confidence": 0.528,
   "coverage": 1.0,
   "transition_risk": 0.67,
   "probabilities": {
-   "US_TECH_LEADERSHIP": 0.3993,
-   "KOREA_DECOUPLING": 0.2662,
-   "REGIME_UNCERTAIN": 0.131,
-   "RECESSION_RISK": 0.1131,
-   "DEFENSIVE_ROTATION": 0.0905
+   "US_TECH_LEADERSHIP": 0.4017,
+   "KOREA_DECOUPLING": 0.2678,
+   "REGIME_UNCERTAIN": 0.1257,
+   "RECESSION_RISK": 0.1138,
+   "DEFENSIVE_ROTATION": 0.091
   },
   "supporting": [
    "d4661be806be5ddd8750ae533c40073d"
@@ -194,17 +194,17 @@
  },
  "cio": {
   "strategy_brief": "오늘의 전략 — 시장은 '미국 기술주 주도' 국면(확신 53%)으로, 중립 기조가 적절합니다. 현금은 약 28% 확보한 채, 늘릴 곳은 [US_TECH, US_SEMICONDUCTOR, KOREA_SEMICONDUCTOR], 줄일 곳은 [CASH]입니다. 방향이 엇갈리는 구간이라 한쪽 베팅보다 분산과 현금 여력 확보가 우선입니다. (매일 갱신되는 참고 전략이며 투자 권유가 아닙니다.)",
-  "risk_on_score": 0.0861,
-  "target_cash_ratio": 0.2828,
+  "risk_on_score": 0.0868,
+  "target_cash_ratio": 0.2826,
   "asset_class_allocation": {
-   "EQUITY": 0.4161,
+   "EQUITY": 0.4163,
    "BOND": 0.3011,
-   "CASH": 0.2828
+   "CASH": 0.2826
   },
   "country_allocation": {
-   "KOREA": 0.251,
-   "US": 0.4662,
-   "CASH": 0.2828
+   "KOREA": 0.2511,
+   "US": 0.4663,
+   "CASH": 0.2826
   },
   "style_tilts": {
    "GROWTH": 0.1,
@@ -213,35 +213,35 @@
   "sector_tilts": {
    "SEMICONDUCTOR": 0.05
   },
-  "portfolio_confidence": 0.5258,
+  "portfolio_confidence": 0.5282,
   "watcher_weights": [
    {
     "watcher": "FED_WATCHER",
-    "weight": 0.1598,
+    "weight": 0.1933,
     "components": {
      "accuracy": 0.5224,
      "regime_suitability": 0.8,
      "horizon_suitability": 1.0,
-     "freshness": 0.7863,
+     "freshness": 0.9779,
      "independence": 0.9,
      "calibration": 0.7
     }
    },
    {
     "watcher": "KOSPI_WATCHER",
-    "weight": 0.2625,
+    "weight": 0.2496,
     "components": {
      "accuracy": 0.6367,
      "regime_suitability": 1.0,
      "horizon_suitability": 1.0,
-     "freshness": 0.8481,
+     "freshness": 0.829,
      "independence": 0.9,
      "calibration": 0.7
     }
    },
    {
     "watcher": "KRW_WATCHER",
-    "weight": 0.3259,
+    "weight": 0.3171,
     "components": {
      "accuracy": 0.838,
      "regime_suitability": 0.8,
@@ -253,12 +253,12 @@
    },
    {
     "watcher": "US_WATCHER",
-    "weight": 0.2518,
+    "weight": 0.24,
     "components": {
      "accuracy": 0.554,
      "regime_suitability": 1.0,
      "horizon_suitability": 1.0,
-     "freshness": 0.935,
+     "freshness": 0.916,
      "independence": 0.9,
      "calibration": 0.7
     }
@@ -371,8 +371,8 @@
  },
  "portfolio": {
   "headline": "중립·혼조 — 미국 주식 우위의 분산 유지, 확신도 53%",
-  "risk_on_score": 0.086,
-  "confidence": 0.5258,
+  "risk_on_score": 0.087,
+  "confidence": 0.5282,
   "coverage": 1.0,
   "notes": [
    "‘달러(USD)’는 달러 보유(환차익·안전판), ‘원화 현금’은 환노출 없는 원화 보유 — 역할이 다릅니다.",
@@ -383,10 +383,10 @@
    {
     "asset": "US_EQUITY",
     "label_ko": "미국 주식",
-    "weight": 0.461,
+    "weight": 0.4619,
     "neutral_weight": 0.35,
     "stance": "OVERWEIGHT",
-    "score": 0.373,
+    "score": 0.376,
     "rationale": "[US_TECH_LEADERSHIP·OVERWEIGHT] 위험선호·미 증시 주도력에 비중 확대 우위",
     "drivers": [
      "위험선호",
@@ -396,10 +396,10 @@
    {
     "asset": "CASH",
     "label_ko": "원화 현금",
-    "weight": 0.1175,
+    "weight": 0.1171,
     "neutral_weight": 0.1,
     "stance": "OVERWEIGHT",
-    "score": 0.262,
+    "score": 0.261,
     "rationale": "[US_TECH_LEADERSHIP·OVERWEIGHT] 원화 현금 — 환노출 없는 방어 버퍼(전환 위험·불확실성 대비 드라이파우더)",
     "drivers": [
      "원화 방향",
@@ -409,7 +409,7 @@
    {
     "asset": "US_TREASURY",
     "label_ko": "미국채",
-    "weight": 0.1077,
+    "weight": 0.1074,
     "neutral_weight": 0.12,
     "stance": "NEUTRAL",
     "score": 0.0,
@@ -422,10 +422,10 @@
    {
     "asset": "USD",
     "label_ko": "달러(USD)",
-    "weight": 0.1002,
+    "weight": 0.0997,
     "neutral_weight": 0.1,
     "stance": "NEUTRAL",
-    "score": 0.107,
+    "score": 0.104,
     "rationale": "[US_TECH_LEADERSHIP·NEUTRAL] 달러(USD) 보유 — 위험회피·달러 강세 국면의 안전판이자 미국 자산 환헤지",
     "drivers": [
      "달러 강세",
@@ -438,7 +438,7 @@
     "weight": 0.0817,
     "neutral_weight": 0.15,
     "stance": "UNDERWEIGHT",
-    "score": -0.485,
+    "score": -0.482,
     "rationale": "[US_TECH_LEADERSHIP·UNDERWEIGHT] 달러 강세·위험회피에 수급 부담",
     "drivers": [
      "위험선호",
@@ -448,10 +448,10 @@
    {
     "asset": "GOLD",
     "label_ko": "금",
-    "weight": 0.0699,
+    "weight": 0.07,
     "neutral_weight": 0.1,
     "stance": "UNDERWEIGHT",
-    "score": -0.243,
+    "score": -0.238,
     "rationale": "[US_TECH_LEADERSHIP·UNDERWEIGHT] 달러 강세·실질금리 상방에 매력 제한",
     "drivers": [
      "실질금리/달러",
@@ -461,10 +461,10 @@
    {
     "asset": "BITCOIN",
     "label_ko": "비트코인",
-    "weight": 0.0621,
+    "weight": 0.0622,
     "neutral_weight": 0.08,
     "stance": "UNDERWEIGHT",
-    "score": -0.141,
+    "score": -0.136,
     "rationale": "[US_TECH_LEADERSHIP·UNDERWEIGHT] 달러 강세·긴축·유동성 스트레스에 비중 축소",
     "drivers": [
      "위험선호/유동성",
@@ -614,7 +614,7 @@
   ]
  },
  "realestate": {
-  "as_of": "2026-08-16T15:45:02.378419Z",
+  "as_of": "2026-08-16T16:19:20.231971Z",
   "stance": {
    "kr_rate_env": "긴축·금리 인상 (2026년 약 2회 인상 전망)",
    "us_rate_env": "긴축·고금리",
@@ -1303,7 +1303,7 @@
   ]
  },
  "geopolitics": {
-  "as_of": "2026-08-16T15:45:02.378419Z",
+  "as_of": "2026-08-16T16:19:20.231971Z",
   "risk_level": "높음",
   "risk_rationale": "위험회피·경기/유동성 스트레스 국면 — 지정학 충격이 자산시장에 크게 전이되기 쉽습니다. 달러·금·현금 등 안전판을 의식하세요.",
   "synthesis": "종합하면, 현재 세계 정세의 자산시장 함의는 '미국 기술주 주도' 국면과 결합해 지정학 위험도 '높음'로 평가됩니다. 가장 구조적인 축은 미·중 기술 패권과 중앙은행 정책 차별화이며, 단기 변동성의 방아쇠는 중동·유가와 엔 캐리입니다. 환율이 중립이라 지정학 변수는 개별 이벤트 중심으로 작용합니다. 리스크가 커지는 국면에서는 금·달러·미국채 같은 안전판과 방산·에너지 같은 사건 대응 자산이 방어력을 제공하고, 긴장이 완화되면 그간 눌렸던 한국·신흥국 위험자산의 반등 탄력이 큽니다.",
@@ -1430,8 +1430,8 @@
   "headline": "세계 경제 조망 — 위험회피 우위 · 미수렴(4R)",
   "overview": "네 시장(미국 금리·환율·한국 증시·미국 증시)에서 모은 정보를 데스크별로 검토하고 수석이 조율한 결과, 세계 경제는 '미국 기술주 주도' 국면이며 종합 위험선호는 -0.59(위험회피 우위)입니다. 섹터 데스크 4곳이 같은 방향, 1곳이 반대 의견입니다.",
   "bottom_line": "4라운드 조율에도 시각차가 남아 완전 수렴에 이르지 못했습니다(최종 -0.59). 시장 간 신호가 엇갈리는 구간이므로 분산과 현금 비중을 키우는 편이 안전합니다.",
-  "converged_risk_on": -0.5948,
-  "confidence": 0.48806,
+  "converged_risk_on": -0.5925,
+  "confidence": 0.48973999999999995,
   "converged": false,
   "iterations": 4,
   "desks": [
@@ -1439,8 +1439,8 @@
     "desk": "RATES",
     "label_ko": "금리·연준 데스크",
     "lean_label": "긴축(매파)",
-    "lean_score": -0.5401412327101534,
-    "conviction": 0.5900706163550766,
+    "lean_score": -0.5297987557658304,
+    "conviction": 0.5848993778829152,
     "summary": "연준 경로가 매파면 위험자산에 부담, 완화면 채권·성장주에 우호적입니다.",
     "drivers": [
      "미 정책금리 경로",
@@ -1504,8 +1504,8 @@
     "desk": "RISK",
     "label_ko": "리스크·방어 데스크",
     "lean_label": "방어 강화",
-    "lean_score": -0.8619153689949997,
-    "conviction": 0.8884576844974998,
+    "lean_score": -0.8611162365529241,
+    "conviction": 0.8880581182764621,
     "summary": "위험회피·전환위험이 높으면 금·달러·현금 등 방어자산을 키웁니다.",
     "drivers": [
      "위험회피 강도",
@@ -1527,28 +1527,28 @@
   "rounds": [
    {
     "round_no": 1,
-    "global_score": -0.3383,
+    "global_score": -0.3361,
     "global_label": "위험회피 우위",
     "delta": 1.0,
     "note": "각 데스크 원안을 신뢰도 가중 종합"
    },
    {
     "round_no": 2,
-    "global_score": -0.4375,
+    "global_score": -0.4353,
     "global_label": "위험회피 우위",
     "delta": 0.0992,
     "note": "글로벌 조망을 각 시장에 환류 — 합의 미달 시각은 비중↓, 일치 시각은 비중↑ 후 재계산"
    },
    {
     "round_no": 3,
-    "global_score": -0.5232,
+    "global_score": -0.521,
     "global_label": "위험회피 우위",
     "delta": 0.0857,
     "note": "글로벌 조망을 각 시장에 환류 — 합의 미달 시각은 비중↓, 일치 시각은 비중↑ 후 재계산"
    },
    {
     "round_no": 4,
-    "global_score": -0.5948,
+    "global_score": -0.5925,
     "global_label": "위험회피 우위",
     "delta": 0.0715,
     "note": "글로벌 조망을 각 시장에 환류 — 합의 미달 시각은 비중↓, 일치 시각은 비중↑ 후 재계산"
@@ -1615,7 +1615,7 @@
   ]
  },
  "news_brief": {
-  "as_of": "2026-08-16T15:45:02.378419Z",
+  "as_of": "2026-08-16T16:19:20.231971Z",
   "title": "MARKET WATCHER — 데일리 분석 브리프",
   "market_read": "오늘 수집한 뉴스 7건을 종합하면, 흐름의 무게중심은 '통화정책·금리'에 있습니다. 이를 시장 국면('미국 기술주 주도', 종합 위험회피)과 겹쳐 보면 세계 경제 조망 — 위험회피 우위 · 미수렴(4R). 개별 헤드라인을 나열하기보다, 아래처럼 주제별로 묶어 '그래서 자산에 어떤 의미인지'로 재해석했습니다.",
   "themes": [
