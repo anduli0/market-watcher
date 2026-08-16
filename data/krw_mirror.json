@@ -4,9 +4,9 @@
   "model": "claude-sonnet-4-6",
   "broker": "paper",
   "live_trading": false,
-  "spot": 1416.47998046875,
-  "realized_vol_krw": 13.405,
-  "data_last_collected": "2026-08-16T17:37:07.274878",
+  "spot": 1409.94,
+  "realized_vol_krw": null,
+  "data_last_collected": "2026-08-16T18:37:09.658158",
   "agent_count": 23
  },
  "/api/forecast": {
