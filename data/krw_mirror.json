@@ -6,7 +6,7 @@
   "live_trading": false,
   "spot": 1416.47998046875,
   "realized_vol_krw": 13.405,
-  "data_last_collected": "2026-08-16T15:37:07.267434",
+  "data_last_collected": "2026-08-16T16:37:07.243641",
   "agent_count": 23
  },
  "/api/forecast": {
