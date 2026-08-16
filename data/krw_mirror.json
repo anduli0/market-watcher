@@ -6,7 +6,7 @@
   "live_trading": false,
   "spot": 1416.47998046875,
   "realized_vol_krw": 13.405,
-  "data_last_collected": "2026-08-16T17:07:07.251103",
+  "data_last_collected": "2026-08-16T17:37:07.274878",
   "agent_count": 23
  },
  "/api/forecast": {
@@ -16,7 +16,7 @@
     "implied_rate": 1406.48,
     "confidence": 0.0,
     "signal": "krw_strong",
-    "unchanged_streak_days": 2,
+    "unchanged_streak_days": 3,
     "spot_at_run": 1416.47998046875,
     "target_date": "2026-08-17",
     "change_justification": null
@@ -26,7 +26,7 @@
     "implied_rate": 1387.48,
     "confidence": 0.0,
     "signal": "krw_strong",
-    "unchanged_streak_days": 2,
+    "unchanged_streak_days": 3,
     "spot_at_run": 1416.47998046875,
     "target_date": "2026-08-17",
     "change_justification": null
@@ -36,7 +36,7 @@
     "implied_rate": 1425.48,
     "confidence": 0.0,
     "signal": "krw_weak",
-    "unchanged_streak_days": 2,
+    "unchanged_streak_days": 3,
     "spot_at_run": 1416.47998046875,
     "target_date": "2026-08-17",
     "change_justification": null
@@ -46,14 +46,14 @@
     "implied_rate": 1437.48,
     "confidence": 0.0,
     "signal": "krw_weak",
-    "unchanged_streak_days": 2,
+    "unchanged_streak_days": 3,
     "spot_at_run": 1416.47998046875,
     "target_date": "2026-08-17",
     "change_justification": null
    }
   },
-  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ce6g9nvgGr2goLM7JH5iy'}",
-  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ce6g9zn4zBmEJNRW9cYUV'}"
+  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ce6qJUzy8sX81cresmt1S'}",
+  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ce6qJci4qT4zJK1QoWwbn'}"
  },
  "/api/accuracy": {
   "forecast": {
@@ -321,6 +321,6 @@
    },
    "spot": 1416.47998046875
   },
-  "updated_at": "2026-08-16T15:37:24.368700"
+  "updated_at": "2026-08-16T17:37:22.687527"
  }
 }
