@@ -5,8 +5,8 @@
   "broker": "paper",
   "live_trading": false,
   "spot": 1416.47998046875,
-  "realized_vol_krw": null,
-  "data_last_collected": "2026-08-16T10:07:07.301157",
+  "realized_vol_krw": 13.405,
+  "data_last_collected": "2026-08-16T13:07:07.253708",
   "agent_count": 23
  },
  "/api/forecast": {
@@ -64,9 +64,9 @@
      "mae_krw": 19.11
     },
     "1m": {
-     "samples": 155,
-     "directional_hit_rate": 0.0,
-     "mae_krw": 86.69
+     "samples": 157,
+     "directional_hit_rate": 0.006,
+     "mae_krw": 86.42
     },
     "3m": {
      "samples": 0
@@ -177,7 +177,7 @@
      "n": 34
     }
    ],
-   "total_samples": 374
+   "total_samples": 376
   },
   "trading": {
    "closed_trades": 5,
