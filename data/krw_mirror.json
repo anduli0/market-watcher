@@ -6,54 +6,54 @@
   "live_trading": false,
   "spot": 1416.47998046875,
   "realized_vol_krw": 13.405,
-  "data_last_collected": "2026-08-15T13:37:07.298120",
+  "data_last_collected": "2026-08-16T09:37:07.243789",
   "agent_count": 23
  },
  "/api/forecast": {
   "horizons": {
    "1w": {
-    "published_delta_krw": -13.0,
-    "implied_rate": 1395.5,
+    "published_delta_krw": -10.0,
+    "implied_rate": 1406.48,
     "confidence": 0.0,
     "signal": "krw_strong",
     "unchanged_streak_days": 1,
-    "spot_at_run": 1408.5,
-    "target_date": "2026-08-15",
+    "spot_at_run": 1416.47998046875,
+    "target_date": "2026-08-16",
     "change_justification": null
    },
    "1m": {
-    "published_delta_krw": -47.0,
-    "implied_rate": 1361.5,
+    "published_delta_krw": -29.0,
+    "implied_rate": 1387.48,
     "confidence": 0.0,
     "signal": "krw_strong",
     "unchanged_streak_days": 1,
-    "spot_at_run": 1408.5,
-    "target_date": "2026-08-15",
+    "spot_at_run": 1416.47998046875,
+    "target_date": "2026-08-16",
     "change_justification": null
    },
    "3m": {
-    "published_delta_krw": 0.0,
-    "implied_rate": 1408.5,
+    "published_delta_krw": 9.0,
+    "implied_rate": 1425.48,
     "confidence": 0.0,
-    "signal": "neutral",
+    "signal": "krw_weak",
     "unchanged_streak_days": 1,
-    "spot_at_run": 1408.5,
-    "target_date": "2026-08-15",
+    "spot_at_run": 1416.47998046875,
+    "target_date": "2026-08-16",
     "change_justification": null
    },
    "12m": {
-    "published_delta_krw": 0.0,
-    "implied_rate": 1408.5,
+    "published_delta_krw": 21.0,
+    "implied_rate": 1437.48,
     "confidence": 0.0,
-    "signal": "neutral",
+    "signal": "krw_weak",
     "unchanged_streak_days": 1,
-    "spot_at_run": 1408.5,
-    "target_date": "2026-08-15",
+    "spot_at_run": 1416.47998046875,
+    "target_date": "2026-08-16",
     "change_justification": null
    }
   },
-  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ce4dE4AxztiihxQi1KaH3'}",
-  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ce4dF15xCVBCsRJVnqKip'}"
+  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ce6CiucvVvXjiUQM7w4k1'}",
+  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ce6Cj91aYxbkQFq6bdtwT'}"
  },
  "/api/accuracy": {
   "forecast": {
@@ -202,35 +202,80 @@
  },
  "/api/briefing/latest": {
   "brief": {
-   "date": "2026-08-15",
+   "date": "2026-08-16",
    "title": "원/달러 데일리 브리프",
-   "headline": "미국 물가 둔화로 달러가 힘을 잃으며 환율은 1,416원대. 하우스 전망은 1개월 뒤 47원 내린 1,369원대다.",
-   "forecast_summary": "1주: -13.0원 → 1403.5원 (원화 강세) / 1개월: -47.0원 → 1369.5원 (원화 강세) / 3개월: 변동 없음 → 1416.5원 / 1년: 변동 없음 → 1416.5원",
+   "headline": "1개월: -29.0원 → 1387.48 (krw_strong, conf 0%)",
+   "forecast_summary": "1주: -10.0원 → 1406.48 (krw_strong, conf 0%) / 1개월: -29.0원 → 1387.48 (krw_strong, conf 0%) / 3개월: +9.0원 → 1425.48 (krw_weak, conf 0%) / 1년: +21.0원 → 1437.48 (krw_weak, conf 0%)",
    "horizon_breakdown": {},
-   "analysis": "환율은 1,416.5원 부근이다. 직전 거래일에는 1.1원 내린 1,418.3원에 마감했고, 국내 보도는 미국 물가 상승세가 둔화되면서 달러가 약해진 것을 하락 이유로 들었다. 같은 흐름이 달러 지수에서도 확인된다. 미국 금리 인상 기대가 뒤로 밀리면서 달러 지수는 99.75~99.70 수준까지 내려왔다. 다만 다른 쪽에서는 연준 가격 반영과 위험 회피 자금이 달러를 떠받치고 있다는 분석, 그리고 시장이 금리 인하 기대를 다시 계산하면서 달러가 크게 밀리지는 않는다는 분석도 함께 나왔다. 달러 약세가 한 방향으로 굳어졌다고 보기는 이르다는 뜻이다.\n\n미국 쪽 숫자는 원화에 우호적이다. 실효 연방기금금리는 8월 13일 3.63으로 변동이 없었고, 같은 날 2년물 금리는 0.05 내린 4.15, 10년물은 0.05 내린 4.63이었다. 짧은 만기 금리가 내렸다는 것은 금리 인상 기대가 약해졌다는 뜻이다. 고용은 7월에 23,000명 줄었고 실업률은 4.1로 0.1 내렸으며, 8월 8일 신규 실업수당 청구는 9,000건 늘어난 209,000건이었다. 미국 성장세가 예전만 못하다는 신호가 쌓이고 있다. 유로화는 8월 7일 기준 1.1559로 올라 달러 약세를 거들었다.\n\n국내 여건도 원화 쪽에 무게가 실린다. 한국은행 총재는 원화가 반등할 것으로 보면서 금리 인상 필요성을 다시 강조했다. 부총재는 경상수지 흑자 효과가 본격화되면서 4분기로 갈수록 환율이 낮아질 것이라고 말했다. 한동안 1,600원을 넘보던 환율이 150원 급락한 뒤 지금은 1,410원대에 자리를 잡았다는 정리도 나왔다. 하우스 전망이 1주 13원, 1개월 47원 하락을 보는 것도 이 흐름과 같은 방향이다.\n\n반대 신호도 분명하다. 뱅크오브아메리카는 원화가 2012년 이후 가장 약한 수준까지 갈 수 있다고 봤고, 정부 개입을 반영해 전망을 수정했으며, 중동 위험 때문에 당분간 좁은 구간에서 오갈 것이라고 경고했다. 지정학 위험이 환율을 1,450~1,550원 구간에 묶어둘 수 있다는 분석도 있다. 중국 인민은행이 예상보다 약한 위안화 기준값을 제시해 위안화 약세 기대가 커진 점도 원화에는 부담이다. 아시아 통화가 함께 움직이는 경향이 있기 때문이다. 정리하면 미국 물가 둔화가 만든 달러 약세가 지금은 우위지만, 중동 상황과 위안화 흐름이 언제든 방향을 되돌릴 수 있는 자리다.",
+   "analysis": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ce6CV2sqt6MjoN5UJZJeg'}",
    "key_levels": null,
    "scenario": {},
    "news_digest": [
-    "美 물가 둔화에 달러 약세…원·달러 환율 1,418.3원으로 하락 - sankyungtoday.com",
-    "원/달러 환율, 1.1원 내린 1418.3원 마감 - 머니투데이",
-    "US Dollar Index Drops To 99.75-99.70 As Fed Rate Hike Bets Recede - Bitcoin World",
-    "BOK chief forecasts Korean won's rebound, reiterates need for rate hike - KED Global",
-    "한은 부총재 \"원·달러 환율, 4분기로 갈수록 낮아질 것…경상흑자 효과 본격화\" - 아시아경제",
-    "USD/KRW: BofA forecasts Korean Won to hit weakest level since 2012 - Investing.com",
-    "USD/KRW Exchange Rate Forecast: Bank of America Warns of Rangebound Trading Amid Critical Middle East Risks - CryptoRank",
-    "PBOC sets weaker USD/CNY fixing above estimates, stoking expectations of yuan depreciation amid growth risks - vtmarkets.com"
+    "7월 6일부터 원/달러 24시간 거래 ㅡ IMF 외환위기 트라우마 끝, 원화 국제화 원년 - koreafuture.co.kr",
+    "[환율 전망] 원만해선 원화를 막을 수 없다 - kbthink.com",
+    "The yuan won't unseat the dollar soon — but it could grow in prominence if China dominates in tech and trade - CNBC",
+    "1300원대 눈앞 둔 환율…한은 추가 인상 '속도조절' 변수 되나 - v.daum.net"
    ],
-   "trading_view": "당분간은 원화가 조금씩 강해지는 쪽에 무게를 둔다. 미국 금리 인상 기대가 밀리고 2년물 금리가 내린 점, 경상수지 흑자 효과를 언급한 한국은행 발언이 근거다. 다만 1,410원 아래에서는 저항이 있었다는 국내 보도가 있어 한 번에 뚫고 내려가기보다 여러 차례 시도하는 그림을 예상한다. 1개월 47원 하락이라는 하우스 전망은 이 시도가 이어질 때 나오는 숫자이고, 3개월과 1년은 변동 없음으로 두고 있어 방향을 길게 확신하지는 않는다. 실무적으로는 달러를 팔아야 하는 쪽이 지금 흐름을 활용해 나눠 파는 방식이 맞고, 달러를 사야 하는 쪽은 중동 관련 소식이 나올 때 생기는 급등을 기다리기보다 필요한 만큼 미리 확보해 두는 편이 안전하다.",
-   "risks": [
-    "중동 상황. 뱅크오브아메리카는 중동 위험 때문에 환율이 좁은 구간에 갇힐 수 있다고 경고했고, 지정학 위험이 1,450~1,550원 구간을 만들 수 있다는 분석도 나왔다.",
-    "달러가 다시 강해질 가능성. 연준 가격 반영과 위험 회피 자금이 달러 지수를 떠받치고 있다는 분석이 있어, 물가 둔화만으로 달러 약세가 이어진다고 보기 어렵다.",
-    "위안화 약세. 중국 인민은행이 예상보다 약한 기준값을 제시하면서 위안화가 더 내릴 것이라는 기대가 커졌고, 아시아 통화가 함께 움직이면 원화도 눌릴 수 있다.",
-    "반대 전망의 존재. 뱅크오브아메리카는 원화가 2012년 이후 가장 약한 수준까지 갈 수 있다고 보고 있어, 하우스 전망과 방향이 정반대다.",
-    "미국 대상 투자 확대. 대미 투자가 늘면 환율이 다시 뛸 수 있다는 지적이 나왔다.",
-    "미국 물가 지표. 국내 보도는 미국 소비자물가를 분수령으로 꼽았다. 다음 물가 숫자가 예상을 웃돌면 금리 인상 기대가 되살아나 달러가 강해질 수 있다."
+   "trading_view": "",
+   "risks": [],
+   "sources": [
+    {
+     "source": "기획재정부 외환시장",
+     "title": "7월 6일부터 원/달러 24시간 거래 ㅡ IMF 외환위기 트라우마 끝, 원화 국제화 원년 - koreafuture.co.kr",
+     "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9kMzI1ekUteEVRN3E5Zm9TR1lYWUExME5rWjZDajdCbTVUcHRNUm1sZmplNVNHZ1dxZ25fQ2VXU2Z2dWQ5UENuYVNkOHZUZk9tMW1ScGxseldLRU9TMm11MFFwMkhDT2pU?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "[환율 전망] 원만해선 원화를 막을 수 없다 - kbthink.com",
+     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBMTkREX0RoSFFxUVNZb0JUYlo1VFhmSFV0NFE4aDhtc2J6SkFBYUh6WW9SWHU5SlpPUnFPOGhteUNGeFlzakNMZ0M0TjVzZ1BzSTJRVWNHMTc3NDFVOFA4eg?oc=5"
+    },
+    {
+     "source": "CNBC Markets",
+     "title": "The yuan won't unseat the dollar soon — but it could grow in prominence if China dominates in tech and trade - CNBC",
+     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNd0VvcVJJd01BSTdMQmNLQjZxT3RwRFNaNktaR2RWalFqWWhURzUxMTcwV0xMMWpKbWctZGR6XzYxd21LSHlud3lVOGpISzNwaTZ2ZUFhdDBxUHZYUWUwVHM2c1BRUzdYMldZU1BnRUFPSWw5azU4TTVlWFI0LVhzNFpiSlBid05nS205b1I1ODZMczJTNWhaMTJPYWxZZ9IBowFBVV95cUxPZThhYV9sZ3M0dG43Wk5XUmdJZm4zVVZQdFF4b3hLUDhCRThtOVhSZXhkeUlTbGhZX3BmUncwcE5Xb0FXZHFkUlR0NGk2Z3hjN3RSSEIzd2JTb3FjYThDTmtmbF9TSC1nTDR2OHpiR1dzR2ppY2xXYWw5WmdjNTA0eVlsclhsLUhVaEtYa2RUbGwxdmhkamhGdl83TE9DYjRma2ZJ?oc=5"
+    },
+    {
+     "source": "한국은행 기준금리",
+     "title": "1300원대 눈앞 둔 환율…한은 추가 인상 '속도조절' 변수 되나 - v.daum.net",
+     "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1rNmxoc1J0bVNJQkRMMVdvYko5MG05NG1QRUk1aFA4ZmZZdEdkZE1SSzRuaTAwUGxvd3FoLWV6NjZ2NXlWR3c?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "한은 부총재 \"원·달러 환율, 4분기로 갈수록 낮아질 것…경상흑자 효과 본격화\"[경제정책 줌인] - asiae.co.kr",
+     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1ya2M2VkZVV1RoYVFpeTNtRXFieXNGcGtKU3FsUHVuSk1KZndKOE1PZU1qUllmTG42TVo3TXVCamxqa2RTU2hKemZucHJQTVRHdDVtQTlTNy1kN0RUVmJlOA?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "[다음주 환율전망]1400원선 향해 완만한 하락 전망…美 연준·BOJ '엇갈린 행보' 주목 - goodkyung.com",
+     "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBNNV9VbU9lMzJXSmVoWVNMbGk1UVZoMl9UVk9zTVpFeDJ4TTJHcVM2Ml9LV1pTVy14TnpobHhIckxvS0M5NUJ6dkZBQ2NLdGtUa081bUdKR2VCRV8xdlQ4WkgtTFlhRDB0Y3ZIbw?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "[주간환율전망] 이벤트 부재 속 1410원대 박스권···중동·엔화 '변수' - 서울파이낸스",
+     "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1zdmM5dlVIQ3FMdG5zSXVVcVMwMFRlcHhubUMtb0J3ZUQ5RGpqX2tldGJHVFBTeEdiblJNSUp2cnJVYWxXRGNkMDlkZzdYanJHeklXR29qbWlBRDZQTXpJd2Nna3ROZ0h2UGc?oc=5"
+    },
+    {
+     "source": "USD/KRW exchange rate",
+     "title": "Won Surges Past 1,540 on Foreign Selling, U.S. Rate Hike Fears - 조선일보",
+     "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQblhINW1oMDFHaE54MHloRzlhTmplS3pINzdTclg0Qzk2cXNHRjhSZlJHWDZZbWN6RmNqQzhSQTRaU29pWXYtekFlc3lvenJpS2l4NHpkdDB5ekM2eTgwWENWdnVYUkdBUW91SXdIcGhWRjhYX0l6WmNDZUN0cVlEV1I5WXRnUUVHbEp1Z2RR?oc=5"
+    },
+    {
+     "source": "Yonhap News (한국 영문)",
+     "title": "Finance minister says Korean won stabilizing against dollar, hopes for alignment with market expectations - Yonhap News Agency",
+     "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBYNUY2NHZWM1k4aUd2bGVGQnZuZGdkTjRCdXFfQ21NX2pMMklFZ2VUZTZWTTVxWlJ2MngwMDJWMmhKV1BDSG56U3JpcmFNRU1MMi1LZXloWVo2dw?oc=5"
+    },
+    {
+     "source": "Bloomberg — KRW / Asia FX",
+     "title": "Yen Intervention Put China’s Yuan Under More Pressure, BE Says - Bloomberg.com",
+     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTjhhYThaQzd5MFlGSThHMnF2MmkxUjlxUVdYWWxyR0hwbEt6eHc3eHJtM0Z0S3dsellweVBxbG4tU3d2VmNDWjBqTlBYNWIwdy0xTWpEcTF3bm9ub2NlcVZDU2xWOWQ3Z1g3TW1CUENMdHpNVF9zeG9wdFVMb0tnUk1YbFI4NW1GYUNtb2R6RHFRNVBSTXRldDBpdGx2QmhXc2lSV01XLVZ6eE01RGktb0dEc0RRUQ?oc=5"
+    }
    ],
-   "sources": [],
-   "fc_lines": []
+   "fc_lines": [
+    "1주: -10.0원 → 1406.48 (krw_strong, conf 0%)",
+    "1개월: -29.0원 → 1387.48 (krw_strong, conf 0%)",
+    "3개월: +9.0원 → 1425.48 (krw_weak, conf 0%)",
+    "1년: +21.0원 → 1437.48 (krw_weak, conf 0%)"
+   ]
   }
  },
  "/api/hierarchy": {
@@ -274,8 +319,8 @@
     "3m": "mixed",
     "12m": "mixed"
    },
-   "spot": 1408.5
+   "spot": 1416.47998046875
   },
-  "updated_at": "2026-08-15T13:38:07.304227"
+  "updated_at": "2026-08-16T09:37:42.927493"
  }
 }
