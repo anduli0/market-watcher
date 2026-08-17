@@ -731,17 +731,17 @@
   "date": "2026-08-18",
   "regime": "US_TECH_LEADERSHIP",
   "secondary": "KOREA_DECOUPLING",
-  "confidence": 0.4925,
-  "risk_on": 0.065,
+  "confidence": 0.4953,
+  "risk_on": 0.0656,
   "coverage": 1.0,
   "weights": {
-   "US_EQUITY": 0.454,
-   "CASH": 0.1196,
-   "US_TREASURY": 0.1092,
-   "USD": 0.1022,
+   "US_EQUITY": 0.4561,
+   "CASH": 0.1188,
+   "US_TREASURY": 0.1085,
+   "USD": 0.1006,
    "KOREA_EQUITY": 0.0823,
-   "GOLD": 0.0711,
-   "BITCOIN": 0.0615
+   "GOLD": 0.0717,
+   "BITCOIN": 0.0621
   },
   "neutral": {
    "US_EQUITY": 0.35,
