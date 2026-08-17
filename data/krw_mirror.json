@@ -4,56 +4,56 @@
   "model": "claude-sonnet-4-6",
   "broker": "paper",
   "live_trading": false,
-  "spot": 1416.47998046875,
+  "spot": 1411.010009765625,
   "realized_vol_krw": 13.405,
-  "data_last_collected": "2026-08-16T20:07:07.908159",
+  "data_last_collected": "2026-08-17T08:17:13.886836",
   "agent_count": 23
  },
  "/api/forecast": {
   "horizons": {
    "1w": {
     "published_delta_krw": -10.0,
-    "implied_rate": 1406.48,
+    "implied_rate": 1399.94,
     "confidence": 0.0,
     "signal": "krw_strong",
-    "unchanged_streak_days": 3,
-    "spot_at_run": 1416.47998046875,
+    "unchanged_streak_days": 4,
+    "spot_at_run": 1409.94,
     "target_date": "2026-08-17",
     "change_justification": null
    },
    "1m": {
     "published_delta_krw": -29.0,
-    "implied_rate": 1387.48,
+    "implied_rate": 1380.94,
     "confidence": 0.0,
     "signal": "krw_strong",
-    "unchanged_streak_days": 3,
-    "spot_at_run": 1416.47998046875,
+    "unchanged_streak_days": 4,
+    "spot_at_run": 1409.94,
     "target_date": "2026-08-17",
     "change_justification": null
    },
    "3m": {
     "published_delta_krw": 9.0,
-    "implied_rate": 1425.48,
+    "implied_rate": 1418.94,
     "confidence": 0.0,
     "signal": "krw_weak",
-    "unchanged_streak_days": 3,
-    "spot_at_run": 1416.47998046875,
+    "unchanged_streak_days": 4,
+    "spot_at_run": 1409.94,
     "target_date": "2026-08-17",
     "change_justification": null
    },
    "12m": {
     "published_delta_krw": 21.0,
-    "implied_rate": 1437.48,
+    "implied_rate": 1430.94,
     "confidence": 0.0,
     "signal": "krw_weak",
-    "unchanged_streak_days": 3,
-    "spot_at_run": 1416.47998046875,
+    "unchanged_streak_days": 4,
+    "spot_at_run": 1409.94,
     "target_date": "2026-08-17",
     "change_justification": null
    }
   },
-  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ce6qJUzy8sX81cresmt1S'}",
-  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ce6qJci4qT4zJK1QoWwbn'}"
+  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ce7HqHZXoPm2WbJTNour9'}",
+  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ce7HrToxH42am4JygmAV5'}"
  },
  "/api/accuracy": {
   "forecast": {
@@ -64,9 +64,9 @@
      "mae_krw": 19.11
     },
     "1m": {
-     "samples": 157,
-     "directional_hit_rate": 0.006,
-     "mae_krw": 86.42
+     "samples": 160,
+     "directional_hit_rate": 0.025,
+     "mae_krw": 85.9
     },
     "3m": {
      "samples": 0
@@ -177,7 +177,7 @@
      "n": 34
     }
    ],
-   "total_samples": 376
+   "total_samples": 379
   },
   "trading": {
    "closed_trades": 5,
@@ -202,72 +202,72 @@
  },
  "/api/briefing/latest": {
   "brief": {
-   "date": "2026-08-16",
+   "date": "2026-08-17",
    "title": "원/달러 데일리 브리프",
    "headline": "1개월: -29.0원 → 1387.48 (krw_strong, conf 0%)",
    "forecast_summary": "1주: -10.0원 → 1406.48 (krw_strong, conf 0%) / 1개월: -29.0원 → 1387.48 (krw_strong, conf 0%) / 3개월: +9.0원 → 1425.48 (krw_weak, conf 0%) / 1년: +21.0원 → 1437.48 (krw_weak, conf 0%)",
    "horizon_breakdown": {},
-   "analysis": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ce6CV2sqt6MjoN5UJZJeg'}",
+   "analysis": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ce6qJUzy8sX81cresmt1S'}",
    "key_levels": null,
    "scenario": {},
    "news_digest": [
-    "7월 6일부터 원/달러 24시간 거래 ㅡ IMF 외환위기 트라우마 끝, 원화 국제화 원년 - koreafuture.co.kr",
-    "[환율 전망] 원만해선 원화를 막을 수 없다 - kbthink.com",
-    "The yuan won't unseat the dollar soon — but it could grow in prominence if China dominates in tech and trade - CNBC",
-    "1300원대 눈앞 둔 환율…한은 추가 인상 '속도조절' 변수 되나 - v.daum.net"
+    "US Dollar Index: Fed pricing and risk-off flows keep DXY supported – ING - fxstreet.com",
+    "(LEAD) Korean won slumps against U.S. dollar on expectations of Fed rate hike - Yonhap News Agency",
+    "BofA revises USD/KRW forecast amid government intervention - Investing.com",
+    "BOK chief forecasts Korean won’s rebound, reiterates need for rate hike - KED Global"
    ],
    "trading_view": "",
    "risks": [],
    "sources": [
     {
-     "source": "기획재정부 외환시장",
-     "title": "7월 6일부터 원/달러 24시간 거래 ㅡ IMF 외환위기 트라우마 끝, 원화 국제화 원년 - koreafuture.co.kr",
-     "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9kMzI1ekUteEVRN3E5Zm9TR1lYWUExME5rWjZDajdCbTVUcHRNUm1sZmplNVNHZ1dxZ25fQ2VXU2Z2dWQ5UENuYVNkOHZUZk9tMW1ScGxseldLRU9TMm11MFFwMkhDT2pU?oc=5"
-    },
-    {
-     "source": "원/달러 환율",
-     "title": "[환율 전망] 원만해선 원화를 막을 수 없다 - kbthink.com",
-     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBMTkREX0RoSFFxUVNZb0JUYlo1VFhmSFV0NFE4aDhtc2J6SkFBYUh6WW9SWHU5SlpPUnFPOGhteUNGeFlzakNMZ0M0TjVzZ1BzSTJRVWNHMTc3NDFVOFA4eg?oc=5"
-    },
-    {
-     "source": "CNBC Markets",
-     "title": "The yuan won't unseat the dollar soon — but it could grow in prominence if China dominates in tech and trade - CNBC",
-     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNd0VvcVJJd01BSTdMQmNLQjZxT3RwRFNaNktaR2RWalFqWWhURzUxMTcwV0xMMWpKbWctZGR6XzYxd21LSHlud3lVOGpISzNwaTZ2ZUFhdDBxUHZYUWUwVHM2c1BRUzdYMldZU1BnRUFPSWw5azU4TTVlWFI0LVhzNFpiSlBid05nS205b1I1ODZMczJTNWhaMTJPYWxZZ9IBowFBVV95cUxPZThhYV9sZ3M0dG43Wk5XUmdJZm4zVVZQdFF4b3hLUDhCRThtOVhSZXhkeUlTbGhZX3BmUncwcE5Xb0FXZHFkUlR0NGk2Z3hjN3RSSEIzd2JTb3FjYThDTmtmbF9TSC1nTDR2OHpiR1dzR2ppY2xXYWw5WmdjNTA0eVlsclhsLUhVaEtYa2RUbGwxdmhkamhGdl83TE9DYjRma2ZJ?oc=5"
-    },
-    {
-     "source": "한국은행 기준금리",
-     "title": "1300원대 눈앞 둔 환율…한은 추가 인상 '속도조절' 변수 되나 - v.daum.net",
-     "link": "https://news.google.com/rss/articles/CBMiRkFVX3lxTE1rNmxoc1J0bVNJQkRMMVdvYko5MG05NG1QRUk1aFA4ZmZZdEdkZE1SSzRuaTAwUGxvd3FoLWV6NjZ2NXlWR3c?oc=5"
-    },
-    {
-     "source": "원/달러 환율",
-     "title": "한은 부총재 \"원·달러 환율, 4분기로 갈수록 낮아질 것…경상흑자 효과 본격화\"[경제정책 줌인] - asiae.co.kr",
-     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1ya2M2VkZVV1RoYVFpeTNtRXFieXNGcGtKU3FsUHVuSk1KZndKOE1PZU1qUllmTG42TVo3TXVCamxqa2RTU2hKemZucHJQTVRHdDVtQTlTNy1kN0RUVmJlOA?oc=5"
-    },
-    {
-     "source": "원/달러 환율",
-     "title": "[다음주 환율전망]1400원선 향해 완만한 하락 전망…美 연준·BOJ '엇갈린 행보' 주목 - goodkyung.com",
-     "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFBNNV9VbU9lMzJXSmVoWVNMbGk1UVZoMl9UVk9zTVpFeDJ4TTJHcVM2Ml9LV1pTVy14TnpobHhIckxvS0M5NUJ6dkZBQ2NLdGtUa081bUdKR2VCRV8xdlQ4WkgtTFlhRDB0Y3ZIbw?oc=5"
-    },
-    {
-     "source": "원/달러 환율",
-     "title": "[주간환율전망] 이벤트 부재 속 1410원대 박스권···중동·엔화 '변수' - 서울파이낸스",
-     "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1zdmM5dlVIQ3FMdG5zSXVVcVMwMFRlcHhubUMtb0J3ZUQ5RGpqX2tldGJHVFBTeEdiblJNSUp2cnJVYWxXRGNkMDlkZzdYanJHeklXR29qbWlBRDZQTXpJd2Nna3ROZ0h2UGc?oc=5"
-    },
-    {
-     "source": "USD/KRW exchange rate",
-     "title": "Won Surges Past 1,540 on Foreign Selling, U.S. Rate Hike Fears - 조선일보",
-     "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQblhINW1oMDFHaE54MHloRzlhTmplS3pINzdTclg0Qzk2cXNHRjhSZlJHWDZZbWN6RmNqQzhSQTRaU29pWXYtekFlc3lvenJpS2l4NHpkdDB5ekM2eTgwWENWdnVYUkdBUW91SXdIcGhWRjhYX0l6WmNDZUN0cVlEV1I5WXRnUUVHbEp1Z2RR?oc=5"
+     "source": "US dollar index / DXY",
+     "title": "US Dollar Index: Fed pricing and risk-off flows keep DXY supported – ING - fxstreet.com",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPSmdScWFkZ05NRjJ5NEpmUEh4R2JXVUVzSXFuQzZoWXVwU0tNUFdURlhjMk5jQk53YTYyejdOdXZIMW9xX2Z0UFVlR0NZOWJTaG1sV1FibG83SnFNRldIcnY5eXZBM1dkbDdkQ21zZW90Y2NTSE91aXpnNjY0QnUtZW1zV05qdXB0S0RHOXA5NDloeEcwQmxIdjRldHgzNmUtdGFRWUlCUnhrdHMybERQT25B?oc=5"
     },
     {
      "source": "Yonhap News (한국 영문)",
-     "title": "Finance minister says Korean won stabilizing against dollar, hopes for alignment with market expectations - Yonhap News Agency",
-     "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBYNUY2NHZWM1k4aUd2bGVGQnZuZGdkTjRCdXFfQ21NX2pMMklFZ2VUZTZWTTVxWlJ2MngwMDJWMmhKV1BDSG56U3JpcmFNRU1MMi1LZXloWVo2dw?oc=5"
+     "title": "(LEAD) Korean won slumps against U.S. dollar on expectations of Fed rate hike - Yonhap News Agency",
+     "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBIb3pYLXBnYk9oaGJsZUlNanRTUHJoME5abDBlU1plU2tLYVZYYmxjekhZV21ZX2VHSVppUkJBbVV4YUpXdWo4YzZMVWxhVDYzZGpoSUxBN3pOZw?oc=5"
     },
     {
-     "source": "Bloomberg — KRW / Asia FX",
-     "title": "Yen Intervention Put China’s Yuan Under More Pressure, BE Says - Bloomberg.com",
-     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTjhhYThaQzd5MFlGSThHMnF2MmkxUjlxUVdYWWxyR0hwbEt6eHc3eHJtM0Z0S3dsellweVBxbG4tU3d2VmNDWjBqTlBYNWIwdy0xTWpEcTF3bm9ub2NlcVZDU2xWOWQ3Z1g3TW1CUENMdHpNVF9zeG9wdFVMb0tnUk1YbFI4NW1GYUNtb2R6RHFRNVBSTXRldDBpdGx2QmhXc2lSV01XLVZ6eE01RGktb0dEc0RRUQ?oc=5"
+     "source": "USD/KRW exchange rate",
+     "title": "BofA revises USD/KRW forecast amid government intervention - Investing.com",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbTF0Uk1JX01CNFdnLVlXSzRPRzlxUS1hdFRaa2oyUm9zZkZUU2pYc1NEcC10NjIwQWEyME1VN2E5ZldrVXIyc05DclllWFpBeUVmZDNjcXBKRnR6N0NYcmJ3S05EektrYWN3MC1MVWdaTWc2UzMxZDJqWmlCeEIwM183UW9RelQ3bWROcThoN29UWlFsTWV6TkJMOXlhSmk2Ymw0anlLZHBBRnJCMjZFZmZn?oc=5"
+    },
+    {
+     "source": "USD/KRW exchange rate",
+     "title": "BOK chief forecasts Korean won’s rebound, reiterates need for rate hike - KED Global",
+     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBlTFN0Nlhzai0zUkVRYkh4LXdUYTh2RHRGSXZsdGZZdU1VVDVqcUdwaC1XaDRIbVpCeEt4SzM0cFd5TXJhRHpYM3J1dU13TkRxOTctcS1wTGZpTHlWSXhfSVpnS3Q4OHU1UWRhZVp6ZzRidGJ6OWc?oc=5"
+    },
+    {
+     "source": "US dollar index / DXY",
+     "title": "What Is the US Dollar Index (DXY)? - thinkmarkets.com",
+     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOSWtraGthSXBKYXRTeDJldmNTbmhCTzFzVHhWYVZWMk5vMW4wNXEtQTdWY3FyS1o3d29vLTVjd1Z2VEdpSFJQWVdGb1F6ZlJodVZ5RjRNcHZxaHJVNXQtRUJ2Umc1bU9nQmZncDMwOFpmeWkxUXduNDlnY2U2NkcyVHlDQlJScFVpMXQ2eWF1OEJGdnpfOWd4c184MmgwNzhyQ1E?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "원·달러 환율, 1418.53원…점진적 하락세 지속 전망 - joseilbo.com",
+     "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE5yaHY2WlBiQ2ZJYVJRd1h2RHVwS296UUVaay1nZVYzWVFlSDFEVWFLQmctU1U2SlhOcy1MN3dBUThTY2hVR2pTOEY5VlVJaUwwS3lJQ21FUTFsSTg5eDgw?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "올해 중 최저치 찍은 원·달러 환율…더 떨어질까 - 뉴시스",
+     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFByMjNGcEJNMzlsZXdNQ3E4Sm83S3doWFh0MWRpUUN5NzNUN0RveXBXUHJmamtieGtCOEJJd0dzZUJxanRZaTVkOGdNdFlsVjV0a0dGZFJkU01nREVja2NDOdIBeEFVX3lxTFBaNHg2ejY1MVNyZHJwMEF5aUY3Y3Vyd2doYkNfQXhseGlNZ3ZUVDZJNWhYRHFYUkpRMVhCRXRZMzJuVWhyNndkNHJFMlpnWlZOaVJoN1h6b0ZsRjVUZzhGT0NBR19SR2V1enZnNGdzVWdHX3cwM3U5Mg?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "1450원대까지 떨어진 원·달러 환율, 변수는 ‘중동 전쟁’ - khan.co.kr",
+     "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5EUzJSNzliOW5seTdHQnJZSElRMExKLTliU2RoazBDTW9EVWhZUXdLY2MteTljZHRlcXlXZ09waTRhZjZYWEd3YTdmYklJX3EzRFZTQm1Qd1NOQdIBX0FVX3lxTFBHVERSTU91bkthWmM1QXBKR1pWT013bEFucldJbThXdTJCeGREYk94bHhfMG1KSlpPOC12Ymp2bC04amMyMmY5QXp0OVBSaC1Ra0RiWktXYURvT0pfOXl3?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "1410원대로 내려온 환율, 빨라진 ‘대미 투자’ 시계에 반등 여부 촉각 - 시사저널e",
+     "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBWal8zR1prYmpwTklUTkNlQ2JVS1FBdVJUcUZCcVVFOTAxcGRNZWFBUDJhWXVOcDNSOHp1MUwyRUNGamtiMFJWRlhXcS1TUmtWRm96aDVTblN2Z1JBZjJVUVdrRHNQSnNWZDIweHhnNlNhUdIBdkFVX3lxTE9LaUk0UVEyM0lsT3RfdDZSNnhVUlNYbGJzX2d6c0Q3RlhzNTVhMG45YUtmN1FiUkVqNFBnVE1od2Zvc3hOeGE5YmVKUlRxY1EyeWZYZ240ODZDN1p0VjhjcGlVci1TVXJoWUI4TnBWeHVBWUFGc1E?oc=5"
+    },
+    {
+     "source": "Chinese yuan / PBoC",
+     "title": "China’s yuan could strengthen to 7 per US dollar as Fed sends dovish signals - scmp.com",
+     "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxOZENEdzdvei1aMlozSE9FdmEzWi0tbU5MamMyeFUtMERHbXhOSVJjM2RRWVA2VWFTYjRJUENFc01vYTJIZnQ4THRNMzVXdFpPeXRYZWZBbTZfRHJ5U2s3RU5MNVNwTzVUSVlYUlZwbDltb3UwVkstSEZtY3dXVGF2OWN2TkNwUmdFaTRjQlA4U3pYY1Z4ZjlHc0FRcUdLT1FPYW14LVduRmxpMENFNk9uZmd6RnBTbXdyVHpQcW5mVlBzT3JZa3dB0gHHAUFVX3lxTE1TTHdUbnQwMlRpeV9vLXdTLW45ZldqYVptamMxd3FuWUxkVzV0Q2VEN3FaWG00ZFIxYVpfZmR2SHNYV0NUaWhfREdYSzdtVWk0V3B1NFdLUlNnRTVTRDF0dUJiaHBfUlhJM3ZHMkwyeGdkeGdGRGtRWkdNWFRjTmxwb093Y043OGlSRXRCYV9ycG1oQUpRamZIc1Y1UlVtTjU1cGJ2cFQ0SEp6Yl9uQVgta0hDUDM3XzZMQW9OcGJIc2M3NUFydzA?oc=5"
     }
    ],
    "fc_lines": [
@@ -319,8 +319,8 @@
     "3m": "mixed",
     "12m": "mixed"
    },
-   "spot": 1416.47998046875
+   "spot": 1409.94
   },
-  "updated_at": "2026-08-16T17:37:22.687527"
+  "updated_at": "2026-08-16T23:25:33.261960"
  }
 }
