@@ -1,6 +1,6 @@
 {
- "as_of_utc": "2026-08-18T14:28:56.071746+00:00",
- "as_of_kst": "2026-08-18T23:28:56.071746+09:00",
+ "as_of_utc": "2026-08-18T15:03:10.917942+00:00",
+ "as_of_kst": "2026-08-19T00:03:10.917942+09:00",
  "warming": false,
  "mode": "READ_ONLY",
  "live_armed": false,
@@ -30,8 +30,8 @@
    "regime": "hawkish",
    "expected_move": "25.0",
    "unit": "BPS",
-   "data_quality": 0.86,
-   "age_seconds": 8848,
+   "data_quality": 0.83,
+   "age_seconds": 10903,
    "stale": false
   },
   {
@@ -43,8 +43,8 @@
    "regime": "hawkish",
    "expected_move": "25.0",
    "unit": "BPS",
-   "data_quality": 0.86,
-   "age_seconds": 8848,
+   "data_quality": 0.83,
+   "age_seconds": 10903,
    "stale": false
   },
   {
@@ -56,8 +56,8 @@
    "regime": "dovish",
    "expected_move": "-25.0",
    "unit": "BPS",
-   "data_quality": 0.86,
-   "age_seconds": 8848,
+   "data_quality": 0.83,
+   "age_seconds": 10903,
    "stale": false
   },
   {
@@ -69,8 +69,8 @@
    "regime": "dovish",
    "expected_move": "-50.0",
    "unit": "BPS",
-   "data_quality": 0.86,
-   "age_seconds": 8848,
+   "data_quality": 0.83,
+   "age_seconds": 10903,
    "stale": false
   },
   {
@@ -134,8 +134,8 @@
    "regime": "SIDEWAYS_HIGH_VOL",
    "expected_move": null,
    "unit": null,
-   "data_quality": 0.89,
-   "age_seconds": 11561,
+   "data_quality": 0.87,
+   "age_seconds": 13616,
    "stale": false
   },
   {
@@ -148,7 +148,7 @@
    "expected_move": "29.5",
    "unit": "SCORE",
    "data_quality": 0.54,
-   "age_seconds": 1687,
+   "age_seconds": 3742,
    "stale": false
   }
  ],
@@ -157,16 +157,16 @@
   "primary_ko": "미국 기술주 주도",
   "secondary": "KOREA_DECOUPLING",
   "secondary_ko": "한국 따로 가기(디커플링)",
-  "confidence": 0.599,
+  "confidence": 0.598,
   "coverage": 1.0,
   "transition_risk": 0.25,
   "probabilities": {
-   "US_TECH_LEADERSHIP": 0.3986,
-   "KOREA_DECOUPLING": 0.1993,
-   "REGIME_UNCERTAIN": 0.1321,
-   "RECESSION_RISK": 0.0897,
-   "HAWKISH_GROWTH": 0.0637,
-   "GOLDILOCKS": 0.046
+   "US_TECH_LEADERSHIP": 0.3979,
+   "KOREA_DECOUPLING": 0.199,
+   "REGIME_UNCERTAIN": 0.1336,
+   "RECESSION_RISK": 0.0895,
+   "HAWKISH_GROWTH": 0.0636,
+   "GOLDILOCKS": 0.0459
   },
   "supporting": [
    "5cc5d3d5abba53c3812f72d5c8ecce01"
@@ -193,17 +193,17 @@
  },
  "cio": {
   "strategy_brief": "오늘의 전략 — 시장은 '미국 기술주 주도' 국면(확신 60%)으로, 공격적 기조가 적절합니다. 현금은 약 26% 확보한 채, 늘릴 곳은 [US_TECH, US_SEMICONDUCTOR, KOREA_SEMICONDUCTOR], 줄일 곳은 [CASH]입니다. 위험선호 국면이라 분할 매수로 위험자산 비중을 키우되 과열 구간은 경계하세요. (매일 갱신되는 참고 전략이며 투자 권유가 아닙니다.)",
-  "risk_on_score": 0.1828,
-  "target_cash_ratio": 0.2634,
+  "risk_on_score": 0.1824,
+  "target_cash_ratio": 0.2635,
   "asset_class_allocation": {
-   "EQUITY": 0.4522,
+   "EQUITY": 0.4521,
    "BOND": 0.2844,
-   "CASH": 0.2634
+   "CASH": 0.2635
   },
   "country_allocation": {
    "KOREA": 0.2578,
-   "US": 0.4788,
-   "CASH": 0.2634
+   "US": 0.4787,
+   "CASH": 0.2635
   },
   "style_tilts": {
    "GROWTH": 0.1,
@@ -212,35 +212,35 @@
   "sector_tilts": {
    "SEMICONDUCTOR": 0.05
   },
-  "portfolio_confidence": 0.599,
+  "portfolio_confidence": 0.5982,
   "watcher_weights": [
    {
     "watcher": "FED_WATCHER",
-    "weight": 0.1701,
+    "weight": 0.1666,
     "components": {
      "accuracy": 0.5224,
      "regime_suitability": 0.8,
      "horizon_suitability": 1.0,
-     "freshness": 0.8635,
+     "freshness": 0.8317,
      "independence": 0.9,
      "calibration": 0.7
     }
    },
    {
     "watcher": "KOSPI_WATCHER",
-    "weight": 0.2663,
+    "weight": 0.265,
     "components": {
      "accuracy": 0.6327,
      "regime_suitability": 1.0,
      "horizon_suitability": 1.0,
-     "freshness": 0.893,
+     "freshness": 0.8739,
      "independence": 0.9,
      "calibration": 0.7
     }
    },
    {
     "watcher": "KRW_WATCHER",
-    "weight": 0.3159,
+    "weight": 0.3213,
     "components": {
      "accuracy": 0.838,
      "regime_suitability": 0.8,
@@ -252,12 +252,12 @@
    },
    {
     "watcher": "US_WATCHER",
-    "weight": 0.2477,
+    "weight": 0.2471,
     "components": {
      "accuracy": 0.534,
      "regime_suitability": 1.0,
      "horizon_suitability": 1.0,
-     "freshness": 0.9844,
+     "freshness": 0.9654,
      "independence": 0.9,
      "calibration": 0.7
     }
@@ -366,8 +366,8 @@
  },
  "portfolio": {
   "headline": "위험선호 우위 — 미국 주식 중심, 위험자산 비중 확대",
-  "risk_on_score": 0.183,
-  "confidence": 0.599,
+  "risk_on_score": 0.182,
+  "confidence": 0.5982,
   "coverage": 1.0,
   "notes": [
    "‘달러(USD)’는 달러 보유(환차익·안전판), ‘원화 현금’은 환노출 없는 원화 보유 — 역할이 다릅니다.",
@@ -378,7 +378,7 @@
    {
     "asset": "US_EQUITY",
     "label_ko": "미국 주식",
-    "weight": 0.4649,
+    "weight": 0.4648,
     "neutral_weight": 0.35,
     "stance": "OVERWEIGHT",
     "score": 0.447,
@@ -420,7 +420,7 @@
     "weight": 0.0957,
     "neutral_weight": 0.1,
     "stance": "NEUTRAL",
-    "score": 0.143,
+    "score": 0.144,
     "rationale": "[US_TECH_LEADERSHIP·NEUTRAL] 원화 현금 — 환노출 없는 방어 버퍼(전환 위험·불확실성 대비 드라이파우더)",
     "drivers": [
      "원화 방향",
@@ -430,7 +430,7 @@
    {
     "asset": "USD",
     "label_ko": "달러(USD)",
-    "weight": 0.0901,
+    "weight": 0.0902,
     "neutral_weight": 0.1,
     "stance": "NEUTRAL",
     "score": 0.088,
@@ -597,7 +597,7 @@
   ]
  },
  "realestate": {
-  "as_of": "2026-08-18T14:28:56.071746Z",
+  "as_of": "2026-08-18T15:03:10.917942Z",
   "stance": {
    "kr_rate_env": "긴축·금리 인상 (2026년 약 2회 인상 전망)",
    "us_rate_env": "긴축·고금리",
@@ -764,14 +764,6 @@
   ],
   "kr_redev": [
    {
-    "area": "흑석뉴타운",
-    "complexes": [
-     "흑석9·11구역"
-    ],
-    "note": "한강·동작 입지 재개발. 분양 성과 양호.",
-    "query": "흑석뉴타운 재개발"
-   },
-   {
     "area": "광명뉴타운",
     "complexes": [
      "광명1·2·4·5R",
@@ -808,6 +800,14 @@
     ],
     "note": "학군+대단지 재건축. 안전진단·종상향 이슈가 변수.",
     "query": "목동 신시가지 재건축"
+   },
+   {
+    "area": "잠실 주공5단지",
+    "complexes": [
+     "주공5단지"
+    ],
+    "note": "잠실 핵심 재건축. 70층 계획·정비계획 단계.",
+    "query": "잠실 주공5단지 재건축"
    }
   ],
   "kr_redev_pinned": [
@@ -909,15 +909,6 @@
   ],
   "us_markets": [
    {
-    "region": "샬럿",
-    "state": "NC",
-    "thesis": "동부 금융 허브(뱅크오브아메리카 등) + 선벨트 성장.",
-    "demand": "금융·핀테크",
-    "risks": "금융 경기 민감",
-    "profile": "균형",
-    "best_for": "안정적 도시 성장"
-   },
-   {
     "region": "피닉스",
     "state": "AZ",
     "thesis": "캘리포니아 대비 가성비 이주 + 반도체(TSMC) 투자.",
@@ -943,6 +934,15 @@
     "risks": "단일 산업 의존",
     "profile": "현금흐름+안정",
     "best_for": "정부·방산 수요 기반 임대"
+   },
+   {
+    "region": "메릴랜드 (DC 근교)",
+    "state": "MD",
+    "thesis": "워싱턴 D.C. 인접 + 연방·군·바이오 클러스터로 경기 둔감한 임대 수요.",
+    "demand": "연방 공무원·계약직·NIH/FDA·NSA(Fort Meade)·외국 주재원",
+    "risks": "정부 셧다운·예산 변수, 지역별 가격 편차",
+    "profile": "현금흐름+안정",
+    "best_for": "공실 위험 낮은 안정적 장기 임대"
    }
   ],
   "us_evergreen": [
@@ -965,6 +965,27 @@
    }
   ],
   "us_archive": [
+   {
+    "date": "2026-08-19",
+    "picks": [
+     {
+      "region": "피닉스",
+      "reason": "이주·산업 유치 베팅"
+     },
+     {
+      "region": "컬럼버스",
+      "reason": "캡레이트 높은 현금흐름"
+     },
+     {
+      "region": "헌츠빌",
+      "reason": "정부·방산 수요 기반 임대"
+     },
+     {
+      "region": "메릴랜드 (DC 근교)",
+      "reason": "공실 위험 낮은 안정적 장기 임대"
+     }
+    ]
+   },
    {
     "date": "2026-08-18",
     "picks": [
@@ -1195,27 +1216,6 @@
       "reason": "정부·방산 수요 기반 임대"
      }
     ]
-   },
-   {
-    "date": "2026-08-07",
-    "picks": [
-     {
-      "region": "롤리–더럼 (리서치 트라이앵글)",
-      "reason": "고소득 임차 수요"
-     },
-     {
-      "region": "샬럿",
-      "reason": "안정적 도시 성장"
-     },
-     {
-      "region": "피닉스",
-      "reason": "이주·산업 유치 베팅"
-     },
-     {
-      "region": "컬럼버스",
-      "reason": "캡레이트 높은 현금흐름"
-     }
-    ]
    }
   ],
   "instruments": [
@@ -1285,7 +1285,7 @@
   ]
  },
  "geopolitics": {
-  "as_of": "2026-08-18T14:28:56.071746Z",
+  "as_of": "2026-08-18T15:03:10.917942Z",
   "risk_level": "보통",
   "risk_rationale": "특별한 위험회피 신호는 약하나, 구조적 지정학 리스크는 상존합니다.",
   "synthesis": "종합하면, 현재 세계 정세의 자산시장 함의는 '미국 기술주 주도' 국면과 결합해 지정학 위험도 '보통'로 평가됩니다. 가장 구조적인 축은 미·중 기술 패권과 중앙은행 정책 차별화이며, 단기 변동성의 방아쇠는 중동·유가와 엔 캐리입니다. 환율이 중립이라 지정학 변수는 개별 이벤트 중심으로 작용합니다. 리스크가 커지는 국면에서는 금·달러·미국채 같은 안전판과 방산·에너지 같은 사건 대응 자산이 방어력을 제공하고, 긴장이 완화되면 그간 눌렸던 한국·신흥국 위험자산의 반등 탄력이 큽니다.",
@@ -1412,8 +1412,8 @@
   "headline": "세계 경제 조망 — 중립·혼조 · 수렴(2R)",
   "overview": "네 시장(미국 금리·환율·한국 증시·미국 증시)에서 모은 정보를 데스크별로 검토하고 수석이 조율한 결과, 세계 경제는 '미국 기술주 주도' 국면이며 종합 위험선호는 +0.03(중립·혼조)입니다. 섹터 데스크 0곳이 같은 방향, 0곳이 반대 의견입니다.",
   "bottom_line": "글로벌 조망을 각 시장에 되돌려 재검토하는 과정을 2라운드 거쳐 개별시장 시각과 전체 시각이 수렴했습니다(최종 +0.03). 즉 시장 간 신호가 대체로 정합적이라는 뜻입니다.",
-  "converged_risk_on": 0.0265,
-  "confidence": 0.7192999999999999,
+  "converged_risk_on": 0.0264,
+  "confidence": 0.7187399999999999,
   "converged": true,
   "iterations": 2,
   "desks": [
@@ -1421,8 +1421,8 @@
     "desk": "RATES",
     "label_ko": "금리·연준 데스크",
     "lean_label": "긴축(매파)",
-    "lean_score": -0.5808148254069889,
-    "conviction": 0.6104074127034944,
+    "lean_score": -0.5808148233918525,
+    "conviction": 0.6104074116959263,
     "summary": "연준 경로가 매파면 위험자산에 부담, 완화면 채권·성장주에 우호적입니다.",
     "drivers": [
      "미 정책금리 경로",
@@ -1486,8 +1486,8 @@
     "desk": "RISK",
     "label_ko": "리스크·방어 데스크",
     "lean_label": "방어 강화",
-    "lean_score": -0.41567913844005017,
-    "conviction": 0.685339569220025,
+    "lean_score": -0.4160262769669561,
+    "conviction": 0.6855131384834781,
     "summary": "위험회피·전환위험이 높으면 금·달러·현금 등 방어자산을 키웁니다.",
     "drivers": [
      "위험회피 강도",
@@ -1502,14 +1502,14 @@
   "rounds": [
    {
     "round_no": 1,
-    "global_score": 0.0265,
+    "global_score": 0.0264,
     "global_label": "중립·혼조",
     "delta": 1.0,
     "note": "각 데스크 원안을 신뢰도 가중 종합"
    },
    {
     "round_no": 2,
-    "global_score": 0.0265,
+    "global_score": 0.0264,
     "global_label": "중립·혼조",
     "delta": 0.0,
     "note": "글로벌 조망을 각 시장에 환류 — 합의 미달 시각은 비중↓, 일치 시각은 비중↑ 후 재계산"
@@ -1576,7 +1576,7 @@
   ]
  },
  "news_brief": {
-  "as_of": "2026-08-18T14:28:56.071746Z",
+  "as_of": "2026-08-18T15:03:10.917942Z",
   "title": "MARKET WATCHER — 데일리 분석 브리프",
   "market_read": "오늘 수집한 뉴스 7건을 종합하면, 흐름의 무게중심은 '통화정책·금리'에 있습니다. 이를 시장 국면('미국 기술주 주도', 종합 중립·혼조)과 겹쳐 보면 세계 경제 조망 — 중립·혼조 · 수렴(2R). 개별 헤드라인을 나열하기보다, 아래처럼 주제별로 묶어 '그래서 자산에 어떤 의미인지'로 재해석했습니다.",
   "themes": [
