@@ -783,8 +783,8 @@
   "date": "2026-08-20",
   "regime": "US_TECH_LEADERSHIP",
   "secondary": "KOREA_DECOUPLING",
-  "confidence": 0.6505,
-  "risk_on": 0.1895,
+  "confidence": 0.6518,
+  "risk_on": 0.1891,
   "coverage": 1.0,
   "weights": {
    "US_EQUITY": 0.4701,
