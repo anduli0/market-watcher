@@ -835,14 +835,14 @@
   "date": "2026-08-22",
   "regime": "US_TECH_LEADERSHIP",
   "secondary": "HAWKISH_GROWTH",
-  "confidence": 0.5432,
-  "risk_on": 0.3326,
+  "confidence": 0.5431,
+  "risk_on": 0.332,
   "coverage": 1.0,
   "weights": {
    "US_EQUITY": 0.4506,
    "KOREA_EQUITY": 0.1958,
    "CASH": 0.0844,
-   "US_TREASURY": 0.0823,
+   "US_TREASURY": 0.0824,
    "USD": 0.071,
    "BITCOIN": 0.0631,
    "GOLD": 0.0527
