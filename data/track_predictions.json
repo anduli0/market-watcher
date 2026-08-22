@@ -861,16 +861,16 @@
   "date": "2026-08-23",
   "regime": "US_TECH_LEADERSHIP",
   "secondary": "HAWKISH_GROWTH",
-  "confidence": 0.526,
-  "risk_on": 0.3331,
+  "confidence": 0.5258,
+  "risk_on": 0.3324,
   "coverage": 1.0,
   "weights": {
-   "US_EQUITY": 0.4504,
-   "KOREA_EQUITY": 0.1955,
+   "US_EQUITY": 0.4503,
+   "KOREA_EQUITY": 0.1954,
    "CASH": 0.0844,
    "US_TREASURY": 0.0824,
-   "USD": 0.0708,
-   "BITCOIN": 0.0636,
+   "USD": 0.0709,
+   "BITCOIN": 0.0635,
    "GOLD": 0.053
   },
   "neutral": {
