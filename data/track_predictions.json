@@ -856,5 +856,31 @@
    "BITCOIN": 0.08,
    "GOLD": 0.1
   }
+ },
+ "2026-08-23": {
+  "date": "2026-08-23",
+  "regime": "US_TECH_LEADERSHIP",
+  "secondary": "HAWKISH_GROWTH",
+  "confidence": 0.5211,
+  "risk_on": 0.3268,
+  "coverage": 1.0,
+  "weights": {
+   "US_EQUITY": 0.4484,
+   "KOREA_EQUITY": 0.195,
+   "CASH": 0.0855,
+   "US_TREASURY": 0.083,
+   "USD": 0.0718,
+   "BITCOIN": 0.0631,
+   "GOLD": 0.0531
+  },
+  "neutral": {
+   "US_EQUITY": 0.35,
+   "KOREA_EQUITY": 0.15,
+   "CASH": 0.1,
+   "US_TREASURY": 0.12,
+   "USD": 0.1,
+   "BITCOIN": 0.08,
+   "GOLD": 0.1
+  }
  }
 }
