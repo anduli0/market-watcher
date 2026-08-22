@@ -860,24 +860,24 @@
  "2026-08-23": {
   "date": "2026-08-23",
   "regime": "US_TECH_LEADERSHIP",
-  "secondary": "HAWKISH_GROWTH",
-  "confidence": 0.5256,
-  "risk_on": 0.3309,
+  "secondary": "KOREA_DECOUPLING",
+  "confidence": 0.6079,
+  "risk_on": 0.1848,
   "coverage": 1.0,
   "weights": {
-   "US_EQUITY": 0.45,
-   "KOREA_EQUITY": 0.1954,
-   "CASH": 0.0845,
-   "US_TREASURY": 0.0825,
-   "USD": 0.071,
-   "BITCOIN": 0.0635,
-   "GOLD": 0.0531
+   "US_EQUITY": 0.467,
+   "KOREA_EQUITY": 0.1273,
+   "US_TREASURY": 0.0977,
+   "CASH": 0.0949,
+   "USD": 0.089,
+   "BITCOIN": 0.0621,
+   "GOLD": 0.062
   },
   "neutral": {
    "US_EQUITY": 0.35,
    "KOREA_EQUITY": 0.15,
-   "CASH": 0.1,
    "US_TREASURY": 0.12,
+   "CASH": 0.1,
    "USD": 0.1,
    "BITCOIN": 0.08,
    "GOLD": 0.1
