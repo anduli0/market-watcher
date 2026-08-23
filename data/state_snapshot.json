@@ -1,6 +1,6 @@
 {
- "as_of_utc": "2026-08-23T22:46:42.338769+00:00",
- "as_of_kst": "2026-08-24T07:46:42.338769+09:00",
+ "as_of_utc": "2026-08-23T23:16:49.300727+00:00",
+ "as_of_kst": "2026-08-24T08:16:49.300727+09:00",
  "warming": false,
  "mode": "READ_ONLY",
  "live_armed": false,
@@ -30,8 +30,8 @@
    "regime": "hawkish",
    "expected_move": "25.0",
    "unit": "BPS",
-   "data_quality": 0.88,
-   "age_seconds": 7792,
+   "data_quality": 0.85,
+   "age_seconds": 9599,
    "stale": false
   },
   {
@@ -43,8 +43,8 @@
    "regime": "hawkish",
    "expected_move": "25.0",
    "unit": "BPS",
-   "data_quality": 0.88,
-   "age_seconds": 7792,
+   "data_quality": 0.85,
+   "age_seconds": 9599,
    "stale": false
   },
   {
@@ -56,8 +56,8 @@
    "regime": "dovish",
    "expected_move": "-25.0",
    "unit": "BPS",
-   "data_quality": 0.88,
-   "age_seconds": 7792,
+   "data_quality": 0.85,
+   "age_seconds": 9599,
    "stale": false
   },
   {
@@ -69,8 +69,8 @@
    "regime": "dovish",
    "expected_move": "-50.0",
    "unit": "BPS",
-   "data_quality": 0.88,
-   "age_seconds": 7792,
+   "data_quality": 0.85,
+   "age_seconds": 9599,
    "stale": false
   },
   {
@@ -134,8 +134,8 @@
    "regime": "SIDEWAYS_HIGH_VOL",
    "expected_move": null,
    "unit": null,
-   "data_quality": 1.0,
-   "age_seconds": 400,
+   "data_quality": 0.98,
+   "age_seconds": 2207,
    "stale": false
   },
   {
@@ -148,7 +148,7 @@
    "expected_move": "41.5",
    "unit": "SCORE",
    "data_quality": 0.54,
-   "age_seconds": 4203,
+   "age_seconds": 6010,
    "stale": false
   }
  ],
@@ -157,16 +157,16 @@
   "primary_ko": "미국 기술주 주도",
   "secondary": "KOREA_DECOUPLING",
   "secondary_ko": "한국 따로 가기(디커플링)",
-  "confidence": 0.608,
+  "confidence": 0.607,
   "coverage": 1.0,
   "transition_risk": 0.25,
   "probabilities": {
-   "US_TECH_LEADERSHIP": 0.4003,
-   "KOREA_DECOUPLING": 0.2002,
-   "REGIME_UNCERTAIN": 0.1306,
-   "RECESSION_RISK": 0.0901,
-   "HAWKISH_GROWTH": 0.06,
-   "GOLDILOCKS": 0.0501
+   "US_TECH_LEADERSHIP": 0.3997,
+   "KOREA_DECOUPLING": 0.1998,
+   "REGIME_UNCERTAIN": 0.132,
+   "RECESSION_RISK": 0.0899,
+   "HAWKISH_GROWTH": 0.0599,
+   "GOLDILOCKS": 0.05
   },
   "supporting": [
    "dd99294bcdc55362b8c4dfe0a84ab59a"
@@ -193,16 +193,16 @@
  },
  "cio": {
   "strategy_brief": "오늘의 전략 — 시장은 '미국 기술주 주도' 국면(확신 61%)으로, 공격적 기조가 적절합니다. 현금은 약 26% 확보한 채, 늘릴 곳은 [US_TECH, US_SEMICONDUCTOR, KOREA_SEMICONDUCTOR], 줄일 곳은 [CASH]입니다. 위험선호 국면이라 분할 매수로 위험자산 비중을 키우되 과열 구간은 경계하세요. (매일 갱신되는 참고 전략이며 투자 권유가 아닙니다.)",
-  "risk_on_score": 0.1852,
+  "risk_on_score": 0.1848,
   "target_cash_ratio": 0.263,
   "asset_class_allocation": {
-   "EQUITY": 0.4531,
-   "BOND": 0.2839,
+   "EQUITY": 0.453,
+   "BOND": 0.284,
    "CASH": 0.263
   },
   "country_allocation": {
-   "KOREA": 0.258,
-   "US": 0.4791,
+   "KOREA": 0.2579,
+   "US": 0.479,
    "CASH": 0.263
   },
   "style_tilts": {
@@ -212,35 +212,35 @@
   "sector_tilts": {
    "SEMICONDUCTOR": 0.05
   },
-  "portfolio_confidence": 0.6079,
+  "portfolio_confidence": 0.6074,
   "watcher_weights": [
    {
     "watcher": "FED_WATCHER",
-    "weight": 0.1679,
+    "weight": 0.1649,
     "components": {
      "accuracy": 0.5224,
      "regime_suitability": 0.8,
      "horizon_suitability": 1.0,
-     "freshness": 0.8798,
+     "freshness": 0.8519,
      "independence": 0.9,
      "calibration": 0.7
     }
    },
    {
     "watcher": "KOSPI_WATCHER",
-    "weight": 0.2934,
+    "weight": 0.2926,
     "components": {
      "accuracy": 0.6449,
      "regime_suitability": 1.0,
      "horizon_suitability": 1.0,
-     "freshness": 0.9963,
+     "freshness": 0.9796,
      "independence": 0.9,
      "calibration": 0.7
     }
    },
    {
     "watcher": "KRW_WATCHER",
-    "weight": 0.3061,
+    "weight": 0.3106,
     "components": {
      "accuracy": 0.838,
      "regime_suitability": 0.8,
@@ -252,12 +252,12 @@
    },
    {
     "watcher": "US_WATCHER",
-    "weight": 0.2326,
+    "weight": 0.2319,
     "components": {
      "accuracy": 0.53,
      "regime_suitability": 1.0,
      "horizon_suitability": 1.0,
-     "freshness": 0.9611,
+     "freshness": 0.9444,
      "independence": 0.9,
      "calibration": 0.7
     }
@@ -367,7 +367,7 @@
  "portfolio": {
   "headline": "위험선호 우위 — 미국 주식 중심, 위험자산 비중 확대",
   "risk_on_score": 0.185,
-  "confidence": 0.6079,
+  "confidence": 0.6074,
   "coverage": 1.0,
   "notes": [
    "‘달러(USD)’는 달러 보유(환차익·안전판), ‘원화 현금’은 환노출 없는 원화 보유 — 역할이 다릅니다.",
@@ -378,7 +378,7 @@
    {
     "asset": "US_EQUITY",
     "label_ko": "미국 주식",
-    "weight": 0.4677,
+    "weight": 0.4676,
     "neutral_weight": 0.35,
     "stance": "OVERWEIGHT",
     "score": 0.459,
@@ -508,8 +508,8 @@
     "heading": "뉴스 흐름",
     "body": "",
     "bullets": [
-     "[Fed] 美 국채금리, 다년 최고치 재위협…40조달러 부채·재무부 개입 우려에 연준 셈법 복잡해져",
-     "[Fed] Global Yield Relief Evaporates as U.S. Rates Push Back Toward Multi-Decade Peaks - CryptoRank",
+     "[Fed] 국가부채 40조달러 돌파·미-캐나다 무역협상 결렬 속 성장 정체 시그널 부각",
+     "[Fed] USD Outlook Tied to UST Yields and Fed Policy Credibility: What Investors Should Know - CryptoRank",
      "[환율] 1개월: -29.0원 → 1359.43 (krw_strong, conf 0%)",
      "[환율] 원/달러 데일리 브리프",
      "[국장] 투자자 관점 — 레버리지·인버스 모두 무리하지 말고, 방향이 확인된 뒤 비중을 조절하세요. (오늘의 종합 판단: 코스피 중립, 확신도 52%)",
@@ -523,16 +523,16 @@
     "bullets": []
    }
   ],
-  "markdown": "# MARKET WATCHER — 자산시장 종합 애널리스트 리포트\n\n**위험선호 우위 — 미국 주식 중심, 위험자산 비중 확대**\n\n한마디로 지금은 '방향이 뚜렷하지 않은 혼조 분위기'입니다. 네 개 시장 신호(미국 금리·환율·한국 증시·미국 증시)를 합쳐 보면 '미국 기술주 주도' 국면이고, 신호들의 확신도는 61% 수준입니다. 그래서 권하는 비중 1위 자산은 미국 주식(47%)입니다. 한쪽에 크게 베팅하기보다 골고루 나눠 담고 현금을 넉넉히 두는 편이 안전합니다.\n\n## 자산별 배분 및 근거\n7개 자산에 어느 정도 비중을 두면 좋을지와 그 이유입니다(비중·중립 대비 방향·근거).\n- 미국 주식 47% (비중 확대) — [US_TECH_LEADERSHIP·OVERWEIGHT] 위험선호·미 증시 주도력에 비중 확대 우위\n- 한국 주식 13% (비중 축소) — [US_TECH_LEADERSHIP·UNDERWEIGHT] 위험선호+원화 강세 시 외국인 유입 기대\n- 미국채 10% (비중 축소) — [US_TECH_LEADERSHIP·UNDERWEIGHT] 금리 상방/리플레이션 압력에 듀레이션 부담\n- 원화 현금 9% (중립) — [US_TECH_LEADERSHIP·NEUTRAL] 원화 현금 — 환노출 없는 방어 버퍼(전환 위험·불확실성 대비 드라이파우더)\n- 달러(USD) 9% (중립) — [US_TECH_LEADERSHIP·NEUTRAL] 달러(USD) 보유 — 위험회피·달러 강세 국면의 안전판이자 미국 자산 환헤지\n- 비트코인 6% (비중 축소) — [US_TECH_LEADERSHIP·UNDERWEIGHT] 달러 강세·긴축·유동성 스트레스에 비중 축소\n- 금 6% (비중 축소) — [US_TECH_LEADERSHIP·UNDERWEIGHT] 달러 강세·실질금리 상방에 매력 제한\n\n## 시장 상황 진단\n지금 시장은 '미국 기술주 주도' 국면입니다. 쉽게 말해, 미국 기술주가 시장을 이끌어 관련 자산이 상대적으로 강합니다. 국면이 바뀔 위험은 25%로 비교적 낮아, 현재 판단을 유지할 만합니다.\n\n## 자산 배분 판단\n위험을 감수할지 말지를 점수로 보면 +0.18입니다(+는 공격적, −는 방어적). 이에 맞춰 현금은 약 26% 정도 들고 가기를 권합니다. 확신이 낮을수록 현금을 늘려 변동성에 대비하는 뜻입니다.\n\n## 무엇을 지켜봐야 하나\n- 현재 특별히 어긋나는 신호는 없습니다. 정기 점검만 유지하면 됩니다.\n- 환율이 크게 움직이거나 미국 금리 방향이 바뀌면 위 판단을 다시 봐야 합니다.\n\n## 뉴스 흐름\n- [Fed] 美 국채금리, 다년 최고치 재위협…40조달러 부채·재무부 개입 우려에 연준 셈법 복잡해져\n- [Fed] Global Yield Relief Evaporates as U.S. Rates Push Back Toward Multi-Decade Peaks - CryptoRank\n- [환율] 1개월: -29.0원 → 1359.43 (krw_strong, conf 0%)\n- [환율] 원/달러 데일리 브리프\n- [국장] 투자자 관점 — 레버리지·인버스 모두 무리하지 말고, 방향이 확인된 뒤 비중을 조절하세요. (오늘의 종합 판단: 코스피 중립, 확신도 52%)\n- [국장] 2026-08-24 한국 증시 데일리 브리핑입니다. 오늘 수집한 증시 뉴스 6건을 종합하면, 오늘 한국 증시는 뚜렷한 방향이 없는 변동성이 큰 채 방향이 엇갈리는 흐름입니다. 종합 판단을 한 줄로 옮기면 '코스피 중립·중간확신 — 고변동성 횡보 국면'입니다.  오늘 수집한 헤드라인의 어조를 보면 상승·강세 톤(1건)이 하\n- [미장] [월요일 8/24 장 예측] 상승 우위 — 강한 상승추세 국면 · 종합점수 +42 · 신뢰도 50%\n\n## 면책\n이 글은 공개 데이터와 자동 모델로 만든 참고 자료이며 투자 권유가 아닙니다. 비트코인·금 비중은 거시 흐름에서 추론한 값입니다. © 2026 YellowScale."
+  "markdown": "# MARKET WATCHER — 자산시장 종합 애널리스트 리포트\n\n**위험선호 우위 — 미국 주식 중심, 위험자산 비중 확대**\n\n한마디로 지금은 '방향이 뚜렷하지 않은 혼조 분위기'입니다. 네 개 시장 신호(미국 금리·환율·한국 증시·미국 증시)를 합쳐 보면 '미국 기술주 주도' 국면이고, 신호들의 확신도는 61% 수준입니다. 그래서 권하는 비중 1위 자산은 미국 주식(47%)입니다. 한쪽에 크게 베팅하기보다 골고루 나눠 담고 현금을 넉넉히 두는 편이 안전합니다.\n\n## 자산별 배분 및 근거\n7개 자산에 어느 정도 비중을 두면 좋을지와 그 이유입니다(비중·중립 대비 방향·근거).\n- 미국 주식 47% (비중 확대) — [US_TECH_LEADERSHIP·OVERWEIGHT] 위험선호·미 증시 주도력에 비중 확대 우위\n- 한국 주식 13% (비중 축소) — [US_TECH_LEADERSHIP·UNDERWEIGHT] 위험선호+원화 강세 시 외국인 유입 기대\n- 미국채 10% (비중 축소) — [US_TECH_LEADERSHIP·UNDERWEIGHT] 금리 상방/리플레이션 압력에 듀레이션 부담\n- 원화 현금 9% (중립) — [US_TECH_LEADERSHIP·NEUTRAL] 원화 현금 — 환노출 없는 방어 버퍼(전환 위험·불확실성 대비 드라이파우더)\n- 달러(USD) 9% (중립) — [US_TECH_LEADERSHIP·NEUTRAL] 달러(USD) 보유 — 위험회피·달러 강세 국면의 안전판이자 미국 자산 환헤지\n- 비트코인 6% (비중 축소) — [US_TECH_LEADERSHIP·UNDERWEIGHT] 달러 강세·긴축·유동성 스트레스에 비중 축소\n- 금 6% (비중 축소) — [US_TECH_LEADERSHIP·UNDERWEIGHT] 달러 강세·실질금리 상방에 매력 제한\n\n## 시장 상황 진단\n지금 시장은 '미국 기술주 주도' 국면입니다. 쉽게 말해, 미국 기술주가 시장을 이끌어 관련 자산이 상대적으로 강합니다. 국면이 바뀔 위험은 25%로 비교적 낮아, 현재 판단을 유지할 만합니다.\n\n## 자산 배분 판단\n위험을 감수할지 말지를 점수로 보면 +0.18입니다(+는 공격적, −는 방어적). 이에 맞춰 현금은 약 26% 정도 들고 가기를 권합니다. 확신이 낮을수록 현금을 늘려 변동성에 대비하는 뜻입니다.\n\n## 무엇을 지켜봐야 하나\n- 현재 특별히 어긋나는 신호는 없습니다. 정기 점검만 유지하면 됩니다.\n- 환율이 크게 움직이거나 미국 금리 방향이 바뀌면 위 판단을 다시 봐야 합니다.\n\n## 뉴스 흐름\n- [Fed] 국가부채 40조달러 돌파·미-캐나다 무역협상 결렬 속 성장 정체 시그널 부각\n- [Fed] USD Outlook Tied to UST Yields and Fed Policy Credibility: What Investors Should Know - CryptoRank\n- [환율] 1개월: -29.0원 → 1359.43 (krw_strong, conf 0%)\n- [환율] 원/달러 데일리 브리프\n- [국장] 투자자 관점 — 레버리지·인버스 모두 무리하지 말고, 방향이 확인된 뒤 비중을 조절하세요. (오늘의 종합 판단: 코스피 중립, 확신도 52%)\n- [국장] 2026-08-24 한국 증시 데일리 브리핑입니다. 오늘 수집한 증시 뉴스 6건을 종합하면, 오늘 한국 증시는 뚜렷한 방향이 없는 변동성이 큰 채 방향이 엇갈리는 흐름입니다. 종합 판단을 한 줄로 옮기면 '코스피 중립·중간확신 — 고변동성 횡보 국면'입니다.  오늘 수집한 헤드라인의 어조를 보면 상승·강세 톤(1건)이 하\n- [미장] [월요일 8/24 장 예측] 상승 우위 — 강한 상승추세 국면 · 종합점수 +42 · 신뢰도 50%\n\n## 면책\n이 글은 공개 데이터와 자동 모델로 만든 참고 자료이며 투자 권유가 아닙니다. 비트코인·금 비중은 거시 흐름에서 추론한 값입니다. © 2026 YellowScale."
  },
  "news": [
   {
    "source": "Fed",
-   "text": "美 국채금리, 다년 최고치 재위협…40조달러 부채·재무부 개입 우려에 연준 셈법 복잡해져"
+   "text": "국가부채 40조달러 돌파·미-캐나다 무역협상 결렬 속 성장 정체 시그널 부각"
   },
   {
    "source": "Fed",
-   "text": "Global Yield Relief Evaporates as U.S. Rates Push Back Toward Multi-Decade Peaks - CryptoRank"
+   "text": "USD Outlook Tied to UST Yields and Fed Policy Credibility: What Investors Should Know - CryptoRank"
   },
   {
    "source": "환율",
@@ -597,7 +597,7 @@
   ]
  },
  "realestate": {
-  "as_of": "2026-08-23T22:46:42.338769Z",
+  "as_of": "2026-08-23T23:16:49.300727Z",
   "stance": {
    "kr_rate_env": "긴축·금리 인상 (2026년 약 2회 인상 전망)",
    "us_rate_env": "긴축·고금리",
@@ -1285,7 +1285,7 @@
   ]
  },
  "geopolitics": {
-  "as_of": "2026-08-23T22:46:42.338769Z",
+  "as_of": "2026-08-23T23:16:49.300727Z",
   "risk_level": "보통",
   "risk_rationale": "특별한 위험회피 신호는 약하나, 구조적 지정학 리스크는 상존합니다.",
   "synthesis": "종합하면, 현재 세계 정세의 자산시장 함의는 '미국 기술주 주도' 국면과 결합해 지정학 위험도 '보통'로 평가됩니다. 가장 구조적인 축은 미·중 기술 패권과 중앙은행 정책 차별화이며, 단기 변동성의 방아쇠는 중동·유가와 엔 캐리입니다. 환율이 중립이라 지정학 변수는 개별 이벤트 중심으로 작용합니다. 리스크가 커지는 국면에서는 금·달러·미국채 같은 안전판과 방산·에너지 같은 사건 대응 자산이 방어력을 제공하고, 긴장이 완화되면 그간 눌렸던 한국·신흥국 위험자산의 반등 탄력이 큽니다.",
@@ -1413,7 +1413,7 @@
   "overview": "네 시장(미국 금리·환율·한국 증시·미국 증시)에서 모은 정보를 데스크별로 검토하고 수석이 조율한 결과, 세계 경제는 '미국 기술주 주도' 국면이며 종합 위험선호는 +0.04(중립·혼조)입니다. 섹터 데스크 0곳이 같은 방향, 0곳이 반대 의견입니다.",
   "bottom_line": "글로벌 조망을 각 시장에 되돌려 재검토하는 과정을 2라운드 거쳐 개별시장 시각과 전체 시각이 수렴했습니다(최종 +0.04). 즉 시장 간 신호가 대체로 정합적이라는 뜻입니다.",
   "converged_risk_on": 0.0368,
-  "confidence": 0.72553,
+  "confidence": 0.7251799999999999,
   "converged": true,
   "iterations": 2,
   "desks": [
@@ -1421,8 +1421,8 @@
     "desk": "RATES",
     "label_ko": "금리·연준 데스크",
     "lean_label": "긴축(매파)",
-    "lean_score": -0.544961476386484,
-    "conviction": 0.592480738193242,
+    "lean_score": -0.5449614745132849,
+    "conviction": 0.5924807372566425,
     "summary": "연준 경로가 매파면 위험자산에 부담, 완화면 채권·성장주에 우호적입니다.",
     "drivers": [
      "미 정책금리 경로",
@@ -1486,8 +1486,8 @@
     "desk": "RISK",
     "label_ko": "리스크·방어 데스크",
     "lean_label": "방어 강화",
-    "lean_score": -0.41500000000000004,
-    "conviction": 0.685,
+    "lean_score": -0.41515445176613175,
+    "conviction": 0.6850772258830659,
     "summary": "위험회피·전환위험이 높으면 금·달러·현금 등 방어자산을 키웁니다.",
     "drivers": [
      "위험회피 강도",
@@ -1522,7 +1522,7 @@
     "present": true,
     "standalone_lean": "금리 상방(매파)",
     "notes": [
-     "美 국채금리, 다년 최고치 재위협…40조달러 부채·재무부 개입 우려에 연준 셈법 복잡해져"
+     "국가부채 40조달러 돌파·미-캐나다 무역협상 결렬 속 성장 정체 시그널 부각"
     ],
     "endpoints": [
      "/api/forecast/report?lang=ko",
@@ -1575,22 +1575,22 @@
   ]
  },
  "news_brief": {
-  "as_of": "2026-08-23T22:46:42.338769Z",
+  "as_of": "2026-08-23T23:16:49.300727Z",
   "title": "MARKET WATCHER — 데일리 분석 브리프",
-  "market_read": "오늘 수집한 뉴스 7건을 종합하면, 흐름의 무게중심은 '통화정책·금리'에 있습니다. 이를 시장 국면('미국 기술주 주도', 종합 중립·혼조)과 겹쳐 보면 세계 경제 조망 — 중립·혼조 · 수렴(2R). 개별 헤드라인을 나열하기보다, 아래처럼 주제별로 묶어 '그래서 자산에 어떤 의미인지'로 재해석했습니다.",
+  "market_read": "오늘 수집한 뉴스 7건을 종합하면, 흐름의 무게중심은 '환율·달러'에 있습니다. 이를 시장 국면('미국 기술주 주도', 종합 중립·혼조)과 겹쳐 보면 세계 경제 조망 — 중립·혼조 · 수렴(2R). 개별 헤드라인을 나열하기보다, 아래처럼 주제별로 묶어 '그래서 자산에 어떤 의미인지'로 재해석했습니다.",
   "themes": [
    {
     "title": "통화정책·금리",
-    "body": "2건 — 금리·물가 흐름은 위험자산 밸류에이션과 환율의 출발점입니다.",
+    "body": "1건 — 금리·물가 흐름은 위험자산 밸류에이션과 환율의 출발점입니다.",
     "items": [
-     "[Fed] 美 국채금리, 다년 최고치 재위협…40조달러 부채·재무부 개입 우려에 연준 셈법 복잡해져",
-     "[Fed] Global Yield Relief Evaporates as U.S. Rates Push Back Toward Multi-Decade Peaks - CryptoRank"
+     "[Fed] USD Outlook Tied to UST Yields and Fed Policy Credibility: What Investors Should Know - CryptoRank"
     ]
    },
    {
     "title": "환율·달러",
-    "body": "1건 — 환율은 외국인 수급과 미국 자산의 원화 환산 손익을 좌우합니다.",
+    "body": "2건 — 환율은 외국인 수급과 미국 자산의 원화 환산 손익을 좌우합니다.",
     "items": [
+     "[Fed] 국가부채 40조달러 돌파·미-캐나다 무역협상 결렬 속 성장 정체 시그널 부각",
      "[환율] 원/달러 데일리 브리프"
     ]
    },
