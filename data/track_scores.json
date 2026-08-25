@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-25T09:31:14.990807+00:00",
+ "updated_at": "2026-08-25T10:27:24.728144+00:00",
  "summary": {
   "horizon_days": 5,
   "n_predictions": 36,
@@ -8,7 +8,7 @@
   "hit_rate": 0.5926,
   "avg_stated_confidence": 0.5774,
   "avg_excess_pct": -0.191,
-  "cum_excess_pct": -5.06,
+  "cum_excess_pct": -5.061,
   "updated_at": null
  },
  "scores": [
@@ -303,9 +303,9 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0846,
    "confidence": 0.4964,
-   "portfolio_return_pct": -0.83,
-   "neutral_return_pct": -0.233,
-   "excess_pct": -0.598,
+   "portfolio_return_pct": -0.844,
+   "neutral_return_pct": -0.246,
+   "excess_pct": -0.599,
    "risk_spread_pct": 4.21,
    "hit": true
   }
