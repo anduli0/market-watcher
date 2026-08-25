@@ -202,23 +202,79 @@
  },
  "/api/briefing/latest": {
   "brief": {
-   "date": "2026-08-25",
+   "date": "2026-08-26",
    "title": "원/달러 데일리 브리프",
-   "headline": "1개월: -47.0원 → 1346.98 (krw_strong, conf 0%)",
-   "forecast_summary": "1주: -12.0원 → 1381.98 (krw_strong, conf 0%) / 1개월: -47.0원 → 1346.98 (krw_strong, conf 0%) / 3개월: +0.0원 → 1393.98 (neutral, conf 0%) / 1년: +0.0원 → 1393.98 (neutral, conf 0%)",
+   "headline": "1개월: -47.0원 → 1334.92 (krw_strong, conf 0%)",
+   "forecast_summary": "1주: -12.0원 → 1369.92 (krw_strong, conf 0%) / 1개월: -47.0원 → 1334.92 (krw_strong, conf 0%) / 3개월: +0.0원 → 1381.92 (neutral, conf 0%) / 1년: +0.0원 → 1381.92 (neutral, conf 0%)",
    "horizon_breakdown": {},
-   "analysis": "Report generation failed: Connection error.",
+   "analysis": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeQHdzLSxsM9x6XyijE9o'}",
    "key_levels": null,
    "scenario": {},
-   "news_digest": [],
+   "news_digest": [
+    "US Dollar Index: Fed pricing and risk-off flows keep DXY supported – ING - FXStreet",
+    "환율 1,380원대 후반으로 상승…수출업체 달러 매도는 지속 - 연합뉴스",
+    "[환율마감] 원·달러 8거래일만 상승, 외인 코스피 대량매도+달러화 강세 - v.daum.net",
+    "Bitcoin and the US Dollar: How DXY, Liquidity and Fed Policy Really Affect BTC? - KuCoin"
+   ],
    "trading_view": "",
    "risks": [],
-   "sources": [],
+   "sources": [
+    {
+     "source": "US dollar index / DXY",
+     "title": "US Dollar Index: Fed pricing and risk-off flows keep DXY supported – ING - FXStreet",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPSmdScWFkZ05NRjJ5NEpmUEh4R2JXVUVzSXFuQzZoWXVwU0tNUFdURlhjMk5jQk53YTYyejdOdXZIMW9xX2Z0UFVlR0NZOWJTaG1sV1FibG83SnFNRldIcnY5eXZBM1dkbDdkQ21zZW90Y2NTSE91aXpnNjY0QnUtZW1zV05qdXB0S0RHOXA5NDloeEcwQmxIdjRldHgzNmUtdGFRWUlCUnhrdHMybERQT25B?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "환율 1,380원대 후반으로 상승…수출업체 달러 매도는 지속 - 연합뉴스",
+     "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBIcXpVMkZtdWJPRGpMZ0x3eDQyUkptY3V4U0F2MlNydTA3Q3dtMm53U2JPcC1RQzlqMVdTVkxBZGxmR0UyZThRUXFaOHFhV09ONFFNVElUT3hTQjjSAWBBVV95cUxOMVpodkZPRURrMk5adGZFMUMzVE1sRlBHVHhnR0JMTVFMYjVoRFdVbDZmUml1TTQ4bkg0ZUwwbTlVVWp6NjFHdlJ3Uk92MVkwOWJjRVdMNDB1WkJoV3dVNXM?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "[환율마감] 원·달러 8거래일만 상승, 외인 코스피 대량매도+달러화 강세 - v.daum.net",
+     "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1NaGFVVTlHN196OWJXLTNNRks4RFdfVWc4NXNuRWhCX3I3RE4zLWdidzRRWnVFOVB0UW5SaVZnVTF4Z19YbXhMbTRkX3NMQjQ?oc=5"
+    },
+    {
+     "source": "US dollar index / DXY",
+     "title": "Bitcoin and the US Dollar: How DXY, Liquidity and Fed Policy Really Affect BTC? - KuCoin",
+     "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE13R0FZX0ZtSXpoLUlDV0xicjdQSExOQURXMEJ2ZFJab1BxdUJTdXZ4OUFFRUZRVXhsMm5VM2ppNjA4aHdNYU9uTkg1UC1ESUgtT2ZlQkF4TmxnU2JfN1ZLZHhud19WSTFaWEdn?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "[속보] 원·달러 환율, 3.7원 오른 1386.1원 - 조선비즈 - Chosunbiz",
+     "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPR3F1WWNMQWVhM0pMSjZHeG90d0hKMHI0dDRySDdKR0lyZTA4b3J5X0dyZlJURlFJWlNiSGpOeFpULVBLeWswTU5yTXVjZ2MtQ0VSMFpQdHRSQW1sQl9COHE3Z2pZSU94Y01lb0kxdWVlYVlnNUhnYWFZMXJUYUdLcXF3SEptZ9IBmgFBVV95cUxQeF8weDdjU2ZTb1lNYVZlREFWSFpzOHp4N0NhNGVrSjBlZ1hadzJ2enFrSDRMWVAwRjl2eXFDNk14alhpWjFMTkRkVUtQV3dlOVg2WVJKcTVWMnIxd3d2R3FSdmc1cDdrVkNuemplWVc0bGRzWFhLQ3BZaDZYZ3VFc0s2b2RyLVptZEl3ak5xUkxaeEZTNE1BS2JB?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "원·달러 환율 1370원대로 하락…11개월 만에 장중 최저 - JTBC뉴스",
+     "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE92b25HQzlqTGQzajFOM2JQdWZ3dG1wVjZNR3pDSTcwSDBWM3BNLU5qZ205UXVpM3FUS3dDUzU2aEdVZVlXQWwzMXhnRnpuV1VkRExudg?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "오늘은 1392원, ‘하락 사이클’ 탄 원·달러 환율···어디까지 내릴까 - 경향신문",
+     "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1tOTFFYllBNFRtWlZId2w1S1R4RXVDOTVTOVVUaFpNc0lpQWxZSElYRFhDQWxPNHFEYmg1TEhRQU5FLXdGSVdCVTZGZTBoTm1SbTBDdGw5aUFZQdIBX0FVX3lxTFB5MnJxTTNnSUVCbnhSd01wYkozOHczTzdJZV9nbjIxemM4QlNjTlIyd2lBaFpFV0p4bllOa0Fwc005ejJndG9VWmNWaWprdXQ4ak5qeEFsVWx3THBGeXNj?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "월말 달러 매도에 원·달러 환율 1380원대 - 뉴스클레임",
+     "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBTUTlqeF9pbWZtdHRKM3Y4R3pIdlE4dzFrY3hKUTdCQ2k3M1RSU0xCM3VnNVJtd2R2Ml8yWGxpYXNHT1NyZUZrZ25xRlA3eURDRHpDQVc3UGRoSzZZUWFEem9SMmFjZjJ2M0RTVjRnY1XSAXRBVV95cUxOUF9FcHN2ZHJrN2lUamNDWVFCVlE0Z1I5MGZBckxjZkJCOWVoX3JQSWUyb1o5eWRSNVBGOG9PVzBjbFhBQTRDaUZDVXlNZHlCck5CWUpxQU1vcloxYnJZTlBoVTZ1NFBXUWFVTFhEaUY1MVRlSg?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "원·달러 환율 1,300원대 눈앞...하락 반전 'U턴', 왜? [앵커리포트] - YTN",
+     "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE11TnA4LVV0MWFLV21yaFNsaHdXbGdKNElBRlpJemFxbV95c24tSl9kbl90Q2JNblgzNEc4aWZwWVR5ZXl6VlBsU0NOYU9tOUF2eGUtTXZaa0pmZlB3RGc?oc=5"
+    },
+    {
+     "source": "Korea exports / semiconductors",
+     "title": "Korea's current account surplus keeps smashing records, putting pressure on BOK to raise growth outlook - 헤럴드경제",
+     "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1QR0FtbjM3NXhybWpDd3ljVE1RXzlkZW1FZlVsSHBuY1MtdFUyQWtzNDhpNkZteFQ5NG9zU0pJSDVuNXNiNjF5WW54V01vdnU0Z3lmN1Rn?oc=5"
+    }
+   ],
    "fc_lines": [
-    "1주: -12.0원 → 1381.98 (krw_strong, conf 0%)",
-    "1개월: -47.0원 → 1346.98 (krw_strong, conf 0%)",
-    "3개월: +0.0원 → 1393.98 (neutral, conf 0%)",
-    "1년: +0.0원 → 1393.98 (neutral, conf 0%)"
+    "1주: -12.0원 → 1369.92 (krw_strong, conf 0%)",
+    "1개월: -47.0원 → 1334.92 (krw_strong, conf 0%)",
+    "3개월: +0.0원 → 1381.92 (neutral, conf 0%)",
+    "1년: +0.0원 → 1381.92 (neutral, conf 0%)"
    ]
   }
  },
