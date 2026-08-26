@@ -939,17 +939,17 @@
   "date": "2026-08-26",
   "regime": "US_TECH_LEADERSHIP",
   "secondary": "HAWKISH_GROWTH",
-  "confidence": 0.5912,
-  "risk_on": 0.3411,
+  "confidence": 0.5911,
+  "risk_on": 0.3404,
   "coverage": 1.0,
   "weights": {
-   "US_EQUITY": 0.4523,
-   "KOREA_EQUITY": 0.1972,
-   "CASH": 0.0841,
+   "US_EQUITY": 0.4522,
+   "KOREA_EQUITY": 0.1971,
+   "CASH": 0.0842,
    "US_TREASURY": 0.0818,
-   "USD": 0.0711,
-   "BITCOIN": 0.0622,
-   "GOLD": 0.0513
+   "USD": 0.0712,
+   "BITCOIN": 0.0621,
+   "GOLD": 0.0514
   },
   "neutral": {
    "US_EQUITY": 0.35,
