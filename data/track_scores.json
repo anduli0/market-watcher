@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-08-26T11:55:26.680953+00:00",
+ "updated_at": "2026-08-26T12:43:11.450200+00:00",
  "summary": {
   "horizon_days": 5,
   "n_predictions": 37,
@@ -314,8 +314,8 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0649,
    "confidence": 0.4915,
-   "portfolio_return_pct": -0.099,
-   "neutral_return_pct": 0.491,
+   "portfolio_return_pct": -0.109,
+   "neutral_return_pct": 0.482,
    "excess_pct": -0.59,
    "risk_spread_pct": 4.127,
    "hit": true
