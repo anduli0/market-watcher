@@ -1,14 +1,14 @@
 {
- "updated_at": "2026-09-02T16:49:05.215753+00:00",
+ "updated_at": "2026-09-02T19:37:05.693946+00:00",
  "summary": {
   "horizon_days": 5,
   "n_predictions": 45,
-  "n_scored": 35,
-  "n_directional": 35,
-  "hit_rate": 0.6857,
-  "avg_stated_confidence": 0.5744,
-  "avg_excess_pct": -0.144,
-  "cum_excess_pct": -4.947,
+  "n_scored": 34,
+  "n_directional": 34,
+  "hit_rate": 0.6765,
+  "avg_stated_confidence": 0.573,
+  "avg_excess_pct": -0.158,
+  "cum_excess_pct": -5.267,
   "updated_at": null
  },
  "scores": [
@@ -347,10 +347,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.1891,
    "confidence": 0.6518,
-   "portfolio_return_pct": -0.593,
-   "neutral_return_pct": -0.792,
-   "excess_pct": 0.199,
-   "risk_spread_pct": 0.745,
+   "portfolio_return_pct": -0.703,
+   "neutral_return_pct": -0.854,
+   "excess_pct": 0.151,
+   "risk_spread_pct": 0.814,
    "hit": true
   },
   {
@@ -358,10 +358,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.3349,
    "confidence": 0.5305,
-   "portfolio_return_pct": 0.157,
-   "neutral_return_pct": -0.132,
-   "excess_pct": 0.289,
-   "risk_spread_pct": 3.305,
+   "portfolio_return_pct": -0.174,
+   "neutral_return_pct": -0.427,
+   "excess_pct": 0.254,
+   "risk_spread_pct": 3.318,
    "hit": true
   },
   {
@@ -369,10 +369,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.3275,
    "confidence": 0.5212,
-   "portfolio_return_pct": -0.1,
-   "neutral_return_pct": -0.452,
-   "excess_pct": 0.352,
-   "risk_spread_pct": 1.973,
+   "portfolio_return_pct": -0.429,
+   "neutral_return_pct": -0.747,
+   "excess_pct": 0.318,
+   "risk_spread_pct": 1.985,
    "hit": true
   },
   {
@@ -380,21 +380,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.3337,
    "confidence": 0.5296,
-   "portfolio_return_pct": -0.491,
-   "neutral_return_pct": -0.872,
-   "excess_pct": 0.381,
-   "risk_spread_pct": 1.672,
-   "hit": true
-  },
-  {
-   "date": "2026-08-24",
-   "regime": "US_TECH_LEADERSHIP",
-   "risk_on": 0.1848,
-   "confidence": 0.621,
-   "portfolio_return_pct": -2.074,
-   "neutral_return_pct": -2.26,
-   "excess_pct": 0.186,
-   "risk_spread_pct": 2.2,
+   "portfolio_return_pct": -0.82,
+   "neutral_return_pct": -1.166,
+   "excess_pct": 0.346,
+   "risk_spread_pct": 1.685,
    "hit": true
   }
  ]
