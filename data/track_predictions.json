@@ -1197,28 +1197,28 @@
  },
  "2026-09-05": {
   "date": "2026-09-05",
-  "regime": "US_TECH_LEADERSHIP",
-  "secondary": "HAWKISH_GROWTH",
-  "confidence": 0.6299,
-  "risk_on": 0.3335,
+  "regime": "GOLDILOCKS",
+  "secondary": "US_TECH_LEADERSHIP",
+  "confidence": 0.6738,
+  "risk_on": 0.4209,
   "coverage": 1.0,
   "weights": {
-   "US_EQUITY": 0.4534,
-   "KOREA_EQUITY": 0.1978,
-   "CASH": 0.0833,
-   "US_TREASURY": 0.0816,
-   "USD": 0.0711,
-   "BITCOIN": 0.0615,
-   "GOLD": 0.0513
+   "US_EQUITY": 0.4946,
+   "KOREA_EQUITY": 0.2003,
+   "BITCOIN": 0.074,
+   "US_TREASURY": 0.0666,
+   "CASH": 0.0608,
+   "GOLD": 0.0555,
+   "USD": 0.0482
   },
   "neutral": {
    "US_EQUITY": 0.35,
    "KOREA_EQUITY": 0.15,
-   "CASH": 0.1,
-   "US_TREASURY": 0.12,
-   "USD": 0.1,
    "BITCOIN": 0.08,
-   "GOLD": 0.1
+   "US_TREASURY": 0.12,
+   "CASH": 0.1,
+   "GOLD": 0.1,
+   "USD": 0.1
   }
  }
 }
