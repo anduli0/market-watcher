@@ -1,6 +1,6 @@
 {
- "as_of_utc": "2026-09-06T14:18:38.958643+00:00",
- "as_of_kst": "2026-09-06T23:18:38.958643+09:00",
+ "as_of_utc": "2026-09-06T17:13:19.045441+00:00",
+ "as_of_kst": "2026-09-07T02:13:19.045441+09:00",
  "warming": false,
  "mode": "READ_ONLY",
  "live_armed": false,
@@ -86,8 +86,8 @@
    "regime": "RISK_ON_FRAGILE",
    "expected_move": null,
    "unit": null,
-   "data_quality": 0.98,
-   "age_seconds": 1651,
+   "data_quality": 0.89,
+   "age_seconds": 12131,
    "stale": false
   },
   {
@@ -100,7 +100,7 @@
    "expected_move": "21.9",
    "unit": "SCORE",
    "data_quality": 0.54,
-   "age_seconds": 22758,
+   "age_seconds": 3167,
    "stale": false
   }
  ],
@@ -113,14 +113,14 @@
   "coverage": 0.75,
   "transition_risk": 0.06,
   "probabilities": {
-   "GOLDILOCKS": 0.4695,
-   "US_TECH_LEADERSHIP": 0.2935,
-   "REGIME_UNCERTAIN": 0.1783,
-   "RECESSION_RISK": 0.0587
+   "GOLDILOCKS": 0.4682,
+   "US_TECH_LEADERSHIP": 0.2926,
+   "REGIME_UNCERTAIN": 0.1806,
+   "RECESSION_RISK": 0.0585
   },
   "supporting": [
    "1e1998d7306950cd8621d551eb1fefc8",
-   "a0ea42ef5259557d8e30f5078c87392c"
+   "821c2aaecc1a5901a64fb62a3601b333"
   ],
   "contradictory": [],
   "invalidations": [
@@ -149,40 +149,40 @@
  },
  "cio": {
   "strategy_brief": "오늘의 전략 — 시장은 '안정적 성장(저물가 호황)' 국면(확신 67%)으로, 공격적 기조가 적절합니다. 현금은 약 22% 확보한 채, 늘릴 곳은 [KOREA_LARGE_CAP, US_LARGE_CAP, US_TECH], 줄일 곳은 [CASH, US_INTERMEDIATE_TREASURY]입니다. 위험선호 국면이라 분할 매수로 위험자산 비중을 키우되 과열 구간은 경계하세요. (매일 갱신되는 참고 전략이며 투자 권유가 아닙니다.)",
-  "risk_on_score": 0.4226,
-  "target_cash_ratio": 0.2155,
+  "risk_on_score": 0.4213,
+  "target_cash_ratio": 0.2157,
   "asset_class_allocation": {
-   "EQUITY": 0.5475,
-   "BOND": 0.237,
-   "CASH": 0.2155
+   "EQUITY": 0.547,
+   "BOND": 0.2373,
+   "CASH": 0.2157
   },
   "country_allocation": {
-   "KOREA": 0.353,
-   "US": 0.4315,
-   "CASH": 0.2155
+   "KOREA": 0.3529,
+   "US": 0.4313,
+   "CASH": 0.2157
   },
   "style_tilts": {
    "GROWTH": 0.1,
    "VALUE": -0.1
   },
   "sector_tilts": {},
-  "portfolio_confidence": 0.6745,
+  "portfolio_confidence": 0.6739,
   "watcher_weights": [
    {
     "watcher": "KOSPI_WATCHER",
-    "weight": 0.3507,
+    "weight": 0.3076,
     "components": {
      "accuracy": 0.6367,
      "regime_suitability": 1.0,
      "horizon_suitability": 1.0,
-     "freshness": 0.9847,
+     "freshness": 0.8877,
      "independence": 0.9,
      "calibration": 0.7
     }
    },
    {
     "watcher": "KRW_WATCHER",
-    "weight": 0.3781,
+    "weight": 0.3679,
     "components": {
      "accuracy": 0.845,
      "regime_suitability": 0.8,
@@ -194,12 +194,12 @@
    },
    {
     "watcher": "US_WATCHER",
-    "weight": 0.2713,
+    "weight": 0.3246,
     "components": {
      "accuracy": 0.553,
      "regime_suitability": 1.0,
      "horizon_suitability": 1.0,
-     "freshness": 0.7893,
+     "freshness": 0.9707,
      "independence": 1.0,
      "calibration": 0.7
     }
@@ -331,8 +331,8 @@
  },
  "portfolio": {
   "headline": "위험선호 우위 — 미국 주식 중심, 위험자산 비중 확대",
-  "risk_on_score": 0.423,
-  "confidence": 0.6745,
+  "risk_on_score": 0.421,
+  "confidence": 0.6739,
   "coverage": 0.75,
   "notes": [
    "‘달러(USD)’는 달러 보유(환차익·안전판), ‘원화 현금’은 환노출 없는 원화 보유 — 역할이 다릅니다.",
@@ -343,10 +343,10 @@
    {
     "asset": "US_EQUITY",
     "label_ko": "미국 주식",
-    "weight": 0.4949,
+    "weight": 0.4947,
     "neutral_weight": 0.35,
     "stance": "OVERWEIGHT",
-    "score": 0.829,
+    "score": 0.827,
     "rationale": "[GOLDILOCKS·OVERWEIGHT] 위험선호·미 증시 주도력에 비중 확대 우위",
     "drivers": [
      "위험선호",
@@ -359,7 +359,7 @@
     "weight": 0.2003,
     "neutral_weight": 0.15,
     "stance": "OVERWEIGHT",
-    "score": 0.778,
+    "score": 0.777,
     "rationale": "[GOLDILOCKS·OVERWEIGHT] 위험선호+원화 강세 시 외국인 유입 기대",
     "drivers": [
      "위험선호",
@@ -372,7 +372,7 @@
     "weight": 0.0741,
     "neutral_weight": 0.08,
     "stance": "NEUTRAL",
-    "score": 0.454,
+    "score": 0.453,
     "rationale": "[GOLDILOCKS·NEUTRAL] 위험선호·유동성 확대 국면의 고베타 자산으로 소폭 편입",
     "drivers": [
      "위험선호/유동성",
@@ -382,7 +382,7 @@
    {
     "asset": "US_TREASURY",
     "label_ko": "미국채",
-    "weight": 0.0665,
+    "weight": 0.0666,
     "neutral_weight": 0.12,
     "stance": "UNDERWEIGHT",
     "score": 0.0,
@@ -395,7 +395,7 @@
    {
     "asset": "CASH",
     "label_ko": "원화 현금",
-    "weight": 0.0607,
+    "weight": 0.0608,
     "neutral_weight": 0.1,
     "stance": "UNDERWEIGHT",
     "score": 0.08,
@@ -408,7 +408,7 @@
    {
     "asset": "GOLD",
     "label_ko": "금",
-    "weight": 0.0554,
+    "weight": 0.0555,
     "neutral_weight": 0.1,
     "stance": "UNDERWEIGHT",
     "score": 0.0,
@@ -567,7 +567,7 @@
   ]
  },
  "realestate": {
-  "as_of": "2026-09-06T14:18:38.958643Z",
+  "as_of": "2026-09-06T17:13:19.045441Z",
   "stance": {
    "kr_rate_env": "긴축·금리 인상 (2026년 약 2회 인상 전망)",
    "us_rate_env": "중립",
@@ -734,18 +734,6 @@
   ],
   "kr_redev": [
    {
-    "area": "1기 신도시 선도지구",
-    "complexes": [
-     "분당",
-     "일산",
-     "평촌",
-     "산본",
-     "중동"
-    ],
-    "note": "노후계획도시 특별법 선도지구 — 정부 추진 가속(각광).",
-    "query": "1기 신도시 재건축 선도지구"
-   },
-   {
     "area": "한남뉴타운",
     "complexes": [
      "한남2구역",
@@ -779,6 +767,14 @@
     ],
     "note": "동북권 대단지 일반분양 활발(각광).",
     "query": "이문 휘경 재개발"
+   },
+   {
+    "area": "흑석뉴타운",
+    "complexes": [
+     "흑석9·11구역"
+    ],
+    "note": "한강·동작 입지 재개발. 분양 성과 양호.",
+    "query": "흑석뉴타운 재개발"
    }
   ],
   "kr_redev_pinned": [
@@ -880,15 +876,6 @@
   ],
   "us_markets": [
    {
-    "region": "롤리–더럼 (리서치 트라이앵글)",
-    "state": "NC",
-    "thesis": "대학·바이오·테크 클러스터, 고학력 인구 유입.",
-    "demand": "제약·반도체·대학",
-    "risks": "신규 공급",
-    "profile": "안정+성장",
-    "best_for": "고소득 임차 수요"
-   },
-   {
     "region": "샬럿",
     "state": "NC",
     "thesis": "동부 금융 허브(뱅크오브아메리카 등) + 선벨트 성장.",
@@ -914,6 +901,15 @@
     "risks": "중서부 인구 성장 완만",
     "profile": "현금흐름(고수익률)",
     "best_for": "캡레이트 높은 현금흐름"
+   },
+   {
+    "region": "헌츠빌",
+    "state": "AL",
+    "thesis": "항공우주·방산(Redstone Arsenal/NASA) 엔지니어 일자리, 저렴한 진입가.",
+    "demand": "방산·항공우주·엔지니어",
+    "risks": "단일 산업 의존",
+    "profile": "현금흐름+안정",
+    "best_for": "정부·방산 수요 기반 임대"
    }
   ],
   "us_evergreen": [
@@ -936,6 +932,27 @@
    }
   ],
   "us_archive": [
+   {
+    "date": "2026-09-07",
+    "picks": [
+     {
+      "region": "샬럿",
+      "reason": "안정적 도시 성장"
+     },
+     {
+      "region": "피닉스",
+      "reason": "이주·산업 유치 베팅"
+     },
+     {
+      "region": "컬럼버스",
+      "reason": "캡레이트 높은 현금흐름"
+     },
+     {
+      "region": "헌츠빌",
+      "reason": "정부·방산 수요 기반 임대"
+     }
+    ]
+   },
    {
     "date": "2026-09-06",
     "picks": [
@@ -1166,27 +1183,6 @@
       "reason": "캡레이트 높은 현금흐름"
      }
     ]
-   },
-   {
-    "date": "2026-08-26",
-    "picks": [
-     {
-      "region": "내슈빌",
-      "reason": "성장 도시 분산"
-     },
-     {
-      "region": "롤리–더럼 (리서치 트라이앵글)",
-      "reason": "고소득 임차 수요"
-     },
-     {
-      "region": "샬럿",
-      "reason": "안정적 도시 성장"
-     },
-     {
-      "region": "피닉스",
-      "reason": "이주·산업 유치 베팅"
-     }
-    ]
    }
   ],
   "instruments": [
@@ -1256,7 +1252,7 @@
   ]
  },
  "geopolitics": {
-  "as_of": "2026-09-06T14:18:38.958643Z",
+  "as_of": "2026-09-06T17:13:19.045441Z",
   "risk_level": "낮음~보통",
   "risk_rationale": "위험선호 국면이라 지정학 노이즈의 시장 충격은 상대적으로 제한적입니다(단, 돌발 변수는 상시 주의).",
   "synthesis": "종합하면, 현재 세계 정세의 자산시장 함의는 '안정적 성장(저물가 호황)' 국면과 결합해 지정학 위험도 '낮음~보통'로 평가됩니다. 가장 구조적인 축은 미·중 기술 패권과 중앙은행 정책 차별화이며, 단기 변동성의 방아쇠는 중동·유가와 엔 캐리입니다. 환율이 중립이라 지정학 변수는 개별 이벤트 중심으로 작용합니다. 리스크가 커지는 국면에서는 금·달러·미국채 같은 안전판과 방산·에너지 같은 사건 대응 자산이 방어력을 제공하고, 긴장이 완화되면 그간 눌렸던 한국·신흥국 위험자산의 반등 탄력이 큽니다.",
@@ -1383,8 +1379,8 @@
   "headline": "세계 경제 조망 — 위험선호 우위 · 미수렴(4R)",
   "overview": "네 시장(미국 금리·환율·한국 증시·미국 증시)에서 모은 정보를 데스크별로 검토하고 수석이 조율한 결과, 세계 경제는 '안정적 성장(저물가 호황)' 국면이며 종합 위험선호는 +0.71(위험선호 우위)입니다. 섹터 데스크 3곳이 같은 방향, 1곳이 반대 의견입니다.",
   "bottom_line": "4라운드 조율에도 시각차가 남아 완전 수렴에 이르지 못했습니다(최종 +0.71). 시장 간 신호가 엇갈리는 구간이므로 분산과 현금 비중을 키우는 편이 안전합니다.",
-  "converged_risk_on": 0.7081,
-  "confidence": 0.59215,
+  "converged_risk_on": 0.708,
+  "confidence": 0.59173,
   "converged": false,
   "iterations": 4,
   "desks": [
@@ -1457,8 +1453,8 @@
     "desk": "RISK",
     "label_ko": "리스크·방어 데스크",
     "lean_label": "방어 강화",
-    "lean_score": -0.16391931220754655,
-    "conviction": 0.5719596561037733,
+    "lean_score": -0.16441932492719566,
+    "conviction": 0.572209662463598,
     "summary": "위험회피·전환위험이 높으면 금·달러·현금 등 방어자산을 키웁니다.",
     "drivers": [
      "위험회피 강도",
@@ -1479,28 +1475,28 @@
   "rounds": [
    {
     "round_no": 1,
-    "global_score": 0.5594,
+    "global_score": 0.5592,
     "global_label": "위험선호 우위",
     "delta": 1.0,
     "note": "각 데스크 원안을 신뢰도 가중 종합"
    },
    {
     "round_no": 2,
-    "global_score": 0.6174,
+    "global_score": 0.6173,
     "global_label": "위험선호 우위",
     "delta": 0.0581,
     "note": "글로벌 조망을 각 시장에 환류 — 합의 미달 시각은 비중↓, 일치 시각은 비중↑ 후 재계산"
    },
    {
     "round_no": 3,
-    "global_score": 0.6671,
+    "global_score": 0.667,
     "global_label": "위험선호 우위",
     "delta": 0.0496,
     "note": "글로벌 조망을 각 시장에 환류 — 합의 미달 시각은 비중↓, 일치 시각은 비중↑ 후 재계산"
    },
    {
     "round_no": 4,
-    "global_score": 0.7081,
+    "global_score": 0.708,
     "global_label": "위험선호 우위",
     "delta": 0.041,
     "note": "글로벌 조망을 각 시장에 환류 — 합의 미달 시각은 비중↓, 일치 시각은 비중↑ 후 재계산"
@@ -1567,7 +1563,7 @@
   ]
  },
  "news_brief": {
-  "as_of": "2026-09-06T14:18:38.958643Z",
+  "as_of": "2026-09-06T17:13:19.045441Z",
   "title": "MARKET WATCHER — 데일리 분석 브리프",
   "market_read": "오늘 수집한 뉴스 7건을 종합하면, 흐름의 무게중심은 '통화정책·금리'에 있습니다. 이를 시장 국면('안정적 성장(저물가 호황)', 종합 위험선호)과 겹쳐 보면 세계 경제 조망 — 위험선호 우위 · 미수렴(4R). 개별 헤드라인을 나열하기보다, 아래처럼 주제별로 묶어 '그래서 자산에 어떤 의미인지'로 재해석했습니다.",
   "themes": [
