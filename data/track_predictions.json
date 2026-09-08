@@ -1303,17 +1303,17 @@
   "date": "2026-09-09",
   "regime": "GOLDILOCKS",
   "secondary": "US_TECH_LEADERSHIP",
-  "confidence": 0.6741,
-  "risk_on": 0.4217,
+  "confidence": 0.6977,
+  "risk_on": 0.4265,
   "coverage": 0.75,
   "weights": {
-   "US_EQUITY": 0.4948,
-   "KOREA_EQUITY": 0.2003,
-   "BITCOIN": 0.0741,
-   "US_TREASURY": 0.0666,
-   "CASH": 0.0607,
-   "GOLD": 0.0555,
-   "USD": 0.0481
+   "US_EQUITY": 0.4966,
+   "KOREA_EQUITY": 0.2009,
+   "BITCOIN": 0.0739,
+   "US_TREASURY": 0.066,
+   "CASH": 0.06,
+   "GOLD": 0.055,
+   "USD": 0.0476
   },
   "neutral": {
    "US_EQUITY": 0.35,
