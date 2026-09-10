@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-10T16:52:27.668599+00:00",
+ "updated_at": "2026-09-10T19:26:39.527615+00:00",
  "summary": {
   "horizon_days": 5,
   "n_predictions": 53,
@@ -8,7 +8,7 @@
   "hit_rate": 0.6977,
   "avg_stated_confidence": 0.5836,
   "avg_excess_pct": -0.092,
-  "cum_excess_pct": -3.929,
+  "cum_excess_pct": -3.905,
   "updated_at": null
  },
  "scores": [
@@ -480,9 +480,9 @@
    "risk_on": 0.353,
    "confidence": 0.628,
    "portfolio_return_pct": 0.476,
-   "neutral_return_pct": 0.149,
-   "excess_pct": 0.327,
-   "risk_spread_pct": 3.444,
+   "neutral_return_pct": 0.125,
+   "excess_pct": 0.352,
+   "risk_spread_pct": 3.63,
    "hit": true
   }
  ]
