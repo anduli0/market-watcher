@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-15T18:21:24.626022+00:00",
+ "updated_at": "2026-09-15T21:36:10.417811+00:00",
  "summary": {
   "horizon_days": 5,
   "n_predictions": 58,
@@ -8,7 +8,7 @@
   "hit_rate": 0.6667,
   "avg_stated_confidence": 0.5943,
   "avg_excess_pct": -0.093,
-  "cum_excess_pct": -4.424,
+  "cum_excess_pct": -4.398,
   "updated_at": null
  },
  "scores": [
@@ -512,10 +512,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.1971,
    "confidence": 0.719,
-   "portfolio_return_pct": -1.578,
-   "neutral_return_pct": -1.706,
-   "excess_pct": 0.128,
-   "risk_spread_pct": -2.544,
+   "portfolio_return_pct": -1.598,
+   "neutral_return_pct": -1.731,
+   "excess_pct": 0.132,
+   "risk_spread_pct": -2.508,
    "hit": false
   },
   {
@@ -523,10 +523,10 @@
    "regime": "GOLDILOCKS",
    "risk_on": 0.4209,
    "confidence": 0.6738,
-   "portfolio_return_pct": -1.926,
-   "neutral_return_pct": -1.696,
-   "excess_pct": -0.23,
-   "risk_spread_pct": -2.502,
+   "portfolio_return_pct": -1.946,
+   "neutral_return_pct": -1.721,
+   "excess_pct": -0.225,
+   "risk_spread_pct": -2.466,
    "hit": false
   },
   {
@@ -534,10 +534,10 @@
    "regime": "GOLDILOCKS",
    "risk_on": 0.4226,
    "confidence": 0.6745,
-   "portfolio_return_pct": -0.839,
-   "neutral_return_pct": -0.584,
-   "excess_pct": -0.255,
-   "risk_spread_pct": -2.079,
+   "portfolio_return_pct": -1.693,
+   "neutral_return_pct": -1.455,
+   "excess_pct": -0.237,
+   "risk_spread_pct": -1.942,
    "hit": false
   }
  ]
