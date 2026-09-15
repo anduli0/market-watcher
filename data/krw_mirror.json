@@ -4,72 +4,74 @@
   "model": "claude-sonnet-4-6",
   "broker": "paper",
   "live_trading": false,
-  "spot": 1384.1500244140625,
-  "realized_vol_krw": 8.968,
-  "data_last_collected": "2026-08-26T00:52:39.650964",
+  "spot": 1358.3299560546875,
+  "realized_vol_krw": 6.631,
+  "data_last_collected": "2026-09-15T13:45:00.376595",
   "agent_count": 23
  },
  "/api/forecast": {
   "horizons": {
    "1w": {
-    "published_delta_krw": -11.0,
-    "implied_rate": 1372.38,
+    "published_delta_krw": -12.0,
+    "implied_rate": 1346.48,
     "confidence": 0.0,
     "signal": "krw_strong",
     "unchanged_streak_days": 1,
-    "spot_at_run": 1383.3800048828125,
-    "target_date": "2026-08-26",
+    "spot_at_run": 1358.47998046875,
+    "target_date": "2026-09-15",
     "change_justification": null
    },
    "1m": {
     "published_delta_krw": -29.0,
-    "implied_rate": 1354.38,
+    "implied_rate": 1329.48,
     "confidence": 0.0,
     "signal": "krw_strong",
     "unchanged_streak_days": 1,
-    "spot_at_run": 1383.3800048828125,
-    "target_date": "2026-08-26",
+    "spot_at_run": 1358.47998046875,
+    "target_date": "2026-09-15",
     "change_justification": null
    },
    "3m": {
-    "published_delta_krw": 9.0,
-    "implied_rate": 1392.38,
+    "published_delta_krw": -57.0,
+    "implied_rate": 1301.48,
     "confidence": 0.0,
-    "signal": "krw_weak",
-    "unchanged_streak_days": 1,
-    "spot_at_run": 1383.3800048828125,
-    "target_date": "2026-08-26",
+    "signal": "krw_strong",
+    "unchanged_streak_days": 0,
+    "spot_at_run": 1358.47998046875,
+    "target_date": "2026-09-15",
     "change_justification": null
    },
    "12m": {
-    "published_delta_krw": 21.0,
-    "implied_rate": 1404.38,
+    "published_delta_krw": 22.0,
+    "implied_rate": 1380.48,
     "confidence": 0.0,
     "signal": "krw_weak",
     "unchanged_streak_days": 1,
-    "spot_at_run": 1383.3800048828125,
-    "target_date": "2026-08-26",
+    "spot_at_run": 1358.47998046875,
+    "target_date": "2026-09-15",
     "change_justification": null
    }
   },
-  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeQSnw24nBN8iLQP11MA1'}",
-  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeQSo42zU6g8wLCsn1afG'}"
+  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cf5Jw3pXx2hSkGzTFSW6L'}",
+  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cf5JwC8MLcUruRd5jVWMG'}"
  },
  "/api/accuracy": {
   "forecast": {
    "horizons": {
     "1w": {
-     "samples": 229,
-     "directional_hit_rate": 0.845,
-     "mae_krw": 19.07
+     "samples": 255,
+     "directional_hit_rate": 0.854,
+     "mae_krw": 18.3
     },
     "1m": {
-     "samples": 191,
-     "directional_hit_rate": 0.186,
-     "mae_krw": 81.29
+     "samples": 223,
+     "directional_hit_rate": 0.305,
+     "mae_krw": 76.43
     },
     "3m": {
-     "samples": 0
+     "samples": 22,
+     "directional_hit_rate": 0.0,
+     "mae_krw": 180.84
     },
     "12m": {
      "samples": 0
@@ -77,59 +79,9 @@
    },
    "agent_ranking": [
     {
-     "agent_id": 7,
-     "mae_krw": 29.27,
-     "n": 40
-    },
-    {
      "agent_id": 16,
      "mae_krw": 30.48,
      "n": 28
-    },
-    {
-     "agent_id": 10,
-     "mae_krw": 30.67,
-     "n": 40
-    },
-    {
-     "agent_id": 11,
-     "mae_krw": 30.81,
-     "n": 40
-    },
-    {
-     "agent_id": 6,
-     "mae_krw": 31.32,
-     "n": 40
-    },
-    {
-     "agent_id": 1,
-     "mae_krw": 31.37,
-     "n": 40
-    },
-    {
-     "agent_id": 9,
-     "mae_krw": 31.37,
-     "n": 40
-    },
-    {
-     "agent_id": 13,
-     "mae_krw": 31.59,
-     "n": 38
-    },
-    {
-     "agent_id": 8,
-     "mae_krw": 31.63,
-     "n": 40
-    },
-    {
-     "agent_id": 106,
-     "mae_krw": 31.85,
-     "n": 40
-    },
-    {
-     "agent_id": 4,
-     "mae_krw": 32.03,
-     "n": 40
     },
     {
      "agent_id": 14,
@@ -137,47 +89,97 @@
      "n": 34
     },
     {
-     "agent_id": 12,
-     "mae_krw": 32.67,
-     "n": 38
-    },
-    {
-     "agent_id": 103,
-     "mae_krw": 32.85,
-     "n": 40
-    },
-    {
-     "agent_id": 105,
-     "mae_krw": 32.85,
-     "n": 40
-    },
-    {
-     "agent_id": 102,
-     "mae_krw": 33.02,
-     "n": 40
-    },
-    {
-     "agent_id": 107,
-     "mae_krw": 33.1,
-     "n": 40
-    },
-    {
-     "agent_id": 104,
-     "mae_krw": 33.22,
-     "n": 40
-    },
-    {
-     "agent_id": 3,
-     "mae_krw": 33.47,
-     "n": 40
-    },
-    {
      "agent_id": 15,
      "mae_krw": 33.47,
      "n": 34
+    },
+    {
+     "agent_id": 13,
+     "mae_krw": 34.75,
+     "n": 39
+    },
+    {
+     "agent_id": 7,
+     "mae_krw": 35.38,
+     "n": 42
+    },
+    {
+     "agent_id": 12,
+     "mae_krw": 36.16,
+     "n": 39
+    },
+    {
+     "agent_id": 9,
+     "mae_krw": 36.59,
+     "n": 42
+    },
+    {
+     "agent_id": 10,
+     "mae_krw": 37.24,
+     "n": 42
+    },
+    {
+     "agent_id": 11,
+     "mae_krw": 37.44,
+     "n": 42
+    },
+    {
+     "agent_id": 6,
+     "mae_krw": 37.88,
+     "n": 42
+    },
+    {
+     "agent_id": 106,
+     "mae_krw": 38.31,
+     "n": 42
+    },
+    {
+     "agent_id": 1,
+     "mae_krw": 38.69,
+     "n": 42
+    },
+    {
+     "agent_id": 8,
+     "mae_krw": 38.75,
+     "n": 42
+    },
+    {
+     "agent_id": 4,
+     "mae_krw": 39.32,
+     "n": 42
+    },
+    {
+     "agent_id": 104,
+     "mae_krw": 39.74,
+     "n": 42
+    },
+    {
+     "agent_id": 105,
+     "mae_krw": 39.93,
+     "n": 42
+    },
+    {
+     "agent_id": 103,
+     "mae_krw": 40.09,
+     "n": 42
+    },
+    {
+     "agent_id": 102,
+     "mae_krw": 40.17,
+     "n": 42
+    },
+    {
+     "agent_id": 107,
+     "mae_krw": 40.38,
+     "n": 42
+    },
+    {
+     "agent_id": 3,
+     "mae_krw": 40.93,
+     "n": 42
     }
    ],
-   "total_samples": 420
+   "total_samples": 500
   },
   "trading": {
    "closed_trades": 5,
@@ -202,79 +204,79 @@
  },
  "/api/briefing/latest": {
   "brief": {
-   "date": "2026-08-26",
+   "date": "2026-09-15",
    "title": "원/달러 데일리 브리프",
-   "headline": "1개월: -47.0원 → 1334.92 (krw_strong, conf 0%)",
-   "forecast_summary": "1주: -12.0원 → 1369.92 (krw_strong, conf 0%) / 1개월: -47.0원 → 1334.92 (krw_strong, conf 0%) / 3개월: +0.0원 → 1381.92 (neutral, conf 0%) / 1년: +0.0원 → 1381.92 (neutral, conf 0%)",
+   "headline": "1개월: -29.0원 → 1329.48 (krw_strong, conf 0%)",
+   "forecast_summary": "1주: -12.0원 → 1346.48 (krw_strong, conf 0%) / 1개월: -29.0원 → 1329.48 (krw_strong, conf 0%) / 3개월: -57.0원 → 1301.48 (krw_strong, conf 0%) / 1년: +22.0원 → 1380.48 (krw_weak, conf 0%)",
    "horizon_breakdown": {},
-   "analysis": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeQHdzLSxsM9x6XyijE9o'}",
+   "analysis": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cf5Jw3pXx2hSkGzTFSW6L'}",
    "key_levels": null,
    "scenario": {},
    "news_digest": [
-    "US Dollar Index: Fed pricing and risk-off flows keep DXY supported – ING - FXStreet",
-    "환율 1,380원대 후반으로 상승…수출업체 달러 매도는 지속 - 연합뉴스",
-    "[환율마감] 원·달러 8거래일만 상승, 외인 코스피 대량매도+달러화 강세 - v.daum.net",
-    "Bitcoin and the US Dollar: How DXY, Liquidity and Fed Policy Really Affect BTC? - KuCoin"
+    "원화 강세보다 무서운 환율 변동성…수출기업 사업 계획도 '안갯속' - 인베스트조선",
+    "원/달러 환율 1,360원 터치…유가·美국채금리 상승에 12.1원↑ - 연합뉴스",
+    "200원 내린 달러·원 환율... 수출 달러 소진에 반등하나 - 매일일보",
+    "원·달러 환율 하락에…수출입물가 나란히 ↓ - 연합뉴스TV"
    ],
    "trading_view": "",
    "risks": [],
    "sources": [
     {
+     "source": "원/달러 환율",
+     "title": "원화 강세보다 무서운 환율 변동성…수출기업 사업 계획도 '안갯속' - 인베스트조선",
+     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNWGpsTGxadUFCTUFTd1ozRTNndU1VU1NyZ1B6aHQ1SUJlLXh3SjYtZU9MMUNFaDR2U3p3eTJnMUFhMGdYZnBsTndpMHpNUDZSZ3EwQjY2b2U5cFIwR204RFMzYlhXeEVHTXZOamJPSFRqRGYzeHpETG5vYmVNWXZJU29zcw?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "원/달러 환율 1,360원 터치…유가·美국채금리 상승에 12.1원↑ - 연합뉴스",
+     "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9UZzJEY1lTUm9YN0F0Y2ozNVNmMGJrb0Myd19Kd3NmZklFbGZQU1RlLVM0QlJ4a09RbzRmV1E0YkpEcWtxbVUxVFJxSXVCbUt1amFDTkViSzQ3LVHSAWBBVV95cUxNQkRHVmlTQzF1aWltcW5GaDUwSFQxRGk1YmFrRlhyLUxlTzNORGpiMWl6N0dNTnhnWHM0SlhTMFZ0NE5lR0NsZmRDSTNXR1djRDdMQmtlUlZyZ01ZUkN3UmE?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "200원 내린 달러·원 환율... 수출 달러 소진에 반등하나 - 매일일보",
+     "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4xd0ZMZ2ZUVDJBMVZtem1NVzNKR1ZNWUtJTGJwV1FydXdYeDdaRmVhVGFhVW1TZUlaUmp6N0JVUmF2Y2ZWMTlMSE43OTZLMmotMXBGTE9kc1hhOW1Zd0EzZVIzeVLSAWhBVV95cUxNRzhVeGY2eFJEaFJjdm5ZVjNtc1J4T0wxUFhjakpCXzBNbnlvN1d3SmZzNnprZ2RqMEdMWmZod3MteGxMN3hrejh2dmhud2NHUG9wOHR2ZHpPaVJRa0dKWFFuUzhkNDg1eQ?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "원·달러 환율 하락에…수출입물가 나란히 ↓ - 연합뉴스TV",
+     "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5CZXJvM1RqRktaak03WWdrQnMxUGQzXzBGVXd3d1ppNk44dk9jdmw5LWczMkg4WTExNFBxY3BIWnlpQklZZUVwa2hNUXV5UkFnNnRPUnlYcGtma2hmUC1IX0t0VGtRMk0?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "코스피 나흘째 하락...원·달러 환율 1,359원까지 상승 - YTN",
+     "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE0zbjhLcDQ0dzc0TjU4RmtXVzlOTkx4T2NvNlVjckNqcjQtVUtOYVFJaXB2WlNqMC1hODRfaFpGSkttQVZyWGZrZkxOVG9YX2c0N3BfSVN0MkM3OTZvQ2ZYbmxjc1U3aEtfX0lya296RQ?oc=5"
+    },
+    {
+     "source": "한국은행 기준금리",
+     "title": "200원 내린 환율, 美 긴축에 방향 틀까…한은 금리 또 올리나 - SBS Biz",
+     "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB4ZFVKOFZvS1poTnY0WkJUQmFKSG9mQmxBdy1VQmtQY1lELU1lWFUzdDNUU3VTT1d4ZEVTMVBHYTl0SXJSdEhuSXZFN1hSeUFLSlNZ0gFYQVVfeXFMTmJtTWQtOVozT3Rjd01PVFFyTWJqMjU3YUpUWFYzUVNZdll6V2M5SXA0OHZJVWhSb3RyS0F4RjBCNlJtc09PVHVDWmtmQmxlLVluREp6NGQ1Nw?oc=5"
+    },
+    {
+     "source": "Reuters — Korea won / FX",
+     "title": "Dollar ticks up as oil prices climb, Fed rate hike chances firm - Reuters",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOeGtqRlJ4LWF3TVM5VklxS09fMU16eHE3bWRLZ3lRS3NuS18wWGcyY3cwRWg2eEtzS3dFRVZGWHB6Z21NNGpzUUcydm10VXpIU29Ca3RnRDRrRUxsVWlNbE5yV0x6ejVQUTZXR1FHRHgtTUExOC1VazhaaGo0b3p0dTNVcDJ5YWdjeWkyQVZRRlhOUUZYUkpmdWsyeHJjNTF6QjlYdEtRcy1NVUg2RWNmOA?oc=5"
+    },
+    {
      "source": "US dollar index / DXY",
-     "title": "US Dollar Index: Fed pricing and risk-off flows keep DXY supported – ING - FXStreet",
-     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPSmdScWFkZ05NRjJ5NEpmUEh4R2JXVUVzSXFuQzZoWXVwU0tNUFdURlhjMk5jQk53YTYyejdOdXZIMW9xX2Z0UFVlR0NZOWJTaG1sV1FibG83SnFNRldIcnY5eXZBM1dkbDdkQ21zZW90Y2NTSE91aXpnNjY0QnUtZW1zV05qdXB0S0RHOXA5NDloeEcwQmxIdjRldHgzNmUtdGFRWUlCUnhrdHMybERQT25B?oc=5"
-    },
-    {
-     "source": "원/달러 환율",
-     "title": "환율 1,380원대 후반으로 상승…수출업체 달러 매도는 지속 - 연합뉴스",
-     "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBIcXpVMkZtdWJPRGpMZ0x3eDQyUkptY3V4U0F2MlNydTA3Q3dtMm53U2JPcC1RQzlqMVdTVkxBZGxmR0UyZThRUXFaOHFhV09ONFFNVElUT3hTQjjSAWBBVV95cUxOMVpodkZPRURrMk5adGZFMUMzVE1sRlBHVHhnR0JMTVFMYjVoRFdVbDZmUml1TTQ4bkg0ZUwwbTlVVWp6NjFHdlJ3Uk92MVkwOWJjRVdMNDB1WkJoV3dVNXM?oc=5"
-    },
-    {
-     "source": "원/달러 환율",
-     "title": "[환율마감] 원·달러 8거래일만 상승, 외인 코스피 대량매도+달러화 강세 - v.daum.net",
-     "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1NaGFVVTlHN196OWJXLTNNRks4RFdfVWc4NXNuRWhCX3I3RE4zLWdidzRRWnVFOVB0UW5SaVZnVTF4Z19YbXhMbTRkX3NMQjQ?oc=5"
+     "title": "Dollar Index hits a 52-week high as hawkish Fed talk fuels the greenback rally - Seeking Alpha",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQc0xJczRES3VVeThUS2JLYjN6RkJ2b1A4ZlBrQWF4V3VKRnNMUWZpSWRWYVFFaWFKSDNXQTJiZnJvMTdTV2h2eHBBUkI5QmJxRGVVYzAyN2dQX0RWMlRLbnpiNzAxakN6QzFXN21odHU5amZYWkMweWRwUWJmUHBEa2hXQTFGeXpiaTNROHpqZTk0LUo0eGNncjA4ekpSTm5wVFhMU3doWUhsWVNCUGMwNHNER2NfVWs?oc=5"
     },
     {
      "source": "US dollar index / DXY",
-     "title": "Bitcoin and the US Dollar: How DXY, Liquidity and Fed Policy Really Affect BTC? - KuCoin",
-     "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE13R0FZX0ZtSXpoLUlDV0xicjdQSExOQURXMEJ2ZFJab1BxdUJTdXZ4OUFFRUZRVXhsMm5VM2ppNjA4aHdNYU9uTkg1UC1ESUgtT2ZlQkF4TmxnU2JfN1ZLZHhud19WSTFaWEdn?oc=5"
+     "title": "US Dollar: Fed-driven gains extend as DXY breaks range – HSBC - Mitrade",
+     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQWXFPejVLc3VRSW03M2ZiSzBhdl9GeEQ5T1BDVmlTYUg3dWZRQWtMdzRxbGVqTjVZaUtSakxiT0JkNlhQLTRsRWRBb2ZsbXZGa3VMODc2Z25qMWJPNVhlM0J1QTFiX0JsX182WUs3RVdRNmU2bHpqMzJNTjJ1Vk1oSW4ybw?oc=5"
     },
     {
-     "source": "원/달러 환율",
-     "title": "[속보] 원·달러 환율, 3.7원 오른 1386.1원 - 조선비즈 - Chosunbiz",
-     "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPR3F1WWNMQWVhM0pMSjZHeG90d0hKMHI0dDRySDdKR0lyZTA4b3J5X0dyZlJURlFJWlNiSGpOeFpULVBLeWswTU5yTXVjZ2MtQ0VSMFpQdHRSQW1sQl9COHE3Z2pZSU94Y01lb0kxdWVlYVlnNUhnYWFZMXJUYUdLcXF3SEptZ9IBmgFBVV95cUxQeF8weDdjU2ZTb1lNYVZlREFWSFpzOHp4N0NhNGVrSjBlZ1hadzJ2enFrSDRMWVAwRjl2eXFDNk14alhpWjFMTkRkVUtQV3dlOVg2WVJKcTVWMnIxd3d2R3FSdmc1cDdrVkNuemplWVc0bGRzWFhLQ3BZaDZYZ3VFc0s2b2RyLVptZEl3ak5xUkxaeEZTNE1BS2JB?oc=5"
-    },
-    {
-     "source": "원/달러 환율",
-     "title": "원·달러 환율 1370원대로 하락…11개월 만에 장중 최저 - JTBC뉴스",
-     "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE92b25HQzlqTGQzajFOM2JQdWZ3dG1wVjZNR3pDSTcwSDBWM3BNLU5qZ205UXVpM3FUS3dDUzU2aEdVZVlXQWwzMXhnRnpuV1VkRExudg?oc=5"
-    },
-    {
-     "source": "원/달러 환율",
-     "title": "오늘은 1392원, ‘하락 사이클’ 탄 원·달러 환율···어디까지 내릴까 - 경향신문",
-     "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1tOTFFYllBNFRtWlZId2w1S1R4RXVDOTVTOVVUaFpNc0lpQWxZSElYRFhDQWxPNHFEYmg1TEhRQU5FLXdGSVdCVTZGZTBoTm1SbTBDdGw5aUFZQdIBX0FVX3lxTFB5MnJxTTNnSUVCbnhSd01wYkozOHczTzdJZV9nbjIxemM4QlNjTlIyd2lBaFpFV0p4bllOa0Fwc005ejJndG9VWmNWaWprdXQ4ak5qeEFsVWx3THBGeXNj?oc=5"
-    },
-    {
-     "source": "원/달러 환율",
-     "title": "월말 달러 매도에 원·달러 환율 1380원대 - 뉴스클레임",
-     "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBTUTlqeF9pbWZtdHRKM3Y4R3pIdlE4dzFrY3hKUTdCQ2k3M1RSU0xCM3VnNVJtd2R2Ml8yWGxpYXNHT1NyZUZrZ25xRlA3eURDRHpDQVc3UGRoSzZZUWFEem9SMmFjZjJ2M0RTVjRnY1XSAXRBVV95cUxOUF9FcHN2ZHJrN2lUamNDWVFCVlE0Z1I5MGZBckxjZkJCOWVoX3JQSWUyb1o5eWRSNVBGOG9PVzBjbFhBQTRDaUZDVXlNZHlCck5CWUpxQU1vcloxYnJZTlBoVTZ1NFBXUWFVTFhEaUY1MVRlSg?oc=5"
-    },
-    {
-     "source": "원/달러 환율",
-     "title": "원·달러 환율 1,300원대 눈앞...하락 반전 'U턴', 왜? [앵커리포트] - YTN",
-     "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE11TnA4LVV0MWFLV21yaFNsaHdXbGdKNElBRlpJemFxbV95c24tSl9kbl90Q2JNblgzNEc4aWZwWVR5ZXl6VlBsU0NOYU9tOUF2eGUtTXZaa0pmZlB3RGc?oc=5"
-    },
-    {
-     "source": "Korea exports / semiconductors",
-     "title": "Korea's current account surplus keeps smashing records, putting pressure on BOK to raise growth outlook - 헤럴드경제",
-     "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE1QR0FtbjM3NXhybWpDd3ljVE1RXzlkZW1FZlVsSHBuY1MtdFUyQWtzNDhpNkZteFQ5NG9zU0pJSDVuNXNiNjF5WW54V01vdnU0Z3lmN1Rn?oc=5"
+     "source": "기획재정부 외환시장",
+     "title": "원화 약세에 당국 움직였다…은행권 외환거래 점검 착수 - 뉴스투데이",
+     "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1uajVZQ3ZtVnl1QmVkVERNTUpqb29jQk9SaGllZVhkaDloLWpQZGNkZXhpTmE2R3VCbW1FQVRzMWRWVUhmeE8tVHdnOUZfNEN5LUs3bzRyenBDZEE?oc=5"
     }
    ],
    "fc_lines": [
-    "1주: -12.0원 → 1369.92 (krw_strong, conf 0%)",
-    "1개월: -47.0원 → 1334.92 (krw_strong, conf 0%)",
-    "3개월: +0.0원 → 1381.92 (neutral, conf 0%)",
-    "1년: +0.0원 → 1381.92 (neutral, conf 0%)"
+    "1주: -12.0원 → 1346.48 (krw_strong, conf 0%)",
+    "1개월: -29.0원 → 1329.48 (krw_strong, conf 0%)",
+    "3개월: -57.0원 → 1301.48 (krw_strong, conf 0%)",
+    "1년: +22.0원 → 1380.48 (krw_weak, conf 0%)"
    ]
   }
  },
@@ -319,8 +321,8 @@
     "3m": "mixed",
     "12m": "mixed"
    },
-   "spot": 1383.3800048828125
+   "spot": 1358.47998046875
   },
-  "updated_at": "2026-08-26T00:52:53.111385"
+  "updated_at": "2026-09-15T13:32:59.395442"
  }
 }
