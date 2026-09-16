@@ -1483,27 +1483,27 @@
  },
  "2026-09-16": {
   "date": "2026-09-16",
-  "regime": "RECESSION_RISK",
-  "secondary": "DEFENSIVE_ROTATION",
-  "confidence": 0.6733,
-  "risk_on": -0.4703,
+  "regime": "KOREA_DECOUPLING",
+  "secondary": "REGIME_UNCERTAIN",
+  "confidence": 0.6339,
+  "risk_on": -0.1276,
   "coverage": 0.75,
   "weights": {
-   "GOLD": 0.2,
-   "US_TREASURY": 0.1979,
-   "CASH": 0.172,
-   "US_EQUITY": 0.1621,
-   "USD": 0.1548,
-   "KOREA_EQUITY": 0.074,
-   "BITCOIN": 0.0391
+   "KOREA_EQUITY": 0.2304,
+   "US_EQUITY": 0.1959,
+   "CASH": 0.1413,
+   "US_TREASURY": 0.1356,
+   "GOLD": 0.114,
+   "USD": 0.1111,
+   "BITCOIN": 0.0717
   },
   "neutral": {
-   "GOLD": 0.1,
-   "US_TREASURY": 0.12,
-   "CASH": 0.1,
-   "US_EQUITY": 0.35,
-   "USD": 0.1,
    "KOREA_EQUITY": 0.15,
+   "US_EQUITY": 0.35,
+   "CASH": 0.1,
+   "US_TREASURY": 0.12,
+   "GOLD": 0.1,
+   "USD": 0.1,
    "BITCOIN": 0.08
   }
  }
