@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-16T08:45:36.658475+00:00",
+ "updated_at": "2026-09-16T13:59:51.752415+00:00",
  "summary": {
   "horizon_days": 5,
   "n_predictions": 58,
@@ -8,7 +8,7 @@
   "hit_rate": 0.6531,
   "avg_stated_confidence": 0.5959,
   "avg_excess_pct": -0.096,
-  "cum_excess_pct": -4.659,
+  "cum_excess_pct": -4.661,
   "updated_at": null
  },
  "scores": [
@@ -545,10 +545,10 @@
    "regime": "GOLDILOCKS",
    "risk_on": 0.4214,
    "confidence": 0.6739,
-   "portfolio_return_pct": -0.342,
-   "neutral_return_pct": -0.068,
-   "excess_pct": -0.273,
-   "risk_spread_pct": -2.096,
+   "portfolio_return_pct": -0.2,
+   "neutral_return_pct": 0.075,
+   "excess_pct": -0.275,
+   "risk_spread_pct": -2.112,
    "hit": false
   }
  ]
