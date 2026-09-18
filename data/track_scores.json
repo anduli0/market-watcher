@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-09-18T05:30:38.813697+00:00",
+ "updated_at": "2026-09-18T10:28:54.063260+00:00",
  "summary": {
   "horizon_days": 5,
   "n_predictions": 60,
@@ -567,10 +567,10 @@
    "regime": "GOLDILOCKS",
    "risk_on": 0.4278,
    "confidence": 0.6983,
-   "portfolio_return_pct": 1.323,
-   "neutral_return_pct": 1.512,
+   "portfolio_return_pct": 1.375,
+   "neutral_return_pct": 1.564,
    "excess_pct": -0.189,
-   "risk_spread_pct": -2.102,
+   "risk_spread_pct": -2.108,
    "hit": false
   }
  ]
