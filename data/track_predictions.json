@@ -1641,16 +1641,16 @@
   "date": "2026-09-22",
   "regime": "KOREA_DECOUPLING",
   "secondary": "REGIME_UNCERTAIN",
-  "confidence": 0.5477,
-  "risk_on": 0.1156,
+  "confidence": 0.5467,
+  "risk_on": 0.1151,
   "coverage": 0.75,
   "weights": {
-   "US_EQUITY": 0.3282,
-   "KOREA_EQUITY": 0.2216,
-   "CASH": 0.1096,
+   "US_EQUITY": 0.3281,
+   "KOREA_EQUITY": 0.2215,
+   "CASH": 0.1099,
    "US_TREASURY": 0.1001,
    "GOLD": 0.0834,
-   "USD": 0.0802,
+   "USD": 0.0803,
    "BITCOIN": 0.0768
   },
   "neutral": {
