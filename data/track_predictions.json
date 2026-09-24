@@ -1714,5 +1714,31 @@
    "USD": 0.1,
    "BITCOIN": 0.08
   }
+ },
+ "2026-09-25": {
+  "date": "2026-09-25",
+  "regime": "RECESSION_RISK",
+  "secondary": "REGIME_UNCERTAIN",
+  "confidence": 0.554,
+  "risk_on": -0.3235,
+  "coverage": 0.75,
+  "weights": {
+   "GOLD": 0.1784,
+   "US_EQUITY": 0.1782,
+   "CASH": 0.1733,
+   "US_TREASURY": 0.1655,
+   "USD": 0.132,
+   "KOREA_EQUITY": 0.1279,
+   "BITCOIN": 0.0447
+  },
+  "neutral": {
+   "GOLD": 0.1,
+   "US_EQUITY": 0.35,
+   "CASH": 0.1,
+   "US_TREASURY": 0.12,
+   "USD": 0.1,
+   "KOREA_EQUITY": 0.15,
+   "BITCOIN": 0.08
+  }
  }
 }
