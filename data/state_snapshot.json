@@ -1,6 +1,6 @@
 {
- "as_of_utc": "2026-09-25T00:14:24.011543+00:00",
- "as_of_kst": "2026-09-25T09:14:24.011543+09:00",
+ "as_of_utc": "2026-09-25T05:10:58.606908+00:00",
+ "as_of_kst": "2026-09-25T14:10:58.606908+09:00",
  "warming": false,
  "mode": "READ_ONLY",
  "live_armed": false,
@@ -87,7 +87,7 @@
    "expected_move": null,
    "unit": null,
    "data_quality": 0.0,
-   "age_seconds": 138161,
+   "age_seconds": 155956,
    "stale": true
   },
   {
@@ -100,7 +100,7 @@
    "expected_move": "-15.4",
    "unit": "SCORE",
    "data_quality": 0.54,
-   "age_seconds": 22848,
+   "age_seconds": 40642,
    "stale": false
   }
  ],
@@ -165,7 +165,7 @@
   "watcher_weights": [
    {
     "watcher": "KRW_WATCHER",
-    "weight": 0.6311,
+    "weight": 0.6839,
     "components": {
      "accuracy": 0.85,
      "regime_suitability": 0.8,
@@ -177,12 +177,12 @@
    },
    {
     "watcher": "US_WATCHER",
-    "weight": 0.3689,
+    "weight": 0.3161,
     "components": {
      "accuracy": 0.504,
      "regime_suitability": 1.0,
      "horizon_suitability": 1.0,
-     "freshness": 0.7885,
+     "freshness": 0.6237,
      "independence": 1.0,
      "calibration": 0.7
     }
@@ -545,7 +545,7 @@
   ]
  },
  "realestate": {
-  "as_of": "2026-09-25T00:14:24.011543Z",
+  "as_of": "2026-09-25T05:10:58.606908Z",
   "stance": {
    "kr_rate_env": "긴축·금리 인상 (2026년 약 2회 인상 전망)",
    "us_rate_env": "중립",
@@ -1232,7 +1232,7 @@
   ]
  },
  "geopolitics": {
-  "as_of": "2026-09-25T00:14:24.011543Z",
+  "as_of": "2026-09-25T05:10:58.606908Z",
   "risk_level": "높음",
   "risk_rationale": "위험회피·경기/유동성 스트레스 국면 — 지정학 충격이 자산시장에 크게 전이되기 쉽습니다. 달러·금·현금 등 안전판을 의식하세요.",
   "synthesis": "종합하면, 현재 세계 정세의 자산시장 함의는 '경기침체 위험' 국면과 결합해 지정학 위험도 '높음'로 평가됩니다. 가장 구조적인 축은 미·중 기술 패권과 중앙은행 정책 차별화이며, 단기 변동성의 방아쇠는 중동·유가와 엔 캐리입니다. 환율이 중립이라 지정학 변수는 개별 이벤트 중심으로 작용합니다. 리스크가 커지는 국면에서는 금·달러·미국채 같은 안전판과 방산·에너지 같은 사건 대응 자산이 방어력을 제공하고, 긴장이 완화되면 그간 눌렸던 한국·신흥국 위험자산의 반등 탄력이 큽니다.",
@@ -1534,7 +1534,7 @@
   ]
  },
  "news_brief": {
-  "as_of": "2026-09-25T00:14:24.011543Z",
+  "as_of": "2026-09-25T05:10:58.606908Z",
   "title": "MARKET WATCHER — 데일리 분석 브리프",
   "market_read": "오늘 수집한 뉴스 7건을 종합하면, 흐름의 무게중심은 '통화정책·금리'에 있습니다. 이를 시장 국면('경기침체 위험', 종합 위험회피)과 겹쳐 보면 세계 경제 조망 — 위험회피 우위 · 수렴(3R). 개별 헤드라인을 나열하기보다, 아래처럼 주제별로 묶어 '그래서 자산에 어떤 의미인지'로 재해석했습니다.",
   "themes": [
