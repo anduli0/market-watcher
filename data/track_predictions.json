@@ -1773,7 +1773,7 @@
   "secondary": null,
   "confidence": 0.5544,
   "risk_on": 0.0,
-  "coverage": 0.5,
+  "coverage": 0.25,
   "weights": {
    "US_EQUITY": 0.3441,
    "KOREA_EQUITY": 0.1475,
