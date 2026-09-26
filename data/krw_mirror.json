@@ -4,74 +4,74 @@
   "model": "claude-sonnet-4-6",
   "broker": "paper",
   "live_trading": false,
-  "spot": 1358.3299560546875,
-  "realized_vol_krw": 6.631,
-  "data_last_collected": "2026-09-15T13:45:00.376595",
+  "spot": 1355.280029296875,
+  "realized_vol_krw": 7.45,
+  "data_last_collected": "2026-09-26T15:15:00.233258",
   "agent_count": 23
  },
  "/api/forecast": {
   "horizons": {
    "1w": {
-    "published_delta_krw": -12.0,
-    "implied_rate": 1346.48,
-    "confidence": 0.0,
-    "signal": "krw_strong",
-    "unchanged_streak_days": 1,
-    "spot_at_run": 1358.47998046875,
-    "target_date": "2026-09-15",
-    "change_justification": null
-   },
-   "1m": {
-    "published_delta_krw": -29.0,
-    "implied_rate": 1329.48,
-    "confidence": 0.0,
-    "signal": "krw_strong",
-    "unchanged_streak_days": 1,
-    "spot_at_run": 1358.47998046875,
-    "target_date": "2026-09-15",
-    "change_justification": null
-   },
-   "3m": {
-    "published_delta_krw": -57.0,
-    "implied_rate": 1301.48,
+    "published_delta_krw": -14.0,
+    "implied_rate": 1345.11,
     "confidence": 0.0,
     "signal": "krw_strong",
     "unchanged_streak_days": 0,
-    "spot_at_run": 1358.47998046875,
-    "target_date": "2026-09-15",
+    "spot_at_run": 1359.11,
+    "target_date": "2026-09-19",
+    "change_justification": null
+   },
+   "1m": {
+    "published_delta_krw": -45.0,
+    "implied_rate": 1314.11,
+    "confidence": 0.0,
+    "signal": "krw_strong",
+    "unchanged_streak_days": 0,
+    "spot_at_run": 1359.11,
+    "target_date": "2026-09-20",
+    "change_justification": null
+   },
+   "3m": {
+    "published_delta_krw": -54.0,
+    "implied_rate": 1305.11,
+    "confidence": 0.0,
+    "signal": "krw_strong",
+    "unchanged_streak_days": 0,
+    "spot_at_run": 1359.11,
+    "target_date": "2026-09-20",
     "change_justification": null
    },
    "12m": {
-    "published_delta_krw": 22.0,
-    "implied_rate": 1380.48,
+    "published_delta_krw": 0.0,
+    "implied_rate": 1359.11,
     "confidence": 0.0,
-    "signal": "krw_weak",
-    "unchanged_streak_days": 1,
-    "spot_at_run": 1358.47998046875,
-    "target_date": "2026-09-15",
+    "signal": "neutral",
+    "unchanged_streak_days": 0,
+    "spot_at_run": 1359.11,
+    "target_date": "2026-09-20",
     "change_justification": null
    }
   },
-  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cf5Jw3pXx2hSkGzTFSW6L'}",
-  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cf5JwC8MLcUruRd5jVWMG'}"
+  "report_ko": "Report generation failed: Connection error.",
+  "report_en": "Report generation failed: Connection error."
  },
  "/api/accuracy": {
   "forecast": {
    "horizons": {
     "1w": {
-     "samples": 255,
-     "directional_hit_rate": 0.854,
-     "mae_krw": 18.3
+     "samples": 260,
+     "directional_hit_rate": 0.836,
+     "mae_krw": 18.65
     },
     "1m": {
-     "samples": 223,
-     "directional_hit_rate": 0.305,
-     "mae_krw": 76.43
+     "samples": 241,
+     "directional_hit_rate": 0.357,
+     "mae_krw": 72.07
     },
     "3m": {
-     "samples": 22,
-     "directional_hit_rate": 0.0,
-     "mae_krw": 180.84
+     "samples": 70,
+     "directional_hit_rate": 0.043,
+     "mae_krw": 190.17
     },
     "12m": {
      "samples": 0
@@ -85,101 +85,101 @@
     },
     {
      "agent_id": 14,
-     "mae_krw": 32.09,
-     "n": 34
+     "mae_krw": 36.08,
+     "n": 35
     },
     {
      "agent_id": 15,
-     "mae_krw": 33.47,
-     "n": 34
-    },
-    {
-     "agent_id": 13,
-     "mae_krw": 34.75,
-     "n": 39
+     "mae_krw": 37.62,
+     "n": 35
     },
     {
      "agent_id": 7,
-     "mae_krw": 35.38,
-     "n": 42
+     "mae_krw": 40.76,
+     "n": 44
     },
     {
-     "agent_id": 12,
-     "mae_krw": 36.16,
-     "n": 39
+     "agent_id": 13,
+     "mae_krw": 41.33,
+     "n": 41
     },
     {
      "agent_id": 9,
-     "mae_krw": 36.59,
-     "n": 42
+     "mae_krw": 41.85,
+     "n": 44
     },
     {
      "agent_id": 10,
-     "mae_krw": 37.24,
-     "n": 42
+     "mae_krw": 42.53,
+     "n": 44
     },
     {
      "agent_id": 11,
-     "mae_krw": 37.44,
-     "n": 42
+     "mae_krw": 42.66,
+     "n": 44
     },
     {
      "agent_id": 6,
-     "mae_krw": 37.88,
-     "n": 42
+     "mae_krw": 42.69,
+     "n": 44
+    },
+    {
+     "agent_id": 12,
+     "mae_krw": 42.99,
+     "n": 41
     },
     {
      "agent_id": 106,
-     "mae_krw": 38.31,
-     "n": 42
-    },
-    {
-     "agent_id": 1,
-     "mae_krw": 38.69,
-     "n": 42
-    },
-    {
-     "agent_id": 8,
-     "mae_krw": 38.75,
-     "n": 42
+     "mae_krw": 43.39,
+     "n": 44
     },
     {
      "agent_id": 4,
-     "mae_krw": 39.32,
-     "n": 42
+     "mae_krw": 43.84,
+     "n": 44
     },
     {
-     "agent_id": 104,
-     "mae_krw": 39.74,
-     "n": 42
+     "agent_id": 1,
+     "mae_krw": 44.42,
+     "n": 44
     },
     {
      "agent_id": 105,
-     "mae_krw": 39.93,
-     "n": 42
+     "mae_krw": 44.42,
+     "n": 44
     },
     {
-     "agent_id": 103,
-     "mae_krw": 40.09,
-     "n": 42
-    },
-    {
-     "agent_id": 102,
-     "mae_krw": 40.17,
-     "n": 42
+     "agent_id": 8,
+     "mae_krw": 44.84,
+     "n": 44
     },
     {
      "agent_id": 107,
-     "mae_krw": 40.38,
-     "n": 42
+     "mae_krw": 45.6,
+     "n": 44
+    },
+    {
+     "agent_id": 104,
+     "mae_krw": 45.74,
+     "n": 44
+    },
+    {
+     "agent_id": 103,
+     "mae_krw": 46.12,
+     "n": 44
+    },
+    {
+     "agent_id": 102,
+     "mae_krw": 46.19,
+     "n": 44
     },
     {
      "agent_id": 3,
-     "mae_krw": 40.93,
-     "n": 42
+     "mae_krw": 47.19,
+     "n": 44
     }
    ],
-   "total_samples": 500
+   "total_samples": 571
   },
   "trading": {
    "closed_trades": 5,
@@ -204,79 +204,23 @@
  },
  "/api/briefing/latest": {
   "brief": {
-   "date": "2026-09-15",
+   "date": "2026-09-20",
    "title": "원/달러 데일리 브리프",
-   "headline": "1개월: -29.0원 → 1329.48 (krw_strong, conf 0%)",
-   "forecast_summary": "1주: -12.0원 → 1346.48 (krw_strong, conf 0%) / 1개월: -29.0원 → 1329.48 (krw_strong, conf 0%) / 3개월: -57.0원 → 1301.48 (krw_strong, conf 0%) / 1년: +22.0원 → 1380.48 (krw_weak, conf 0%)",
+   "headline": "1개월: -45.0원 → 1314.11 (krw_strong, conf 0%)",
+   "forecast_summary": "1주: -14.0원 → 1345.11 (krw_strong, conf 0%) / 1개월: -45.0원 → 1314.11 (krw_strong, conf 0%) / 3개월: -54.0원 → 1305.11 (krw_strong, conf 0%) / 1년: +0.0원 → 1359.11 (neutral, conf 0%)",
    "horizon_breakdown": {},
-   "analysis": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cf5Jw3pXx2hSkGzTFSW6L'}",
+   "analysis": "Report generation failed: Connection error.",
    "key_levels": null,
    "scenario": {},
-   "news_digest": [
-    "원화 강세보다 무서운 환율 변동성…수출기업 사업 계획도 '안갯속' - 인베스트조선",
-    "원/달러 환율 1,360원 터치…유가·美국채금리 상승에 12.1원↑ - 연합뉴스",
-    "200원 내린 달러·원 환율... 수출 달러 소진에 반등하나 - 매일일보",
-    "원·달러 환율 하락에…수출입물가 나란히 ↓ - 연합뉴스TV"
-   ],
+   "news_digest": [],
    "trading_view": "",
    "risks": [],
-   "sources": [
-    {
-     "source": "원/달러 환율",
-     "title": "원화 강세보다 무서운 환율 변동성…수출기업 사업 계획도 '안갯속' - 인베스트조선",
-     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxNWGpsTGxadUFCTUFTd1ozRTNndU1VU1NyZ1B6aHQ1SUJlLXh3SjYtZU9MMUNFaDR2U3p3eTJnMUFhMGdYZnBsTndpMHpNUDZSZ3EwQjY2b2U5cFIwR204RFMzYlhXeEVHTXZOamJPSFRqRGYzeHpETG5vYmVNWXZJU29zcw?oc=5"
-    },
-    {
-     "source": "원/달러 환율",
-     "title": "원/달러 환율 1,360원 터치…유가·美국채금리 상승에 12.1원↑ - 연합뉴스",
-     "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9UZzJEY1lTUm9YN0F0Y2ozNVNmMGJrb0Myd19Kd3NmZklFbGZQU1RlLVM0QlJ4a09RbzRmV1E0YkpEcWtxbVUxVFJxSXVCbUt1amFDTkViSzQ3LVHSAWBBVV95cUxNQkRHVmlTQzF1aWltcW5GaDUwSFQxRGk1YmFrRlhyLUxlTzNORGpiMWl6N0dNTnhnWHM0SlhTMFZ0NE5lR0NsZmRDSTNXR1djRDdMQmtlUlZyZ01ZUkN3UmE?oc=5"
-    },
-    {
-     "source": "원/달러 환율",
-     "title": "200원 내린 달러·원 환율... 수출 달러 소진에 반등하나 - 매일일보",
-     "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4xd0ZMZ2ZUVDJBMVZtem1NVzNKR1ZNWUtJTGJwV1FydXdYeDdaRmVhVGFhVW1TZUlaUmp6N0JVUmF2Y2ZWMTlMSE43OTZLMmotMXBGTE9kc1hhOW1Zd0EzZVIzeVLSAWhBVV95cUxNRzhVeGY2eFJEaFJjdm5ZVjNtc1J4T0wxUFhjakpCXzBNbnlvN1d3SmZzNnprZ2RqMEdMWmZod3MteGxMN3hrejh2dmhud2NHUG9wOHR2ZHpPaVJRa0dKWFFuUzhkNDg1eQ?oc=5"
-    },
-    {
-     "source": "원/달러 환율",
-     "title": "원·달러 환율 하락에…수출입물가 나란히 ↓ - 연합뉴스TV",
-     "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5CZXJvM1RqRktaak03WWdrQnMxUGQzXzBGVXd3d1ppNk44dk9jdmw5LWczMkg4WTExNFBxY3BIWnlpQklZZUVwa2hNUXV5UkFnNnRPUnlYcGtma2hmUC1IX0t0VGtRMk0?oc=5"
-    },
-    {
-     "source": "원/달러 환율",
-     "title": "코스피 나흘째 하락...원·달러 환율 1,359원까지 상승 - YTN",
-     "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE0zbjhLcDQ0dzc0TjU4RmtXVzlOTkx4T2NvNlVjckNqcjQtVUtOYVFJaXB2WlNqMC1hODRfaFpGSkttQVZyWGZrZkxOVG9YX2c0N3BfSVN0MkM3OTZvQ2ZYbmxjc1U3aEtfX0lya296RQ?oc=5"
-    },
-    {
-     "source": "한국은행 기준금리",
-     "title": "200원 내린 환율, 美 긴축에 방향 틀까…한은 금리 또 올리나 - SBS Biz",
-     "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFB4ZFVKOFZvS1poTnY0WkJUQmFKSG9mQmxBdy1VQmtQY1lELU1lWFUzdDNUU3VTT1d4ZEVTMVBHYTl0SXJSdEhuSXZFN1hSeUFLSlNZ0gFYQVVfeXFMTmJtTWQtOVozT3Rjd01PVFFyTWJqMjU3YUpUWFYzUVNZdll6V2M5SXA0OHZJVWhSb3RyS0F4RjBCNlJtc09PVHVDWmtmQmxlLVluREp6NGQ1Nw?oc=5"
-    },
-    {
-     "source": "Reuters — Korea won / FX",
-     "title": "Dollar ticks up as oil prices climb, Fed rate hike chances firm - Reuters",
-     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOeGtqRlJ4LWF3TVM5VklxS09fMU16eHE3bWRLZ3lRS3NuS18wWGcyY3cwRWg2eEtzS3dFRVZGWHB6Z21NNGpzUUcydm10VXpIU29Ca3RnRDRrRUxsVWlNbE5yV0x6ejVQUTZXR1FHRHgtTUExOC1VazhaaGo0b3p0dTNVcDJ5YWdjeWkyQVZRRlhOUUZYUkpmdWsyeHJjNTF6QjlYdEtRcy1NVUg2RWNmOA?oc=5"
-    },
-    {
-     "source": "US dollar index / DXY",
-     "title": "Dollar Index hits a 52-week high as hawkish Fed talk fuels the greenback rally - Seeking Alpha",
-     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQc0xJczRES3VVeThUS2JLYjN6RkJ2b1A4ZlBrQWF4V3VKRnNMUWZpSWRWYVFFaWFKSDNXQTJiZnJvMTdTV2h2eHBBUkI5QmJxRGVVYzAyN2dQX0RWMlRLbnpiNzAxakN6QzFXN21odHU5amZYWkMweWRwUWJmUHBEa2hXQTFGeXpiaTNROHpqZTk0LUo0eGNncjA4ekpSTm5wVFhMU3doWUhsWVNCUGMwNHNER2NfVWs?oc=5"
-    },
-    {
-     "source": "US dollar index / DXY",
-     "title": "US Dollar: Fed-driven gains extend as DXY breaks range – HSBC - Mitrade",
-     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQWXFPejVLc3VRSW03M2ZiSzBhdl9GeEQ5T1BDVmlTYUg3dWZRQWtMdzRxbGVqTjVZaUtSakxiT0JkNlhQLTRsRWRBb2ZsbXZGa3VMODc2Z25qMWJPNVhlM0J1QTFiX0JsX182WUs3RVdRNmU2bHpqMzJNTjJ1Vk1oSW4ybw?oc=5"
-    },
-    {
-     "source": "기획재정부 외환시장",
-     "title": "원화 약세에 당국 움직였다…은행권 외환거래 점검 착수 - 뉴스투데이",
-     "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1uajVZQ3ZtVnl1QmVkVERNTUpqb29jQk9SaGllZVhkaDloLWpQZGNkZXhpTmE2R3VCbW1FQVRzMWRWVUhmeE8tVHdnOUZfNEN5LUs3bzRyenBDZEE?oc=5"
-    }
-   ],
+   "sources": [],
    "fc_lines": [
-    "1주: -12.0원 → 1346.48 (krw_strong, conf 0%)",
-    "1개월: -29.0원 → 1329.48 (krw_strong, conf 0%)",
-    "3개월: -57.0원 → 1301.48 (krw_strong, conf 0%)",
-    "1년: +22.0원 → 1380.48 (krw_weak, conf 0%)"
+    "1주: -14.0원 → 1345.11 (krw_strong, conf 0%)",
+    "1개월: -45.0원 → 1314.11 (krw_strong, conf 0%)",
+    "3개월: -54.0원 → 1305.11 (krw_strong, conf 0%)",
+    "1년: +0.0원 → 1359.11 (neutral, conf 0%)"
    ]
   }
  },
