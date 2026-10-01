@@ -1,5 +1,5 @@
 {
- "updated_at": "2026-10-01T06:18:53.256066+00:00",
+ "updated_at": "2026-10-01T13:41:56.569277+00:00",
  "summary": {
   "horizon_days": 5,
   "n_predictions": 73,
@@ -8,7 +8,7 @@
   "hit_rate": 0.5873,
   "avg_stated_confidence": 0.6053,
   "avg_excess_pct": -0.084,
-  "cum_excess_pct": -5.21,
+  "cum_excess_pct": -5.186,
   "updated_at": null
  },
  "scores": [
@@ -699,10 +699,10 @@
    "regime": "KOREA_DECOUPLING",
    "risk_on": 0.1161,
    "confidence": 0.549,
-   "portfolio_return_pct": -1.314,
-   "neutral_return_pct": -1.381,
-   "excess_pct": 0.067,
-   "risk_spread_pct": 0.138,
+   "portfolio_return_pct": -1.236,
+   "neutral_return_pct": -1.328,
+   "excess_pct": 0.093,
+   "risk_spread_pct": 0.255,
    "hit": true
   }
  ]

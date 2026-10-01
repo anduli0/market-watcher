@@ -1875,7 +1875,7 @@
   "date": "2026-10-01",
   "regime": "REGIME_UNCERTAIN",
   "secondary": null,
-  "confidence": 0.525,
+  "confidence": 0.5219,
   "risk_on": 0.0,
   "coverage": 0.25,
   "weights": {
