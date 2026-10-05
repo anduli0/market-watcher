@@ -1,8 +1,8 @@
 {
- "updated_at": "2026-10-05T09:24:53.452876+00:00",
+ "updated_at": "2026-10-05T18:42:30.045419+00:00",
  "summary": {
   "horizon_days": 5,
-  "n_predictions": 77,
+  "n_predictions": 78,
   "n_scored": 64,
   "n_directional": 64,
   "hit_rate": 0.5938,
