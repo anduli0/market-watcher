@@ -2031,14 +2031,14 @@
   "date": "2026-10-07",
   "regime": "REGIME_UNCERTAIN",
   "secondary": null,
-  "confidence": 0.5169,
+  "confidence": 0.5337,
   "risk_on": 0.0,
   "coverage": 0.25,
   "weights": {
-   "US_EQUITY": 0.3439,
+   "US_EQUITY": 0.344,
    "KOREA_EQUITY": 0.1474,
    "US_TREASURY": 0.1179,
-   "CASH": 0.1156,
+   "CASH": 0.1155,
    "GOLD": 0.0983,
    "USD": 0.0983,
    "BITCOIN": 0.0786
