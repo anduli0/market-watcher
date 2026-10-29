@@ -4,74 +4,74 @@
   "model": "claude-sonnet-4-6",
   "broker": "paper",
   "live_trading": false,
-  "spot": 1355.280029296875,
-  "realized_vol_krw": 7.45,
-  "data_last_collected": "2026-09-26T15:15:00.233258",
+  "spot": 1337.969970703125,
+  "realized_vol_krw": 5.9,
+  "data_last_collected": "2026-10-29T12:44:49.077734",
   "agent_count": 23
  },
  "/api/forecast": {
   "horizons": {
    "1w": {
-    "published_delta_krw": -14.0,
-    "implied_rate": 1345.11,
+    "published_delta_krw": -11.0,
+    "implied_rate": 1327.08,
     "confidence": 0.0,
     "signal": "krw_strong",
-    "unchanged_streak_days": 0,
-    "spot_at_run": 1359.11,
-    "target_date": "2026-09-19",
+    "unchanged_streak_days": 4,
+    "spot_at_run": 1338.0799560546875,
+    "target_date": "2026-10-29",
     "change_justification": null
    },
    "1m": {
-    "published_delta_krw": -45.0,
-    "implied_rate": 1314.11,
+    "published_delta_krw": -15.0,
+    "implied_rate": 1323.08,
     "confidence": 0.0,
     "signal": "krw_strong",
-    "unchanged_streak_days": 0,
-    "spot_at_run": 1359.11,
-    "target_date": "2026-09-20",
+    "unchanged_streak_days": 4,
+    "spot_at_run": 1338.0799560546875,
+    "target_date": "2026-10-29",
     "change_justification": null
    },
    "3m": {
-    "published_delta_krw": -54.0,
-    "implied_rate": 1305.11,
+    "published_delta_krw": -51.0,
+    "implied_rate": 1287.08,
     "confidence": 0.0,
     "signal": "krw_strong",
-    "unchanged_streak_days": 0,
-    "spot_at_run": 1359.11,
-    "target_date": "2026-09-20",
+    "unchanged_streak_days": 4,
+    "spot_at_run": 1338.0799560546875,
+    "target_date": "2026-10-29",
     "change_justification": null
    },
    "12m": {
-    "published_delta_krw": 0.0,
-    "implied_rate": 1359.11,
+    "published_delta_krw": 25.0,
+    "implied_rate": 1363.08,
     "confidence": 0.0,
-    "signal": "neutral",
-    "unchanged_streak_days": 0,
-    "spot_at_run": 1359.11,
-    "target_date": "2026-09-20",
+    "signal": "krw_weak",
+    "unchanged_streak_days": 4,
+    "spot_at_run": 1338.0799560546875,
+    "target_date": "2026-10-29",
     "change_justification": null
    }
   },
-  "report_ko": "Report generation failed: Connection error.",
-  "report_en": "Report generation failed: Connection error."
+  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgWYsdBZfvDhm3XnwEBS5'}",
+  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgWYsihi4U8wuu9zoEH4X'}"
  },
  "/api/accuracy": {
   "forecast": {
    "horizons": {
     "1w": {
-     "samples": 260,
-     "directional_hit_rate": 0.836,
-     "mae_krw": 18.65
+     "samples": 281,
+     "directional_hit_rate": 0.849,
+     "mae_krw": 17.59
     },
     "1m": {
-     "samples": 241,
-     "directional_hit_rate": 0.357,
-     "mae_krw": 72.07
+     "samples": 263,
+     "directional_hit_rate": 0.412,
+     "mae_krw": 67.41
     },
     "3m": {
-     "samples": 70,
-     "directional_hit_rate": 0.043,
-     "mae_krw": 190.17
+     "samples": 208,
+     "directional_hit_rate": 0.015,
+     "mae_krw": 178.4
     },
     "12m": {
      "samples": 0
@@ -79,107 +79,107 @@
    },
    "agent_ranking": [
     {
-     "agent_id": 16,
-     "mae_krw": 30.48,
-     "n": 28
-    },
-    {
-     "agent_id": 14,
-     "mae_krw": 36.08,
-     "n": 35
-    },
-    {
-     "agent_id": 15,
-     "mae_krw": 37.62,
-     "n": 35
+     "agent_id": 9,
+     "mae_krw": 74.3,
+     "n": 60
     },
     {
      "agent_id": 7,
-     "mae_krw": 40.76,
-     "n": 44
-    },
-    {
-     "agent_id": 13,
-     "mae_krw": 41.33,
-     "n": 41
-    },
-    {
-     "agent_id": 9,
-     "mae_krw": 41.85,
-     "n": 44
-    },
-    {
-     "agent_id": 10,
-     "mae_krw": 42.53,
-     "n": 44
-    },
-    {
-     "agent_id": 11,
-     "mae_krw": 42.66,
-     "n": 44
+     "mae_krw": 76.27,
+     "n": 60
     },
     {
      "agent_id": 6,
-     "mae_krw": 42.69,
-     "n": 44
+     "mae_krw": 76.77,
+     "n": 60
     },
     {
-     "agent_id": 12,
-     "mae_krw": 42.99,
-     "n": 41
+     "agent_id": 16,
+     "mae_krw": 77.21,
+     "n": 42
+    },
+    {
+     "agent_id": 11,
+     "mae_krw": 78.13,
+     "n": 60
+    },
+    {
+     "agent_id": 10,
+     "mae_krw": 78.48,
+     "n": 60
     },
     {
      "agent_id": 106,
-     "mae_krw": 43.39,
-     "n": 44
+     "mae_krw": 79.37,
+     "n": 60
     },
     {
-     "agent_id": 4,
-     "mae_krw": 43.84,
-     "n": 44
+     "agent_id": 13,
+     "mae_krw": 80.41,
+     "n": 57
     },
     {
      "agent_id": 1,
-     "mae_krw": 44.42,
-     "n": 44
+     "mae_krw": 80.55,
+     "n": 60
     },
     {
-     "agent_id": 105,
-     "mae_krw": 44.42,
-     "n": 44
+     "agent_id": 4,
+     "mae_krw": 81.44,
+     "n": 60
     },
     {
      "agent_id": 8,
-     "mae_krw": 44.84,
-     "n": 44
+     "mae_krw": 83.43,
+     "n": 60
     },
     {
-     "agent_id": 107,
-     "mae_krw": 45.6,
-     "n": 44
+     "agent_id": 105,
+     "mae_krw": 83.85,
+     "n": 60
     },
     {
-     "agent_id": 104,
-     "mae_krw": 45.74,
-     "n": 44
+     "agent_id": 12,
+     "mae_krw": 83.88,
+     "n": 57
     },
     {
      "agent_id": 103,
-     "mae_krw": 46.12,
-     "n": 44
+     "mae_krw": 85.65,
+     "n": 60
+    },
+    {
+     "agent_id": 107,
+     "mae_krw": 85.65,
+     "n": 60
     },
     {
      "agent_id": 102,
-     "mae_krw": 46.19,
-     "n": 44
+     "mae_krw": 85.72,
+     "n": 60
     },
     {
-     "agent_id": 3,
-     "mae_krw": 47.19,
-     "n": 44
+     "agent_id": 14,
+     "mae_krw": 86.05,
+     "n": 51
+    },
+    {
+     "agent_id": 15,
+     "mae_krw": 86.11,
+     "n": 51
+    },
+    {
+     "agent_id": 104,
+     "mae_krw": 86.4,
+     "n": 60
+    },
+    {
+     "agent_id": 2,
+     "mae_krw": 88.4,
+     "n": 60
     }
    ],
-   "total_samples": 571
+   "total_samples": 752
   },
   "trading": {
    "closed_trades": 5,
@@ -204,23 +204,79 @@
  },
  "/api/briefing/latest": {
   "brief": {
-   "date": "2026-09-20",
+   "date": "2026-10-29",
    "title": "원/달러 데일리 브리프",
-   "headline": "1개월: -45.0원 → 1314.11 (krw_strong, conf 0%)",
-   "forecast_summary": "1주: -14.0원 → 1345.11 (krw_strong, conf 0%) / 1개월: -45.0원 → 1314.11 (krw_strong, conf 0%) / 3개월: -54.0원 → 1305.11 (krw_strong, conf 0%) / 1년: +0.0원 → 1359.11 (neutral, conf 0%)",
+   "headline": "1개월: -15.0원 → 1321.4 (krw_strong, conf 0%)",
+   "forecast_summary": "1주: -11.0원 → 1325.4 (krw_strong, conf 0%) / 1개월: -15.0원 → 1321.4 (krw_strong, conf 0%) / 3개월: -51.0원 → 1285.4 (krw_strong, conf 0%) / 1년: +25.0원 → 1361.4 (krw_weak, conf 0%)",
    "horizon_breakdown": {},
-   "analysis": "Report generation failed: Connection error.",
+   "analysis": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgWDDTBnRAfaPpNeTmEg4'}",
    "key_levels": null,
    "scenario": {},
-   "news_digest": [],
+   "news_digest": [
+    "미 금리 동결에 원/달러 환율 소폭 하락 - 연합뉴스",
+    "Federal Reserve issues FOMC statement",
+    "United States Dollar Index rises towards 102.50 ahead of Fed rate decision - www.tmgm.com",
+    "의외의 곳에서 방향이 바뀐다 원·달러 환율은 다시 오를 겁니다 - 연합인포맥스"
+   ],
    "trading_view": "",
    "risks": [],
-   "sources": [],
+   "sources": [
+    {
+     "source": "원/달러 환율",
+     "title": "미 금리 동결에 원/달러 환율 소폭 하락 - 연합뉴스",
+     "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9fVUwwcl9GQkpVaC1pWkl5VHp2WEVUMEJ3d1VNMEJ5S1lBSWRnWUF0MUVoUElJTEJoWHRoMEpyazVSTF9OcUt1RWNBbUhyWWV0S3lpVnZUNGUzSVnSAWBBVV95cUxPeFR1UXBDcS15eHdXaDMtTWVHRVV6R01LVUkyckVkYXRHbEQ1MXJ4UG5qVHloZkt0MDVEank5a0JPcFRIZ18wY2liTU9sdkw2RlR5bFI2OWVMTUliMmpVNXA?oc=5"
+    },
+    {
+     "source": "Federal Reserve Press",
+     "title": "Federal Reserve issues FOMC statement",
+     "link": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+    },
+    {
+     "source": "US dollar index / DXY",
+     "title": "United States Dollar Index rises towards 102.50 ahead of Fed rate decision - www.tmgm.com",
+     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQSTJWUGtXcUM3dkFMN3lrWnFnSTBSaEpaWk5sM1pvbDFIQlJQNDlhX05BTUZMbHo2Zk8xUFM2aTZZTC01N190RUdmZEdtOV9vZmptdUJVUFRJamVUeU50Z0NvSmtYbmhXdEwzd2tTeTdueTd1dTNTUnBZSzV0Rl9qSXBPV3NmMzNlWE13ZC10c1RoSGtNUFNwV2l3WWZZejlnbDZQSlJ0UGRzcXJ2ZThRX0NzUy15S0VhVkkxbkxRWkpYVEtnQ2RTOVU3OVVHd2dWYmxGbWFvS3EteXJoUFE?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "의외의 곳에서 방향이 바뀐다 원·달러 환율은 다시 오를 겁니다 - 연합인포맥스",
+     "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFB4dldHendCNFFnS3MzWFRON3JtYldKQkpkRFkxeHk0N2VTT1hFUHdRbzFzWEIxUGpZN1pvTWtoa3k3RVRkV1pVS19ELVhpTDVuNFpQQVdnSWpKOW9zbTVOdXdIbzdESHNmTHhheklQV27SAXRBVV95cUxNdHUxVFVZWDNrN3FackxqNE53Z0JsWnlxSXJ6ZVQxU1VMQjhGMktEclE4djJZQlkwQjRRQ0FXQWxlRzNSUVBzbW5kWG5ZLXNwa3FFZUVKeW51SjR4RW40Ym1IRDNQTmI1OGVvRllHbFN5dEo3aA?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "원·달러 환율, 0.9원 내린 1336.8원 마감 - 뉴시스",
+     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFAwNHFaYzhBWmxjbEtvZnhwMDFrbkZtY2piNENKLTBWR2Nza25rUExOX1NQMGVHc2hyazNLTU5uR0ozd0dIWlRZVUUycE1mWUMzU1Fhdm54Y1c3bXhJSFRmdg?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "원·달러 환율,'美 금리 동결'에 소폭 하락...1336.8원 마감 - 베타뉴스",
+     "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE9BNGVxeTVYdEhCUmdOcUhubkZaeU44MnVFWkhOb2J5TVdtNW1XczlYTEtfZHoxNkcyMFZnaWc2a1didGF5VmNwQmRaeDBOb3VKS3UxeElReklpWVE1cXl0MkpWSUw?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "원-엔화 환율, 6원 가까이 하락하면서 845원 중반까지 밀려…달러-엔화 환율은 일본 정책금리 발표 임박에 157엔 후반대 기록 - 산업일보",
+     "link": "https://news.google.com/rss/articles/CBMiREFVX3lxTE9VVlRBcHFNcWNzU2xUU2RBN0NmZ1BwalhWNnZhcWEyOE5kbjltN3l3SEJqTWNMNDNPV1FYbHVBd1FkS1lC?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "원·달러 환율, 0.9원 내린 1336.8원 - 조세일보",
+     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5wTklxaXBfY1ZxSHNVY0RPdDlsSmhIT2VLS3NxTXg3aUF6eVMzMDBtdGRDaWhpRzlidHhxVi1OR29tNkFIX1hSdmR1MF9ZYmNzbVItVTF6RlcxU3E5TENWd0JOX3Bqay1iWDUtRHBzeFNFU21h?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "[외환] 원·달러 환율 1336.8원 마감···0.9원↓ - 서울파이낸스",
+     "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTFBOOVUzaVBvMWpVNzJiNGE1dGtTVjU0WWpkNlhmVGk3VmhESml0MkRYMkRFa1pac290OWpMUlViS1JsVzRoblVvZElUbHFibkd6ZW5uSzVDSmdCTy1ySmtkVVRmeTJNSDVwWHc?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "원·달러 환율, 0.9원 내린 1336.8원(오후 3시30분) - 아시아경제",
+     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5sTm93SUFhNFctUXIyYzl0MGVRQ2Zlc3dDNFJIaU1wSUpZT1lGdjFER2FFellqbEJVN3hSUjlnV040cVNla0NfaVJLUDBfN01RVk9fbXF0TTUtN2I0T1pQbQ?oc=5"
+    }
+   ],
    "fc_lines": [
-    "1주: -14.0원 → 1345.11 (krw_strong, conf 0%)",
-    "1개월: -45.0원 → 1314.11 (krw_strong, conf 0%)",
-    "3개월: -54.0원 → 1305.11 (krw_strong, conf 0%)",
-    "1년: +0.0원 → 1359.11 (neutral, conf 0%)"
+    "1주: -11.0원 → 1325.4 (krw_strong, conf 0%)",
+    "1개월: -15.0원 → 1321.4 (krw_strong, conf 0%)",
+    "3개월: -51.0원 → 1285.4 (krw_strong, conf 0%)",
+    "1년: +25.0원 → 1361.4 (krw_weak, conf 0%)"
    ]
   }
  },
@@ -265,8 +321,8 @@
     "3m": "mixed",
     "12m": "mixed"
    },
-   "spot": 1358.47998046875
+   "spot": 1338.0799560546875
   },
-  "updated_at": "2026-09-15T13:32:59.395442"
+  "updated_at": "2026-10-29T12:45:06.568019"
  }
 }
