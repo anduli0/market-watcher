@@ -2292,7 +2292,7 @@
   "regime": "US_TECH_LEADERSHIP",
   "secondary": "KOREA_DECOUPLING",
   "confidence": 0.6946,
-  "risk_on": 0.072,
+  "risk_on": 0.0719,
   "coverage": 0.75,
   "weights": {
    "US_EQUITY": 0.4996,
