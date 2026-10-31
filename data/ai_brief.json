@@ -31,5 +31,5 @@
  "model": "claude-sonnet-5",
  "input_hash": "50bcfdfb0eaa6f8f",
  "trigger": "pages-build",
- "last_skip": null
+ "last_skip": "시장 데이터가 직전 생성 이후 변하지 않아 건너뛰었습니다."
 }
