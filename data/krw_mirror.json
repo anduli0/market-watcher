@@ -4,64 +4,64 @@
   "model": "claude-sonnet-4-6",
   "broker": "paper",
   "live_trading": false,
-  "spot": 1333.43994140625,
-  "realized_vol_krw": 5.9,
-  "data_last_collected": "2026-11-01T17:15:32.717566",
+  "spot": 1343.489990234375,
+  "realized_vol_krw": 6.786,
+  "data_last_collected": "2026-11-03T15:15:32.440860",
   "agent_count": 23
  },
  "/api/forecast": {
   "horizons": {
    "1w": {
-    "published_delta_krw": -11.0,
-    "implied_rate": 1322.44,
+    "published_delta_krw": -10.0,
+    "implied_rate": 1332.57,
     "confidence": 0.0,
     "signal": "krw_strong",
-    "unchanged_streak_days": 15,
-    "spot_at_run": 1333.43994140625,
-    "target_date": "2026-11-02",
+    "unchanged_streak_days": 3,
+    "spot_at_run": 1342.5699462890625,
+    "target_date": "2026-11-03",
     "change_justification": null
    },
    "1m": {
     "published_delta_krw": -15.0,
-    "implied_rate": 1318.44,
+    "implied_rate": 1327.57,
     "confidence": 0.0,
     "signal": "krw_strong",
-    "unchanged_streak_days": 0,
-    "spot_at_run": 1333.43994140625,
-    "target_date": "2026-11-02",
+    "unchanged_streak_days": 5,
+    "spot_at_run": 1342.5699462890625,
+    "target_date": "2026-11-03",
     "change_justification": null
    },
    "3m": {
     "published_delta_krw": -51.0,
-    "implied_rate": 1282.44,
+    "implied_rate": 1291.57,
     "confidence": 0.0,
     "signal": "krw_strong",
-    "unchanged_streak_days": 0,
-    "spot_at_run": 1333.43994140625,
-    "target_date": "2026-11-02",
+    "unchanged_streak_days": 5,
+    "spot_at_run": 1342.5699462890625,
+    "target_date": "2026-11-03",
     "change_justification": null
    },
    "12m": {
     "published_delta_krw": 25.0,
-    "implied_rate": 1358.44,
+    "implied_rate": 1367.57,
     "confidence": 0.0,
     "signal": "krw_weak",
-    "unchanged_streak_days": 0,
-    "spot_at_run": 1333.43994140625,
-    "target_date": "2026-11-02",
+    "unchanged_streak_days": 5,
+    "spot_at_run": 1342.5699462890625,
+    "target_date": "2026-11-03",
     "change_justification": null
    }
   },
-  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgcYfgtk9Ayv9326Apyvn'}",
-  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgcYfpQwPXdtqTeWWdspD'}"
+  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CggB7uu1gp9gRjwmKybvV'}",
+  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CggB84E55FpU1QKKmsfJ5'}"
  },
  "/api/accuracy": {
   "forecast": {
    "horizons": {
     "1w": {
-     "samples": 285,
-     "directional_hit_rate": 0.837,
-     "mae_krw": 17.65
+     "samples": 291,
+     "directional_hit_rate": 0.818,
+     "mae_krw": 17.92
     },
     "1m": {
      "samples": 263,
@@ -69,9 +69,9 @@
      "mae_krw": 67.41
     },
     "3m": {
-     "samples": 211,
-     "directional_hit_rate": 0.015,
-     "mae_krw": 177.43
+     "samples": 213,
+     "directional_hit_rate": 0.014,
+     "mae_krw": 176.59
     },
     "12m": {
      "samples": 0
@@ -179,7 +179,7 @@
      "n": 60
     }
    ],
-   "total_samples": 759
+   "total_samples": 767
   },
   "trading": {
    "closed_trades": 5,
@@ -204,49 +204,69 @@
  },
  "/api/briefing/latest": {
   "brief": {
-   "date": "2026-11-02",
+   "date": "2026-11-03",
    "title": "원/달러 데일리 브리프",
-   "headline": "1개월: -15.0원 → 1318.44 (krw_strong, conf 0%)",
-   "forecast_summary": "1주: -11.0원 → 1322.44 (krw_strong, conf 0%) / 1개월: -15.0원 → 1318.44 (krw_strong, conf 0%) / 3개월: -51.0원 → 1282.44 (krw_strong, conf 0%) / 1년: +25.0원 → 1358.44 (krw_weak, conf 0%)",
+   "headline": "1개월: -15.0원 → 1329.13 (krw_strong, conf 0%)",
+   "forecast_summary": "1주: -10.0원 → 1334.13 (krw_strong, conf 0%) / 1개월: -15.0원 → 1329.13 (krw_strong, conf 0%) / 3개월: -51.0원 → 1293.13 (krw_strong, conf 0%) / 1년: +25.0원 → 1369.13 (krw_weak, conf 0%)",
    "horizon_breakdown": {},
-   "analysis": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgcYfgtk9Ayv9326Apyvn'}",
+   "analysis": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgeNbrd89ycHD7sXXVZFZ'}",
    "key_levels": null,
    "scenario": {},
    "news_digest": [
-    "[주간환율전망] 美정치적 불확실성 vs 수출 네고···1330원대 방향 탐색 - 서울파이낸스",
-    "1300원대 환율에 외화투자 관심 쑥, 달러예금 트래블통장 더해 ETF도 눈길 - 비즈니스포스트",
-    "WSJ Dollar Index Rises 0.04% This Month to 97.08 - WSJ",
-    "S. Korean won hits over 2-year high against U.S. dollar - Yonhap News Agency"
+    "CAD to KRW Exchange Rate Live - Convert Canadian Dollars to South Korean Won - Exchange Rates UK",
+    "[외환] 원/달러 환율 9.5원 오른 1,343.8원(15:30 기준가) - 연합뉴스",
+    "원/달러 환율 1,340원대 진입… 9.5원 오른 1,343.8원 마감 - 파이낸스투데이",
+    "원/달러 환율 1,340원대로 상승…약 2주 만에 최고 - 연합뉴스"
    ],
    "trading_view": "",
    "risks": [],
    "sources": [
     {
-     "source": "원/달러 환율",
-     "title": "[주간환율전망] 美정치적 불확실성 vs 수출 네고···1330원대 방향 탐색 - 서울파이낸스",
-     "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE1aUXRhZTFRUGpnWGw0RkI3NG00MkZJNHRFU3hvdmktOE9WaDVfVlI1Vkk0N3BodVJORTRPQUZkQ1UwR2ZiSlNOVG1Xd212STdveEpHdmhzbDlXcFRsd1pyWFZRYl9HYUI4Z1E?oc=5"
+     "source": "USD/KRW exchange rate",
+     "title": "CAD to KRW Exchange Rate Live - Convert Canadian Dollars to South Korean Won - Exchange Rates UK",
+     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQREVtTGVmdkphOHZKVGV5VnUwTzZiZGRlSTk4YkJpRzdHSmVJYUk4d0d4ZmFyMEJMZVR4Q0dXZlZ3cFZXOTV5dlFDMXA2NU9mc0dkVzJ2SzdIVlhUN01jX1g5RVVZSzBXWlZpTUlfeEZEaHUyUDVMU1UyTXA5UWpBcGZRelNsUnhfa2IzUVdubkVYZlowRVJvSy1LUnNyR1Zv?oc=5"
     },
     {
      "source": "원/달러 환율",
-     "title": "1300원대 환율에 외화투자 관심 쑥, 달러예금 트래블통장 더해 ETF도 눈길 - 비즈니스포스트",
-     "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9zUjFEMWV6X1pjMU82NUR6LWJKNUpLTXZMZl9xclpnNFdyWUNLNml5VVZybXROVlV3NUhWTHFGZl9PUHBSTUhtN1RLcDlrMHVzZW1jTDVnbTJUanFHOURTS2dOeXJWdUt4YnhVOF9xWVNkWTg?oc=5"
+     "title": "[외환] 원/달러 환율 9.5원 오른 1,343.8원(15:30 기준가) - 연합뉴스",
+     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE00czVXWmJMOGcwaC1oUkRGbFB0ZHI3WlJ6Yl9xaHNheExlb3M1eTRsSndxcXVZZi02U2hSMW02aUtiOWhyemFpNWNkWF83UjhJSVBWYWxQdG1mSFVVUHBfdtIBYEFVX3lxTE00czVXWmJMOGcwaC1oUkRGbFB0ZHI3WlJ6Yl9xaHNheExlb3M1eTRsSndxcXVZZi02U2hSMW02aUtiOWhyemFpNWNkWF83UjhJSVBWYWxQdG1mSFVVUHBfdg?oc=5"
     },
     {
-     "source": "Wall Street Journal — Dollar/FX",
-     "title": "WSJ Dollar Index Rises 0.04% This Month to 97.08 - WSJ",
-     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQMWFPVDBsbldOUlNvLTBWbUlGbnFlNFRtaXluRl9rcjVsTXM0Umg0SVB0NHhCZ2JQOGtCakRMX2VjTTdIVUotWkZQdE1WWVE2TnU0dDN1cGpSYUJlRy13YXYtYXJpNVB1WlhSNFJoNW5ib0U5RHR1RV9IUU1pdm5xOTBGSGdDQ09Wa1NQTF9ENGREUEZVOUoybEVsVzh1TnRXa2JqdzN5V0ZvQlV2Ync?oc=5"
+     "source": "원/달러 환율",
+     "title": "원/달러 환율 1,340원대 진입… 9.5원 오른 1,343.8원 마감 - 파이낸스투데이",
+     "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4wT1pxanpab2FWdmZ4dnRNWWxPSmhicW5qTDRPdGZlUXdwNExOQ3JCY3ZZclJqM1BtUktyV2JyRy1uZ1RsR1FLT3VFNG16SEZrQlE4UWJBcnR1RTd4OWVObHRBblc1blJjMDJkaA?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "원/달러 환율 1,340원대로 상승…약 2주 만에 최고 - 연합뉴스",
+     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9GaGNqWloyTE5qWlZqRkNkby1JYWZiVndyeHF0eENuY3ZUMmhCMGUxQ1dfU0N0V2N1Umt2dGNTVDZtZmhPTUo0eUdxY2FjWW5oWTM4UGVSTDlIU1VGWXpnSNIBYEFVX3lxTE9GaGNqWloyTE5qWlZqRkNkby1JYWZiVndyeHF0eENuY3ZUMmhCMGUxQ1dfU0N0V2N1Umt2dGNTVDZtZmhPTUo0eUdxY2FjWW5oWTM4UGVSTDlIU1VGWXpnSA?oc=5"
     },
     {
      "source": "Yonhap News (한국 영문)",
-     "title": "S. Korean won hits over 2-year high against U.S. dollar - Yonhap News Agency",
-     "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5nRmtkUk1CTGtwaHBreU1ZTUZnTHRpLU5TUzRKZUoxdVhjQmVuU0Z2TnVsRkxPdUJ0ZDJtS2ZEQmhGWDZIR0Z3WFZjeVZWWGw5U25kVlFVN3dwZw?oc=5"
+     "title": "(LEAD) Korean won slumps against U.S. dollar on expectations of Fed rate hike - Yonhap News Agency",
+     "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBIb3pYLXBnYk9oaGJsZUlNanRTUHJoME5abDBlU1plU2tLYVZYYmxjekhZV21ZX2VHSVppUkJBbVV4YUpXdWo4YzZMVWxhVDYzZGpoSUxBN3pOZw?oc=5"
+    },
+    {
+     "source": "기획재정부 외환시장",
+     "title": "원화 약세에 당국 움직였다…은행권 외환거래 점검 착수 - 뉴스투데이",
+     "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8zanVGdFptdUI2OTVRNVMycTJRbjNQUlozRlpndmJhQzk1b2U0c2RWS3pwSWZad29VQUh5Y0JtRy1fVjhrTjVhY0RnVkttQzFGSTRzOVNQUnBkWW9SUmc?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "[외환] 원·달러 환율 1343.8원 마감···9.5원↑ - 서울파이낸스",
+     "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5SeUdhYjJXT2VBdFIyTnY3a0dqeHNFT0hjSXNYZGV3LVlxakRCeE1rZkhfWTRleDlpM2t3YUs0aU1nNnIyVTJyYkpTamgzdzQ1eTQzaGcxNWNEMUZZVElIc3pKVTJ5QlB6Wmc?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "원 달러 환율 1,340원대로 상승‥약 2주 만에 최고 - MBC 뉴스",
+     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBNZlIxakZ1UVR1WjZXaEpwMGlmb21Oc00wYU81dmxVX2pJX3pDell1LXZuam9reXBhTlV2eHZqOHVucDJyZE0tVmRaUWNPREEyWjZYcmh0N0ZuN0dqUmpJU3lUNTVjU2dDdEJpc0hzRnk3bl9Q0gF0QVVfeXFMT1c5RXV5RkNzWkpzd1NHbEZ6aEg1cTN2R3k2ajlPdEtqMThObDdQa0FNWmJ1UUExTm9XNTlTUnF1WHI0eDhfZnl4ai1TM3lWdldib3YxODN1QUFkazB3Tjc5SFp6R3FTRlNwQXM5cXNJckoxR3k?oc=5"
     }
    ],
    "fc_lines": [
-    "1주: -11.0원 → 1322.44 (krw_strong, conf 0%)",
-    "1개월: -15.0원 → 1318.44 (krw_strong, conf 0%)",
-    "3개월: -51.0원 → 1282.44 (krw_strong, conf 0%)",
-    "1년: +25.0원 → 1358.44 (krw_weak, conf 0%)"
+    "1주: -10.0원 → 1334.13 (krw_strong, conf 0%)",
+    "1개월: -15.0원 → 1329.13 (krw_strong, conf 0%)",
+    "3개월: -51.0원 → 1293.13 (krw_strong, conf 0%)",
+    "1년: +25.0원 → 1369.13 (krw_weak, conf 0%)"
    ]
   }
  },
@@ -291,8 +311,8 @@
     "3m": "mixed",
     "12m": "mixed"
    },
-   "spot": 1333.43994140625
+   "spot": 1342.5699462890625
   },
-  "updated_at": "2026-11-01T16:24:56.249797"
+  "updated_at": "2026-11-03T14:45:47.532335"
  }
 }
