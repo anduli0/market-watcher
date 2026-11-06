@@ -1,9 +1,9 @@
 {
  "morning_date": "2026-07-14",
  "runs": {
-  "2026-11-06": 4
+  "2026-11-07": 1
  },
- "last_error": "ClaudeUnavailableError: claude -p error: You've hit your org's monthly spend limit · ask your admin to raise it at https://claude.ai/admin-settings/usage · your weekly limit resets Nov 7, 5pm (UTC)",
+ "last_error": "ClaudeUnavailableError: claude -p error: You've hit your org's monthly spend limit · ask your admin to raise it at https://claude.ai/admin-settings/usage · your weekly limit resets 5pm (UTC)",
  "brief": {
   "headline": "미국 기술주가 시장을 이끌지만 세계 전반은 위험을 피하려는 분위기이며, 한국 증시는 따로 약세를 보이고 있습니다.",
   "summary": [
