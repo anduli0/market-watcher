@@ -1,7 +1,7 @@
 {
  "morning_date": "2026-07-14",
  "runs": {
-  "2026-11-07": 1
+  "2026-11-07": 2
  },
  "last_error": "ClaudeUnavailableError: claude -p error: You've hit your org's monthly spend limit · ask your admin to raise it at https://claude.ai/admin-settings/usage · your weekly limit resets 5pm (UTC)",
  "brief": {

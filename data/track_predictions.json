@@ -2499,17 +2499,17 @@
   "date": "2026-11-07",
   "regime": "RECESSION_RISK",
   "secondary": "KOREA_DECOUPLING",
-  "confidence": 0.4573,
-  "risk_on": -0.2629,
+  "confidence": 0.4562,
+  "risk_on": -0.2619,
   "coverage": 0.75,
   "weights": {
-   "US_EQUITY": 0.2871,
-   "GOLD": 0.1595,
+   "US_EQUITY": 0.2873,
+   "GOLD": 0.1593,
    "CASH": 0.1534,
-   "US_TREASURY": 0.1507,
-   "USD": 0.1212,
-   "KOREA_EQUITY": 0.0819,
-   "BITCOIN": 0.0463
+   "US_TREASURY": 0.1506,
+   "USD": 0.1211,
+   "KOREA_EQUITY": 0.082,
+   "BITCOIN": 0.0464
   },
   "neutral": {
    "US_EQUITY": 0.35,
