@@ -2520,5 +2520,31 @@
    "KOREA_EQUITY": 0.15,
    "BITCOIN": 0.08
   }
+ },
+ "2026-11-08": {
+  "date": "2026-11-08",
+  "regime": "RECESSION_RISK",
+  "secondary": "KOREA_DECOUPLING",
+  "confidence": 0.4579,
+  "risk_on": -0.2634,
+  "coverage": 0.75,
+  "weights": {
+   "US_EQUITY": 0.2869,
+   "GOLD": 0.1596,
+   "CASH": 0.1535,
+   "US_TREASURY": 0.1507,
+   "USD": 0.1212,
+   "KOREA_EQUITY": 0.0818,
+   "BITCOIN": 0.0463
+  },
+  "neutral": {
+   "US_EQUITY": 0.35,
+   "GOLD": 0.1,
+   "CASH": 0.1,
+   "US_TREASURY": 0.12,
+   "USD": 0.1,
+   "KOREA_EQUITY": 0.15,
+   "BITCOIN": 0.08
+  }
  }
 }
