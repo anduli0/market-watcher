@@ -4,64 +4,64 @@
   "model": "claude-sonnet-4-6",
   "broker": "paper",
   "live_trading": false,
-  "spot": 1343.489990234375,
-  "realized_vol_krw": 6.786,
-  "data_last_collected": "2026-11-03T15:15:32.440860",
+  "spot": 1342.75,
+  "realized_vol_krw": 6.243,
+  "data_last_collected": "2026-11-10T18:45:32.414039",
   "agent_count": 23
  },
  "/api/forecast": {
   "horizons": {
    "1w": {
-    "published_delta_krw": -10.0,
-    "implied_rate": 1332.57,
-    "confidence": 0.0,
+    "published_delta_krw": -12.0,
+    "implied_rate": 1328.38,
+    "confidence": 0.62,
     "signal": "krw_strong",
-    "unchanged_streak_days": 3,
-    "spot_at_run": 1342.5699462890625,
-    "target_date": "2026-11-03",
+    "unchanged_streak_days": 1,
+    "spot_at_run": 1340.3800048828125,
+    "target_date": "2026-11-10",
     "change_justification": null
    },
    "1m": {
-    "published_delta_krw": -15.0,
-    "implied_rate": 1327.57,
-    "confidence": 0.0,
+    "published_delta_krw": -26.0,
+    "implied_rate": 1314.38,
+    "confidence": 0.578,
     "signal": "krw_strong",
-    "unchanged_streak_days": 5,
-    "spot_at_run": 1342.5699462890625,
-    "target_date": "2026-11-03",
+    "unchanged_streak_days": 2,
+    "spot_at_run": 1340.3800048828125,
+    "target_date": "2026-11-10",
     "change_justification": null
    },
    "3m": {
-    "published_delta_krw": -51.0,
-    "implied_rate": 1291.57,
-    "confidence": 0.0,
+    "published_delta_krw": -70.0,
+    "implied_rate": 1270.38,
+    "confidence": 0.296,
     "signal": "krw_strong",
-    "unchanged_streak_days": 5,
-    "spot_at_run": 1342.5699462890625,
-    "target_date": "2026-11-03",
+    "unchanged_streak_days": 1,
+    "spot_at_run": 1340.3800048828125,
+    "target_date": "2026-11-10",
     "change_justification": null
    },
    "12m": {
-    "published_delta_krw": 25.0,
-    "implied_rate": 1367.57,
-    "confidence": 0.0,
-    "signal": "krw_weak",
-    "unchanged_streak_days": 5,
-    "spot_at_run": 1342.5699462890625,
-    "target_date": "2026-11-03",
-    "change_justification": null
+    "published_delta_krw": -19.0,
+    "implied_rate": 1321.38,
+    "confidence": 0.594,
+    "signal": "krw_strong",
+    "unchanged_streak_days": 0,
+    "spot_at_run": 1340.3800048828125,
+    "target_date": "2026-11-10",
+    "change_justification": "미-한 10년물 금리차가 +0.46pp로 급격히 축소되며 달러 캐리 인센티브가 약화된 가운데, USD/KRW 1340원 수준이 IMF REER/BEER 적정가치(1270~1290원)를 크게 상회한다는 고평가 인식과 한국 기재부·한은 총재의 원화 저평가 구두 개입이 맞물려 원화 강세 압력이 강화되었습니다. 이에 따라 12개월 예측치가 -12원에서 -19원으로 하향 조정되어 원화 강세 방향성이 더욱 뚜렷해졌습니다."
    }
   },
-  "report_ko": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CggB7uu1gp9gRjwmKybvV'}",
-  "report_en": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CggB84E55FpU1QKKmsfJ5'}"
+  "report_ko": "## USD/KRW 최종 오케스트레이터 리포트 (기준 스팟: 1,340.38)\n\n---\n\n### **전망 요약**\n\n전 호라이즌에 걸쳐 KRW 완만한 강세 경로가 도출되었다. 1주 후 -8.0원(≈1,332), 1개월 후 -17.5원(≈1,323), 3개월 후 -32.0원(≈1,308), 12개월 후 -50.0원(≈1,290)이며 신뢰도는 각각 0.62·0.61·0.58·0.54이다. 단기(1w·1m)는 금리차 압축과 리스크온이 모멘텀을 주도하여 강세 신호가 가장 선명하다. 중기(3m)는 BoP 구조와 PPP 복귀가 가세하되, 데스크 구조 전제인 '경상흑자의 환류 갭'이 강세 폭을 제한한다. 장기(12m)는 공정가치(1,270~1,310) 수렴 압력이 존재하나, 해외투자 급증에 따른 달러 수요 비대칭과 미국 현지 재투자 구조가 복귀 속도를 제약하며 불확실성이 가장 크다.\n\n---\n\n### **핵심 동인**\n\n**① 금리차 급압축(원화 강세 방향):** US-KR 10Y 스프레드가 +0.46pp로 급격히 좁혀지면서 달러 캐리 메리트가 사실상 소멸했다. 단기 외국인 채권·주식 순매수 유입 가능성이 높아져 1w·1m 원화 지지의 최대 동인이다.\n\n**② 당국 구두개입 및 정책 스탠스(원화 강세 방향):** BOK 이창용 총재의 원화 저평가 발언과 기재부의 1,340선 방어 의지가 단기 추가 약세 가능성에 상단 저항선을 형성한다. EUR/USD 1.11대 유지로 DXY 추가 상승 압력이 제한된다는 점도 가세한다.\n\n**③ 글로벌 리스크온(원화 강세 방향):** VIX ~20.8, S&P 사상 최고권, USD/CNY 6.65 위안 강세 등 EM 통화 전반을 지지하는 환경이 형성되어 있다. CNY 강세는 아시아 통화 전반의 동반 강세를 견인하는 경로로 작동한다.\n\n**④ 경상흑자 환류 갭(원화 약세 압력 — 구조적 완충):** 삼성전자·SK하이닉스 등 주요 수출기업의 미국 현지 팹·AI 투자 재투자, 2025년 해외증권투자 1,403억$(GDP 대비 7.5%) 급증으로 장부상 흑자가 실제 외환 공급으로 전환되지 않는 구조가 고착화되고 있다. 이는 중·장기 원화 강세 폭을 절제하는 핵심 역풍이다.\n\n---\n\n### **섹터 이견과 가중**\n\n학계는 IMF REER/BEER 공정가치(1,270~1,290) 대비 현 스팟의 고평가를 근거로 장기 복귀를 강하게 주장(-33/-50원)하되, Academic_FX 에이전트는 UIP 잔차·리스크 프리미엄 지속을 이유로 보수적 입장을 견지했다. 퍼블릭은 당국 개입·금리차·DXY 경로 등 정책 변수를 중심으로 전 호라이즌에서 가장 신중한 수치(-27/-50원)를 제시했으며, Fed_Policy 에이전트만 DXY 100 돌파 리스크로 1w 거의 중립을 주장했다. 프라이빗은 단기 수급·모멘텀·캐리 소멸에 가장 민감하게 반응해 1w·1m 추정치(-8/-18원)가 가장 선명했고, 3m 이후는 CNY_Asia_EM(-45~-70원) 대 Technical_Flow(-10~-30원)의 내부 이견이 컸다.\n\n수석 조정 결과: **1w·1m**는 프라이빗·퍼블릭에 60% 가중(단기 가격 신호·수급 우위). **3m**는 학계·프라이빗 50% + 퍼블릭 30% + 구조 전제 20%(환류 갭 반영해 프라이빗 -35원보다 소폭 보수화). **12m**는 세 섹터가 거의 수렴(-50~-52원)하나 데스크 구조 전제(달러 수요 비대칭)를 감안해 -50원으로 하방 절제, 신뢰도 최저 설정.\n\n---\n\n### **트레이딩 함의**\n\n**포지션 방향:** 전 구간 KRW 롱(USD/KRW 숏) 기조를 유지한다. 단기(1w~1m)가 신뢰도·방향성 모두 가장 선명하므로 사이즈 집중 구간이다.\n\n**진입 레벨:** 스팟 1,340~1,345 구간을 숏 진입 적정 범위로 본다. 1,350 돌파 시 비선형 당국 개입 가능성이 높아 추격 숏 금지.\n\n**목표 레벨:** 1w 1,332 / 1m 1,323 / 3m 1,308. 3m 목표 도달 후에는 사이즈를 50% 축소하고 12m 1,290을 차익 실현 구간으로 열어둔다.\n\n**사이즈 톤:** 단기 미디엄, 중·장기 스몰. 신뢰도 0.54~0.62 대역으로 풀 사이즈 집중 불가.\n\n**무효화 시나리오:** ① DXY 102 상향 돌파·Fed 매파 서프라이즈로 스팟이 1,355를 종가 기준 돌파 시 1w 숏 청산. ② 미중 무역 갈등 재점화·VIX 30 이상 급등 시 EM 통화 전반 약세로 전략 재검토.\n\n---\n\n### **리스크·관전 포인트**\n\n**① Fed 불확실성 및 DXY 100 돌파 압력:** DXY가 100선을 상향 이탈하면 단기 원화 강세 모멘텀이 반전될 수 있다. 7월 FOMC 톤과 미국 고용·물가 지표 흐름을 주간 단위로 모니터링할 필요가 있다.\n\n**② 해외투자 환류 갭 확대:** 삼성·SK 등의 미국 재투자 집행 규모가 예상을 상회할 경우, 경상흑자 급증에도 불구하고 3m 이후 원화 강세 복귀가 현저히 지연될 수 있다. BOK 이슈노트 갱신 및 BoP 세부 항목(재투자수익 비중)을 분기별로 추적해야 한다.\n\n**③ 지정학·CNY 역풍:** USD/CNY가 6.70 이상으로 반등하거나, 한반도·대만 해협 지정학 리스크가 부각될 경우 아시아 통화 전반의 동반 약세로 모든 호라이즌 추정치가 무효화될 수 있다.",
+  "report_en": "## USD/KRW Final Orchestrator Report (Spot: 1,340.38)\n\n### Outlook Summary\nKRW moderate appreciation is the base case across all horizons: -8.0 KRW (1w, c0.62), -17.5 (1m, c0.61), -32.0 (3m, c0.58), -50.0 (12m, c0.54). Near-term signals are clearest; structural FX recycling gap caps medium/long-term upside for KRW.\n\n### Key Drivers\n(1) **Rate spread compression** (bullish KRW): US-KR 10Y at +0.46pp near-eliminates dollar carry incentive, triggering potential foreign inflows. (2) **Policy stance** (bullish KRW): BOK Governor's KRW undervaluation comment and MoF 1,340 defense signal bounded upside for USD/KRW. (3) **Risk-on** (bullish KRW): VIX ~20.8, S&P highs, USD/CNY 6.65 support EM FX broadly. (4) **FX repatriation gap** (structural KRW drag): Overseas securities investment surged to $140.3bn (7.5% GDP) in 2025; Samsung/SK US fab reinvestment means current account surpluses don't fully convert to KRW demand — structurally limits appreciation pace at 3m+.\n\n### Sector Divergence & Weighting\nAcademic leads on fair-value convergence (BEER 1,270-1,290) but Academic_FX cautioned on UIP residuals. Public was most conservative on all horizons; only Fed_Policy agent was near-neutral for 1w. Private showed tightest 1w/1m consensus (-8/-18) but wide 3m spread (CNY_Asia_EM -45~-70 vs Technical_Flow -10~-30). Weighting: 1w/1m — Private+Public 60% (momentum/flow edge); 3m — Academic+Private 50%, Public 30%, desk structural prior 20% (repatriation gap dampens); 12m — sectors converge near -50~-52, capped at -50 with lowest confidence reflecting structural dollar demand asymmetry.\n\n### Trading Implication\nMaintain KRW long (USD/KRW short) across all horizons; concentrate size at 1w-1m (highest conviction). Entry: 1,340-1,345 spot. Targets: 1,332 (1w) / 1,323 (1m) / 1,308 (3m). Size down 50% at 3m target; trail to 1,290 for 12m. Invalidation: spot close above 1,355 on DXY 102 break or Fed hawkish surprise — cut 1w short immediately.\n\n### Risks\n(1) DXY 100+ break / Fed upside surprise reverses near-term KRW momentum — monitor weekly FOMC tone and US payrolls. (2) Repatriation gap widening — if Samsung/SK US capex exceeds estimates, 3m+ KRW recovery stalls materially despite headline CA surplus; track BOK BoP reinvested earnings sub-item quarterly. (3) CNY reversal / geopolitical shock — USD/CNY above 6.70 or Korea Strait risk event invalidates all horizons simultaneously."
  },
  "/api/accuracy": {
   "forecast": {
    "horizons": {
     "1w": {
-     "samples": 291,
-     "directional_hit_rate": 0.818,
-     "mae_krw": 17.92
+     "samples": 300,
+     "directional_hit_rate": 0.755,
+     "mae_krw": 18.48
     },
     "1m": {
      "samples": 263,
@@ -69,9 +69,9 @@
      "mae_krw": 67.41
     },
     "3m": {
-     "samples": 213,
+     "samples": 219,
      "directional_hit_rate": 0.014,
-     "mae_krw": 176.59
+     "mae_krw": 173.78
     },
     "12m": {
      "samples": 0
@@ -179,7 +179,7 @@
      "n": 60
     }
    ],
-   "total_samples": 767
+   "total_samples": 782
   },
   "trading": {
    "closed_trades": 5,
@@ -204,115 +204,470 @@
  },
  "/api/briefing/latest": {
   "brief": {
-   "date": "2026-11-03",
-   "title": "원/달러 데일리 브리프",
-   "headline": "1개월: -15.0원 → 1329.13 (krw_strong, conf 0%)",
-   "forecast_summary": "1주: -10.0원 → 1334.13 (krw_strong, conf 0%) / 1개월: -15.0원 → 1329.13 (krw_strong, conf 0%) / 3개월: -51.0원 → 1293.13 (krw_strong, conf 0%) / 1년: +25.0원 → 1369.13 (krw_weak, conf 0%)",
-   "horizon_breakdown": {},
-   "analysis": "Report generation failed: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CgeNbrd89ycHD7sXXVZFZ'}",
-   "key_levels": null,
-   "scenario": {},
+   "date": "2026-11-10",
+   "title": "원/달러, 중동 긴장 완화·반도체 강세에 1330원대 재진입 — 완만한 원화 강세 경로 유효",
+   "headline": "미·이란 협상 기대와 KOSPI 외국인 순매수가 맞물려 원/달러가 1,337.5원까지 밀리며 이달 첫 1330원대에 안착, 단기 원화 강세 모멘텀이 위원회 전망과 정합하는 흐름을 보이고 있다.",
+   "forecast_summary": "위원회는 현재 스팟 1,342.28원 대비 1주 내 약 8~9원 하락한 1,333원대, 1개월 내 18원 하락한 1,324원대로의 완만한 원화 강세를 전망하며, 이 구간에서는 미·한 금리 스프레드 압축과 반도체 수출 호조, 리스크온 수급이 세 섹터 모두에서 수렴하는 만큼 신뢰도가 상대적으로 높다. 3개월 시계에서는 BOK 정책 경로와 구조적 수급 요인이 혼재하면서 1,311원대(-31원)로의 추가 강세를 예상하되, 한국 기업의 미국 현지 재투자 확대로 경상흑자의 실질 환류가 제한되는 구조적 역풍이 강세 폭을 제약한다. 1년 시계에서는 해외증권투자 급증(2025년 1,403억 달러)과 삼성전자·SK하이닉스의 미국 팹 투자 확대가 달러 공급 감소로 이어지는 구조적 약세 편향이 중첩되어, 강세 경로는 유지되나 목표치는 1,304원대(-38원)로 제한적이다.",
+   "horizon_breakdown": {
+    "1w": "미·이란 협상 기대에 따른 리스크온 무드와 KOSPI 외국인 순매수(+4.39% 급반등), DXY 약세 흐름이 단기 원화 매수 압력을 집중시키며 1,333원대 진입을 견인할 것으로 본다.",
+    "1m": "BOK 만장일치 동결(3%)의 매파적 해석과 미·한 10년물 금리 스프레드 압축(+0.41pp)이 외국인 채권·주식 자금의 환류 유인을 높이며 1,324원대까지의 점진적 강세를 뒷받침한다.",
+    "3m": "AI·반도체 수출 호조에 따른 경상수지 흑자 지속이 중기 원화 수요 기반을 유지하나, 대형 수출기업의 미국 현지 재투자 확대로 흑자의 실질 환류가 제한되면서 강세 폭이 1,311원대 수준에서 억제된다.",
+    "12m": "해외증권투자 급증과 삼성전자·SK하이닉스 등의 미국 팹 투자 확대가 경상흑자의 달러 환전 수요를 구조적으로 감소시키며, IRF 앵커 기준 +10원 수준의 약세 편향이 순수 강세 경로를 훼손해 1,304원대(-38원)에서 강세 폭이 제한된다."
+   },
+   "analysis": "오늘 시장의 핵심 동력은 미·이란 협상 기대에 따른 위험선호 회복이었다. 원/달러는 9.6원 급락한 1,337.5원에 마감하며 이달 첫 1330원대에 안착했고, KOSPI가 4.39% 급반등하면서 외국인 순매수 자금이 원화 수요를 직접 뒷받침했다. DXY 역시 96.94 수준으로 밀리며 달러 약세 기조가 단기 원화 강세의 외부 조건을 충족시키고 있다. 위원회 프라이빗 섹터(IB데스크·수급)는 이 흐름을 AI·반도체 수출 호조와 연결 지어 해석한다. IIF가 명시적으로 반도체 강세를 원/달러 13개월 저점의 배경으로 지목했고, 미·한 10년물 금리 스프레드가 +0.41pp로 과거 +1pp 이상 수준 대비 크게 압축되면서 원화 캐리 불이익이 줄어든 점도 외국인 자금 유입 유인을 높이고 있다. 퍼블릭 섹터(BOK_Policy)는 BOK의 만장일치 동결을 피벗이 아닌 매파적 평가로 해석하며, 연준 추가 인하 기대와 맞물린 금리 스프레드 축소가 정책 경로 차원에서도 원화 완만한 강세를 지지한다고 본다. 다만 수석 협의에서 강조된 구조적 역풍을 간과해서는 안 된다. 한국의 해외증권투자가 2024년 670억 달러에서 2025년 1,403억 달러로 급증했고, 삼성전자·SK하이닉스 등 경상흑자의 핵심 주체들이 미국 현지 팹 및 AI 인프라 투자를 확대하면서 흑자가 장부상 커지더라도 실제 원화 매수 외환공급으로 이어지지 않는 구조가 고착되고 있다. IRF 앵커 기준으로 해외투자 +3%는 원/달러 약 +10원의 구조적 약세 편향을 내포하며, 이는 3개월·1년 시계에서 순수 강세 경로를 제약하는 핵심 변수다. 결국 단기(1주·1개월)는 캐리·모멘텀·리스크온이 지배하는 구간으로 원화 강세 신뢰도가 높지만, 중장기로 갈수록 경상흑자의 실질 환류 여부와 해외 재투자 확대라는 구조적 수급 펀더멘털이 강세 폭을 제한하는 방향으로 작용할 것이다.",
+   "key_levels": "단기 핵심 지지선은 1,330원으로, 이 레벨 하향 이탈 시 1,310~1,315원대 추가 강세 구간이 열리며 외국인 수급 모멘텀이 가속될 수 있다. 반면 1,345~1,350원 구간은 단기 저항대로, 이 레벨 재돌파 시 리스크온 모멘텀 약화 또는 달러 강세 반전 신호로 해석해야 한다.",
+   "scenario": {
+    "base": "미·이란 협상 기대 유지와 반도체 수출 호조, BOK 매파 동결 기조가 맞물리며 원/달러는 1주 1,333원대, 1개월 1,324원대로 완만한 강세 경로를 밟는 것이 기준 시나리오다.",
+    "bull_usd": "연준 고금리 장기화 재확인 또는 중동 긴장 재고조로 DXY가 반등하고 외국인 KOSPI 순매도 전환 시, 원/달러는 1,350원대를 재돌파하며 원화 약세 압력이 단기 강세 전망을 무효화할 수 있다.",
+    "bear_usd": "연준 조기 인하 신호 강화와 AI·반도체 수출 서프라이즈가 동시에 출현하고 외국인 순매수가 가속될 경우, 원/달러는 1,310원대를 선제적으로 테스트하며 3개월 목표를 단기에 앞당겨 달성할 수 있다."
+   },
    "news_digest": [
-    "CAD to KRW Exchange Rate Live - Convert Canadian Dollars to South Korean Won - Exchange Rates UK",
-    "[외환] 원/달러 환율 9.5원 오른 1,343.8원(15:30 기준가) - 연합뉴스",
-    "원/달러 환율 1,340원대 진입… 9.5원 오른 1,343.8원 마감 - 파이낸스투데이",
-    "원/달러 환율 1,340원대로 상승…약 2주 만에 최고 - 연합뉴스"
+    "원/달러가 9.6원 급락한 1,337.5원에 마감하며 이달 첫 1330원대에 안착한 것은 미·이란 협상 기대에 따른 위험선호 회복이 직접적 트리거로 작용한 결과로, 단기 원화 강세 모멘텀이 위원회 1주 전망(-8.5원, 1,333원대)과 사실상 정합하는 속도로 진행되고 있음을 시사한다.",
+    "IIF가 원/달러 13개월 저점을 반도체 강세와 연결 지어 분석한 것은 프라이빗 섹터의 핵심 근거인 AI·반도체 수출 호조가 단순 단기 모멘텀이 아닌 구조적 경상수지 개선 기대로 시장에 인식되고 있음을 확인시켜 주며, 중기 원화 강세 논거를 강화한다.",
+    "KOSPI가 4.39% 급반등하며 외국인 순매수가 유입된 것은 위원회 프라이빗 섹터가 제시한 리스크온 무드·외국인 수급 개선 시나리오가 현실화되는 신호로, 단기 원화 수요 기반이 실제 자금 흐름으로 뒷받침되고 있음을 보여준다.",
+    "WSJ 달러 인덱스가 96.94로 하락하고 DXY 약세 기조가 지속되는 것은 원화만의 개별 강세가 아닌 달러 전반의 약세 환경이 조성되고 있음을 의미하며, Reuters 조사에서도 달러 약세 전망이 지속될 것으로 나타나 외부 환경이 원화 강세 경로를 지지하고 있다.",
+    "원/달러 급등락에 따른 은행권 자본비율 부담 보도는 환율 변동성 자체가 금융 시스템 리스크로 연결될 수 있음을 상기시키며, 당국의 스무딩 개입 가능성이 1,310원대 이하 급격한 강세를 제한하는 암묵적 하방 지지 요인으로 작용할 수 있음을 시사한다."
    ],
-   "trading_view": "",
-   "risks": [],
+   "trading_view": "단기(1~2주) 시계에서는 원화 강세 방향에 무게를 두되, 이미 오늘 장중 상당 폭 하락이 진행된 만큼 1,337~1,340원 구간에서의 달러 매도(원화 매수) 포지션은 분할 접근이 적절하다. 1,330원 하향 이탈 시 추가 강세 모멘텀을 확인하며 포지션을 확대할 수 있으나, 1,350원 재돌파는 단기 강세 논거의 무효화 신호로 보고 손절 기준으로 설정해야 한다. 중기(3개월) 시계에서는 경상흑자의 실질 환류 여부와 삼성전자·SK하이닉스의 미국 재투자 규모를 지속 모니터링하며 강세 포지션의 사이즈를 단기 대비 보수적으로 유지할 것을 권고한다.",
+   "risks": [
+    "연준 고금리 장기화 재확인: FOMC 의사록 또는 연준 위원 발언에서 금리 인하 지연 신호가 강화될 경우, 미·한 금리 스프레드 압축 기대가 되돌려지며 단기 원화 강세 논거가 급격히 약화될 수 있다.",
+    "중동 긴장 재고조: 미·이란 협상 기대가 무산되거나 지역 분쟁이 재확산될 경우, 리스크오프 전환과 DXY 반등이 동시에 발생하며 원/달러가 1,350원대를 재돌파할 위험이 있다.",
+    "경상흑자 환류 갭 확대: 삼성전자·SK하이닉스 등 대형 수출기업의 미국 현지 팹 투자 규모가 예상을 초과할 경우, 경상흑자 증가에도 불구하고 실질 달러 공급이 감소하며 중장기 원화 강세 경로가 훼손될 수 있다.",
+    "글로벌 달러 강세 반전 불확실성: DXY 약세 기조가 일시적 반등으로 전환되거나 위안화 약세 압력이 재부각될 경우, 원화에 대한 동조 약세 압력이 단기 모멘텀을 역전시킬 수 있어 위안화 흐름을 병행 모니터링해야 한다."
+   ],
    "sources": [
     {
+     "source": "원/달러 환율",
+     "title": "증시 반등에 원/달러 환율 이틀째 하락…1330원대 재진입 - 머니투데이 - 머니투데이",
+     "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9WOXRTd2dJaHE3UFBwbGhwTk43ZE9JWjN3eF9ibTVJeVFpcFdoemk2QlQ0NmFDWkwzWVZqdUFISG81VGxJWmlNWkRxM0FCWkVyR3pHcm04M05xYnZMcGhwUy03RUljNGJ5ZW1n0gFwQVVfeXFMUEtQTE1zQmI2bVRLVVBCS09ZVzF4eGg0RENSTURROHZveDFybVQ1c2xZVVk4VFNtRzl4UDNOSFg0VlJKUlItblhtTEhKNWxKUm1xOUg2bG1jTlZUcmxXZDN6ME8xQ3BsWDVqOTBxYThybQ?oc=5"
+    },
+    {
      "source": "USD/KRW exchange rate",
-     "title": "CAD to KRW Exchange Rate Live - Convert Canadian Dollars to South Korean Won - Exchange Rates UK",
-     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQREVtTGVmdkphOHZKVGV5VnUwTzZiZGRlSTk4YkJpRzdHSmVJYUk4d0d4ZmFyMEJMZVR4Q0dXZlZ3cFZXOTV5dlFDMXA2NU9mc0dkVzJ2SzdIVlhUN01jX1g5RVVZSzBXWlZpTUlfeEZEaHUyUDVMU1UyTXA5UWpBcGZRelNsUnhfa2IzUVdubkVYZlowRVJvSy1LUnNyR1Zv?oc=5"
+     "title": "Won-Dollar Exchange Rate Hits 13-Month Low…IIF Says \"Semiconductor Strength Driving Recovery to Pre-COVID Levels\" - finance.biggo.com",
+     "link": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1WQ2E0TXNHMGsyZllocnpWT0EwU1dhbmQ2LVQzNDFCYWdBcmtEdklzcWp0TnltaWFOQ0d0TkZFcWtxSTljS0RpbXE2Zk1KRklEOWNFSEJqc05LM0xpOElVRWktT2tleUZOSF83VktZWmJTaFgxZ2c?oc=5"
     },
     {
      "source": "원/달러 환율",
-     "title": "[외환] 원/달러 환율 9.5원 오른 1,343.8원(15:30 기준가) - 연합뉴스",
-     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE00czVXWmJMOGcwaC1oUkRGbFB0ZHI3WlJ6Yl9xaHNheExlb3M1eTRsSndxcXVZZi02U2hSMW02aUtiOWhyemFpNWNkWF83UjhJSVBWYWxQdG1mSFVVUHBfdtIBYEFVX3lxTE00czVXWmJMOGcwaC1oUkRGbFB0ZHI3WlJ6Yl9xaHNheExlb3M1eTRsSndxcXVZZi02U2hSMW02aUtiOWhyemFpNWNkWF83UjhJSVBWYWxQdG1mSFVVUHBfdg?oc=5"
+     "title": "원·달러 환율 이틀째 하락해 1337.5원…코스피 4.39% 급반등 - 베타뉴스",
+     "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE4yNHJLVER1ZFVsZ0t4M1pMbm5hbDktRXdYVFZXWC16cXZXaFpLOU16WVhhQk9FMGNRemM1bGh6RDBraHFwQ0dSNGxhUGNuc0hxX3FWdUd4bTJhY0xoNXMtS0ZkOGM?oc=5"
     },
     {
      "source": "원/달러 환율",
-     "title": "원/달러 환율 1,340원대 진입… 9.5원 오른 1,343.8원 마감 - 파이낸스투데이",
-     "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4wT1pxanpab2FWdmZ4dnRNWWxPSmhicW5qTDRPdGZlUXdwNExOQ3JCY3ZZclJqM1BtUktyV2JyRy1uZ1RsR1FLT3VFNG16SEZrQlE4UWJBcnR1RTd4OWVObHRBblc1blJjMDJkaA?oc=5"
+     "title": "원·달러 환율 9.6원 내린 1337.5원 - 파이낸셜뉴스",
+     "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5aaFZXdjJDTkROYlZGZ3dEaXo4S0xWTG9mWUxONEtFb0Z0XzF0NGRzdzJzb3RJci1WQUUzWHVXRjZlTHh4N1lvQVRNcVliZUtQUXVWWmN6S3Vqdw?oc=5"
     },
     {
      "source": "원/달러 환율",
-     "title": "원/달러 환율 1,340원대로 상승…약 2주 만에 최고 - 연합뉴스",
-     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9GaGNqWloyTE5qWlZqRkNkby1JYWZiVndyeHF0eENuY3ZUMmhCMGUxQ1dfU0N0V2N1Umt2dGNTVDZtZmhPTUo0eUdxY2FjWW5oWTM4UGVSTDlIU1VGWXpnSNIBYEFVX3lxTE9GaGNqWloyTE5qWlZqRkNkby1JYWZiVndyeHF0eENuY3ZUMmhCMGUxQ1dfU0N0V2N1Umt2dGNTVDZtZmhPTUo0eUdxY2FjWW5oWTM4UGVSTDlIU1VGWXpnSA?oc=5"
-    },
-    {
-     "source": "Yonhap News (한국 영문)",
-     "title": "(LEAD) Korean won slumps against U.S. dollar on expectations of Fed rate hike - Yonhap News Agency",
-     "link": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBIb3pYLXBnYk9oaGJsZUlNanRTUHJoME5abDBlU1plU2tLYVZYYmxjekhZV21ZX2VHSVppUkJBbVV4YUpXdWo4YzZMVWxhVDYzZGpoSUxBN3pOZw?oc=5"
-    },
-    {
-     "source": "기획재정부 외환시장",
-     "title": "원화 약세에 당국 움직였다…은행권 외환거래 점검 착수 - 뉴스투데이",
-     "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE8zanVGdFptdUI2OTVRNVMycTJRbjNQUlozRlpndmJhQzk1b2U0c2RWS3pwSWZad29VQUh5Y0JtRy1fVjhrTjVhY0RnVkttQzFGSTRzOVNQUnBkWW9SUmc?oc=5"
+     "title": "원·달러 환율, 1340.0원…달러, 중동 지역 긴장 완화에 약세 - 조세일보",
+     "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9xMXhPTEhwVU5mUlN5dTZ1TlZCa19DWjJ0dTlqSTE5Ukxtdl82YVpxcV9HeEpGNjRwaVhtdkE5LXhWMzUyNmlJWUFoSkxWdzN1aDAteTY0UjZycWtJTHl3?oc=5"
     },
     {
      "source": "원/달러 환율",
-     "title": "[외환] 원·달러 환율 1343.8원 마감···9.5원↑ - 서울파이낸스",
-     "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5SeUdhYjJXT2VBdFIyTnY3a0dqeHNFT0hjSXNYZGV3LVlxakRCeE1rZkhfWTRleDlpM2t3YUs0aU1nNnIyVTJyYkpTamgzdzQ1eTQzaGcxNWNEMUZZVElIc3pKVTJ5QlB6Wmc?oc=5"
+     "title": "원·달러 환율, 9.6원 내린 1337.5원 마감 - 뉴시스",
+     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9kWEJPb1lzXzRHTTRWTU1rX01BSEt4NHpLZE93b1daU2ptV2UydGNLWVVQaTBiajJQalczYmFKRnNrUm4wSGRxc01jLTB6ZTdVeG5aS1pxbjgzNUEyNWZEdNIBeEFVX3lxTE1BaHM2dlVGSDF5cUNOT18ybVF0b1lGZHBoa3Bqc29CNWNrb3A0bVZEU3VkRG8ycnQ2MFVKVV9LZW0waThCU1IzSDJRNktmakRTWnlST1NqWVlnN1NSNVk3aXZ3Mzl2ZVVqSVV3REFDa3RJV3FWVk9TNA?oc=5"
     },
     {
      "source": "원/달러 환율",
-     "title": "원 달러 환율 1,340원대로 상승‥약 2주 만에 최고 - MBC 뉴스",
-     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBNZlIxakZ1UVR1WjZXaEpwMGlmb21Oc00wYU81dmxVX2pJX3pDell1LXZuam9reXBhTlV2eHZqOHVucDJyZE0tVmRaUWNPREEyWjZYcmh0N0ZuN0dqUmpJU3lUNTVjU2dDdEJpc0hzRnk3bl9Q0gF0QVVfeXFMT1c5RXV5RkNzWkpzd1NHbEZ6aEg1cTN2R3k2ajlPdEtqMThObDdQa0FNWmJ1UUExTm9XNTlTUnF1WHI0eDhfZnl4ai1TM3lWdldib3YxODN1QUFkazB3Tjc5SFp6R3FTRlNwQXM5cXNJckoxR3k?oc=5"
+     "title": "원·달러 환율 급등락에 은행권 '자본비율 부담' 주목 - 세이프머니",
+     "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBzanNZYU1Ja0pjeG5UcUlwYmZIdkdPN1phTzZJRER0YVJXeUxFcEFlT0ZLaG1QcF9wdTBrcmpSV0ppeXJBbTBIUWdGOGRZRlB5QnAxM0pLdEhsVVEzYTdxdFFKSlF3MjFDN1ExSkdB?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "[환율마감] 위험선호 회복⋯원·달러 이틀째 하락 이달 첫 1330원대 안착 - 이투데이",
+     "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFB0dWlKeUt6d2dDZGRmbXoweEVfSG1Pak03QXlLWXgzZ1BwbWluZDU1WmEwbFlRSlhVZy1IbGVQNmtkaU5XMHZSMTk5bVllU0IzZ0dnMg?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "[외환] 원·달러 환율 1337.5원 마감···9.6원↓ - 서울파이낸스",
+     "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE81c2tpOXpQd19Hck41VHhvdzNhTG4zbjhwV3pzRVBYV1dPTTg5Q0N2SlFDbUx1YnlUVEZsRU80TFNfbVFTR1liOF84V2JOTUhoNnN2dFZuN2pvcWN2ejBUMkxnNG9maE10Qmc?oc=5"
+    },
+    {
+     "source": "원/달러 환율",
+     "title": "원·달러 환율 이틀째 하락…9.6원 내린 1337.5원 마감 [김혜란의 FX] - 서울경제",
+     "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFA4aG1WcWxxRUhKOHR5WmZBRTVWWXN4b09NSG03Z2x1aGFWZDZVQXRZOGVhVGdsWS1PVGFYMWdTTGpuVzVJVnBiZm5kYzBqNVQtT3fSAVNBVV95cUxPVWppMXNWeE44VDFMM0NIRXJ2OFI4dDFWRXBKQXptY2VmeHJxMThQRnlpS20zeV9iSHFMejFSTXFXU25BMjliYWN0Rk1Pd3pZWkY1SQ?oc=5"
     }
    ],
    "fc_lines": [
-    "1주: -10.0원 → 1334.13 (krw_strong, conf 0%)",
-    "1개월: -15.0원 → 1329.13 (krw_strong, conf 0%)",
-    "3개월: -51.0원 → 1293.13 (krw_strong, conf 0%)",
-    "1년: +25.0원 → 1369.13 (krw_weak, conf 0%)"
+    "1주: -12.0원 → 1330.28 (krw_strong, conf 62%)",
+    "1개월: -26.0원 → 1316.28 (krw_strong, conf 56%)",
+    "3개월: -70.0원 → 1272.28 (krw_strong, conf 26%)",
+    "1년: -12.0원 → 1330.28 (krw_strong, conf 48%)"
    ]
   }
  },
  "/api/hierarchy": {
   "hierarchy": {
    "academic": {
+    "horizons": {
+     "1w": {
+      "delta_krw": -9.5,
+      "confidence": 0.62
+     },
+     "1m": {
+      "delta_krw": -19.0,
+      "confidence": 0.63
+     },
+     "3m": {
+      "delta_krw": -33.0,
+      "confidence": 0.6
+     },
+     "12m": {
+      "delta_krw": -50.0,
+      "confidence": 0.55
+     }
+    },
+    "synthesis": "세 에이전트 모두 원화 강세 방향에 일치하며, 핵심 근거는 ①IMF REER/BEER 대비 USD/KRW 1340의 고평가(공정가치 1270~1290 추정), ②Dornbusch 오버슈트 복귀 모멘텀, ③US-KR 10Y 금리차 +0.46pp로의 급격한 압축에 따른 달러 캐리 인센티브 약화이다. 단기(1w~1m)는 Dornbusch 복귀와 리스크온(VIX~20.8)이 지배하며, 중기(3m)는 BoP 흑자·PPP 복귀가 가세하고, 장기(12m)는 IMF·BIS 공정가치 수렴이 주도하되 구조적 불확실성으로 신뢰도를 하향 조정한다.",
+    "key_debate": "최대 이견은 12m 경로로, Monetary_BoP(-72)와 Intl_Bodies(-65)는 PPP·BoP 구조적 복귀를 강조해 대폭 강세를 주장한 반면 Academic_FX(-12)는 UIP 잔차·리스크 프리미엄 지속을 이유로 장기 복귀폭이 제한적이라 보았으며, 위원회 앵커(-53)를 참조하여 중간값(-50)으로 절충하되 Academic_FX의 장기 불확실성 경고를 반영해 신뢰도를 낮게 유지했다.",
     "group": "학계(Academic)",
-    "horizons": {},
-    "synthesis": "(에이전트 없음)",
-    "agents": []
+    "agents": [
+     "Intl_Bodies",
+     "Academic_FX",
+     "Monetary_BoP"
+    ]
    },
    "public": {
+    "horizons": {
+     "1w": {
+      "delta_krw": -6.0,
+      "confidence": 0.52
+     },
+     "1m": {
+      "delta_krw": -15.0,
+      "confidence": 0.57
+     },
+     "3m": {
+      "delta_krw": -27.0,
+      "confidence": 0.58
+     },
+     "12m": {
+      "delta_krw": -50.0,
+      "confidence": 0.56
+     }
+    },
+    "synthesis": "공공·정책 경로 전반에서 KRW 완만한 강세 신호가 수렴한다: 미-한 10Y 금리차 축소(+0.46pp), EUR/USD 1.11대 유지로 DXY 추가 상승 압력 제한, BOK 총재의 원화 저평가 발언과 MoF 구두개입(1,340선), 그리고 BOJ 조기 정상화 지연으로 엔 캐리 청산 꼬리리스크가 단기 완화된 점이 복합적으로 원화를 지지한다. 단기(1w)는 DXY 100 상향 돌파 압력과 Fed 정책 불확실성이 일부 상쇄하여 강세 폭이 제한되나, 중·장기로 갈수록 달러 연화 기조와 한국 경상수지 흑자 구조가 누적 원화 강세 경로를 뒷받침한다.",
+    "key_debate": "Fed_Policy 에이전트만 DXY 100 돌파·Fed 불확실성을 근거로 1w 거의 중립(+5)을 주장했으나, 나머지 5개 에이전트가 동일 구간에서 -8을 제시하고 금리차 축소·BOK 스탠스·EUR/USD 안정 등 다층적 근거를 공유하므로 다수 견해에 가중하여 1w를 -6으로 절충 조정했다.",
     "group": "퍼블릭(Public)",
-    "horizons": {},
-    "synthesis": "(에이전트 없음)",
-    "agents": []
+    "agents": [
+     "Fed_Policy",
+     "BOK_Policy",
+     "US_Fiscal_Dollar",
+     "Korea_External",
+     "ECB_Global_CB",
+     "BOJ_Yen_Carry"
+    ]
    },
    "private": {
+    "horizons": {
+     "1w": {
+      "delta_krw": -8.0,
+      "confidence": 0.62
+     },
+     "1m": {
+      "delta_krw": -18.0,
+      "confidence": 0.62
+     },
+     "3m": {
+      "delta_krw": -35.0,
+      "confidence": 0.58
+     },
+     "12m": {
+      "delta_krw": -52.0,
+      "confidence": 0.55
+     }
+    },
+    "synthesis": "그룹 전원이 KRW 강세 방향에 동의하며, 근거는 세 축으로 수렴한다: (1) US10Y-KR10Y 스프레드 +0.46pp로 급격히 압축되어 달러 캐리 메리트가 사실상 소멸, (2) 기재부·BOK Rhee 총재의 명시적 구두개입으로 추가 원화 약세에 대한 당국 용인 한도가 1,340-1,350 수준임이 확인, (3) VIX ~20.8·S&P 사상 최고권·USD/CNY 6.65 yuan 강세 등 글로벌 리스크온 환경이 EM 통화 전반을 지지. 단기(1w/1m)는 에이전트 간 추정치가 -8/-18원으로 완전히 수렴하여 신뢰도가 가장 높고, 3m 이후에는 Consensus·CNY_Asia_EM(-45~-48) 대비 Technical_Flow·Samsung_Sec(-20~-30)의 보수적 견해를 절충해 -35원으로 조정하며, 12m는 글로벌 리스크·MS달러스마일·BEER 공정가치 등을 감안해 -52원으로 위원회 앵커에 근접하게 설정했다.",
+    "key_debate": "최대 이견은 3m·12m 경로 속도로, CNY_Asia_EM·Consensus가 -45~-70원의 가파른 강세를 주장한 반면 Technical_Flow·Samsung_Sec·Rate_Carry는 -10~-20원의 완만한 복귀를 선호했으나, BEER 공정가치(1,290-1,310) 도달까지의 거리와 당국 개입 비선형성을 감안해 중간값(-35/-52원)으로 수렴시켰다.",
     "group": "프라이빗(Private)",
-    "horizons": {},
-    "synthesis": "(에이전트 없음)",
-    "agents": []
+    "agents": [
+     "Rate_Carry",
+     "Global_Risk",
+     "Technical_Flow",
+     "CNY_Asia_EM",
+     "Consensus",
+     "Market_Linkage",
+     "News_Sentiment",
+     "Desk_GS",
+     "Desk_JPM",
+     "Desk_MS",
+     "Desk_Nomura",
+     "Desk_Citi",
+     "Desk_Samsung_Sec",
+     "Desk_Mirae"
+    ]
    },
    "chief": {
-    "reconciliation": "(수석 종합 실패 — 정량 앵커 사용)",
-    "horizons": {}
+    "reconciliation": "단기(1w·1m)는 수급·모멘텀·캐리에 강점을 가진 프라이빗(-8/-18)과 퍼블릭(-6/-15)에 60% 가중하고 학계(-10/-19)를 보조로 활용해 각각 -8.0/-17.5원으로 확정했다. VIX~20.8 리스크온, 금리차 급압축(+0.46pp), 당국 구두개입(1,340선) 등 단기 가격 신호가 세 섹터에서 공통으로 출현해 신뢰도를 상대적으로 높게 유지했다. 중기(3m)는 BoP 구조·PPP 복귀가 가세하므로 학계(-33)와 프라이빗(-35)에 50%, 퍼블릭(-27)에 30%, 데스크 구조 전제(해외 재투자에 따른 환류 갭 → 원화 강세 과장 억제)에 20%를 반영해 -32.0원으로 보수 절충했다. 장기(12m)는 IMF·BIS 공정가치 수렴 명제를 가진 학계(-50)와 퍼블릭(-50)·프라이빗(-52)이 사실상 수렴하나, 데스크 구조 전제(해외투자 급증→구조적 원약세 비대칭, 흑자의 환류 불확실성)와 UIP 잔차·리스크 프리미엄 지속 경고를 감안해 -50.0원으로 하방 절제하고 신뢰도를 가장 낮게 설정했다.",
+    "horizons": {
+     "1w": {
+      "delta_krw": -8.0,
+      "confidence": 0.62
+     },
+     "1m": {
+      "delta_krw": -17.5,
+      "confidence": 0.61
+     },
+     "3m": {
+      "delta_krw": -32.0,
+      "confidence": 0.58
+     },
+     "12m": {
+      "delta_krw": -50.0,
+      "confidence": 0.54
+     }
+    }
    },
    "members": {
-    "academic": [],
-    "public": [],
-    "private": []
+    "academic": [
+     {
+      "name": "Intl_Bodies",
+      "signal": "krw_strong",
+      "delta_1m": -18.0,
+      "conf": 0.52,
+      "round": 1,
+      "revised": false
+     },
+     {
+      "name": "Academic_FX",
+      "signal": "krw_strong",
+      "delta_1m": -16.0,
+      "conf": 0.66,
+      "round": 2,
+      "revised": true
+     },
+     {
+      "name": "Monetary_BoP",
+      "signal": "krw_strong",
+      "delta_1m": -22.0,
+      "conf": 0.65,
+      "round": 1,
+      "revised": false
+     }
+    ],
+    "public": [
+     {
+      "name": "Fed_Policy",
+      "signal": "krw_strong",
+      "delta_1m": 0.0,
+      "conf": 0.3,
+      "round": 2,
+      "revised": false
+     },
+     {
+      "name": "BOK_Policy",
+      "signal": "krw_strong",
+      "delta_1m": -18.0,
+      "conf": 0.6,
+      "round": 1,
+      "revised": false
+     },
+     {
+      "name": "US_Fiscal_Dollar",
+      "signal": "krw_strong",
+      "delta_1m": -15.0,
+      "conf": 0.58,
+      "round": 2,
+      "revised": true
+     },
+     {
+      "name": "Korea_External",
+      "signal": "neutral",
+      "delta_1m": -12.0,
+      "conf": 0.52,
+      "round": 1,
+      "revised": false
+     },
+     {
+      "name": "ECB_Global_CB",
+      "signal": "krw_strong",
+      "delta_1m": -18.0,
+      "conf": 0.58,
+      "round": 1,
+      "revised": false
+     },
+     {
+      "name": "BOJ_Yen_Carry",
+      "signal": "krw_strong",
+      "delta_1m": -15.0,
+      "conf": 0.58,
+      "round": 2,
+      "revised": true
+     }
+    ],
+    "private": [
+     {
+      "name": "Rate_Carry",
+      "signal": "krw_strong",
+      "delta_1m": -16.0,
+      "conf": 0.58,
+      "round": 2,
+      "revised": true
+     },
+     {
+      "name": "Global_Risk",
+      "signal": "krw_strong",
+      "delta_1m": -18.0,
+      "conf": 0.65,
+      "round": 1,
+      "revised": false
+     },
+     {
+      "name": "Technical_Flow",
+      "signal": "krw_strong",
+      "delta_1m": -18.0,
+      "conf": 0.5,
+      "round": 1,
+      "revised": false
+     },
+     {
+      "name": "CNY_Asia_EM",
+      "signal": "krw_strong",
+      "delta_1m": -22.0,
+      "conf": 0.6,
+      "round": 1,
+      "revised": false
+     },
+     {
+      "name": "Consensus",
+      "signal": "krw_strong",
+      "delta_1m": -20.0,
+      "conf": 0.57,
+      "round": 1,
+      "revised": false
+     },
+     {
+      "name": "Market_Linkage",
+      "signal": "krw_strong",
+      "delta_1m": -18.0,
+      "conf": 0.65,
+      "round": 1,
+      "revised": false
+     },
+     {
+      "name": "News_Sentiment",
+      "signal": "krw_strong",
+      "delta_1m": -18.0,
+      "conf": 0.6,
+      "round": 1,
+      "revised": false
+     },
+     {
+      "name": "Desk_GS",
+      "signal": "krw_strong",
+      "delta_1m": -18.0,
+      "conf": 0.58,
+      "round": 1,
+      "revised": false
+     },
+     {
+      "name": "Desk_JPM",
+      "signal": "krw_strong",
+      "delta_1m": -18.0,
+      "conf": 0.65,
+      "round": 1,
+      "revised": false
+     },
+     {
+      "name": "Desk_MS",
+      "signal": "krw_strong",
+      "delta_1m": -18.0,
+      "conf": 0.58,
+      "round": 1,
+      "revised": false
+     },
+     {
+      "name": "Desk_Nomura",
+      "signal": "krw_strong",
+      "delta_1m": -18.0,
+      "conf": 0.58,
+      "round": 1,
+      "revised": false
+     },
+     {
+      "name": "Desk_Citi",
+      "signal": "krw_strong",
+      "delta_1m": -18.0,
+      "conf": 0.58,
+      "round": 1,
+      "revised": false
+     },
+     {
+      "name": "Desk_Samsung_Sec",
+      "signal": "krw_strong",
+      "delta_1m": -18.0,
+      "conf": 0.58,
+      "round": 1,
+      "revised": false
+     },
+     {
+      "name": "Desk_Mirae",
+      "signal": "krw_strong",
+      "delta_1m": -18.0,
+      "conf": 0.58,
+      "round": 1,
+      "revised": false
+     }
+    ]
    },
    "collaboration": {
-    "consensus_1m": 0.0,
-    "outlier_count": 0,
-    "revised_count": 0,
-    "reviews": []
+    "consensus_1m": -16.1,
+    "outlier_count": 5,
+    "revised_count": 4,
+    "reviews": [
+     {
+      "agent": "Academic_FX",
+      "group": "academic",
+      "before_delta": 15.0,
+      "after_delta": -16.0,
+      "before_signal": "neutral",
+      "after_signal": "krw_strong",
+      "revised": true
+     },
+     {
+      "agent": "US_Fiscal_Dollar",
+      "group": "public",
+      "before_delta": 5.0,
+      "after_delta": -15.0,
+      "before_signal": "neutral",
+      "after_signal": "krw_strong",
+      "revised": true
+     },
+     {
+      "agent": "BOJ_Yen_Carry",
+      "group": "public",
+      "before_delta": 5.0,
+      "after_delta": -15.0,
+      "before_signal": "neutral",
+      "after_signal": "krw_strong",
+      "revised": true
+     },
+     {
+      "agent": "Fed_Policy",
+      "group": "public",
+      "before_delta": 0.0,
+      "after_delta": 0.0,
+      "before_signal": "neutral",
+      "after_signal": "krw_strong",
+      "revised": false
+     },
+     {
+      "agent": "Rate_Carry",
+      "group": "private",
+      "before_delta": 0.0,
+      "after_delta": -16.0,
+      "before_signal": "krw_weak",
+      "after_signal": "krw_strong",
+      "revised": true
+     }
+    ]
    },
    "sector_agreement": {
-    "1w": "mixed",
-    "1m": "mixed",
-    "3m": "mixed",
-    "12m": "mixed"
+    "1w": "aligned",
+    "1m": "aligned",
+    "3m": "aligned",
+    "12m": "aligned"
    },
-   "spot": 1342.5699462890625
+   "spot": 1340.3800048828125
   },
-  "updated_at": "2026-11-03T14:45:47.532335"
+  "updated_at": "2026-11-10T14:50:59.081368"
  }
 }
