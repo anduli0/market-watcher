@@ -2603,11 +2603,11 @@
   "date": "2026-11-11",
   "regime": "US_TECH_LEADERSHIP",
   "secondary": "KOREA_DECOUPLING",
-  "confidence": 0.674,
+  "confidence": 0.6742,
   "risk_on": 0.0735,
   "coverage": 0.75,
   "weights": {
-   "US_EQUITY": 0.4895,
+   "US_EQUITY": 0.4896,
    "CASH": 0.1543,
    "US_TREASURY": 0.0937,
    "GOLD": 0.0781,
