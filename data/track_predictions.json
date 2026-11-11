@@ -2603,17 +2603,17 @@
   "date": "2026-11-11",
   "regime": "US_TECH_LEADERSHIP",
   "secondary": "KOREA_DECOUPLING",
-  "confidence": 0.6742,
-  "risk_on": 0.0735,
+  "confidence": 0.6538,
+  "risk_on": 0.0725,
   "coverage": 0.75,
   "weights": {
-   "US_EQUITY": 0.4896,
+   "US_EQUITY": 0.4877,
    "CASH": 0.1543,
-   "US_TREASURY": 0.0937,
-   "GOLD": 0.0781,
-   "KOREA_EQUITY": 0.0751,
-   "BITCOIN": 0.0683,
-   "USD": 0.0409
+   "US_TREASURY": 0.094,
+   "GOLD": 0.0784,
+   "KOREA_EQUITY": 0.0758,
+   "BITCOIN": 0.0685,
+   "USD": 0.0414
   },
   "neutral": {
    "US_EQUITY": 0.35,
