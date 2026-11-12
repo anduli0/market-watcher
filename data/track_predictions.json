@@ -2650,5 +2650,31 @@
    "BITCOIN": 0.08,
    "USD": 0.1
   }
+ },
+ "2026-11-13": {
+  "date": "2026-11-13",
+  "regime": "US_TECH_LEADERSHIP",
+  "secondary": "KOREA_DECOUPLING",
+  "confidence": 0.635,
+  "risk_on": 0.0718,
+  "coverage": 0.75,
+  "weights": {
+   "US_EQUITY": 0.4861,
+   "CASH": 0.1542,
+   "US_TREASURY": 0.0943,
+   "GOLD": 0.0786,
+   "KOREA_EQUITY": 0.0764,
+   "BITCOIN": 0.0686,
+   "USD": 0.0418
+  },
+  "neutral": {
+   "US_EQUITY": 0.35,
+   "CASH": 0.1,
+   "US_TREASURY": 0.12,
+   "GOLD": 0.1,
+   "KOREA_EQUITY": 0.15,
+   "BITCOIN": 0.08,
+   "USD": 0.1
+  }
  }
 }
