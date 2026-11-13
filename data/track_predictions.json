@@ -2653,27 +2653,27 @@
  },
  "2026-11-13": {
   "date": "2026-11-13",
-  "regime": "US_TECH_LEADERSHIP",
-  "secondary": "KOREA_DECOUPLING",
-  "confidence": 0.6348,
-  "risk_on": 0.0718,
+  "regime": "KRW_STRENGTH",
+  "secondary": "GOLDILOCKS",
+  "confidence": 0.4851,
+  "risk_on": 0.2636,
   "coverage": 0.75,
   "weights": {
-   "US_EQUITY": 0.4861,
-   "CASH": 0.1542,
-   "US_TREASURY": 0.0943,
-   "GOLD": 0.0786,
-   "KOREA_EQUITY": 0.0764,
-   "BITCOIN": 0.0686,
-   "USD": 0.0418
+   "US_EQUITY": 0.4577,
+   "KOREA_EQUITY": 0.1893,
+   "CASH": 0.1087,
+   "US_TREASURY": 0.0765,
+   "BITCOIN": 0.0703,
+   "GOLD": 0.0638,
+   "USD": 0.0336
   },
   "neutral": {
    "US_EQUITY": 0.35,
+   "KOREA_EQUITY": 0.15,
    "CASH": 0.1,
    "US_TREASURY": 0.12,
-   "GOLD": 0.1,
-   "KOREA_EQUITY": 0.15,
    "BITCOIN": 0.08,
+   "GOLD": 0.1,
    "USD": 0.1
   }
  }
