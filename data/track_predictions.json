@@ -2702,5 +2702,31 @@
    "GOLD": 0.1,
    "USD": 0.1
   }
+ },
+ "2026-11-15": {
+  "date": "2026-11-15",
+  "regime": "KRW_STRENGTH",
+  "secondary": "GOLDILOCKS",
+  "confidence": 0.5152,
+  "risk_on": 0.2687,
+  "coverage": 0.75,
+  "weights": {
+   "US_EQUITY": 0.4599,
+   "KOREA_EQUITY": 0.1901,
+   "CASH": 0.1082,
+   "US_TREASURY": 0.0758,
+   "BITCOIN": 0.0701,
+   "GOLD": 0.0632,
+   "USD": 0.0329
+  },
+  "neutral": {
+   "US_EQUITY": 0.35,
+   "KOREA_EQUITY": 0.15,
+   "CASH": 0.1,
+   "US_TREASURY": 0.12,
+   "BITCOIN": 0.08,
+   "GOLD": 0.1,
+   "USD": 0.1
+  }
  }
 }
