@@ -2681,17 +2681,17 @@
   "date": "2026-11-14",
   "regime": "KRW_STRENGTH",
   "secondary": "GOLDILOCKS",
-  "confidence": 0.5025,
-  "risk_on": 0.2661,
+  "confidence": 0.5151,
+  "risk_on": 0.2686,
   "coverage": 0.75,
   "weights": {
-   "US_EQUITY": 0.4589,
-   "KOREA_EQUITY": 0.1897,
-   "CASH": 0.1084,
-   "US_TREASURY": 0.0761,
-   "BITCOIN": 0.0701,
-   "GOLD": 0.0634,
-   "USD": 0.0332
+   "US_EQUITY": 0.4599,
+   "KOREA_EQUITY": 0.1901,
+   "CASH": 0.1082,
+   "US_TREASURY": 0.0758,
+   "BITCOIN": 0.07,
+   "GOLD": 0.0632,
+   "USD": 0.0329
   },
   "neutral": {
    "US_EQUITY": 0.35,
