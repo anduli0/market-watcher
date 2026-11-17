@@ -2758,25 +2758,25 @@
  "2026-11-17": {
   "date": "2026-11-17",
   "regime": "KRW_STRENGTH",
-  "secondary": "KOREA_DECOUPLING",
-  "confidence": 0.5446,
-  "risk_on": 0.1,
+  "secondary": "RECESSION_RISK",
+  "confidence": 0.514,
+  "risk_on": -0.1607,
   "coverage": 0.75,
   "weights": {
-   "US_EQUITY": 0.3274,
-   "KOREA_EQUITY": 0.2213,
-   "CASH": 0.1429,
-   "US_TREASURY": 0.1014,
-   "GOLD": 0.0845,
-   "BITCOIN": 0.0764,
-   "USD": 0.0461
+   "US_EQUITY": 0.3135,
+   "CASH": 0.2088,
+   "US_TREASURY": 0.1394,
+   "GOLD": 0.1174,
+   "KOREA_EQUITY": 0.0867,
+   "BITCOIN": 0.0694,
+   "USD": 0.0648
   },
   "neutral": {
    "US_EQUITY": 0.35,
-   "KOREA_EQUITY": 0.15,
    "CASH": 0.1,
    "US_TREASURY": 0.12,
    "GOLD": 0.1,
+   "KOREA_EQUITY": 0.15,
    "BITCOIN": 0.08,
    "USD": 0.1
   }
