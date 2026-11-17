@@ -2780,5 +2780,31 @@
    "BITCOIN": 0.08,
    "USD": 0.1
   }
+ },
+ "2026-11-18": {
+  "date": "2026-11-18",
+  "regime": "KRW_STRENGTH",
+  "secondary": "RECESSION_RISK",
+  "confidence": 0.5262,
+  "risk_on": -0.1623,
+  "coverage": 0.75,
+  "weights": {
+   "US_EQUITY": 0.3131,
+   "CASH": 0.2096,
+   "US_TREASURY": 0.1396,
+   "GOLD": 0.1176,
+   "KOREA_EQUITY": 0.0863,
+   "BITCOIN": 0.0692,
+   "USD": 0.0646
+  },
+  "neutral": {
+   "US_EQUITY": 0.35,
+   "CASH": 0.1,
+   "US_TREASURY": 0.12,
+   "GOLD": 0.1,
+   "KOREA_EQUITY": 0.15,
+   "BITCOIN": 0.08,
+   "USD": 0.1
+  }
  }
 }
