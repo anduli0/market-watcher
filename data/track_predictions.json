@@ -2812,14 +2812,14 @@
   "regime": "KRW_STRENGTH",
   "secondary": "RECESSION_RISK",
   "confidence": 0.517,
-  "risk_on": -0.2409,
+  "risk_on": -0.2405,
   "coverage": 0.75,
   "weights": {
-   "CASH": 0.2452,
-   "US_EQUITY": 0.2074,
+   "CASH": 0.2451,
+   "US_EQUITY": 0.2075,
    "US_TREASURY": 0.1665,
    "GOLD": 0.141,
-   "KOREA_EQUITY": 0.0918,
+   "KOREA_EQUITY": 0.0919,
    "USD": 0.0765,
    "BITCOIN": 0.0716
   },
