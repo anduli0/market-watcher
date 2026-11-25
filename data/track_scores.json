@@ -1,14 +1,14 @@
 {
- "updated_at": "2026-11-25T12:02:37.499798+00:00",
+ "updated_at": "2026-11-25T21:53:22.778927+00:00",
  "summary": {
   "horizon_days": 5,
-  "n_predictions": 115,
+  "n_predictions": 116,
   "n_scored": 86,
   "n_directional": 85,
   "hit_rate": 0.6,
   "avg_stated_confidence": 0.6004,
-  "avg_excess_pct": 0.052,
-  "cum_excess_pct": 4.563,
+  "avg_excess_pct": 0.044,
+  "cum_excess_pct": 3.798,
   "updated_at": null
  },
  "scores": [
@@ -17,10 +17,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.074,
    "confidence": 0.6857,
-   "portfolio_return_pct": -1.711,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.05,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.266,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.008,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -28,10 +28,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0742,
    "confidence": 0.6877,
-   "portfolio_return_pct": -1.715,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.047,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.268,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.006,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -39,10 +39,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0711,
    "confidence": 0.66,
-   "portfolio_return_pct": -1.706,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.055,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.262,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.011,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -50,10 +50,10 @@
    "regime": "RECESSION_RISK",
    "risk_on": -0.2879,
    "confidence": 0.5949,
-   "portfolio_return_pct": -2.329,
-   "neutral_return_pct": -1.761,
-   "excess_pct": -0.568,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.673,
+   "neutral_return_pct": -1.273,
+   "excess_pct": -0.4,
+   "risk_spread_pct": 1.521,
    "hit": false
   },
   {
@@ -61,10 +61,10 @@
    "regime": "RECESSION_RISK",
    "risk_on": -0.2874,
    "confidence": 0.5941,
-   "portfolio_return_pct": -2.328,
-   "neutral_return_pct": -1.761,
-   "excess_pct": -0.567,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.672,
+   "neutral_return_pct": -1.273,
+   "excess_pct": -0.399,
+   "risk_spread_pct": 1.521,
    "hit": false
   },
   {
@@ -72,10 +72,10 @@
    "regime": "RECESSION_RISK",
    "risk_on": -0.2877,
    "confidence": 0.5946,
-   "portfolio_return_pct": -2.329,
-   "neutral_return_pct": -1.761,
-   "excess_pct": -0.568,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.673,
+   "neutral_return_pct": -1.273,
+   "excess_pct": -0.399,
+   "risk_spread_pct": 1.521,
    "hit": false
   },
   {
@@ -83,10 +83,10 @@
    "regime": "RECESSION_RISK",
    "risk_on": -0.2883,
    "confidence": 0.5955,
-   "portfolio_return_pct": -2.33,
-   "neutral_return_pct": -1.761,
-   "excess_pct": -0.569,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.673,
+   "neutral_return_pct": -1.273,
+   "excess_pct": -0.4,
+   "risk_spread_pct": 1.521,
    "hit": false
   },
   {
@@ -94,10 +94,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.067,
    "confidence": 0.5782,
-   "portfolio_return_pct": -1.821,
-   "neutral_return_pct": -1.761,
-   "excess_pct": -0.059,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.329,
+   "neutral_return_pct": -1.273,
+   "excess_pct": -0.056,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -105,10 +105,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.067,
    "confidence": 0.5786,
-   "portfolio_return_pct": -1.821,
-   "neutral_return_pct": -1.761,
-   "excess_pct": -0.059,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.329,
+   "neutral_return_pct": -1.273,
+   "excess_pct": -0.056,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -116,10 +116,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0721,
    "confidence": 0.6469,
-   "portfolio_return_pct": -1.716,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.045,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.268,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.005,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -127,10 +127,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0704,
    "confidence": 0.6082,
-   "portfolio_return_pct": -1.719,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.043,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.269,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.004,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -138,10 +138,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.069,
    "confidence": 0.5723,
-   "portfolio_return_pct": -1.711,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.051,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.264,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.009,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -149,10 +149,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0689,
    "confidence": 0.5718,
-   "portfolio_return_pct": -1.71,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.051,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.264,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.009,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -160,10 +160,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0691,
    "confidence": 0.5725,
-   "portfolio_return_pct": -1.713,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.048,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.266,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.008,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -171,10 +171,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0688,
    "confidence": 0.5706,
-   "portfolio_return_pct": -1.71,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.051,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.264,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.009,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -182,10 +182,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.069,
    "confidence": 0.5745,
-   "portfolio_return_pct": -1.705,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.056,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.261,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.012,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -193,10 +193,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0692,
    "confidence": 0.5881,
-   "portfolio_return_pct": -1.715,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.046,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.267,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.006,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -204,10 +204,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0696,
    "confidence": 0.5888,
-   "portfolio_return_pct": -1.719,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.043,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.269,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.004,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -215,10 +215,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0682,
    "confidence": 0.5595,
-   "portfolio_return_pct": -1.727,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.035,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.273,
+   "neutral_return_pct": -1.273,
+   "excess_pct": -0.0,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -226,10 +226,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0683,
    "confidence": 0.5601,
-   "portfolio_return_pct": -1.72,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.041,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.269,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.004,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -237,10 +237,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0697,
    "confidence": 0.5915,
-   "portfolio_return_pct": -1.715,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.046,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.267,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.006,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -248,10 +248,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0652,
    "confidence": 0.4884,
-   "portfolio_return_pct": -1.718,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.043,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.268,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.006,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -259,10 +259,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.1819,
    "confidence": 0.5837,
-   "portfolio_return_pct": -1.564,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.198,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.136,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.138,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -270,10 +270,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0635,
    "confidence": 0.4505,
-   "portfolio_return_pct": -1.718,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.043,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.267,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.006,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -281,10 +281,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0646,
    "confidence": 0.4735,
-   "portfolio_return_pct": -1.716,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.046,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.266,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.007,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -292,10 +292,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0667,
    "confidence": 0.5242,
-   "portfolio_return_pct": -1.715,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.047,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.266,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.007,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -303,10 +303,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0846,
    "confidence": 0.4964,
-   "portfolio_return_pct": -1.717,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.044,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.266,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.007,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -314,10 +314,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0649,
    "confidence": 0.4915,
-   "portfolio_return_pct": -1.713,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.049,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.264,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.009,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -325,10 +325,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.1828,
    "confidence": 0.599,
-   "portfolio_return_pct": -1.559,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.203,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.133,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.141,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -336,10 +336,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.0686,
    "confidence": 0.5676,
-   "portfolio_return_pct": -1.716,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.046,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.267,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.006,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -347,10 +347,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.1891,
    "confidence": 0.6518,
-   "portfolio_return_pct": -1.558,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.203,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -1.132,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.141,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -358,10 +358,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.3349,
    "confidence": 0.5305,
-   "portfolio_return_pct": -1.314,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.448,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -0.924,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.35,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -369,10 +369,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.3275,
    "confidence": 0.5212,
-   "portfolio_return_pct": -1.312,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.45,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -0.923,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.35,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -380,10 +380,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.3337,
    "confidence": 0.5296,
-   "portfolio_return_pct": -1.315,
-   "neutral_return_pct": -1.761,
-   "excess_pct": 0.447,
-   "risk_spread_pct": 2.155,
+   "portfolio_return_pct": -0.924,
+   "neutral_return_pct": -1.273,
+   "excess_pct": 0.349,
+   "risk_spread_pct": 1.521,
    "hit": true
   },
   {
@@ -391,10 +391,10 @@
    "regime": "US_TECH_LEADERSHIP",
    "risk_on": 0.1848,
    "confidence": 0.621,
-   "portfolio_return_pct": -1.249,
-   "neutral_return_pct": -1.467,
-   "excess_pct": 0.218,
-   "risk_spread_pct": 2.128,
+   "portfolio_return_pct": -0.822,
+   "neutral_return_pct": -0.977,
+   "excess_pct": 0.155,
+   "risk_spread_pct": 1.491,
    "hit": true
   },
   {
