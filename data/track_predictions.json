@@ -3019,17 +3019,17 @@
   "date": "2026-11-27",
   "regime": "KRW_STRENGTH",
   "secondary": "RECESSION_RISK",
-  "confidence": 0.4475,
-  "risk_on": -0.2287,
+  "confidence": 0.3696,
+  "risk_on": -0.2168,
   "coverage": 0.75,
   "weights": {
-   "CASH": 0.239,
-   "US_EQUITY": 0.2133,
-   "US_TREASURY": 0.1644,
-   "GOLD": 0.1391,
-   "KOREA_EQUITY": 0.0943,
-   "USD": 0.0776,
-   "BITCOIN": 0.0722
+   "CASH": 0.2322,
+   "US_EQUITY": 0.2197,
+   "US_TREASURY": 0.1622,
+   "GOLD": 0.1372,
+   "KOREA_EQUITY": 0.0969,
+   "USD": 0.079,
+   "BITCOIN": 0.0728
   },
   "neutral": {
    "CASH": 0.1,
