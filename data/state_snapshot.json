@@ -1,6 +1,6 @@
 {
- "as_of_utc": "2026-11-26T22:31:43.576818+00:00",
- "as_of_kst": "2026-11-27T07:31:43.576818+09:00",
+ "as_of_utc": "2026-11-27T04:44:38.532294+00:00",
+ "as_of_kst": "2026-11-27T13:44:38.532294+09:00",
  "warming": false,
  "mode": "READ_ONLY",
  "live_armed": false,
@@ -86,8 +86,8 @@
    "regime": "CRISIS",
    "expected_move": null,
    "unit": null,
-   "data_quality": 0.83,
-   "age_seconds": 18889,
+   "data_quality": 0.62,
+   "age_seconds": 41264,
    "stale": false
   },
   {
@@ -95,12 +95,12 @@
    "target": "US_EQUITY",
    "horizon": "NOWCAST",
    "direction": "DOWN",
-   "confidence": 0.456,
+   "confidence": 0.455,
    "regime": "CORRECTION",
-   "expected_move": "-32.0",
+   "expected_move": "-31.9",
    "unit": "SCORE",
    "data_quality": 0.54,
-   "age_seconds": 344,
+   "age_seconds": 3947,
    "stale": false
   }
  ],
@@ -113,16 +113,16 @@
   "coverage": 0.75,
   "transition_risk": 0.5,
   "probabilities": {
-   "RECESSION_RISK": 0.3688,
-   "KRW_STRENGTH": 0.3688,
-   "DEFENSIVE_ROTATION": 0.1475,
-   "REGIME_UNCERTAIN": 0.115
+   "RECESSION_RISK": 0.3674,
+   "KRW_STRENGTH": 0.3674,
+   "DEFENSIVE_ROTATION": 0.1469,
+   "REGIME_UNCERTAIN": 0.1183
   },
   "supporting": [
-   "7eb10cc2cfe15a11bb7a37ffa9869dfe",
-   "1bcc47cf10e35950b0c59ac826434bb0",
-   "5ae45111e558516bb10640677aa21fef",
-   "c73348f0bb675eb4bffa5d5cc07cb5a9"
+   "6f6f4c5509145781b324b990d8d93d90",
+   "f4fcabea02d35b1a8764c6b5533778a0",
+   "fe5089c8b2a55a1398dc4b73757a194e",
+   "29146c15e9f7586093879d45a49c5517"
   ],
   "contradictory": [],
   "invalidations": [
@@ -146,17 +146,17 @@
  },
  "cio": {
   "strategy_brief": "오늘의 전략 — 시장은 '원화 강세' 국면(확신 45%)으로, 방어적 기조가 적절합니다. 현금은 약 35% 확보한 채, 늘릴 곳은 [KOREA_LARGE_CAP], 줄일 곳은 [USD_EXPOSURE, US_LARGE_CAP]입니다. 위험회피 국면이라 방어자산(금·달러·국채·현금)으로 무게를 옮기고 위험자산은 줄이세요. (매일 갱신되는 참고 전략이며 투자 권유가 아닙니다.)",
-  "risk_on_score": -0.2295,
-  "target_cash_ratio": 0.3459,
+  "risk_on_score": -0.2287,
+  "target_cash_ratio": 0.3457,
   "asset_class_allocation": {
-   "EQUITY": 0.3072,
-   "BOND": 0.3469,
-   "CASH": 0.3459
+   "EQUITY": 0.3075,
+   "BOND": 0.3468,
+   "CASH": 0.3457
   },
   "country_allocation": {
    "KOREA": 0.3598,
-   "US": 0.2943,
-   "CASH": 0.3459
+   "US": 0.2944,
+   "CASH": 0.3457
   },
   "style_tilts": {
    "GROWTH": 0.0,
@@ -167,19 +167,19 @@
   "watcher_weights": [
    {
     "watcher": "KOSPI_WATCHER",
-    "weight": 0.2292,
+    "weight": 0.1838,
     "components": {
      "accuracy": 0.5796,
      "regime_suitability": 0.7,
      "horizon_suitability": 1.0,
-     "freshness": 0.8251,
+     "freshness": 0.6179,
      "independence": 0.9,
      "calibration": 0.7
     }
    },
    {
     "watcher": "KRW_WATCHER",
-    "weight": 0.517,
+    "weight": 0.5536,
     "components": {
      "accuracy": 0.755,
      "regime_suitability": 1.0,
@@ -191,12 +191,12 @@
    },
    {
     "watcher": "US_WATCHER",
-    "weight": 0.2538,
+    "weight": 0.2626,
     "components": {
      "accuracy": 0.478,
      "regime_suitability": 0.7,
      "horizon_suitability": 1.0,
-     "freshness": 0.9968,
+     "freshness": 0.9635,
      "independence": 1.0,
      "calibration": 0.7
     }
@@ -282,7 +282,7 @@
  },
  "portfolio": {
   "headline": "위험회피 우위 — 원화 현금·금·현금 등 방어자산 비중 확대",
-  "risk_on_score": -0.23,
+  "risk_on_score": -0.229,
   "confidence": 0.4475,
   "coverage": 0.75,
   "notes": [
@@ -294,7 +294,7 @@
    {
     "asset": "CASH",
     "label_ko": "원화 현금",
-    "weight": 0.2392,
+    "weight": 0.239,
     "neutral_weight": 0.1,
     "stance": "OVERWEIGHT",
     "score": 0.712,
@@ -307,10 +307,10 @@
    {
     "asset": "US_EQUITY",
     "label_ko": "미국 주식",
-    "weight": 0.2131,
+    "weight": 0.2133,
     "neutral_weight": 0.35,
     "stance": "UNDERWEIGHT",
-    "score": -0.688,
+    "score": -0.687,
     "rationale": "[KRW_STRENGTH·UNDERWEIGHT] 위험회피 국면에서 비중 축소",
     "drivers": [
      "위험선호",
@@ -320,10 +320,10 @@
    {
     "asset": "US_TREASURY",
     "label_ko": "미국채",
-    "weight": 0.1645,
+    "weight": 0.1644,
     "neutral_weight": 0.12,
     "stance": "OVERWEIGHT",
-    "score": 0.143,
+    "score": 0.142,
     "rationale": "[KRW_STRENGTH·OVERWEIGHT] 완화적 통화정책·경기둔화 시 금리 하락(채권가격 상승) 수혜",
     "drivers": [
      "금리 방향",
@@ -333,10 +333,10 @@
    {
     "asset": "GOLD",
     "label_ko": "금",
-    "weight": 0.1392,
+    "weight": 0.1391,
     "neutral_weight": 0.1,
     "stance": "OVERWEIGHT",
-    "score": 0.159,
+    "score": 0.158,
     "rationale": "[KRW_STRENGTH·OVERWEIGHT] 실질금리 하락·위험회피·인플레이션 헤지 복합 수요",
     "drivers": [
      "실질금리/달러",
@@ -346,10 +346,10 @@
    {
     "asset": "KOREA_EQUITY",
     "label_ko": "한국 주식",
-    "weight": 0.0942,
+    "weight": 0.0943,
     "neutral_weight": 0.15,
     "stance": "UNDERWEIGHT",
-    "score": -0.656,
+    "score": -0.655,
     "rationale": "[KRW_STRENGTH·UNDERWEIGHT] 달러 강세·위험회피에 수급 부담",
     "drivers": [
      "위험선호",
@@ -375,7 +375,7 @@
     "weight": 0.0722,
     "neutral_weight": 0.08,
     "stance": "NEUTRAL",
-    "score": -0.285,
+    "score": -0.284,
     "rationale": "[KRW_STRENGTH·NEUTRAL] 달러 강세·긴축·유동성 스트레스에 비중 축소",
     "drivers": [
      "위험선호/유동성",
@@ -424,8 +424,8 @@
     "heading": "뉴스 흐름",
     "body": "",
     "bullets": [
-     "[Fed] PCE 3.8% 쇼크에 12월 인상 기정사실화 — AI 불안 속 국채 금리는 하락",
-     "[Fed] US core PCE inflation set to heat up in October, prompting Federal Reserve rate hikes in 2027 - www.tmgm.com",
+     "[Fed] PCE 3.8%·GDP 상향에 연준 인상 경계 고조, 나스닥 급락 후 반등",
+     "[Fed] US PCE Inflation Rises to 3.8% in October; Will the Fed Hike Interest Rates in December? - Kotak Neo",
      "[환율] 미·이란 협상 기대와 KOSPI 외국인 순매수가 맞물려 원/달러가 1,337.5원까지 밀리며 이달 첫 1330원대에 안착, 단기 원화 강세 모멘텀이 위원회 전망과 정합하는 흐름을 보이고 있다.",
      "[환율] 원/달러, 중동 긴장 완화·반도체 강세에 1330원대 재진입 — 완만한 원화 강세 경로 유효",
      "[국장] 투자자 관점 — 비중을 줄여 방어적으로 가져가되, 곱버스(2배 인버스)의 장기 보유는 손실이 쌓이니 피하세요. (오늘의 종합 판단: 코스피 약세, 확신도 79%)",
@@ -439,16 +439,16 @@
     "bullets": []
    }
   ],
-  "markdown": "# MARKET WATCHER — 자산시장 종합 애널리스트 리포트\n\n**위험회피 우위 — 원화 현금·금·현금 등 방어자산 비중 확대**\n\n한마디로 지금은 '방향이 뚜렷하지 않은 혼조 분위기'입니다. 네 개 시장 신호(미국 금리·환율·한국 증시·미국 증시)를 합쳐 보면 '원화 강세' 국면이고, 신호들의 확신도는 45% 수준입니다. 그래서 권하는 비중 1위 자산은 원화 현금(24%)입니다. 한쪽에 크게 베팅하기보다 골고루 나눠 담고 현금을 넉넉히 두는 편이 안전합니다.\n\n## 자산별 배분 및 근거\n7개 자산에 어느 정도 비중을 두면 좋을지와 그 이유입니다(비중·중립 대비 방향·근거).\n- 원화 현금 24% (비중 확대) — [KRW_STRENGTH·OVERWEIGHT] 원화 강세 전망 — 환노출 없는 원화 현금 보유가 유리\n- 미국 주식 21% (비중 축소) — [KRW_STRENGTH·UNDERWEIGHT] 위험회피 국면에서 비중 축소\n- 미국채 16% (비중 확대) — [KRW_STRENGTH·OVERWEIGHT] 완화적 통화정책·경기둔화 시 금리 하락(채권가격 상승) 수혜\n- 금 14% (비중 확대) — [KRW_STRENGTH·OVERWEIGHT] 실질금리 하락·위험회피·인플레이션 헤지 복합 수요\n- 한국 주식 9% (비중 축소) — [KRW_STRENGTH·UNDERWEIGHT] 달러 강세·위험회피에 수급 부담\n- 달러(USD) 8% (비중 축소) — [KRW_STRENGTH·UNDERWEIGHT] 달러(USD) — 위험선호·달러 약세 흐름에서 보유 매력 저하\n- 비트코인 7% (중립) — [KRW_STRENGTH·NEUTRAL] 달러 강세·긴축·유동성 스트레스에 비중 축소\n\n## 시장 상황 진단\n지금 시장은 '원화 강세' 국면입니다. 쉽게 말해, 원화가 강해 한국 자산·원화 보유가 상대적으로 유리합니다. 국면이 바뀔 위험은 50%로 비교적 낮아, 현재 판단을 유지할 만합니다.\n\n## 자산 배분 판단\n위험을 감수할지 말지를 점수로 보면 -0.23입니다(+는 공격적, −는 방어적). 이에 맞춰 현금은 약 35% 정도 들고 가기를 권합니다. 확신이 낮을수록 현금을 늘려 변동성에 대비하는 뜻입니다.\n\n## 무엇을 지켜봐야 하나\n- 네 시장 중 일부 신호가 빠져(데이터 커버리지 75%) 확신이 낮습니다. → 비중을 보수적으로.\n- 환율이 크게 움직이거나 미국 금리 방향이 바뀌면 위 판단을 다시 봐야 합니다.\n\n## 뉴스 흐름\n- [Fed] PCE 3.8% 쇼크에 12월 인상 기정사실화 — AI 불안 속 국채 금리는 하락\n- [Fed] US core PCE inflation set to heat up in October, prompting Federal Reserve rate hikes in 2027 - www.tmgm.com\n- [환율] 미·이란 협상 기대와 KOSPI 외국인 순매수가 맞물려 원/달러가 1,337.5원까지 밀리며 이달 첫 1330원대에 안착, 단기 원화 강세 모멘텀이 위원회 전망과 정합하는 흐름을 보이고 있다.\n- [환율] 원/달러, 중동 긴장 완화·반도체 강세에 1330원대 재진입 — 완만한 원화 강세 경로 유효\n- [국장] 투자자 관점 — 비중을 줄여 방어적으로 가져가되, 곱버스(2배 인버스)의 장기 보유는 손실이 쌓이니 피하세요. (오늘의 종합 판단: 코스피 약세, 확신도 79%)\n- [국장] 2026-11-27 한국 증시 데일리 브리핑입니다. 오늘 수집한 증시 뉴스 3건을 종합하면, 오늘 한국 증시는 내릴 가능성에 무게가 실린 위기 경계가 높은 흐름입니다. 종합 판단을 한 줄로 옮기면 '코스피 약세·고확신 — 위기 국면 · 인버스 우위'입니다.  오늘 수집한 헤드라인의 어조를 보면 상승 톤(1건)과 하락 톤(\n- [미장] [금요일 11/27 장 예측] 하락 우위 — 조정 / 위험회피 국면 · 종합점수 -32 · 신뢰도 46%\n\n## 면책\n이 글은 공개 데이터와 자동 모델로 만든 참고 자료이며 투자 권유가 아닙니다. 비트코인·금 비중은 거시 흐름에서 추론한 값입니다. © 2026 YellowScale."
+  "markdown": "# MARKET WATCHER — 자산시장 종합 애널리스트 리포트\n\n**위험회피 우위 — 원화 현금·금·현금 등 방어자산 비중 확대**\n\n한마디로 지금은 '방향이 뚜렷하지 않은 혼조 분위기'입니다. 네 개 시장 신호(미국 금리·환율·한국 증시·미국 증시)를 합쳐 보면 '원화 강세' 국면이고, 신호들의 확신도는 45% 수준입니다. 그래서 권하는 비중 1위 자산은 원화 현금(24%)입니다. 한쪽에 크게 베팅하기보다 골고루 나눠 담고 현금을 넉넉히 두는 편이 안전합니다.\n\n## 자산별 배분 및 근거\n7개 자산에 어느 정도 비중을 두면 좋을지와 그 이유입니다(비중·중립 대비 방향·근거).\n- 원화 현금 24% (비중 확대) — [KRW_STRENGTH·OVERWEIGHT] 원화 강세 전망 — 환노출 없는 원화 현금 보유가 유리\n- 미국 주식 21% (비중 축소) — [KRW_STRENGTH·UNDERWEIGHT] 위험회피 국면에서 비중 축소\n- 미국채 16% (비중 확대) — [KRW_STRENGTH·OVERWEIGHT] 완화적 통화정책·경기둔화 시 금리 하락(채권가격 상승) 수혜\n- 금 14% (비중 확대) — [KRW_STRENGTH·OVERWEIGHT] 실질금리 하락·위험회피·인플레이션 헤지 복합 수요\n- 한국 주식 9% (비중 축소) — [KRW_STRENGTH·UNDERWEIGHT] 달러 강세·위험회피에 수급 부담\n- 달러(USD) 8% (비중 축소) — [KRW_STRENGTH·UNDERWEIGHT] 달러(USD) — 위험선호·달러 약세 흐름에서 보유 매력 저하\n- 비트코인 7% (중립) — [KRW_STRENGTH·NEUTRAL] 달러 강세·긴축·유동성 스트레스에 비중 축소\n\n## 시장 상황 진단\n지금 시장은 '원화 강세' 국면입니다. 쉽게 말해, 원화가 강해 한국 자산·원화 보유가 상대적으로 유리합니다. 국면이 바뀔 위험은 50%로 비교적 낮아, 현재 판단을 유지할 만합니다.\n\n## 자산 배분 판단\n위험을 감수할지 말지를 점수로 보면 -0.23입니다(+는 공격적, −는 방어적). 이에 맞춰 현금은 약 35% 정도 들고 가기를 권합니다. 확신이 낮을수록 현금을 늘려 변동성에 대비하는 뜻입니다.\n\n## 무엇을 지켜봐야 하나\n- 네 시장 중 일부 신호가 빠져(데이터 커버리지 75%) 확신이 낮습니다. → 비중을 보수적으로.\n- 환율이 크게 움직이거나 미국 금리 방향이 바뀌면 위 판단을 다시 봐야 합니다.\n\n## 뉴스 흐름\n- [Fed] PCE 3.8%·GDP 상향에 연준 인상 경계 고조, 나스닥 급락 후 반등\n- [Fed] US PCE Inflation Rises to 3.8% in October; Will the Fed Hike Interest Rates in December? - Kotak Neo\n- [환율] 미·이란 협상 기대와 KOSPI 외국인 순매수가 맞물려 원/달러가 1,337.5원까지 밀리며 이달 첫 1330원대에 안착, 단기 원화 강세 모멘텀이 위원회 전망과 정합하는 흐름을 보이고 있다.\n- [환율] 원/달러, 중동 긴장 완화·반도체 강세에 1330원대 재진입 — 완만한 원화 강세 경로 유효\n- [국장] 투자자 관점 — 비중을 줄여 방어적으로 가져가되, 곱버스(2배 인버스)의 장기 보유는 손실이 쌓이니 피하세요. (오늘의 종합 판단: 코스피 약세, 확신도 79%)\n- [국장] 2026-11-27 한국 증시 데일리 브리핑입니다. 오늘 수집한 증시 뉴스 3건을 종합하면, 오늘 한국 증시는 내릴 가능성에 무게가 실린 위기 경계가 높은 흐름입니다. 종합 판단을 한 줄로 옮기면 '코스피 약세·고확신 — 위기 국면 · 인버스 우위'입니다.  오늘 수집한 헤드라인의 어조를 보면 상승 톤(1건)과 하락 톤(\n- [미장] [금요일 11/27 장 예측] 하락 우위 — 조정 / 위험회피 국면 · 종합점수 -32 · 신뢰도 46%\n\n## 면책\n이 글은 공개 데이터와 자동 모델로 만든 참고 자료이며 투자 권유가 아닙니다. 비트코인·금 비중은 거시 흐름에서 추론한 값입니다. © 2026 YellowScale."
  },
  "news": [
   {
    "source": "Fed",
-   "text": "PCE 3.8% 쇼크에 12월 인상 기정사실화 — AI 불안 속 국채 금리는 하락"
+   "text": "PCE 3.8%·GDP 상향에 연준 인상 경계 고조, 나스닥 급락 후 반등"
   },
   {
    "source": "Fed",
-   "text": "US core PCE inflation set to heat up in October, prompting Federal Reserve rate hikes in 2027 - www.tmgm.com"
+   "text": "US PCE Inflation Rises to 3.8% in October; Will the Fed Hike Interest Rates in December? - Kotak Neo"
   },
   {
    "source": "환율",
@@ -518,7 +518,7 @@
   ]
  },
  "realestate": {
-  "as_of": "2026-11-26T22:31:43.576818Z",
+  "as_of": "2026-11-27T04:44:38.532294Z",
   "stance": {
    "kr_rate_env": "긴축·금리 인상 (2026년 약 2회 인상 전망)",
    "us_rate_env": "중립",
@@ -1206,7 +1206,7 @@
   ]
  },
  "geopolitics": {
-  "as_of": "2026-11-26T22:31:43.576818Z",
+  "as_of": "2026-11-27T04:44:38.532294Z",
   "risk_level": "높음",
   "risk_rationale": "위험회피·경기/유동성 스트레스 국면 — 지정학 충격이 자산시장에 크게 전이되기 쉽습니다. 달러·금·현금 등 안전판을 의식하세요.",
   "synthesis": "종합하면, 현재 세계 정세의 자산시장 함의는 '원화 강세' 국면과 결합해 지정학 위험도 '높음'로 평가됩니다. 가장 구조적인 축은 미·중 기술 패권과 중앙은행 정책 차별화이며, 단기 변동성의 방아쇠는 중동·유가와 엔 캐리입니다. 달러 약세 흐름이라 신흥국·원화 자산엔 숨통이 트이나, 유가·중동 변수는 여전히 경계 대상입니다. 리스크가 커지는 국면에서는 금·달러·미국채 같은 안전판과 방산·에너지 같은 사건 대응 자산이 방어력을 제공하고, 긴장이 완화되면 그간 눌렸던 한국·신흥국 위험자산의 반등 탄력이 큽니다.",
@@ -1464,7 +1464,7 @@
     "present": false,
     "standalone_lean": "신호 없음(워처 미가용/만료)",
     "notes": [
-     "PCE 3.8% 쇼크에 12월 인상 기정사실화 — AI 불안 속 국채 금리는 하락"
+     "PCE 3.8%·GDP 상향에 연준 인상 경계 고조, 나스닥 급락 후 반등"
     ],
     "endpoints": [
      "/api/forecast/report?lang=ko",
@@ -1518,7 +1518,7 @@
   ]
  },
  "news_brief": {
-  "as_of": "2026-11-26T22:31:43.576818Z",
+  "as_of": "2026-11-27T04:44:38.532294Z",
   "title": "MARKET WATCHER — 데일리 분석 브리프",
   "market_read": "오늘 수집한 뉴스 7건을 종합하면, 흐름의 무게중심은 '통화정책·금리'에 있습니다. 이를 시장 국면('원화 강세', 종합 위험회피)과 겹쳐 보면 세계 경제 조망 — 위험회피 우위 · 미수렴(4R). 개별 헤드라인을 나열하기보다, 아래처럼 주제별로 묶어 '그래서 자산에 어떤 의미인지'로 재해석했습니다.",
   "themes": [
@@ -1526,8 +1526,8 @@
     "title": "통화정책·금리",
     "body": "2건 — 금리·물가 흐름은 위험자산 밸류에이션과 환율의 출발점입니다.",
     "items": [
-     "[Fed] PCE 3.8% 쇼크에 12월 인상 기정사실화 — AI 불안 속 국채 금리는 하락",
-     "[Fed] US core PCE inflation set to heat up in October, prompting Federal Reserve rate hikes in 2027 - www.tmgm.com"
+     "[Fed] PCE 3.8%·GDP 상향에 연준 인상 경계 고조, 나스닥 급락 후 반등",
+     "[Fed] US PCE Inflation Rises to 3.8% in October; Will the Fed Hike Interest Rates in December? - Kotak Neo"
     ]
    },
    {
