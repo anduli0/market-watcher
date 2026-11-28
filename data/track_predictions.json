@@ -3046,16 +3046,16 @@
   "regime": "KRW_STRENGTH",
   "secondary": "RECESSION_RISK",
   "confidence": 0.4427,
-  "risk_on": -0.2279,
+  "risk_on": -0.2294,
   "coverage": 0.75,
   "weights": {
-   "CASH": 0.2386,
-   "US_EQUITY": 0.2137,
-   "US_TREASURY": 0.1643,
-   "GOLD": 0.139,
-   "KOREA_EQUITY": 0.0944,
-   "USD": 0.0777,
-   "BITCOIN": 0.0723
+   "CASH": 0.2388,
+   "US_EQUITY": 0.2134,
+   "US_TREASURY": 0.1644,
+   "GOLD": 0.1392,
+   "KOREA_EQUITY": 0.0943,
+   "USD": 0.0778,
+   "BITCOIN": 0.0722
   },
   "neutral": {
    "CASH": 0.1,
