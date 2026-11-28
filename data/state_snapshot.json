@@ -1,6 +1,6 @@
 {
- "as_of_utc": "2026-11-27T23:10:50.474284+00:00",
- "as_of_kst": "2026-11-28T08:10:50.474284+09:00",
+ "as_of_utc": "2026-11-28T04:50:15.375300+00:00",
+ "as_of_kst": "2026-11-28T13:50:15.375300+09:00",
  "warming": false,
  "mode": "READ_ONLY",
  "live_armed": false,
@@ -86,8 +86,8 @@
    "regime": "CRISIS",
    "expected_move": null,
    "unit": null,
-   "data_quality": 0.88,
-   "age_seconds": 12502,
+   "data_quality": 0.7,
+   "age_seconds": 32867,
    "stale": false
   },
   {
@@ -99,8 +99,8 @@
    "regime": "CORRECTION",
    "expected_move": "-30.4",
    "unit": "SCORE",
-   "data_quality": 0.54,
-   "age_seconds": 37603,
+   "data_quality": 0.46,
+   "age_seconds": 57968,
    "stale": false
   }
  ],
@@ -113,16 +113,16 @@
   "coverage": 0.75,
   "transition_risk": 0.5,
   "probabilities": {
-   "RECESSION_RISK": 0.3692,
-   "KRW_STRENGTH": 0.3692,
-   "DEFENSIVE_ROTATION": 0.1477,
-   "REGIME_UNCERTAIN": 0.114
+   "RECESSION_RISK": 0.3674,
+   "KRW_STRENGTH": 0.3674,
+   "DEFENSIVE_ROTATION": 0.1469,
+   "REGIME_UNCERTAIN": 0.1183
   },
   "supporting": [
-   "53dc88a4a7115af08d1f9479b9f51018",
-   "df8bb2d0b6b8597d920874f395c57f06",
-   "d0fde72237d15c0abd011ece488bceb4",
-   "ad67c0f480de56b599e8cfe193bffbe5"
+   "a608c19c41dc5c63b458d7f479eea669",
+   "37c1a08766365bf1908738ef7becba06",
+   "58539de2985557788a9e82e7164a9612",
+   "62f88725338e5b1cb4a9737b0b055e1c"
   ],
   "contradictory": [],
   "invalidations": [
@@ -146,17 +146,17 @@
  },
  "cio": {
   "strategy_brief": "오늘의 전략 — 시장은 '원화 강세' 국면(확신 44%)으로, 방어적 기조가 적절합니다. 현금은 약 35% 확보한 채, 늘릴 곳은 [KOREA_LARGE_CAP], 줄일 곳은 [USD_EXPOSURE, US_LARGE_CAP]입니다. 위험회피 국면이라 방어자산(금·달러·국채·현금)으로 무게를 옮기고 위험자산은 줄이세요. (매일 갱신되는 참고 전략이며 투자 권유가 아닙니다.)",
-  "risk_on_score": -0.229,
-  "target_cash_ratio": 0.3458,
+  "risk_on_score": -0.2279,
+  "target_cash_ratio": 0.3456,
   "asset_class_allocation": {
-   "EQUITY": 0.3074,
-   "BOND": 0.3468,
-   "CASH": 0.3458
+   "EQUITY": 0.3077,
+   "BOND": 0.3467,
+   "CASH": 0.3456
   },
   "country_allocation": {
-   "KOREA": 0.3598,
-   "US": 0.2944,
-   "CASH": 0.3458
+   "KOREA": 0.3599,
+   "US": 0.2945,
+   "CASH": 0.3456
   },
   "style_tilts": {
    "GROWTH": 0.0,
@@ -167,19 +167,19 @@
   "watcher_weights": [
    {
     "watcher": "KOSPI_WATCHER",
-    "weight": 0.2645,
+    "weight": 0.2334,
     "components": {
      "accuracy": 0.5796,
      "regime_suitability": 0.7,
      "horizon_suitability": 1.0,
-     "freshness": 0.8842,
+     "freshness": 0.6957,
      "independence": 0.9,
      "calibration": 0.7
     }
    },
    {
     "watcher": "KRW_WATCHER",
-    "weight": 0.5568,
+    "weight": 0.6242,
     "components": {
      "accuracy": 0.755,
      "regime_suitability": 1.0,
@@ -191,12 +191,12 @@
    },
    {
     "watcher": "US_WATCHER",
-    "weight": 0.1787,
+    "weight": 0.1424,
     "components": {
      "accuracy": 0.478,
      "regime_suitability": 0.7,
      "horizon_suitability": 1.0,
-     "freshness": 0.6518,
+     "freshness": 0.4633,
      "independence": 1.0,
      "calibration": 0.7
     }
@@ -282,7 +282,7 @@
  },
  "portfolio": {
   "headline": "위험회피 우위 — 원화 현금·금·현금 등 방어자산 비중 확대",
-  "risk_on_score": -0.229,
+  "risk_on_score": -0.228,
   "confidence": 0.4427,
   "coverage": 0.75,
   "notes": [
@@ -294,7 +294,7 @@
    {
     "asset": "CASH",
     "label_ko": "원화 현금",
-    "weight": 0.2388,
+    "weight": 0.2386,
     "neutral_weight": 0.1,
     "stance": "OVERWEIGHT",
     "score": 0.713,
@@ -307,10 +307,10 @@
    {
     "asset": "US_EQUITY",
     "label_ko": "미국 주식",
-    "weight": 0.2134,
+    "weight": 0.2137,
     "neutral_weight": 0.35,
     "stance": "UNDERWEIGHT",
-    "score": -0.688,
+    "score": -0.687,
     "rationale": "[KRW_STRENGTH·UNDERWEIGHT] 위험회피 국면에서 비중 축소",
     "drivers": [
      "위험선호",
@@ -320,10 +320,10 @@
    {
     "asset": "US_TREASURY",
     "label_ko": "미국채",
-    "weight": 0.1644,
+    "weight": 0.1643,
     "neutral_weight": 0.12,
     "stance": "OVERWEIGHT",
-    "score": 0.143,
+    "score": 0.142,
     "rationale": "[KRW_STRENGTH·OVERWEIGHT] 완화적 통화정책·경기둔화 시 금리 하락(채권가격 상승) 수혜",
     "drivers": [
      "금리 방향",
@@ -333,10 +333,10 @@
    {
     "asset": "GOLD",
     "label_ko": "금",
-    "weight": 0.1391,
+    "weight": 0.139,
     "neutral_weight": 0.1,
     "stance": "OVERWEIGHT",
-    "score": 0.159,
+    "score": 0.158,
     "rationale": "[KRW_STRENGTH·OVERWEIGHT] 실질금리 하락·위험회피·인플레이션 헤지 복합 수요",
     "drivers": [
      "실질금리/달러",
@@ -346,10 +346,10 @@
    {
     "asset": "KOREA_EQUITY",
     "label_ko": "한국 주식",
-    "weight": 0.0943,
+    "weight": 0.0944,
     "neutral_weight": 0.15,
     "stance": "UNDERWEIGHT",
-    "score": -0.656,
+    "score": -0.655,
     "rationale": "[KRW_STRENGTH·UNDERWEIGHT] 달러 강세·위험회피에 수급 부담",
     "drivers": [
      "위험선호",
@@ -372,10 +372,10 @@
    {
     "asset": "BITCOIN",
     "label_ko": "비트코인",
-    "weight": 0.0722,
+    "weight": 0.0723,
     "neutral_weight": 0.08,
     "stance": "NEUTRAL",
-    "score": -0.286,
+    "score": -0.284,
     "rationale": "[KRW_STRENGTH·NEUTRAL] 달러 강세·긴축·유동성 스트레스에 비중 축소",
     "drivers": [
      "위험선호/유동성",
@@ -518,7 +518,7 @@
   ]
  },
  "realestate": {
-  "as_of": "2026-11-27T23:10:50.474284Z",
+  "as_of": "2026-11-28T04:50:15.375300Z",
   "stance": {
    "kr_rate_env": "긴축·금리 인상 (2026년 약 2회 인상 전망)",
    "us_rate_env": "중립",
@@ -1206,7 +1206,7 @@
   ]
  },
  "geopolitics": {
-  "as_of": "2026-11-27T23:10:50.474284Z",
+  "as_of": "2026-11-28T04:50:15.375300Z",
   "risk_level": "높음",
   "risk_rationale": "위험회피·경기/유동성 스트레스 국면 — 지정학 충격이 자산시장에 크게 전이되기 쉽습니다. 달러·금·현금 등 안전판을 의식하세요.",
   "synthesis": "종합하면, 현재 세계 정세의 자산시장 함의는 '원화 강세' 국면과 결합해 지정학 위험도 '높음'로 평가됩니다. 가장 구조적인 축은 미·중 기술 패권과 중앙은행 정책 차별화이며, 단기 변동성의 방아쇠는 중동·유가와 엔 캐리입니다. 달러 약세 흐름이라 신흥국·원화 자산엔 숨통이 트이나, 유가·중동 변수는 여전히 경계 대상입니다. 리스크가 커지는 국면에서는 금·달러·미국채 같은 안전판과 방산·에너지 같은 사건 대응 자산이 방어력을 제공하고, 긴장이 완화되면 그간 눌렸던 한국·신흥국 위험자산의 반등 탄력이 큽니다.",
@@ -1518,7 +1518,7 @@
   ]
  },
  "news_brief": {
-  "as_of": "2026-11-27T23:10:50.474284Z",
+  "as_of": "2026-11-28T04:50:15.375300Z",
   "title": "MARKET WATCHER — 데일리 분석 브리프",
   "market_read": "오늘 수집한 뉴스 7건을 종합하면, 흐름의 무게중심은 '통화정책·금리'에 있습니다. 이를 시장 국면('원화 강세', 종합 위험회피)과 겹쳐 보면 세계 경제 조망 — 위험회피 우위 · 미수렴(4R). 개별 헤드라인을 나열하기보다, 아래처럼 주제별로 묶어 '그래서 자산에 어떤 의미인지'로 재해석했습니다.",
   "themes": [
